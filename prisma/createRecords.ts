@@ -18,8 +18,6 @@ export const createSingleTeam = async (team: any, competitionId: any) => {
         city: team.city,
         country: team.country,
         managerName: team.managerName,
-        primaryColor: team.primaryColor,
-        secondaryColor: team.secondaryColor,
         stadium: {
           connectOrCreate: {
             where: { id: team.stadiumId },
@@ -39,45 +37,21 @@ export const createSingleTeam = async (team: any, competitionId: any) => {
         },
       },
     });
-    return dbTeam;
+
+    return { dbTeam };
   } catch (error) {
     console.error(`Failed to create team ${team.id}`, "ERROR");
     // console.log("team info:", team.id, team.name);
   }
 };
 
-export const createPlayersFromTeam = async (team: any) => {
-  const { competitor, players } = team;
-
-  // const dbPlayers = await prisma.player.createMany({
-  //   data: players.map((player: any) => ({
-  //     id: player.id,
-  //     name: player.name,
-  //     position: player.type ?? "Unknown",
-  //     teamId: competitor.id,
-  //   })),
-  //   skipDuplicates: true,
-  // });
-
-  const playerPromises = players.map(async (player: any) => {
-    try {
-      await prisma.player.create({
-        data: {
-          id: player.id,
-          name: player.name,
-          position: player.type ?? "Unknown",
-          teamId: competitor.id,
-        },
-      });
-    } catch (error) {
-      console.error(`Failed to create player ${player.name}:`, error);
-    }
+export const createPlayersFromTeam = async (players: any) => {
+  const dbPlayers = await prisma.player.createMany({
+    data: players.map((player: any) => ({
+      ...player,
+    })),
+    skipDuplicates: true,
   });
-
-  await Promise.all(playerPromises);
-
-  //   console.log(dbPlayers);
-  //   console.log(await Promise.all(playersPromises));
 };
 
 export const createSingleMatch = async ({
@@ -165,13 +139,27 @@ export const createStadiumsFromMatches = async (matches: any) => {
   await Promise.all(stadiumPromises);
 };
 
-// connectOrCreate: {
-//           where: { id: stadiumId },
-//           create: {
-//             id: stadiumId,
-//             name: "Estadio Único de Santiago del Estero",
-//             city: "Santiago del Estero",
-//             country: "Argentina",
-//             capacity: 30000,
-//           },
-//         },
+export const createJerseysFromTeam = async (team: any) => {
+  const jerseysPromises = team.jerseys.map(async (jersey: any) => {
+    try {
+      const dbJersey = await prisma.jersey.create({
+        data: {
+          id: jersey.id,
+          type: jersey.type,
+          baseColor: jersey.base,
+          sleeveColor: jersey.sleeve,
+          numberColor: jersey.number,
+          team: {
+            connect: {
+              id: team.id,
+            },
+          },
+        },
+      });
+      return { dbJersey };
+    } catch (error) {
+      console.error(`Failed to create jersey for ${team.id}:`, error);
+    }
+  });
+  await Promise.all(jerseysPromises);
+};

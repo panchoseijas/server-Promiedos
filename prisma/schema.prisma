@@ -31,8 +31,7 @@ model Team {
   managerName String
   stadiumId String
   logo      String?
-  primaryColor String?
-  secondaryColor String?
+  jerseys  Jersey[]
   stadium   Stadium  @relation(fields: [stadiumId], references: [id])
   players   Player[]
   competitions Competition[]
@@ -76,9 +75,12 @@ model Player {
   id        String      @id // API id
   name      String?
   teamId    String
-  team     Team        @relation(fields: [teamId], references: [id])
   position  String?
+  number    Int?
+  country   String?
 
+
+  team     Team        @relation(fields: [teamId], references: [id])
   @@unique([id, teamId])
 }
 
@@ -102,6 +104,17 @@ model Competition {
   Team Team[]
 }
 
+model Jersey {
+  id        Int          @id @default(autoincrement())
+  teamId    String
+  type      String?
+  baseColor String?
+  sleeveColor String?
+  numberColor String?
+
+  team      Team        @relation(fields: [teamId], references: [id])
+  @@unique([teamId, type])
+}
 
 
 model Standings {
