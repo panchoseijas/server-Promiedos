@@ -21115,9 +21115,10 @@
             "type": "home",
             "base": "ffffff",
             "sleeve": "000000",
-            "number": "000000",
+            "number": "e32d2b",
             "squares": false,
-            "stripes": false,
+            "stripes": true,
+            "stripes_color": "000000",
             "horizontal_stripes": false,
             "split": false,
             "shirt_type": "short_sleeves"

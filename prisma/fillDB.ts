@@ -25,7 +25,7 @@ const competitionsId = [
   // "sr:competition:23", //Serie A
 ];
 
-const API_KEY = process.env.SPORTSRADAR_API_KEY;
+const API_KEY = process.env.SPORTRADAR_API_KEY;
 
 const fetchData = async (endpoint: String, params: any) => {
   const options = { method: "GET", headers: { accept: "application/json" } };
