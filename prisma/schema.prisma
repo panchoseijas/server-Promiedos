@@ -18,8 +18,9 @@ model User {
   name      String
   email     String       @unique
   password  String
-  follows   TeamFollow[]
+  follows   Team[]
   createdAt DateTime     @default(now())
+  teamFollows TeamFollow[]
 }
 
 model Team {
@@ -38,6 +39,7 @@ model Team {
   standings    Standings[]
   homeMatches Match[] @relation("HomeTeam")
   awayMatches Match[] @relation("AwayTeam")
+  users User[]
 }
 
 
@@ -88,7 +90,6 @@ model TeamFollow {
   userId    Int
   teamId    Int
   user      User     @relation(fields: [userId], references: [id])
-
   @@unique([userId, teamId])
 }
 
