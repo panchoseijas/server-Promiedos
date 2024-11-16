@@ -12,7 +12,7 @@ const prisma = new PrismaClient();
 
 // Define a basic route
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, TypeScript with Express!");
+  res.send("Promiedos!!!");
 });
 
 app.get("/standings", async (req: Request, res: Response) => {
