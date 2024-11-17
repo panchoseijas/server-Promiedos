@@ -16,4 +16,20 @@ router.get("/:competitionId", async (req: Request, res: Response) => {
   }
 });
 
+router.get("/:competitionId/standings", async (req: Request, res: Response) => {
+  const { competitionId } = req.params
+
+  try {
+    const standings = await prisma.standings.findMany({
+      where: { competitionId: competitionId },
+      include: { team: true },
+      orderBy: { position: "asc" }
+  });
+    res.json(standings);
+  } catch (e: any) {
+    console.error(e);
+    res.json({ error: e.message });
+  }
+})
+
 export default router;
