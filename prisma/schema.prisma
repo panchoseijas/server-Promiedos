@@ -18,9 +18,9 @@ model User {
   name      String
   email     String       @unique
   password  String
-  follows   Team[]
+  followedTeams   Team[]
+  folllowedCompetitions Competition[]
   createdAt DateTime     @default(now())
-  teamFollows TeamFollow[]
 }
 
 model Team {
@@ -86,13 +86,6 @@ model Player {
   @@unique([id, teamId])
 }
 
-model TeamFollow {
-  userId    Int
-  teamId    Int
-  user      User     @relation(fields: [userId], references: [id])
-  @@unique([userId, teamId])
-}
-
 
 model Competition {
   id        String      @id // usamos el seasonId de la API 
@@ -103,6 +96,7 @@ model Competition {
 
   matches   Match[]
   Team Team[]
+  users User[]
 }
 
 model Jersey {
