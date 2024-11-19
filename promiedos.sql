@@ -318,14 +318,14 @@ ALTER TABLE ONLY public."User" ALTER COLUMN id SET DEFAULT nextval('public."User
 --
 
 COPY public."Competition" (id, name, country, logo) FROM stdin;
-sr:season:118699	Championship	ENG	\N
-sr:season:119835	Ligue 1	FRA	\N
-sr:season:119799	Eredivisie	NLD	\N
-sr:season:118691	LaLiga	ESP	\N
-sr:season:118693	Bundesliga	DEU	\N
-sr:season:114317	Liga Profesional	ARG	\N
-sr:season:118689	Premier League	ENG	\N
-sr:season:119847	Liga Portugal	PRT	\N
+sr:season:119847	Liga Portugal	PRT	https://upload.wikimedia.org/wikipedia/commons/5/5a/S%C3%ADmbolo_da_Liga_Portuguesa_de_Futebol_Profissional.png
+sr:season:118689	Premier League	ENG	https://ssl.gstatic.com/onebox/media/sports/logos/5D811WOqeV3SRG6qt-DDPA_64x64.png
+sr:season:118691	LaLiga	ESP	https://crests.football-data.org/laliga.png
+sr:season:118693	Bundesliga	DEU	https://crests.football-data.org/BL1.png
+sr:season:118699	Championship	ENG	https://crests.football-data.org/ELC.png
+sr:season:119799	Eredivisie	NLD	https://crests.football-data.org/ED.png
+sr:season:119835	Ligue 1	FRA	https://crests.football-data.org/FL1.png
+sr:season:114317	Liga Profesional	ARG	https://upload.wikimedia.org/wikipedia/commons/8/85/Logo_lpf_afa.png
 \.
 
 
@@ -9645,170 +9645,170 @@ COPY public."Standings" (id, "competitionId", "teamId", "position", played, win,
 --
 
 COPY public."Team" (id, name, city, country, "managerName", "stadiumId", logo, "shortName") FROM stdin;
-sr:competitor:3204	Union de Santa Fe	Santa Fe de la Vera Cruz	ARG	Gonzalez, Kily	sr:venue:4754	\N	UNI
-sr:competitor:3211	CA River Plate (ARG)	Buenos Aires	ARG	Gallardo, Marcelo	sr:venue:1009	\N	RIV
-sr:competitor:3208	Velez Sarsfield	Buenos Aires	ARG	Quinteros, Gustavo	sr:venue:1079	\N	VEL
-sr:competitor:3206	Estudiantes de La Plata	La Plata	ARG	Dominguez, Eduardo	sr:venue:1007	\N	ELP
-sr:competitor:191648	Deportivo Riestra	Flores	ARG	Fabbiani, Cristian	sr:venue:17150	\N	RIE
-sr:competitor:3205	Gimnasia Y Esgrima La Plata	La Plata	ARG	Mendez, Marcelo	sr:venue:12003	\N	GLP
-sr:competitor:3215	Racing Club Avellaneda	Buenos Aires	ARG	Costas, Gustavo	sr:venue:1082	\N	RAC
-sr:competitor:7629	CA Huracan	Buenos Aires	ARG	Kudelka, Frank	sr:venue:12021	\N	HUR
-sr:competitor:3209	CA Independiente Avellaneda	Buenos Aires	ARG	Vaccari, Julio	sr:venue:1099	\N	CAI
-sr:competitor:3212	Newell's Old Boys	Rosario	ARG	Lunari, Ricardo	sr:venue:1567	\N	NOB
-sr:competitor:3203	CA Belgrano de Cordoba	Cordoba	ARG	Cruz Real, Juan	sr:venue:4750	\N	BEL
-sr:competitor:6074	CD Godoy Cruz	Mendoza	ARG	Oldra, Daniel	sr:venue:15676	\N	GOD
-sr:competitor:42	Arsenal FC	London	ENG	Arteta, Mikel	sr:venue:624	\N	ARS
-sr:competitor:65668	Barracas Central	Barracas	ARG	Insua, Ruben Dario	sr:venue:69401	\N	BAR
-sr:competitor:3201	CA San Lorenzo de Almagro	Flores	ARG	Russo, Miguel Angel	sr:venue:14324	\N	SLO
-sr:competitor:44	Liverpool FC	Liverpool	ENG	Slot, Arne	sr:venue:579	\N	LIV
-sr:competitor:14	Nottingham Forest	Nottingham	ENG	Espirito Santo, Nuno	sr:venue:2230	\N	NFO
-sr:competitor:3218	Atletico Lanus	Buenos Aires	ARG	Zielinski, Ricardo	sr:venue:981	\N	LAN
-sr:competitor:43	Fulham FC	London	ENG	Silva, Marco	sr:venue:611	\N	FUL
-sr:competitor:17	Manchester City	Manchester	ENG	Guardiola, Pep	sr:venue:606	\N	MCI
-sr:competitor:39	Newcastle United	Newcastle upon Tyne	ENG	Howe, Eddie	sr:venue:765	\N	NEW
-sr:competitor:30	Brighton & Hove Albion	Falmer	ENG	Hurzeler, Fabian	sr:venue:2443	\N	BRI
-sr:competitor:35	Manchester United	Manchester	ENG	Amorim, Ruben	sr:venue:9	\N	MUN
-sr:competitor:38	Chelsea FC	London	ENG	Maresca, Enzo	sr:venue:799	\N	CHE
-sr:competitor:50	Brentford FC	London	ENG	Frank, Thomas	sr:venue:53349	\N	BRE
-sr:competitor:40	Aston Villa	Birmingham	ENG	Emery, Unai	sr:venue:815	\N	AVL
-sr:competitor:36837	CA Platense	Florida	ARG	Gomez, Sergio	sr:venue:12712	\N	PLA
-sr:competitor:33	Tottenham Hotspur	London	ENG	Postecoglou, Ange	sr:venue:28762	\N	TOT
-sr:competitor:60	AFC Bournemouth	Bournemouth	ENG	Iraola, Andoni	sr:venue:2990	\N	BOU
-sr:competitor:31	Leicester City	Leicester	ENG	Cooper, Steve	sr:venue:2183	\N	LEI
-sr:competitor:37	West Ham United	London	ENG	Lopetegui, Julen	sr:venue:18379	\N	WHU
-sr:competitor:48	Everton FC	Liverpool	ENG	Dyche, Sean	sr:venue:12	\N	EVE
-sr:competitor:3	Wolverhampton Wanderers	Wolverhampton	ENG	O'Neil, Gary	sr:venue:1272	\N	WOL
-sr:competitor:3217	CA Rosario Central	Rosario	ARG	Holan, Ariel	sr:venue:1329	\N	ROS
-sr:competitor:3216	Argentinos Juniors	Buenos Aires	ARG	Zermatten, Cristian	sr:venue:613	\N	ARG
-sr:competitor:32	Ipswich Town	Ipswich	ENG	McKenna, Kieran	sr:venue:2188	\N	IPS
-sr:competitor:7	Crystal Palace	London	ENG	Glasner, Oliver	sr:venue:10	\N	CRY
-sr:competitor:45	Southampton FC	Southampton	ENG	Martin, Russell	sr:venue:2231	\N	SOU
-sr:competitor:36842	Independiente Rivadavia	Mendoza	ARG	Berti, Alfredo Jesus	sr:venue:12031	\N	IRM
-sr:competitor:36839	Defensa y Justicia	Gobernador Julio A. Costa	ARG	De Muner, Pablo Daniel	sr:venue:12025	\N	DYJ
-sr:competitor:7628	CA Tigre	Buenos Aires	ARG	Dominguez, Sebastian	sr:venue:4738	\N	TIG
-sr:competitor:3210	CA Talleres de Cordoba	Cordoba	ARG	Medina, Alexander	sr:venue:2388	\N	CAT
-sr:competitor:4937	Instituto AC Cordoba	Cordoba	ARG	Dabove, Diego	sr:venue:12033	\N	IAC
-sr:competitor:3219	CA Banfield	Buenos Aires	ARG	Munua, Gustavo	sr:venue:634	\N	BAN
-sr:competitor:3202	Boca Juniors	Buenos Aires	ARG	Gago, Fernando	sr:venue:44628	\N	BOC
-sr:competitor:2829	Real Madrid	Madrid	ESP	Ancelotti, Carlo	sr:venue:754	\N	RMA
-sr:competitor:2817	FC Barcelona	Barcelona	ESP	Flick, Hansi	sr:venue:714	\N	BAR
-sr:competitor:2819	Villarreal CF	Villarreal	ESP	Marcelino	sr:venue:619	\N	VIL
-sr:competitor:24264	Girona FC	Girona	ESP	Michel	sr:venue:11380	\N	GIR
-sr:competitor:2836	Atletico Madrid	Madrid	ESP	Simeone, Diego	sr:venue:21414	\N	ATM
-sr:competitor:2816	Real Betis Seville	Seville	ESP	Pellegrini, Manuel	sr:venue:1045	\N	RBB
-sr:competitor:2820	CA Osasuna	Pamplona	ESP	Moreno, Vicente	sr:venue:739	\N	OSA
-sr:competitor:42338	CA Sarmiento Junin	Junin	ARG	Funes, Martin	sr:venue:8975	\N	CAS
-sr:competitor:2826	RCD Mallorca	Palma	ESP	Arrasate, Jagoba	sr:venue:760	\N	MAL
-sr:competitor:65676	CA Central Cordoba SE	Santiago del Estero	ARG	De Felippe, Omar	sr:venue:49307	\N	CC
-sr:competitor:2824	Real Sociedad San Sebastian	San Sebastian	ESP	Alguacil, Imanol	sr:venue:581	\N	RSO
-sr:competitor:2818	Rayo Vallecano	Madrid	ESP	Perez, Inigo	sr:venue:2440	\N	RVC
-sr:competitor:36833	Atletico Tucuman	San Miguel de Tucuman	ARG	Sava, Facundo	sr:venue:12017	\N	CAT
-sr:competitor:2833	Sevilla FC	Seville	ESP	Pimienta, Garcia	sr:venue:730	\N	SEV
-sr:competitor:6577	UD Las Palmas	Las Palmas de Gran Canaria	ESP	Martinez, Diego	sr:venue:974	\N	LPA
-sr:competitor:2885	Deportivo Alaves	Vitoria-Gasteiz	ESP	Garcia, Luis	sr:venue:9311	\N	ALA
-sr:competitor:2821	RC Celta de Vigo	Vigo	ESP	Giraldez, Claudio	sr:venue:697	\N	RCC
-sr:competitor:2825	Athletic Bilbao	Bilbao	ESP	Valverde, Ernesto	sr:venue:751	\N	ATH
-sr:competitor:2831	Real Valladolid	Valladolid	ESP	Pezzolano, Paulo	sr:venue:880	\N	VLL
-sr:competitor:2845	CD Leganes	Leganes	ESP	Jimenez, Borja	sr:venue:14888	\N	LEG
-sr:competitor:2859	Getafe CF	Getafe	ESP	Bordalas, Pepe	sr:venue:608	\N	GET
-sr:competitor:2828	Valencia CF	Valencia	ESP	Baraja, Ruben	sr:venue:691	\N	VCF
-sr:competitor:2971	PEC Zwolle	Zwolle	NLD	Jansen, Johnny	sr:venue:18994	\N	ZWO
-sr:competitor:2573	Holstein Kiel	Kiel	DEU	Rapp, Marcel	sr:venue:659	\N	HOK
-sr:competitor:1682	Stade Reims	Reims	FRA	Elsner, Luka	sr:venue:1871	\N	SDR
-sr:competitor:3011	Santa Clara Azores	Ponta Delgada	PRT	Matos, Vasco	sr:venue:5318	\N	SCL
-sr:competitor:41	Sunderland AFC	Sunderland	ENG	Le Bris, Regis	sr:venue:851	\N	SUN
-sr:competitor:263	Norwich City	Norwich	ENG	Thorup, Johannes	sr:venue:2221	\N	NOR
-sr:competitor:2952	PSV Eindhoven	Eindhoven	NLD	Bosz, Peter	sr:venue:726	\N	PSV
-sr:competitor:2990	Almere City FC	Almere	NLD	Maduro, Hedwiges	sr:venue:3261	\N	ALM
-sr:competitor:2673	Borussia Dortmund	Dortmund	DEU	Sahin, Nuri	sr:venue:759	\N	BVB
-sr:competitor:1642	Montpellier HSC	Montpellier	FRA	Gasset, Jean-Louis	sr:venue:1275	\N	MHS
-sr:competitor:25777	FC Arouca	Arouca	PRT	Seabra, Vasco	sr:venue:8289	\N	ARO
-sr:competitor:72	Luton Town	Luton	ENG	Edwards, Rob	sr:venue:2178	\N	LUT
-sr:competitor:2953	Ajax Amsterdam	Amsterdam	NLD	Farioli, Francesco	sr:venue:577	\N	AJA
-sr:competitor:2977	Heracles Almelo	Almelo	NLD	Van de Looi, Erwin	sr:venue:729	\N	HER
-sr:competitor:2538	SC Freiburg	Freiburg im Breisgau	DEU	Schuster, Julian	sr:venue:61056	\N	SCF
-sr:competitor:1681	Toulouse FC	Toulouse	FRA	Martinez, Carles	sr:venue:848	\N	TFC
-sr:competitor:3013	Nacional da Madeir	Funchal	PRT	Margarido, Tiago	sr:venue:1335	\N	CDN
-sr:competitor:71	Plymouth Argyle	Plymouth	ENG	Rooney, Wayne	sr:venue:660	\N	PA
-sr:competitor:2814	Espanyol Barcelona	Cornella	ESP	Gonzalez, Manolo	sr:venue:1307	\N	ESP
-sr:competitor:2962	NEC Nijmegen	Nijmegen	NLD	Meijer, Rogier	sr:venue:689	\N	NIJ
-sr:competitor:2672	Bayern Munich	Munich	DEU	Kompany, Vincent	sr:venue:574	\N	BMU
-sr:competitor:2681	Bayer Leverkusen	Leverkusen	DEU	Alonso, Xabi	sr:venue:593	\N	LEV
-sr:competitor:1653	AS Monaco	Fontvieille	FRA	Hutter, Adi	sr:venue:831	\N	ASM
-sr:competitor:1644	Paris Saint-Germain	Paris	FRA	Enrique, Luis	sr:venue:843	\N	PSG
-sr:competitor:1662	Le Havre AC	Le Havre	FRA	Digard, Didier	sr:venue:46514	\N	HAC
-sr:competitor:1649	Olympique Lyon	Lyon	FRA	Sage, Pierre	sr:venue:17406	\N	OL
-sr:competitor:1031053	AVS Futebol SAD	Vila das Aves	PRT	Ramos, Daniel	sr:venue:8249	\N	AVS
-sr:competitor:36365	Casa Pia Lisbon	Lisbon	PRT	Pereira, Joao	sr:venue:43626	\N	CAS
-sr:competitor:29	Stoke City	Stoke	ENG	Pelach, Narcis	sr:venue:1135	\N	STK
-sr:competitor:12	Sheffield Wednesday	Sheffield	ENG	Rohl, Danny	sr:venue:2547	\N	SHW
-sr:competitor:2955	FC Twente Enschede	Enschede	NLD	Oosting, Joseph	sr:venue:584	\N	TWE
-sr:competitor:2950	AZ Alkmaar	Alkmaar	NLD	Martens, Maarten	sr:venue:615	\N	AZA
-sr:competitor:36360	RB Leipzig	Leipzig	DEU	Rose, Marco	sr:venue:850	\N	RBL
-sr:competitor:2547	Union Berlin	Berlin	DEU	Svensson, Bo	sr:venue:578	\N	UNI
-sr:competitor:2677	VfB Stuttgart	Stuttgart	DEU	Hoeness, Sebastian	sr:venue:648	\N	VFB
-sr:competitor:1661	OGC Nice	Nice	FRA	Haise, Franck	sr:venue:13184	\N	NIC
-sr:competitor:3001	Sporting Lisbon	Lisbon	PRT	Pereira, Joao	sr:venue:910	\N	SPO
-sr:competitor:3010	Gil Vicente Barcelos	Barcelos	PRT	Pinheiro, Bruno	sr:venue:2539	\N	GIL
-sr:competitor:6	Burnley FC	Burnley	ENG	Parker, Scott	sr:venue:806	\N	BUR
-sr:competitor:34	Leeds United	Leeds	ENG	Farke, Daniel	sr:venue:2223	\N	LEE
-sr:competitor:2	Portsmouth FC	Portsmouth	ENG	Mousinho, John	sr:venue:638	\N	POR
-sr:competitor:96	Hull City	Hull	ENG	Walter, Tim	sr:venue:1138	\N	HUL
-sr:competitor:2961	Willem II Tilburg	Tilburg	NLD	Maes, Peter	sr:venue:826	\N	WIL
-sr:competitor:2534	Werder Bremen	Bremen	DEU	Werner, Ole	sr:venue:821	\N	SVW
-sr:competitor:1643	Lille OSC	Lille	FRA	Genesio, Bruno	sr:venue:837	\N	LIL
-sr:competitor:3009	Vitoria SC Guimaraes	Guimaraes	PRT	Borges, Rui	sr:venue:1137	\N	VIT
-sr:competitor:36	Middlesbrough FC	Middlesbrough	ENG	Carrick, Michael	sr:venue:743	\N	MID
-sr:competitor:2959	Feyenoord Rotterdam	Rotterdam	NLD	Priske, Brian	sr:venue:612	\N	FEY
-sr:competitor:2527	Borussia Monchengladbach	Monchengladbach	DEU	Seoane, Gerardo	sr:venue:788	\N	BMG
-sr:competitor:1648	RC Lens	Lens	FRA	Still, Will	sr:venue:835	\N	RCL
-sr:competitor:2999	SC Braga	Braga	PRT	Carvalhal, Carlos	sr:venue:951	\N	BRA
-sr:competitor:24	Watford FC	Watford	ENG	Cleverley, Tom	sr:venue:813	\N	WAT
-sr:competitor:2979	Go Ahead Eagles	Deventer	NLD	Simonis, Paul	sr:venue:3293	\N	GAE
-sr:competitor:2524	VfL Wolfsburg	Wolfsburg	DEU	Hasenhuttl, Ralph	sr:venue:816	\N	WOB
-sr:competitor:1715	Stade Brest 29	Brest	FRA	Roy, Eric	sr:venue:1858	\N	STB
-sr:competitor:3036	Rio Ave FC	Vila do Conde	PRT	Petit	sr:venue:2013	\N	RAV
-sr:competitor:8	West Bromwich Albion	West Bromwich	ENG	Corberan, Carlos	sr:venue:1136	\N	WBA
-sr:competitor:61	Cardiff City	Cardiff	WAL	Riza, Omer	sr:venue:1514	\N	CAC
-sr:competitor:2951	FC Groningen	Groningen	NLD	Lukkien, Dick	sr:venue:35438	\N	GRO
-sr:competitor:2556	FSV Mainz	Mainz	DEU	Henriksen, Bo	sr:venue:2406	\N	M05
-sr:competitor:1658	Stade Rennes	Rennes	FRA	Sampaoli, Jorge	sr:venue:844	\N	REN
-sr:competitor:3014	Moreirense FC	Moreira de Conegos	PRT	Peixoto, Cesar	sr:venue:5312	\N	MOR
-sr:competitor:46	Blackburn Rovers	Blackburn	ENG	Eustace, John	sr:venue:631	\N	BLA
-sr:competitor:2964	SC Heerenveen	Heerenveen	NLD	van Persie, Robin	sr:venue:569	\N	HEE
-sr:competitor:5885	1. FC Heidenheim	Heidenheim an der Brenz	DEU	Schmidt, Frank	sr:venue:34054	\N	FCH
-sr:competitor:1678	AS Saint-Etienne	Saint Etienne	FRA	Dall'Oglio, Oliver	sr:venue:845	\N	STE
-sr:competitor:4500	Estoril Praia	Estoril	PRT	Cathro, Ian	sr:venue:5326	\N	EST
-sr:competitor:74	Swansea City	Swansea	WAL	Williams, Luke	sr:venue:1689	\N	SWA
-sr:competitor:95	Oxford United	Oxford	ENG	Buckingham, Des	sr:venue:2366	\N	OXU
-sr:competitor:2947	NAC Breda	Breda	NLD	Hoefkens, Carl	sr:venue:2081	\N	BRE
-sr:competitor:2569	TSG Hoffenheim	Sinsheim	DEU	Ilzer, Christian	sr:venue:1089	\N	TSG
-sr:competitor:1647	FC Nantes	Nantes	FRA	Kombouare, Antoine	sr:venue:953	\N	FCN
-sr:competitor:3002	FC Porto	Porto	PRT	Vitor Bruno	sr:venue:907	\N	FCP
-sr:competitor:58	Bristol City	Bristol	ENG	Hogg, Chris	sr:venue:2505	\N	BRC
-sr:competitor:2960	Sparta Rotterdam	Rotterdam	NLD	Steijn, Maurice	sr:venue:656	\N	SPA
-sr:competitor:2526	FC St. Pauli	Hamburg	DEU	Blessin, Alexander	sr:venue:791	\N	STP
-sr:competitor:1659	Strasbourg Alsace	Strasbourg	FRA	Rosenior, Liam	sr:venue:847	\N	RCS
-sr:competitor:49531	FC Famalicao	Vila Nova de Famalicao	PRT	Evangelista, Armando	sr:venue:16520	\N	FAM
-sr:competitor:25	Millwall FC	London	ENG	Harris, Neil	sr:venue:2352	\N	MIL
-sr:competitor:1	Queens Park Rangers	London	ENG	Cifuentes, Marti	sr:venue:1693	\N	QPR
-sr:competitor:2956	RKC Waalwijk	Waalwijk	NLD	Fraser, Henk	sr:venue:685	\N	WAA
-sr:competitor:2542	VfL Bochum	Bochum	DEU	Hecking, Dieter	sr:venue:738	\N	BOC
-sr:competitor:1684	Angers SCO	Angers	FRA	Dujeux, Alexandre	sr:venue:19889	\N	ANG
-sr:competitor:2995	Boavista Porto	Porto	PRT	Bacci, Cristiano	sr:venue:14556	\N	BFC
-sr:competitor:15	Sheffield United	Sheffield	ENG	Wilder, Chris	sr:venue:598	\N	SHU
-sr:competitor:11	Coventry City	Coventry	ENG	Carr, Rhys	sr:venue:2194	\N	COV
-sr:competitor:2957	Fortuna Sittard	Sittard-Geleen	NLD	Buijs, Danny	sr:venue:2769	\N	FOR
-sr:competitor:2600	FC Augsburg	Augsburg	DEU	Thorup, Jess	sr:venue:1655	\N	FCA
-sr:competitor:1646	AJ Auxerre	Auxerre	FRA	Pelissier, Christophe	sr:venue:767	\N	AUX
-sr:competitor:2998	SC Farense	Faro	PRT	Marreco, Toze	sr:venue:12069	\N	FAR
-sr:competitor:21	Preston North End	Preston	ENG	Heckingbottom, Paul	sr:venue:3002	\N	PNE
-sr:competitor:2948	FC Utrecht	Utrecht	NLD	Jans, Ron	sr:venue:786	\N	FCU
-sr:competitor:2674	Eintracht Frankfurt	Frankfurt	DEU	Toppmoller, Dino	sr:venue:67707	\N	SGE
-sr:competitor:1641	Olympique Marseille	Marseille	FRA	De Zerbi, Roberto	sr:venue:839	\N	OM
-sr:competitor:3006	SL Benfica	Lisbon	PRT	Lage, Bruno	sr:venue:902	\N	BEN
-sr:competitor:744135	Estrela Amadora	Amadora	PRT	Ze Augusto	sr:venue:53523	\N	ESA
-sr:competitor:27	Derby County	Derby	ENG	Warne, Paul	sr:venue:852	\N	DER
+sr:competitor:42	Arsenal FC	London	ENG	Arteta, Mikel	sr:venue:624	https://crests.football-data.org/57.png	ARS
+sr:competitor:48	Everton FC	Liverpool	ENG	Dyche, Sean	sr:venue:12	https://crests.football-data.org/62.png	EVE
+sr:competitor:43	Fulham FC	London	ENG	Silva, Marco	sr:venue:611	https://crests.football-data.org/63.png	FUL
+sr:competitor:17	Manchester City	Manchester	ENG	Guardiola, Pep	sr:venue:606	https://crests.football-data.org/65.png	MCI
+sr:competitor:35	Manchester United	Manchester	ENG	Amorim, Ruben	sr:venue:9	https://crests.football-data.org/66.png	MUN
+sr:competitor:33	Tottenham Hotspur	London	ENG	Postecoglou, Ange	sr:venue:28762	https://crests.football-data.org/73.png	TOT
+sr:competitor:3	Wolverhampton Wanderers	Wolverhampton	ENG	O'Neil, Gary	sr:venue:1272	https://crests.football-data.org/76.png	WOL
+sr:competitor:31	Leicester City	Leicester	ENG	Cooper, Steve	sr:venue:2183	https://crests.football-data.org/338.png	LEI
+sr:competitor:32	Ipswich Town	Ipswich	ENG	McKenna, Kieran	sr:venue:2188	https://crests.football-data.org/349.png	IPS
+sr:competitor:7	Crystal Palace	London	ENG	Glasner, Oliver	sr:venue:10	https://crests.football-data.org/354.png	CRY
+sr:competitor:37	West Ham United	London	ENG	Lopetegui, Julen	sr:venue:18379	https://crests.football-data.org/563.png	WHU
+sr:competitor:60	AFC Bournemouth	Bournemouth	ENG	Iraola, Andoni	sr:venue:2990	https://crests.football-data.org/bournemouth.png	BOU
+sr:competitor:2825	Athletic Bilbao	Bilbao	ESP	Valverde, Ernesto	sr:venue:751	https://crests.football-data.org/77.png	ATH
+sr:competitor:2820	CA Osasuna	Pamplona	ESP	Moreno, Vicente	sr:venue:739	https://crests.football-data.org/79.png	OSA
+sr:competitor:2859	Getafe CF	Getafe	ESP	Bordalas, Pepe	sr:venue:608	https://crests.football-data.org/82.png	GET
+sr:competitor:2826	RCD Mallorca	Palma	ESP	Arrasate, Jagoba	sr:venue:760	https://crests.football-data.org/89.png	MAL
+sr:competitor:2824	Real Sociedad San Sebastian	San Sebastian	ESP	Alguacil, Imanol	sr:venue:581	https://crests.football-data.org/92.png	RSO
+sr:competitor:2885	Deportivo Alaves	Vitoria-Gasteiz	ESP	Garcia, Luis	sr:venue:9311	https://crests.football-data.org/263.png	ALA
+sr:competitor:6577	UD Las Palmas	Las Palmas de Gran Canaria	ESP	Martinez, Diego	sr:venue:974	https://crests.football-data.org/275.png	LPA
+sr:competitor:24264	Girona FC	Girona	ESP	Michel	sr:venue:11380	https://crests.football-data.org/298.png	GIR
+sr:competitor:2845	CD Leganes	Leganes	ESP	Jimenez, Borja	sr:venue:14888	https://crests.football-data.org/745.png	LEG
+sr:competitor:2971	PEC Zwolle	Zwolle	NLD	Jansen, Johnny	sr:venue:18994	https://crests.football-data.org/684.png	ZWO
+sr:competitor:30	Brighton & Hove Albion	Falmer	ENG	Hurzeler, Fabian	sr:venue:2443	https://crests.football-data.org/387.png	BRI
+sr:competitor:3011	Santa Clara Azores	Ponta Delgada	PRT	Matos, Vasco	sr:venue:5318	https://crests.football-data.org/5530.png	SCL
+sr:competitor:14	Nottingham Forest	Nottingham	ENG	Espirito Santo, Nuno	sr:venue:2230	https://crests.football-data.org/351.png	NFO
+sr:competitor:2816	Real Betis Seville	Seville	ESP	Pellegrini, Manuel	sr:venue:1045	https://crests.football-data.org/90.png	RBB
+sr:competitor:2818	Rayo Vallecano	Madrid	ESP	Perez, Inigo	sr:venue:2440	https://crests.football-data.org/87.png	RVC
+sr:competitor:2821	RC Celta de Vigo	Vigo	ESP	Giraldez, Claudio	sr:venue:697	https://crests.football-data.org/558.png	RCC
+sr:competitor:2828	Valencia CF	Valencia	ESP	Baraja, Ruben	sr:venue:691	https://crests.football-data.org/95.png	VCF
+sr:competitor:2836	Atletico Madrid	Madrid	ESP	Simeone, Diego	sr:venue:21414	https://crests.football-data.org/78.png	ATM
+sr:competitor:2677	VfB Stuttgart	Stuttgart	DEU	Hoeness, Sebastian	sr:venue:648	https://crests.football-data.org/10.png	VFB
+sr:competitor:2524	VfL Wolfsburg	Wolfsburg	DEU	Hasenhuttl, Ralph	sr:venue:816	https://crests.football-data.org/11.png	WOB
+sr:competitor:2534	Werder Bremen	Bremen	DEU	Werner, Ole	sr:venue:821	https://crests.football-data.org/12.png	SVW
+sr:competitor:2538	SC Freiburg	Freiburg im Breisgau	DEU	Schuster, Julian	sr:venue:61056	https://crests.football-data.org/17.png	SCF
+sr:competitor:2526	FC St. Pauli	Hamburg	DEU	Blessin, Alexander	sr:venue:791	https://crests.football-data.org/20.png	STP
+sr:competitor:36360	RB Leipzig	Leipzig	DEU	Rose, Marco	sr:venue:850	https://crests.football-data.org/721.png	RBL
+sr:competitor:2814	Espanyol Barcelona	Cornella	ESP	Gonzalez, Manolo	sr:venue:1307	https://crests.football-data.org/80.png	ESP
+sr:competitor:2977	Heracles Almelo	Almelo	NLD	Van de Looi, Erwin	sr:venue:729	https://crests.football-data.org/671.png	HER
+sr:competitor:2964	SC Heerenveen	Heerenveen	NLD	van Persie, Robin	sr:venue:569	https://crests.football-data.org/673.png	HEE
+sr:competitor:2952	PSV Eindhoven	Eindhoven	NLD	Bosz, Peter	sr:venue:726	https://crests.football-data.org/674.png	PSV
+sr:competitor:2951	FC Groningen	Groningen	NLD	Lukkien, Dick	sr:venue:35438	https://crests.football-data.org/677.png	GRO
+sr:competitor:1643	Lille OSC	Lille	FRA	Genesio, Bruno	sr:venue:837	https://crests.football-data.org/521.png	LIL
+sr:competitor:2960	Sparta Rotterdam	Rotterdam	NLD	Steijn, Maurice	sr:venue:656	https://crests.football-data.org/6806.png	SPA
+sr:competitor:2947	NAC Breda	Breda	NLD	Hoefkens, Carl	sr:venue:2081	https://crests.football-data.org/512.png	BRE
+sr:competitor:2953	Ajax Amsterdam	Amsterdam	NLD	Farioli, Francesco	sr:venue:577	https://crests.football-data.org/519.png	AJA
+sr:competitor:1644	Paris Saint-Germain	Paris	FRA	Enrique, Luis	sr:venue:843	https://crests.football-data.org/524.png	PSG
+sr:competitor:1658	Stade Rennes	Rennes	FRA	Sampaoli, Jorge	sr:venue:844	https://crests.football-data.org/529.png	REN
+sr:competitor:1648	RC Lens	Lens	FRA	Still, Will	sr:venue:835	https://crests.football-data.org/546.png	RCL
+sr:competitor:1653	AS Monaco	Fontvieille	FRA	Hutter, Adi	sr:venue:831	https://crests.football-data.org/548.png	ASM
+sr:competitor:263	Norwich City	Norwich	ENG	Thorup, Johannes	sr:venue:2221	https://crests.football-data.org/68.png	NOR
+sr:competitor:29	Stoke City	Stoke	ENG	Pelach, Narcis	sr:venue:1135	https://crests.football-data.org/70.png	STK
+sr:competitor:41	Sunderland AFC	Sunderland	ENG	Le Bris, Regis	sr:venue:851	https://crests.football-data.org/71.png	SUN
+sr:competitor:8	West Bromwich Albion	West Bromwich	ENG	Corberan, Carlos	sr:venue:1136	https://crests.football-data.org/74.png	WBA
+sr:competitor:96	Hull City	Hull	ENG	Walter, Tim	sr:venue:1138	https://crests.football-data.org/322.png	HUL
+sr:competitor:6	Burnley FC	Burnley	ENG	Parker, Scott	sr:venue:806	https://crests.football-data.org/328.png	BUR
+sr:competitor:34	Leeds United	Leeds	ENG	Farke, Daniel	sr:venue:2223	https://crests.football-data.org/341.png	LEE
+sr:competitor:24	Watford FC	Watford	ENG	Cleverley, Tom	sr:venue:813	https://crests.football-data.org/346.png	WAT
+sr:competitor:72	Luton Town	Luton	ENG	Edwards, Rob	sr:venue:2178	https://crests.football-data.org/389.png	LUT
+sr:competitor:3002	FC Porto	Porto	PRT	Vitor Bruno	sr:venue:907	https://crests.football-data.org/503.png	FCP
+sr:competitor:4500	Estoril Praia	Estoril	PRT	Cathro, Ian	sr:venue:5326	https://crests.football-data.org/582.png	EST
+sr:competitor:3013	Nacional da Madeir	Funchal	PRT	Margarido, Tiago	sr:venue:1335	https://crests.football-data.org/5529.png	CDN
+sr:competitor:49531	FC Famalicao	Vila Nova de Famalicao	PRT	Evangelista, Armando	sr:venue:16520	https://crests.football-data.org/5531.png	FAM
+sr:competitor:3010	Gil Vicente Barcelos	Barcelos	PRT	Pinheiro, Bruno	sr:venue:2539	https://crests.football-data.org/5533.png	GIL
+sr:competitor:2672	Bayern Munich	Munich	DEU	Kompany, Vincent	sr:venue:574	https://crests.football-data.org/5.png	BMU
+sr:competitor:2681	Bayer Leverkusen	Leverkusen	DEU	Alonso, Xabi	sr:venue:593	https://crests.football-data.org/3.png	LEV
+sr:competitor:2547	Union Berlin	Berlin	DEU	Svensson, Bo	sr:venue:578	https://crests.football-data.org/28.png	UNI
+sr:competitor:12	Sheffield Wednesday	Sheffield	ENG	Rohl, Danny	sr:venue:2547	https://crests.football-data.org/345.png	SHW
+sr:competitor:1642	Montpellier HSC	Montpellier	FRA	Gasset, Jean-Louis	sr:venue:1275	https://crests.football-data.org/518.png	MHS
+sr:competitor:1647	FC Nantes	Nantes	FRA	Kombouare, Antoine	sr:venue:953	https://crests.football-data.org/543.png	FCN
+sr:competitor:1659	Strasbourg Alsace	Strasbourg	FRA	Rosenior, Liam	sr:venue:847	https://crests.football-data.org/576.png	RCS
+sr:competitor:1678	AS Saint-Etienne	Saint Etienne	FRA	Dall'Oglio, Oliver	sr:venue:845	https://crests.football-data.org/527.png	STE
+sr:competitor:1715	Stade Brest 29	Brest	FRA	Roy, Eric	sr:venue:1858	https://crests.football-data.org/512.png	STB
+sr:competitor:25777	FC Arouca	Arouca	PRT	Seabra, Vasco	sr:venue:8289	https://crests.football-data.org/712.png	ARO
+sr:competitor:2961	Willem II Tilburg	Tilburg	NLD	Maes, Peter	sr:venue:826	https://crests.football-data.org/672.png	WIL
+sr:competitor:2962	NEC Nijmegen	Nijmegen	NLD	Meijer, Rogier	sr:venue:689	https://crests.football-data.org/1915.png	NIJ
+sr:competitor:2979	Go Ahead Eagles	Deventer	NLD	Simonis, Paul	sr:venue:3293	https://crests.football-data.org/718.png	GAE
+sr:competitor:3009	Vitoria SC Guimaraes	Guimaraes	PRT	Borges, Rui	sr:venue:1137	https://crests.football-data.org/5543.png	VIT
+sr:competitor:3036	Rio Ave FC	Vila do Conde	PRT	Petit	sr:venue:2013	https://crests.football-data.org/496.png	RAV
+sr:competitor:58	Bristol City	Bristol	ENG	Hogg, Chris	sr:venue:2505	https://crests.football-data.org/387.png	BRC
+sr:competitor:61	Cardiff City	Cardiff	WAL	Riza, Omer	sr:venue:1514	https://crests.football-data.org/715.png	CAC
+sr:competitor:95	Oxford United	Oxford	ENG	Buckingham, Des	sr:venue:2366	https://crests.football-data.org/1082.png	OXU
+sr:competitor:40	Aston Villa	Birmingham	ENG	Emery, Unai	sr:venue:815	https://crests.football-data.org/58.png	AVL
+sr:competitor:38	Chelsea FC	London	ENG	Maresca, Enzo	sr:venue:799	https://crests.football-data.org/61.png	CHE
+sr:competitor:44	Liverpool FC	Liverpool	ENG	Slot, Arne	sr:venue:579	https://crests.football-data.org/64.png	LIV
+sr:competitor:39	Newcastle United	Newcastle upon Tyne	ENG	Howe, Eddie	sr:venue:765	https://crests.football-data.org/67.png	NEW
+sr:competitor:45	Southampton FC	Southampton	ENG	Martin, Russell	sr:venue:2231	https://crests.football-data.org/340.png	SOU
+sr:competitor:50	Brentford FC	London	ENG	Frank, Thomas	sr:venue:53349	https://crests.football-data.org/402.png	BRE
+sr:competitor:2569	TSG Hoffenheim	Sinsheim	DEU	Ilzer, Christian	sr:venue:1089	https://crests.football-data.org/2.png	TSG
+sr:competitor:2673	Borussia Dortmund	Dortmund	DEU	Sahin, Nuri	sr:venue:759	https://crests.football-data.org/4.png	BVB
+sr:competitor:2556	FSV Mainz	Mainz	DEU	Henriksen, Bo	sr:venue:2406	https://crests.football-data.org/15.png	M05
+sr:competitor:3006	SL Benfica	Lisbon	PRT	Lage, Bruno	sr:venue:902	https://crests.football-data.org/1903.png	BEN
+sr:competitor:2527	Borussia Monchengladbach	Monchengladbach	DEU	Seoane, Gerardo	sr:venue:788	https://crests.football-data.org/18.png	BMG
+sr:competitor:2674	Eintracht Frankfurt	Frankfurt	DEU	Toppmoller, Dino	sr:venue:67707	https://crests.football-data.org/19.png	SGE
+sr:competitor:2829	Real Madrid	Madrid	ESP	Ancelotti, Carlo	sr:venue:754	https://crests.football-data.org/86.png	RMA
+sr:competitor:2819	Villarreal CF	Villarreal	ESP	Marcelino	sr:venue:619	https://crests.football-data.org/94.png	VIL
+sr:competitor:2833	Sevilla FC	Seville	ESP	Pimienta, Garcia	sr:venue:730	https://crests.football-data.org/559.png	SEV
+sr:competitor:2955	FC Twente Enschede	Enschede	NLD	Oosting, Joseph	sr:venue:584	https://crests.football-data.org/666.png	TWE
+sr:competitor:2959	Feyenoord Rotterdam	Rotterdam	NLD	Priske, Brian	sr:venue:612	https://crests.football-data.org/675.png	FEY
+sr:competitor:2990	Almere City FC	Almere	NLD	Maduro, Hedwiges	sr:venue:3261	https://crests.football-data.org/1911.png	ALM
+sr:competitor:1661	OGC Nice	Nice	FRA	Haise, Franck	sr:venue:13184	https://crests.football-data.org/522.png	NIC
+sr:competitor:1684	Angers SCO	Angers	FRA	Dujeux, Alexandre	sr:venue:19889	https://crests.football-data.org/532.png	ANG
+sr:competitor:1662	Le Havre AC	Le Havre	FRA	Digard, Didier	sr:venue:46514	https://crests.football-data.org/533.png	HAC
+sr:competitor:1682	Stade Reims	Reims	FRA	Elsner, Luka	sr:venue:1871	https://crests.football-data.org/547.png	SDR
+sr:competitor:46	Blackburn Rovers	Blackburn	ENG	Eustace, John	sr:venue:631	https://crests.football-data.org/59.png	BLA
+sr:competitor:1	Queens Park Rangers	London	ENG	Cifuentes, Marti	sr:venue:1693	https://crests.football-data.org/69.png	QPR
+sr:competitor:74	Swansea City	Swansea	WAL	Williams, Luke	sr:venue:1689	https://crests.football-data.org/72.png	SWA
+sr:competitor:2	Portsmouth FC	Portsmouth	ENG	Mousinho, John	sr:venue:638	https://crests.football-data.org/325.png	POR
+sr:competitor:27	Derby County	Derby	ENG	Warne, Paul	sr:venue:852	https://crests.football-data.org/342.png	DER
+sr:competitor:36	Middlesbrough FC	Middlesbrough	ENG	Carrick, Michael	sr:venue:743	https://crests.football-data.org/343.png	MID
+sr:competitor:25	Millwall FC	London	ENG	Harris, Neil	sr:venue:2352	https://crests.football-data.org/384.png	MIL
+sr:competitor:11	Coventry City	Coventry	ENG	Carr, Rhys	sr:venue:2194	https://crests.football-data.org/1076.png	COV
+sr:competitor:21	Preston North End	Preston	ENG	Heckingbottom, Paul	sr:venue:3002	https://crests.football-data.org/1081.png	PNE
+sr:competitor:3001	Sporting Lisbon	Lisbon	PRT	Pereira, Joao	sr:venue:910	https://crests.football-data.org/498.png	SPO
+sr:competitor:3014	Moreirense FC	Moreira de Conegos	PRT	Peixoto, Cesar	sr:venue:5312	https://crests.football-data.org/583.png	MOR
+sr:competitor:2600	FC Augsburg	Augsburg	DEU	Thorup, Jess	sr:venue:1655	https://crests.football-data.org/712.png	FCA
+sr:competitor:2998	SC Farense	Faro	PRT	Marreco, Toze	sr:venue:12069	https://crests.football-data.org/5602.png	FAR
+sr:competitor:1031053	AVS Futebol SAD	Vila das Aves	PRT	Ramos, Daniel	sr:venue:8249	https://crests.football-data.org/10340.png	AVS
+sr:competitor:2542	VfL Bochum	Bochum	DEU	Hecking, Dieter	sr:venue:738	https://crests.football-data.org/36.png	BOC
+sr:competitor:2573	Holstein Kiel	Kiel	DEU	Rapp, Marcel	sr:venue:659	https://crests.football-data.org/720.png	HOK
+sr:competitor:5885	1. FC Heidenheim	Heidenheim an der Brenz	DEU	Schmidt, Frank	sr:venue:34054	https://crests.football-data.org/44.png	FCH
+sr:competitor:2817	FC Barcelona	Barcelona	ESP	Flick, Hansi	sr:venue:714	https://crests.football-data.org/81.png	BAR
+sr:competitor:2831	Real Valladolid	Valladolid	ESP	Pezzolano, Paulo	sr:venue:880	https://crests.football-data.org/250.png	VLL
+sr:competitor:3204	Union de Santa Fe	Santa Fe de la Vera Cruz	ARG	Gonzalez, Kily	sr:venue:4754	https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Escudo_club_Atl%C3%A9tico_Uni%C3%B3n_de_santa_fe.svg/512px-Escudo_club_Atl%C3%A9tico_Uni%C3%B3n_de_santa_fe.svg.png	UNI
+sr:competitor:3211	CA River Plate (ARG)	Buenos Aires	ARG	Gallardo, Marcelo	sr:venue:1009	https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Escudo_del_C_A_River_Plate.svg/129px-Escudo_del_C_A_River_Plate.svg.png	RIV
+sr:competitor:3208	Velez Sarsfield	Buenos Aires	ARG	Quinteros, Gustavo	sr:venue:1079	https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Escudo_del_Club_Atl%C3%A9tico_V%C3%A9lez_Sarsfield.svg/140px-Escudo_del_Club_Atl%C3%A9tico_V%C3%A9lez_Sarsfield.svg.png	VEL
+sr:competitor:15	Sheffield United	Sheffield	ENG	Wilder, Chris	sr:venue:598	https://crests.football-data.org/356.png	SHU
+sr:competitor:1646	AJ Auxerre	Auxerre	FRA	Pelissier, Christophe	sr:venue:767	https://crests.football-data.org/519.png	AUX
+sr:competitor:2948	FC Utrecht	Utrecht	NLD	Jans, Ron	sr:venue:786	https://crests.football-data.org/676.png	FCU
+sr:competitor:2956	RKC Waalwijk	Waalwijk	NLD	Fraser, Henk	sr:venue:685	https://crests.football-data.org/683.png	WAA
+sr:competitor:2995	Boavista Porto	Porto	PRT	Bacci, Cristiano	sr:venue:14556	https://crests.football-data.org/810.png	BFC
+sr:competitor:744135	Estrela Amadora	Amadora	PRT	Ze Augusto	sr:venue:53523	https://crests.football-data.org/9136.png	ESA
+sr:competitor:3206	Estudiantes de La Plata	La Plata	ARG	Dominguez, Eduardo	sr:venue:1007	https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Escudo_de_Estudiantes_de_La_Plata.svg/125px-Escudo_de_Estudiantes_de_La_Plata.svg.png	ELP
+sr:competitor:191648	Deportivo Riestra	Flores	ARG	Fabbiani, Cristian	sr:venue:17150	https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Escudo_del_Club_Deportivo_Riestra.svg/138px-Escudo_del_Club_Deportivo_Riestra.svg.png	RIE
+sr:competitor:3205	Gimnasia Y Esgrima La Plata	La Plata	ARG	Mendez, Marcelo	sr:venue:12003	https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Club-de-gimnasia-y-esgrima-la-plata-escudo.png/160px-Club-de-gimnasia-y-esgrima-la-plata-escudo.png	GLP
+sr:competitor:3215	Racing Club Avellaneda	Buenos Aires	ARG	Costas, Gustavo	sr:venue:1082	https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Escudo_de_Racing_Club_%282014%29.svg/132px-Escudo_de_Racing_Club_%282014%29.svg.png	RAC
+sr:competitor:7629	CA Huracan	Buenos Aires	ARG	Kudelka, Frank	sr:venue:12021	https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Emblema_oficial_del_Club_Atl%C3%A9tico_Hurac%C3%A1n.svg/98px-Emblema_oficial_del_Club_Atl%C3%A9tico_Hurac%C3%A1n.svg.png	HUR
+sr:competitor:3209	CA Independiente Avellaneda	Buenos Aires	ARG	Vaccari, Julio	sr:venue:1099	https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Escudo_del_Club_Atl%C3%A9tico_Independiente.svg/152px-Escudo_del_Club_Atl%C3%A9tico_Independiente.svg.png	CAI
+sr:competitor:3212	Newell's Old Boys	Rosario	ARG	Lunari, Ricardo	sr:venue:1567	https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Escudo_del_Club_Atl%C3%A9tico_Newell%27s_Old_Boys_de_Rosario.svg/130px-Escudo_del_Club_Atl%C3%A9tico_Newell%27s_Old_Boys_de_Rosario.svg.png	NOB
+sr:competitor:3203	CA Belgrano de Cordoba	Cordoba	ARG	Cruz Real, Juan	sr:venue:4750	https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Escudo_Oficial_del_Club_Atl%C3%A9tico_Belgrano.png/190px-Escudo_Oficial_del_Club_Atl%C3%A9tico_Belgrano.png	BEL
+sr:competitor:6074	CD Godoy Cruz	Mendoza	ARG	Oldra, Daniel	sr:venue:15676	https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Logo_of_CD_Godoy_Cruz_Antonio_Tomba.png/161px-Logo_of_CD_Godoy_Cruz_Antonio_Tomba.png	GOD
+sr:competitor:65668	Barracas Central	Barracas	ARG	Insua, Ruben Dario	sr:venue:69401	https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Barracas_central_logo.svg/124px-Barracas_central_logo.svg.png	BAR
+sr:competitor:3201	CA San Lorenzo de Almagro	Flores	ARG	Russo, Miguel Angel	sr:venue:14324	https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.svg/160px-Escudo_del_Club_Atl%C3%A9tico_San_Lorenzo_de_Almagro.svg.png	SLO
+sr:competitor:3218	Atletico Lanus	Buenos Aires	ARG	Zielinski, Ricardo	sr:venue:981	https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Escudo_de_Lan%C3%BAs.14.png/150px-Escudo_de_Lan%C3%BAs.14.png	LAN
+sr:competitor:36837	CA Platense	Florida	ARG	Gomez, Sergio	sr:venue:12712	https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Escudo_del_Club_Alt%C3%A9tico_Platense.svg/127px-Escudo_del_Club_Alt%C3%A9tico_Platense.svg.png	PLA
+sr:competitor:3217	CA Rosario Central	Rosario	ARG	Holan, Ariel	sr:venue:1329	https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Rosario_Central_shield.jpg/250px-Rosario_Central_shield.jpg	ROS
+sr:competitor:3216	Argentinos Juniors	Buenos Aires	ARG	Zermatten, Cristian	sr:venue:613	https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Asociacion_Atletica_Argentinos_Juniors.svg/160px-Asociacion_Atletica_Argentinos_Juniors.svg.png	ARG
+sr:competitor:36842	Independiente Rivadavia	Mendoza	ARG	Berti, Alfredo Jesus	sr:venue:12031	https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Escudo_del_Club_Independiente_Rivadavia.svg/159px-Escudo_del_Club_Independiente_Rivadavia.svg.png	IRM
+sr:competitor:36839	Defensa y Justicia	Gobernador Julio A. Costa	ARG	De Muner, Pablo Daniel	sr:venue:12025	https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Escudo_del_Club_Social_y_Deportivo_Defensa_y_Justicia.svg/160px-Escudo_del_Club_Social_y_Deportivo_Defensa_y_Justicia.svg.png	DYJ
+sr:competitor:7628	CA Tigre	Buenos Aires	ARG	Dominguez, Sebastian	sr:venue:4738	https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Escudo_del_Club_Atl%C3%A9tico_Tigre_-_2019.svg/125px-Escudo_del_Club_Atl%C3%A9tico_Tigre_-_2019.svg.png	TIG
+sr:competitor:3210	CA Talleres de Cordoba	Cordoba	ARG	Medina, Alexander	sr:venue:2388	https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Escudo_Talleres_2015.svg/154px-Escudo_Talleres_2015.svg.png	CAT
+sr:competitor:4937	Instituto AC Cordoba	Cordoba	ARG	Dabove, Diego	sr:venue:12033	https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Escudo_Instituto_Atletico_Central_Cordoba.png/157px-Escudo_Instituto_Atletico_Central_Cordoba.png	IAC
+sr:competitor:3219	CA Banfield	Buenos Aires	ARG	Munua, Gustavo	sr:venue:634	https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/CA_Banfield_%282014%29.svg/98px-CA_Banfield_%282014%29.svg.png	BAN
+sr:competitor:65676	CA Central Cordoba SE	Santiago del Estero	ARG	De Felippe, Omar	sr:venue:49307	https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Escudo_del_Club_Central_C%C3%B3rdoba_de_Santiago_del_Estero.svg/150px-Escudo_del_Club_Central_C%C3%B3rdoba_de_Santiago_del_Estero.svg.png	CC
+sr:competitor:36833	Atletico Tucuman	San Miguel de Tucuman	ARG	Sava, Facundo	sr:venue:12017	https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Escudo_del_Club_Atletico_Tucuman.svg/136px-Escudo_del_Club_Atletico_Tucuman.svg.png	CAT
+sr:competitor:42338	CA Sarmiento Junin	Junin	ARG	Funes, Martin	sr:venue:8975	https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Escudo_del_Club_Atl%C3%A9tico_Sarmiento_de_Jun%C3%ADn.svg/163px-Escudo_del_Club_Atl%C3%A9tico_Sarmiento_de_Jun%C3%ADn.svg.png	CAS
+sr:competitor:3202	Boca Juniors	Buenos Aires	ARG	Gago, Fernando	sr:venue:44628	https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/CABJ70.png/138px-CABJ70.png	BOC
+sr:competitor:1641	Olympique Marseille	Marseille	FRA	De Zerbi, Roberto	sr:venue:839	https://crests.football-data.org/516.png	OM
+sr:competitor:1649	Olympique Lyon	Lyon	FRA	Sage, Pierre	sr:venue:17406	https://crests.football-data.org/523.png	OL
+sr:competitor:1681	Toulouse FC	Toulouse	FRA	Martinez, Carles	sr:venue:848	https://crests.football-data.org/511.png	TFC
+sr:competitor:2950	AZ Alkmaar	Alkmaar	NLD	Martens, Maarten	sr:venue:615	https://crests.football-data.org/682.png	AZA
+sr:competitor:2957	Fortuna Sittard	Sittard-Geleen	NLD	Buijs, Danny	sr:venue:2769	https://crests.football-data.org/1920.png	FOR
+sr:competitor:2999	SC Braga	Braga	PRT	Carvalhal, Carlos	sr:venue:951	https://crests.football-data.org/5613.png	BRA
+sr:competitor:36365	Casa Pia Lisbon	Lisbon	PRT	Pereira, Joao	sr:venue:43626	https://crests.football-data.org/6618.png	CAS
+sr:competitor:71	Plymouth Argyle	Plymouth	ENG	Rooney, Wayne	sr:venue:660	https://crests.football-data.org/1138.png	PA
 \.
 
 
@@ -9817,6 +9817,7 @@ sr:competitor:27	Derby County	Derby	ENG	Warne, Paul	sr:venue:852	\N	DER
 --
 
 COPY public."User" (id, name, email, "createdAt", password) FROM stdin;
+2	panchoseijas	panchoseijas@gmail.com	2024-11-18 23:12:29.948	$2b$10$n3vT7HhSj4c6E0iSUdkX3uuSqa3U4eSjKCmkx/fzJaMyhzsJiC1yq
 \.
 
 
@@ -10053,7 +10054,7 @@ SELECT pg_catalog.setval('public."Standings_id_seq"', 5807, true);
 -- Name: User_id_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
 --
 
-SELECT pg_catalog.setval('public."User_id_seq"', 1, false);
+SELECT pg_catalog.setval('public."User_id_seq"', 2, true);
 
 
 --
