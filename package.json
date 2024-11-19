@@ -7,6 +7,7 @@
     "dev": "nodemon index.ts",
     "db": "ts-node --esm  prisma/fillDB.ts",
     "logos": "ts-node --esm prisma/syncLogos.ts",
+    "update": "ts-node --esm prisma/updateMatches.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

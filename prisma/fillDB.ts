@@ -27,14 +27,10 @@ const competitionsId = [
 
 const API_KEY = process.env.SPORTSRADAR_API_KEY;
 
-const fetchData = async (
-  endpoint: String,
-  params: any,
-  additionalHeaders?: any
-) => {
+export const fetchData = async (endpoint: String, params: any) => {
   const options = {
     method: "GET",
-    headers: { accept: "application/json", ...additionalHeaders },
+    headers: { accept: "application/json" },
   };
   try {
     const response = await fetch(
