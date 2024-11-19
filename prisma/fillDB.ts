@@ -27,15 +27,22 @@ const competitionsId = [
 
 const API_KEY = process.env.SPORTSRADAR_API_KEY;
 
-const fetchData = async (endpoint: String, params: any) => {
-  const options = { method: "GET", headers: { accept: "application/json" } };
+const fetchData = async (
+  endpoint: String,
+  params: any,
+  additionalHeaders?: any
+) => {
+  const options = {
+    method: "GET",
+    headers: { accept: "application/json", ...additionalHeaders },
+  };
   try {
     const response = await fetch(
       `https://api.sportradar.com/soccer/trial/v4/en${endpoint}.json?api_key=${API_KEY}`,
       options
     );
     if (!response.ok) {
-      console.log(response);
+      // console.log(response);
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
@@ -238,75 +245,3 @@ const fillDatabase = async () => {
 };
 
 //fillDatabase();
-
-const updateTeamLogos = async (logos: Record<string, string>) => {
-  for (const [SN, logoUrl] of Object.entries(logos)) 
-  {
-    try 
-    {
-      const dbTeam = await prisma.team.findFirst({
-        where: { shortName: SN },
-      });
-
-      if (!dbTeam) 
-      {
-        console.log(`Equipo con abreviación ${SN} no encontrado en la base de datos.`);
-        continue;
-      }
-
-      await prisma.team.update({
-        where: { id: dbTeam.id },
-        data: { logo: logoUrl },
-      });
-
-      console.log(`Logo actualizado para el equipo: ${SN}`);
-    } 
-
-    catch (error)
-    {
-      console.error(`Error actualizando logo para ${SN}:`, error);
-    }
-  }
-};
-
-const fetchLogosDictionary = async (): Promise<Record<string, string>> => {
-  try 
-  {
-    const teamsData = await fetchData('https://api.football-data.org/v4/competition/PL/teams', {}); 
-    const logosDictionary: Record<string, string> = {};
-
-    teamsData.teams.forEach((team: any) => {
-      if (team.tla && team.crest) 
-      {
-        logosDictionary[team.tla] = team.crest;
-      }
-
-    });
-
-    return logosDictionary;
-
-  } 
-
-  catch (error) 
-  {
-    console.error("Error fetching logos dictionary:", error);
-    return {};
-  }
-};
-
-const syncTeamLogos = async () => {
-  try 
-  {
-    const logosDictionary = await fetchLogosDictionary();
-    console.log("Logos obtenidos de la API:", logosDictionary);
-
-    await updateTeamLogos(logosDictionary);
-    console.log("Todos los logos han sido actualizados.");
-  } 
-  catch (error) 
-  {
-    console.error("Error sincronizando los logos:", error);
-  }
-};
-
-syncTeamLogos();
