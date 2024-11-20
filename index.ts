@@ -6,6 +6,7 @@ import competitionRoutes from "./routes/competitionRoutes";
 import authRoutes from "./routes/authRoutes";
 import matchRoutes from "./routes/matchRoutes";
 import teamRoutes from "./routes/teamsRoutes";
+import followingRoutes from "./routes/followingRoutes";
 
 dotenv.config();
 const app = express();
@@ -25,6 +26,7 @@ app.use("/competition", competitionRoutes);
 app.use("/auth", authRoutes);
 app.use("/matches", matchRoutes);
 app.use("/team", teamRoutes);
+app.use("/following", followingRoutes)
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Promiedos!!!");
