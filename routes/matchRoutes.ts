@@ -101,4 +101,62 @@ router.get("/:matchId/info", async (req: Request, res: Response) => {
   }
 });
 
+router.get("/teams/:teamIds", async (req: Request, res: Response) => {
+  const { date } = req.query;
+  const { teamIds } = req.params;
+  let teamIdsArray: string[] = [];
+  try {
+    teamIdsArray = JSON.parse(teamIds).map((team: { id: string }) => team.id);
+  } catch (error) {
+    res.status(400).json({ message: "Invalid teamIds format." });
+    return;
+  }
+
+  console.log("array", teamIdsArray);
+
+  try {
+    const startDate = new Date(date as string);
+    startDate.setHours(0, 0, 0, 0);
+    const endDate = new Date(date as string);
+    endDate.setHours(23, 59, 59, 999);
+
+    const matchesByCompetition = await prisma.match.findMany({
+      where: {
+        start_time: {
+          gte: startDate,
+          lte: endDate,
+        },
+        OR: [
+          { homeTeamId: { in: teamIdsArray } },
+          { awayTeamId: { in: teamIdsArray } },
+        ],
+      },
+      include: {
+        competition: true,
+        homeTeam: {
+          select: {
+            name: true,
+            logo: true,
+          },
+        },
+        awayTeam: {
+          select: {
+            name: true,
+            logo: true,
+          },
+        },
+      },
+      orderBy: {
+        start_time: "asc",
+      },
+    });
+
+    res.json(matchesByCompetition);
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({ message: "An error occurred while fetching matches." });
+  }
+});
 export default router;
