@@ -42,13 +42,14 @@ router.get("/:teamId", async (req: Request, res: Response) => {
     const { teamId } = req.params
 
     try {
-        const team = await prisma.team.findUnique({
-            where: { id: teamId },
-            include: { jerseys: true }
+        const jersey = await prisma.jersey.findFirst({
+            where: { teamId: teamId },
         })
         
         const formattedTeam = {
-            primary_color: team?.jerseys?.baseColor,
+            teamId: teamId,
+            baseColor: jersey?.baseColor,
+            sleeveColor: jersey?.sleeveColor
         };
         
         res.json(formattedTeam)
