@@ -1,9 +1,11 @@
 import dotenv from "dotenv";
 import express, { Request, Response } from "express";
 import prisma from "./prisma/client";
-import competitionRoutes from "./routes/competitionRoutes";
 import cors from "cors";
+import competitionRoutes from "./routes/competitionRoutes";
 import authRoutes from "./routes/authRoutes";
+import matchRoutes from "./routes/matchRoutes";
+import teamRoutes from "./routes/teamsRoutes";
 
 dotenv.config();
 const app = express();
@@ -21,6 +23,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/competition", competitionRoutes);
 app.use("/auth", authRoutes);
+app.use("/matches", matchRoutes);
+app.use("/team", teamRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Promiedos!!!");
@@ -81,6 +85,7 @@ app.get("/matches", async (req: Request, res: Response) => {
       },
       []
     );
+    console.log(groupedByCompetition);
 
     res.json(groupedByCompetition);
   } catch (e: any) {
