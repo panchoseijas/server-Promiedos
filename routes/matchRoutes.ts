@@ -1,6 +1,8 @@
 import { Router, Request, Response } from "express";
 import prisma from "../prisma/client";
 import { fetchData } from "../prisma/fillDB";
+import { getTeamsById } from "../prisma/repositories/teams";
+import { getCompetitionByName } from "../prisma/repositories/competition";
 const router = Router();
 
 router.get("/:matchId", async (req: Request, res: Response) => {
@@ -63,23 +65,64 @@ router.get("/:matchId/h2h", async (req: Request, res: Response) => {
       `/competitors/${homeTeamId}/versus/${awayTeamId}/summaries`,
       {}
     );
+
+    if (!data) {
+      res.status(403).json({ error: "Actualizar Sportsradar APIKEY" });
+      return;
+    }
+
     const h2h = {
       homeTeam,
       awayTeam,
-      lastMatches: data.last_meetings.map((match: any) => ({
-        id: match.sport_event.id,
-        competition: match.sport_event.sport_event_context.competition.name,
-        start_time: match.sport_event.start_time,
-        home_team: match.sport_event.competitors[0],
-        away_team: match.sport_event.competitors[1],
-        scoreHome: match.sport_event_status.period_scores[1].home_score,
-        scoreAway: match.sport_event_status.period_scores[1].away_score,
-      })),
+      lastMatches: await Promise.all(
+        data.last_meetings.map(async (match: any) => ({
+          id: match.sport_event.id,
+          start_time: match.sport_event.start_time,
+          scoreHome: match.sport_event_status.period_scores[1].home_score,
+          scoreAway: match.sport_event_status.period_scores[1].away_score,
+          status: match.sport_event_status.status,
+          competition: {
+            id: match.sport_event.sport_event_context.competition.id,
+            name: match.sport_event.sport_event_context.competition.name,
+            logo: "",
+          },
+          homeTeam: await getTeamsById(match.sport_event.competitors[0].id),
+          awayTeam: await getTeamsById(match.sport_event.competitors[1].id),
+        }))
+      ),
     };
+    // {
+    //     id: match.id,
+    //     start_time: match.start_time,
+    //     scoreHome: match.scoreHome,
+    //     scoreAway: match.scoreAway,
+    //     status: match.status,
+    //     competition: {
+    //       id: match.competition.id,
+    //       name: match.competition.name,
+    //       country: match.competition.country,
+    //       logo: match.competition.logo,
+    //     },
+    //     homeTeam: {
+    //       id: match.homeTeamId,
+    //       name: match.homeTeam.name,
+    //       logo: match.homeTeam.logo,
+    //     },
+    //     awayTeam: {
+    //       id: match.awayTeamId,
+    //       name: match.awayTeam.name,
+    //       logo: match.awayTeam.logo,
+    //     },
+    //   };
 
     res.json(h2h);
   } catch (e: any) {
     console.error(e);
+    // if (e.response.status === 403) {
+    //   res.json({ error: "Actualizar Sportsradar APIKEY" });
+    // } else {
+    //   res.json({ error: e.message });
+    // }
     res.json({ error: e.message });
   }
 });
@@ -111,8 +154,6 @@ router.get("/teams/:teamIds", async (req: Request, res: Response) => {
     res.status(400).json({ message: "Invalid teamIds format." });
     return;
   }
-
-  console.log("array", teamIdsArray);
 
   try {
     const startDate = new Date(date as string);

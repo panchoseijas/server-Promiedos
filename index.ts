@@ -9,6 +9,8 @@ import teamRoutes from "./routes/teamsRoutes";
 import followingRoutes from "./routes/followingRoutes";
 import userRoutes from "./routes/userRoutes";
 import unfollowRoutes from "./routes/unfollowRoutes";
+import { getMatchesByDate } from "./prisma/repositories/matches";
+import { start } from "repl";
 
 dotenv.config();
 const app = express();
@@ -40,39 +42,35 @@ app.get("/matches", async (req: Request, res: Response) => {
   const { date } = req.query;
 
   try {
-    const startDate = new Date(date as string);
-    startDate.setHours(0, 0, 0, 0);
-    const endDate = new Date(date as string);
-    endDate.setHours(23, 59, 59, 999);
+    const matches = await getMatchesByDate(date as string);
 
-    const matchesByCompetition = await prisma.match.findMany({
-      where: {
-        start_time: {
-          gte: startDate,
-          lte: endDate,
+    const formattedMatchDetails = matches.map((match) => {
+      return {
+        id: match.id,
+        start_time: match.start_time,
+        scoreHome: match.scoreHome,
+        scoreAway: match.scoreAway,
+        status: match.status,
+        competition: {
+          id: match.competition.id,
+          name: match.competition.name,
+          country: match.competition.country,
+          logo: match.competition.logo,
         },
-      },
-      include: {
-        competition: true,
         homeTeam: {
-          select: {
-            name: true,
-            logo: true,
-          },
+          id: match.homeTeamId,
+          name: match.homeTeam.name,
+          logo: match.homeTeam.logo,
         },
         awayTeam: {
-          select: {
-            name: true,
-            logo: true,
-          },
+          id: match.awayTeamId,
+          name: match.awayTeam.name,
+          logo: match.awayTeam.logo,
         },
-      },
-      orderBy: {
-        start_time: "asc",
-      },
+      };
     });
 
-    const groupedByCompetition = matchesByCompetition.reduce(
+    const groupedByCompetition = formattedMatchDetails.reduce(
       (acc: any, match) => {
         const competitionId = match.competition.id;
         const index = acc.findIndex(
@@ -91,7 +89,6 @@ app.get("/matches", async (req: Request, res: Response) => {
       },
       []
     );
-    console.log(groupedByCompetition);
 
     res.json(groupedByCompetition);
   } catch (e: any) {
@@ -102,8 +99,7 @@ app.get("/matches", async (req: Request, res: Response) => {
 
 app.get("/teams/:teamIdsArray", async (req: Request, res: Response) => {
   const { teamIdsArray } = req.params;
-  console.log("array", teamIdsArray);
-  console.log(JSON.parse(teamIdsArray));
+
   try {
     const teams = await prisma.team.findMany({
       where: {

@@ -18,7 +18,7 @@ router.post(
       const updatedUser = await prisma.user.update({
         where: { id: parseInt(userId) },
         data: {
-          folllowedCompetitions: {
+          followedCompetitions: {
             disconnect: { id: competitionId },
           },
         },
@@ -26,7 +26,7 @@ router.post(
           followedTeams: {
             select: { id: true },
           },
-          folllowedCompetitions: { select: { id: true } },
+          followedCompetitions: { select: { id: true } },
         },
       });
 
@@ -56,7 +56,7 @@ router.post("/team/:teamId", async (req: Request, res: Response) => {
         followedTeams: {
           select: { id: true },
         },
-        folllowedCompetitions: { select: { id: true } },
+        followedCompetitions: { select: { id: true } },
       },
     });
 

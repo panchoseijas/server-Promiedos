@@ -38,7 +38,6 @@ export const fetchData = async (endpoint: String, params: any) => {
       options
     );
     if (!response.ok) {
-      // console.log(response);
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
