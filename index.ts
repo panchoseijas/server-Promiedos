@@ -46,56 +46,72 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.get("/matches", async (req: Request, res: Response) => {
-  const { date } = req.query;
+  const { date, teamIds, competitionIds } = req.query;
+  if (!date) {
+    res.json({ error: "Date is required" });
+    return;
+  }
+  const teamIdsArray = teamIds ? (teamIds as string).split(",") : [];
+  const competitionIdsArray = competitionIds
+    ? (competitionIds as string).split(",")
+    : [];
 
   try {
+    if (teamIdsArray.length > 0 || competitionIdsArray.length > 0) {
+      const teamsMatches = await getMatchesByDate(date as string, {
+        OR: [
+          { homeTeamId: { in: teamIdsArray } },
+          { awayTeamId: { in: teamIdsArray } },
+        ],
+      });
+
+      const competitionMatches = await getMatchesByDate(date as string, {
+        competitionId: { in: competitionIdsArray },
+      });
+
+      const groupedByCompetition = competitionMatches.reduce(
+        (acc: any, match) => {
+          const competitionId = match.competition.id;
+          const index = acc.findIndex(
+            (item: any) => item.competitionId === competitionId
+          );
+          if (index === -1) {
+            acc.push({
+              competitionId,
+              competition: match.competition,
+              matches: [match],
+            });
+          } else {
+            acc[index].matches.push(match);
+          }
+          return acc;
+        },
+        []
+      );
+
+      res.json({
+        followedTeams: teamsMatches,
+        groupedByCompetition: groupedByCompetition,
+      });
+      return;
+    }
     const matches = await getMatchesByDate(date as string);
-
-    const formattedMatchDetails = matches.map((match) => {
-      return {
-        id: match.id,
-        start_time: match.start_time,
-        scoreHome: match.scoreHome,
-        scoreAway: match.scoreAway,
-        status: match.status,
-        competition: {
-          id: match.competition.id,
-          name: match.competition.name,
-          country: match.competition.country,
-          logo: match.competition.logo,
-        },
-        homeTeam: {
-          id: match.homeTeamId,
-          name: match.homeTeam.name,
-          logo: match.homeTeam.logo,
-        },
-        awayTeam: {
-          id: match.awayTeamId,
-          name: match.awayTeam.name,
-          logo: match.awayTeam.logo,
-        },
-      };
-    });
-
-    const groupedByCompetition = formattedMatchDetails.reduce(
-      (acc: any, match) => {
-        const competitionId = match.competition.id;
-        const index = acc.findIndex(
-          (item: any) => item.competitionId === competitionId
-        );
-        if (index === -1) {
-          acc.push({
-            competitionId,
-            competition: match.competition,
-            matches: [match],
-          });
-        } else {
-          acc[index].matches.push(match);
-        }
-        return acc;
-      },
-      []
-    );
+    const groupedByCompetition = matches.reduce((acc: any, match) => {
+      const competitionId = match.competition.id;
+      const index = acc.findIndex(
+        (item: any) => item.competitionId === competitionId
+      );
+      if (index === -1) {
+        acc.push({
+          competitionId,
+          competition: match.competition,
+          matches: [match],
+        });
+      } else {
+        acc[index].matches.push(match);
+      }
+      return acc;
+    }, []);
 
     res.json(groupedByCompetition);
   } catch (e: any) {
@@ -162,10 +178,7 @@ app.get(
 
 app.get("/search", async (req: Request, res: Response) => {
   const { filters, query } = req.query;
-  // if (!query) {
-  //   res.json({ error: "Query is required" });
-  //   return;
-  // }
+
   const queryArray = query as string;
   const filterArray = filters ? (filters as string).split(",") : [];
 
@@ -186,7 +199,7 @@ app.get("/search", async (req: Request, res: Response) => {
           country: team.country,
         };
       });
-      res.json({ teams: teamsResponse, competitions: [] });
+      res.json({ teams: teamsResponse.splice(0, 5), competitions: [] });
       return;
     }
 
@@ -198,7 +211,7 @@ app.get("/search", async (req: Request, res: Response) => {
           },
         },
       });
-      res.json({ teams: [], competitions });
+      res.json({ teams: [], competitions: competitions.splice(0, 5) });
       return;
     }
 
@@ -227,7 +240,7 @@ app.get("/search", async (req: Request, res: Response) => {
       };
     });
 
-    res.json({ teams: teamsResponse, competitions });
+    res.json({ teams: teamsResponse.splice(0, 5), competitions });
   } catch (e: any) {
     console.error(e);
     res.json({ error: e.message });

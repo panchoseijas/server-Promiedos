@@ -114,4 +114,41 @@ router.get("/:teamId/form", async (req: Request, res: Response) => {
   }
 });
 
+router.get("/:teamId/players", async (req: Request, res: Response) => {
+  const { teamId } = req.params;
+  try {
+    const players = await prisma.player.findMany({
+      where: { teamId },
+    });
+
+    const jerseys = await prisma.jersey.findMany({
+      where: { teamId },
+    });
+
+    const groupedPlayers = players.reduce((acc, player) => {
+      const key = player.position || "unknown";
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(player);
+      return acc;
+    }, {} as { [key: string]: typeof players });
+    console.log(groupedPlayers);
+
+    const manager = await prisma.team.findUnique({
+      where: { id: teamId },
+      select: { managerName: true },
+    });
+
+    res.json({
+      players: groupedPlayers,
+      jerseys,
+      manager: manager?.managerName,
+    });
+  } catch (e: any) {
+    console.error(e);
+    res.json({ error: e.message });
+  }
+});
+
 export default router;

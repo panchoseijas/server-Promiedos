@@ -9,7 +9,9 @@ router.post(
   "/register",
   [
     body("email").isEmail().withMessage("Invalid email address"),
-    body("username").isLength({ min: 1 }).withMessage("Username is required"),
+    body("username")
+      .isLength({ min: 3 })
+      .withMessage("Username must have at least 3 characters"),
     body("password")
       .isLength({ min: 6 })
       .withMessage("Password must be at least 6 characters long")
@@ -94,4 +96,30 @@ router.post("/login", async (req: Request, res: Response) => {
   }
 });
 
+router.post("/check-password", async (req: Request, res: Response) => {
+  const { userId, password } = req.body;
+  try {
+    const user = await prisma.user.findFirst({
+      where: {
+        id: userId,
+      },
+    });
+
+    if (!user) {
+      res.status(404).json({ message: "User not found" });
+      return;
+    }
+
+    const passwordMatch = bcrypt.compareSync(password, user.password);
+    if (!passwordMatch) {
+      res.status(401).json({ message: "Invalid password" });
+      return;
+    }
+
+    res.status(200).json({ message: "Password is correct" });
+  } catch (e: any) {
+    console.error(e);
+    res.json({ error: e.message });
+  }
+});
 export default router;
