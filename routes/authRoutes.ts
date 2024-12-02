@@ -2,45 +2,65 @@ import { Router, Request, Response } from "express";
 import prisma from "../prisma/client";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { body, validationResult } from "express-validator";
 const router = Router();
 
-router.post("/register", async (req: Request, res: Response) => {
-  const { email, username, password } = req.body;
-
-  try {
-    const userExists = await prisma.user.findFirst({
-      where: {
-        OR: [{ email }, { username: username }],
-      },
-    });
-    if (userExists) {
-      res
-        .status(409)
-        .json({ message: "User already exists", field: "username" });
+router.post(
+  "/register",
+  [
+    body("email").isEmail().withMessage("Invalid email address"),
+    body("username").isLength({ min: 1 }).withMessage("Username is required"),
+    body("password")
+      .isLength({ min: 6 })
+      .withMessage("Password must be at least 6 characters long")
+      .matches(/[A-Z]/)
+      .withMessage("Password must have at least one uppercase letter")
+      .matches(/\d/)
+      .withMessage("Password must have at least one number"),
+  ],
+  async (req: Request, res: Response) => {
+    const { email, username, password } = req.body;
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      res.status(400).json({ errors: errors.array() });
       return;
     }
 
-    const user = await prisma.user.create({
-      data: {
-        email,
-        username,
-        password: bcrypt.hashSync(password, 10),
-      },
-    });
-    res.json(user);
-  } catch (e: any) {
-    console.error(e);
-    res.json({ error: e.message });
+    try {
+      const userExists = await prisma.user.findFirst({
+        where: {
+          OR: [{ email }, { username }],
+        },
+      });
+      if (userExists) {
+        res
+          .status(409)
+          .json({ message: "User already exists", field: "username" });
+        return;
+      }
+
+      const user = await prisma.user.create({
+        data: {
+          email,
+          username,
+          password: bcrypt.hashSync(password, 10),
+        },
+      });
+      res.json(user);
+    } catch (e: any) {
+      console.error(e);
+      res.json({ error: e.message });
+    }
   }
-});
+);
 
 router.post("/login", async (req: Request, res: Response) => {
   const { email, password } = req.body;
-
+  const lowerCaseEmail = email.toLowerCase();
   try {
     const user = await prisma.user.findFirst({
       where: {
-        email,
+        email: lowerCaseEmail,
       },
       include: {
         followedTeams: {

@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import express, { Request, Response } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import prisma from "./prisma/client";
 import cors from "cors";
 import competitionRoutes from "./routes/competitionRoutes";
@@ -8,9 +8,9 @@ import matchRoutes from "./routes/matchRoutes";
 import teamRoutes from "./routes/teamsRoutes";
 import followingRoutes from "./routes/followingRoutes";
 import userRoutes from "./routes/userRoutes";
-import unfollowRoutes from "./routes/unfollowRoutes";
+
 import { getMatchesByDate } from "./prisma/repositories/matches";
-import { start } from "repl";
+import authMiddleware from "./middleware/authMiddleware";
 
 dotenv.config();
 const app = express();
@@ -26,13 +26,20 @@ app.use(
 );
 app.use(express.urlencoded({ extended: true }));
 
+app.use((req: Request, res: Response, next: NextFunction) => {
+  if (req.path === "/auth/register" || req.path === "/auth/login") {
+    next();
+    return;
+  }
+  return authMiddleware(req, res, next);
+});
+
 app.use("/competition", competitionRoutes);
 app.use("/auth", authRoutes);
 app.use("/matches", matchRoutes);
 app.use("/team", teamRoutes);
 app.use("/user", userRoutes);
 app.use("/follow", followingRoutes);
-app.use("/unfollow", unfollowRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Promiedos!!!");
@@ -152,6 +159,80 @@ app.get(
     }
   }
 );
+
+app.get("/search", async (req: Request, res: Response) => {
+  const { filters, query } = req.query;
+  // if (!query) {
+  //   res.json({ error: "Query is required" });
+  //   return;
+  // }
+  const queryArray = query as string;
+  const filterArray = filters ? (filters as string).split(",") : [];
+
+  try {
+    if (filterArray.includes("teams")) {
+      const teams = await prisma.team.findMany({
+        where: {
+          name: {
+            contains: query as string,
+          },
+        },
+      });
+      const teamsResponse = teams.map((team) => {
+        return {
+          id: team.id,
+          name: team.name,
+          logo: team.logo,
+          country: team.country,
+        };
+      });
+      res.json({ teams: teamsResponse, competitions: [] });
+      return;
+    }
+
+    if (filterArray.includes("competitions")) {
+      const competitions = await prisma.competition.findMany({
+        where: {
+          name: {
+            contains: query as string,
+          },
+        },
+      });
+      res.json({ teams: [], competitions });
+      return;
+    }
+
+    const teams = await prisma.team.findMany({
+      where: {
+        name: {
+          contains: query as string,
+        },
+      },
+    });
+
+    const competitions = await prisma.competition.findMany({
+      where: {
+        name: {
+          contains: query as string,
+        },
+      },
+    });
+
+    const teamsResponse = teams.map((team) => {
+      return {
+        id: team.id,
+        name: team.name,
+        logo: team.logo,
+        country: team.country,
+      };
+    });
+
+    res.json({ teams: teamsResponse, competitions });
+  } catch (e: any) {
+    console.error(e);
+    res.json({ error: e.message });
+  }
+});
 
 app.listen(port, host, () => {
   console.log(`Server is running on http://${host}:${port}`);
