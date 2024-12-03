@@ -240,7 +240,10 @@ app.get("/search", async (req: Request, res: Response) => {
       };
     });
 
-    res.json({ teams: teamsResponse.splice(0, 5), competitions });
+    res.json({
+      teams: teamsResponse.splice(0, 3),
+      competitions: competitions.slice(0, 2),
+    });
   } catch (e: any) {
     console.error(e);
     res.json({ error: e.message });

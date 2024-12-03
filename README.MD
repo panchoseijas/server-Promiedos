@@ -19,4 +19,5 @@ SPORTSRADAR_API_KEY=
 1 -- Poner en HOST la ip de tu computadora
 2 -- Agregar al .env las variables que faltan, (estan en Discord)
 3 -- npm i
-4 -- npm run dev
+4 -- npx prisma generate
+5 -- npm run dev
