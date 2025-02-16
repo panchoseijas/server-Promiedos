@@ -17,16 +17,16 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: public; Type: SCHEMA; Schema: -; Owner: avnadmin
+-- Name: public; Type: SCHEMA; Schema: -; Owner: juanseijas
 --
 
 -- *not* creating schema, since initdb creates it
 
 
-ALTER SCHEMA public OWNER TO avnadmin;
+ALTER SCHEMA public OWNER TO juanseijas;
 
 --
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: avnadmin
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: juanseijas
 --
 
 COMMENT ON SCHEMA public IS '';
@@ -37,7 +37,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: Competition; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: Competition; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."Competition" (
@@ -48,10 +48,10 @@ CREATE TABLE public."Competition" (
 );
 
 
-ALTER TABLE public."Competition" OWNER TO avnadmin;
+ALTER TABLE public."Competition" OWNER TO juanseijas;
 
 --
--- Name: Jersey; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: Jersey; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."Jersey" (
@@ -64,10 +64,10 @@ CREATE TABLE public."Jersey" (
 );
 
 
-ALTER TABLE public."Jersey" OWNER TO avnadmin;
+ALTER TABLE public."Jersey" OWNER TO juanseijas;
 
 --
--- Name: Jersey_id_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
+-- Name: Jersey_id_seq; Type: SEQUENCE; Schema: public; Owner: juanseijas
 --
 
 CREATE SEQUENCE public."Jersey_id_seq"
@@ -79,17 +79,17 @@ CREATE SEQUENCE public."Jersey_id_seq"
     CACHE 1;
 
 
-ALTER SEQUENCE public."Jersey_id_seq" OWNER TO avnadmin;
+ALTER SEQUENCE public."Jersey_id_seq" OWNER TO juanseijas;
 
 --
--- Name: Jersey_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: avnadmin
+-- Name: Jersey_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: juanseijas
 --
 
 ALTER SEQUENCE public."Jersey_id_seq" OWNED BY public."Jersey".id;
 
 
 --
--- Name: Match; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: Match; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."Match" (
@@ -106,10 +106,10 @@ CREATE TABLE public."Match" (
 );
 
 
-ALTER TABLE public."Match" OWNER TO avnadmin;
+ALTER TABLE public."Match" OWNER TO juanseijas;
 
 --
--- Name: Player; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: Player; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."Player" (
@@ -122,10 +122,10 @@ CREATE TABLE public."Player" (
 );
 
 
-ALTER TABLE public."Player" OWNER TO avnadmin;
+ALTER TABLE public."Player" OWNER TO juanseijas;
 
 --
--- Name: Stadium; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: Stadium; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."Stadium" (
@@ -137,10 +137,10 @@ CREATE TABLE public."Stadium" (
 );
 
 
-ALTER TABLE public."Stadium" OWNER TO avnadmin;
+ALTER TABLE public."Stadium" OWNER TO juanseijas;
 
 --
--- Name: Standings; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: Standings; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."Standings" (
@@ -159,10 +159,10 @@ CREATE TABLE public."Standings" (
 );
 
 
-ALTER TABLE public."Standings" OWNER TO avnadmin;
+ALTER TABLE public."Standings" OWNER TO juanseijas;
 
 --
--- Name: Standings_id_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
+-- Name: Standings_id_seq; Type: SEQUENCE; Schema: public; Owner: juanseijas
 --
 
 CREATE SEQUENCE public."Standings_id_seq"
@@ -174,17 +174,17 @@ CREATE SEQUENCE public."Standings_id_seq"
     CACHE 1;
 
 
-ALTER SEQUENCE public."Standings_id_seq" OWNER TO avnadmin;
+ALTER SEQUENCE public."Standings_id_seq" OWNER TO juanseijas;
 
 --
--- Name: Standings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: avnadmin
+-- Name: Standings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: juanseijas
 --
 
 ALTER SEQUENCE public."Standings_id_seq" OWNED BY public."Standings".id;
 
 
 --
--- Name: Team; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: Team; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."Team" (
@@ -199,10 +199,10 @@ CREATE TABLE public."Team" (
 );
 
 
-ALTER TABLE public."Team" OWNER TO avnadmin;
+ALTER TABLE public."Team" OWNER TO juanseijas;
 
 --
--- Name: User; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: User; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."User" (
@@ -214,10 +214,10 @@ CREATE TABLE public."User" (
 );
 
 
-ALTER TABLE public."User" OWNER TO avnadmin;
+ALTER TABLE public."User" OWNER TO juanseijas;
 
 --
--- Name: User_id_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
+-- Name: User_id_seq; Type: SEQUENCE; Schema: public; Owner: juanseijas
 --
 
 CREATE SEQUENCE public."User_id_seq"
@@ -229,17 +229,17 @@ CREATE SEQUENCE public."User_id_seq"
     CACHE 1;
 
 
-ALTER SEQUENCE public."User_id_seq" OWNER TO avnadmin;
+ALTER SEQUENCE public."User_id_seq" OWNER TO juanseijas;
 
 --
--- Name: User_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: avnadmin
+-- Name: User_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: juanseijas
 --
 
 ALTER SEQUENCE public."User_id_seq" OWNED BY public."User".id;
 
 
 --
--- Name: _CompetitionToTeam; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToTeam; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."_CompetitionToTeam" (
@@ -248,10 +248,10 @@ CREATE TABLE public."_CompetitionToTeam" (
 );
 
 
-ALTER TABLE public."_CompetitionToTeam" OWNER TO avnadmin;
+ALTER TABLE public."_CompetitionToTeam" OWNER TO juanseijas;
 
 --
--- Name: _CompetitionToUser; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToUser; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."_CompetitionToUser" (
@@ -260,10 +260,10 @@ CREATE TABLE public."_CompetitionToUser" (
 );
 
 
-ALTER TABLE public."_CompetitionToUser" OWNER TO avnadmin;
+ALTER TABLE public."_CompetitionToUser" OWNER TO juanseijas;
 
 --
--- Name: _TeamToUser; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: _TeamToUser; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public."_TeamToUser" (
@@ -272,10 +272,10 @@ CREATE TABLE public."_TeamToUser" (
 );
 
 
-ALTER TABLE public."_TeamToUser" OWNER TO avnadmin;
+ALTER TABLE public."_TeamToUser" OWNER TO juanseijas;
 
 --
--- Name: _prisma_migrations; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: _prisma_migrations; Type: TABLE; Schema: public; Owner: juanseijas
 --
 
 CREATE TABLE public._prisma_migrations (
@@ -290,31 +290,31 @@ CREATE TABLE public._prisma_migrations (
 );
 
 
-ALTER TABLE public._prisma_migrations OWNER TO avnadmin;
+ALTER TABLE public._prisma_migrations OWNER TO juanseijas;
 
 --
--- Name: Jersey id; Type: DEFAULT; Schema: public; Owner: avnadmin
+-- Name: Jersey id; Type: DEFAULT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Jersey" ALTER COLUMN id SET DEFAULT nextval('public."Jersey_id_seq"'::regclass);
 
 
 --
--- Name: Standings id; Type: DEFAULT; Schema: public; Owner: avnadmin
+-- Name: Standings id; Type: DEFAULT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Standings" ALTER COLUMN id SET DEFAULT nextval('public."Standings_id_seq"'::regclass);
 
 
 --
--- Name: User id; Type: DEFAULT; Schema: public; Owner: avnadmin
+-- Name: User id; Type: DEFAULT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."User" ALTER COLUMN id SET DEFAULT nextval('public."User_id_seq"'::regclass);
 
 
 --
--- Data for Name: Competition; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: Competition; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."Competition" (id, name, country, logo) FROM stdin;
@@ -330,7 +330,7 @@ sr:season:114317	Liga Profesional	ARG	https://upload.wikimedia.org/wikipedia/com
 
 
 --
--- Data for Name: Jersey; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: Jersey; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."Jersey" (id, "teamId", type, "baseColor", "numberColor", "sleeveColor") FROM stdin;
@@ -994,7 +994,7 @@ COPY public."Jersey" (id, "teamId", type, "baseColor", "numberColor", "sleeveCol
 
 
 --
--- Data for Name: Match; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: Match; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."Match" (id, "competitionId", "homeTeamId", "awayTeamId", "scoreHome", "scoreAway", status, round, "stadiumId", start_time) FROM stdin;
@@ -1040,39 +1040,32 @@ sr:sport_event:51388909	sr:season:119847	sr:competitor:1031053	sr:competitor:299
 sr:sport_event:51388969	sr:season:119847	sr:competitor:49531	sr:competitor:2998	\N	\N	not_started	15	sr:venue:16520	2024-12-21 15:30:00
 sr:sport_event:51388727	sr:season:119847	sr:competitor:2995	sr:competitor:2999	0	1	closed	2	sr:venue:14556	2024-08-18 19:30:00
 sr:sport_event:51388949	sr:season:119847	sr:competitor:3001	sr:competitor:2995	\N	\N	not_started	14	sr:venue:910	2024-12-14 20:30:00
-sr:sport_event:51389261	sr:season:119847	sr:competitor:25777	sr:competitor:49531	\N	\N	not_started	28	sr:venue:8289	2025-04-06 17:00:00
 sr:sport_event:51389075	sr:season:119847	sr:competitor:36365	sr:competitor:744135	\N	\N	not_started	21	sr:venue:43626	2025-02-09 18:00:00
 sr:sport_event:51388881	sr:season:119847	sr:competitor:3001	sr:competitor:744135	5	1	closed	10	sr:venue:910	2024-11-01 20:15:00
-sr:sport_event:51389329	sr:season:119847	sr:competitor:3002	sr:competitor:3014	\N	\N	not_started	32	sr:venue:907	2025-05-04 17:00:00
 sr:sport_event:51094999	sr:season:118699	sr:competitor:95	sr:competitor:29	1	0	closed	5	sr:venue:2366	2024-09-14 11:30:00
 sr:sport_event:51095223	sr:season:118699	sr:competitor:21	sr:competitor:263	2	2	closed	11	sr:venue:3002	2024-10-22 18:45:00
-sr:sport_event:51389179	sr:season:119847	sr:competitor:3036	sr:competitor:2999	\N	\N	not_started	24	sr:venue:2013	2025-03-02 18:00:00
 sr:sport_event:51388979	sr:season:119847	sr:competitor:4500	sr:competitor:3014	\N	\N	not_started	16	sr:venue:5326	2024-12-28 18:00:00
 sr:sport_event:51389029	sr:season:119847	sr:competitor:36365	sr:competitor:3006	\N	\N	not_started	19	sr:venue:43626	2025-01-26 18:00:00
 sr:sport_event:51388999	sr:season:119847	sr:competitor:36365	sr:competitor:49531	\N	\N	not_started	17	sr:venue:43626	2025-01-05 18:00:00
+sr:sport_event:51389179	sr:season:119847	sr:competitor:3036	sr:competitor:2999	\N	\N	not_started	24	sr:venue:2013	2025-03-02 18:00:00
+sr:sport_event:51389329	sr:season:119847	sr:competitor:3002	sr:competitor:3014	\N	\N	not_started	32	sr:venue:907	2025-05-04 17:00:00
 sr:sport_event:51092187	sr:season:118699	sr:competitor:72	sr:competitor:6	1	4	closed	1	sr:venue:2178	2024-08-12 19:00:00
 sr:sport_event:51388989	sr:season:119847	sr:competitor:3036	sr:competitor:3013	\N	\N	not_started	16	sr:venue:2013	2024-12-29 15:30:00
 sr:sport_event:51388847	sr:season:119847	sr:competitor:3014	sr:competitor:3011	1	0	closed	8	sr:venue:5312	2024-10-05 14:30:00
 sr:sport_event:51388885	sr:season:119847	sr:competitor:3011	sr:competitor:3009	1	0	closed	11	sr:venue:5318	2024-11-10 16:30:00
 sr:sport_event:51094971	sr:season:118699	sr:competitor:34	sr:competitor:96	2	0	closed	4	sr:venue:2223	2024-08-31 14:00:00
-sr:sport_event:51389321	sr:season:119847	sr:competitor:4500	sr:competitor:3006	\N	\N	not_started	32	sr:venue:5326	2025-05-04 17:00:00
 sr:sport_event:51388955	sr:season:119847	sr:competitor:3013	sr:competitor:3014	\N	\N	not_started	14	sr:venue:1335	2024-12-14 18:00:00
 sr:sport_event:51389089	sr:season:119847	sr:competitor:3014	sr:competitor:36365	\N	\N	not_started	22	sr:venue:5312	2025-02-16 18:00:00
 sr:sport_event:51389011	sr:season:119847	sr:competitor:3011	sr:competitor:4500	\N	\N	not_started	18	sr:venue:5318	2025-01-19 18:00:00
 sr:sport_event:51389003	sr:season:119847	sr:competitor:744135	sr:competitor:4500	\N	\N	not_started	17	sr:venue:53523	2025-01-05 18:00:00
 sr:sport_event:51094941	sr:season:118699	sr:competitor:58	sr:competitor:11	1	1	closed	3	sr:venue:2505	2024-08-24 11:30:00
-sr:sport_event:51389313	sr:season:119847	sr:competitor:2995	sr:competitor:3001	\N	\N	not_started	31	sr:venue:14556	2025-04-27 17:00:00
 sr:sport_event:51094833	sr:season:118699	sr:competitor:58	sr:competitor:25	4	3	closed	2	sr:venue:2505	2024-08-17 14:00:00
-sr:sport_event:51389289	sr:season:119847	sr:competitor:2998	sr:competitor:2995	\N	\N	not_started	30	sr:venue:12069	2025-04-19 17:00:00
-sr:sport_event:51389189	sr:season:119847	sr:competitor:2998	sr:competitor:1031053	\N	\N	not_started	24	sr:venue:12069	2025-03-02 18:00:00
 sr:sport_event:51095279	sr:season:118699	sr:competitor:71	sr:competitor:21	3	3	closed	12	sr:venue:660	2024-10-26 14:00:00
 sr:sport_event:51095015	sr:season:118699	sr:competitor:61	sr:competitor:34	0	2	closed	6	sr:venue:1514	2024-09-21 14:00:00
-sr:sport_event:51389351	sr:season:119847	sr:competitor:3006	sr:competitor:3001	\N	\N	not_started	33	sr:venue:902	2025-05-11 17:00:00
 sr:sport_event:51095169	sr:season:118699	sr:competitor:96	sr:competitor:41	0	1	closed	10	sr:venue:1138	2024-10-20 14:00:00
 sr:sport_event:51388895	sr:season:119847	sr:competitor:744135	sr:competitor:3013	2	0	closed	11	sr:venue:53523	2024-11-10 15:30:00
 sr:sport_event:51095321	sr:season:118699	sr:competitor:34	sr:competitor:71	3	0	closed	13	sr:venue:2223	2024-11-02 15:00:00
 sr:sport_event:51095219	sr:season:118699	sr:competitor:95	sr:competitor:27	1	1	closed	11	sr:venue:2366	2024-10-22 18:45:00
-sr:sport_event:51096245	sr:season:118699	sr:competitor:21	sr:competitor:25	\N	\N	not_started	31	sr:venue:3002	2025-02-08 15:00:00
 sr:sport_event:51095019	sr:season:118699	sr:competitor:72	sr:competitor:12	2	1	closed	6	sr:venue:2178	2024-09-21 14:00:00
 sr:sport_event:51095049	sr:season:118699	sr:competitor:71	sr:competitor:72	3	1	closed	7	sr:venue:660	2024-09-27 19:00:00
 sr:sport_event:51094977	sr:season:118699	sr:competitor:95	sr:competitor:21	3	1	closed	4	sr:venue:2366	2024-08-31 14:00:00
@@ -1081,37 +1074,36 @@ sr:sport_event:51388961	sr:season:119847	sr:competitor:3009	sr:competitor:3013	\
 sr:sport_event:51095051	sr:season:118699	sr:competitor:2	sr:competitor:15	0	0	closed	7	sr:venue:638	2024-09-28 14:00:00
 sr:sport_event:51095157	sr:season:118699	sr:competitor:41	sr:competitor:34	2	2	closed	9	sr:venue:851	2024-10-04 19:00:00
 sr:sport_event:51389015	sr:season:119847	sr:competitor:3009	sr:competitor:25777	\N	\N	not_started	18	sr:venue:1137	2025-01-19 18:00:00
-sr:sport_event:51389361	sr:season:119847	sr:competitor:49531	sr:competitor:36365	\N	\N	not_started	34	sr:venue:16520	2025-05-17 17:00:00
 sr:sport_event:51388887	sr:season:119847	sr:competitor:3006	sr:competitor:3002	4	1	closed	11	sr:venue:902	2024-11-10 20:45:00
-sr:sport_event:50955807	sr:season:119835	sr:competitor:1659	sr:competitor:1681	\N	\N	not_started	26	sr:venue:847	2025-03-16 17:00:00
 sr:sport_event:51389007	sr:season:119847	sr:competitor:2995	sr:competitor:25777	\N	\N	not_started	17	sr:venue:14556	2025-01-05 18:00:00
-sr:sport_event:51389161	sr:season:119847	sr:competitor:744135	sr:competitor:3011	\N	\N	not_started	23	sr:venue:53523	2025-02-23 18:00:00
 sr:sport_event:51092211	sr:season:118699	sr:competitor:25	sr:competitor:24	2	3	closed	1	sr:venue:2352	2024-08-10 11:30:00
-sr:sport_event:51389187	sr:season:119847	sr:competitor:3013	sr:competitor:49531	\N	\N	not_started	24	sr:venue:1335	2025-03-02 18:00:00
 sr:sport_event:51389157	sr:season:119847	sr:competitor:2998	sr:competitor:3002	\N	\N	not_started	22	sr:venue:12069	2025-02-16 18:00:00
-sr:sport_event:51389311	sr:season:119847	sr:competitor:3009	sr:competitor:3036	\N	\N	not_started	31	sr:venue:1137	2025-04-27 17:00:00
-sr:sport_event:51389287	sr:season:119847	sr:competitor:4500	sr:competitor:2999	\N	\N	not_started	30	sr:venue:5326	2025-04-19 17:00:00
 sr:sport_event:51388831	sr:season:119847	sr:competitor:25777	sr:competitor:1031053	1	1	closed	8	sr:venue:8289	2024-10-05 17:00:00
-sr:sport_event:51389209	sr:season:119847	sr:competitor:744135	sr:competitor:3010	\N	\N	not_started	25	sr:venue:53523	2025-03-09 18:00:00
 sr:sport_event:51389031	sr:season:119847	sr:competitor:2999	sr:competitor:2995	\N	\N	not_started	19	sr:venue:951	2025-01-26 18:00:00
-sr:sport_event:51389219	sr:season:119847	sr:competitor:3013	sr:competitor:36365	\N	\N	not_started	26	sr:venue:1335	2025-03-16 18:00:00
 sr:sport_event:51388991	sr:season:119847	sr:competitor:49531	sr:competitor:3011	\N	\N	not_started	16	sr:venue:16520	2024-12-30 20:15:00
-sr:sport_event:51389229	sr:season:119847	sr:competitor:25777	sr:competitor:4500	\N	\N	not_started	26	sr:venue:8289	2025-03-16 18:00:00
 sr:sport_event:51388951	sr:season:119847	sr:competitor:4500	sr:competitor:36365	\N	\N	not_started	14	sr:venue:5326	2024-12-15 20:30:00
 sr:sport_event:51389009	sr:season:119847	sr:competitor:3014	sr:competitor:1031053	\N	\N	not_started	17	sr:venue:5312	2025-01-05 18:00:00
 sr:sport_event:51092207	sr:season:118699	sr:competitor:34	sr:competitor:2	3	3	closed	1	sr:venue:2223	2024-08-10 11:30:00
 sr:sport_event:51095347	sr:season:118699	sr:competitor:1	sr:competitor:41	0	0	closed	13	sr:venue:1693	2024-11-02 15:00:00
+sr:sport_event:51389209	sr:season:119847	sr:competitor:744135	sr:competitor:3010	\N	\N	not_started	25	sr:venue:53523	2025-03-09 18:00:00
+sr:sport_event:51389161	sr:season:119847	sr:competitor:744135	sr:competitor:3011	\N	\N	not_started	23	sr:venue:53523	2025-02-23 18:00:00
+sr:sport_event:51389289	sr:season:119847	sr:competitor:2998	sr:competitor:2995	\N	\N	not_started	30	sr:venue:12069	2025-04-19 17:00:00
+sr:sport_event:51389313	sr:season:119847	sr:competitor:2995	sr:competitor:3001	\N	\N	not_started	31	sr:venue:14556	2025-04-27 17:00:00
 sr:sport_event:51389335	sr:season:119847	sr:competitor:25777	sr:competitor:36365	\N	\N	not_started	32	sr:venue:8289	2025-05-04 17:00:00
-sr:sport_event:51389309	sr:season:119847	sr:competitor:3006	sr:competitor:1031053	\N	\N	not_started	31	sr:venue:902	2025-04-27 17:00:00
+sr:sport_event:51389321	sr:season:119847	sr:competitor:4500	sr:competitor:3006	\N	\N	not_started	32	sr:venue:5326	2025-05-04 17:00:00
+sr:sport_event:51389351	sr:season:119847	sr:competitor:3006	sr:competitor:3001	\N	\N	not_started	33	sr:venue:902	2025-05-11 17:00:00
+sr:sport_event:51389361	sr:season:119847	sr:competitor:49531	sr:competitor:36365	\N	\N	not_started	34	sr:venue:16520	2025-05-17 17:00:00
+sr:sport_event:51389187	sr:season:119847	sr:competitor:3013	sr:competitor:49531	\N	\N	not_started	24	sr:venue:1335	2025-03-02 18:00:00
+sr:sport_event:51389229	sr:season:119847	sr:competitor:25777	sr:competitor:4500	\N	\N	not_started	26	sr:venue:8289	2025-03-16 18:00:00
+sr:sport_event:51096245	sr:season:118699	sr:competitor:21	sr:competitor:25	\N	\N	postponed	31	sr:venue:3002	2025-02-08 15:00:00
+sr:sport_event:50955807	sr:season:119835	sr:competitor:1659	sr:competitor:1681	\N	\N	not_started	26	sr:venue:847	2025-03-16 17:00:00
 sr:sport_event:51388835	sr:season:119847	sr:competitor:3002	sr:competitor:2999	2	1	closed	8	sr:venue:907	2024-10-06 19:30:00
 sr:sport_event:51092185	sr:season:118699	sr:competitor:12	sr:competitor:71	4	0	closed	1	sr:venue:2547	2024-08-11 15:00:00
 sr:sport_event:51389095	sr:season:119847	sr:competitor:3036	sr:competitor:1031053	\N	\N	not_started	22	sr:venue:2013	2025-02-16 18:00:00
 sr:sport_event:51094989	sr:season:118699	sr:competitor:27	sr:competitor:61	1	0	closed	5	sr:venue:852	2024-09-14 14:00:00
 sr:sport_event:51094993	sr:season:118699	sr:competitor:34	sr:competitor:6	0	1	closed	5	sr:venue:2223	2024-09-14 11:30:00
-sr:sport_event:51389271	sr:season:119847	sr:competitor:3010	sr:competitor:3009	\N	\N	not_started	29	sr:venue:2539	2025-04-13 17:00:00
 sr:sport_event:51094995	sr:season:118699	sr:competitor:36	sr:competitor:21	1	1	closed	5	sr:venue:743	2024-09-14 14:00:00
 sr:sport_event:51388845	sr:season:119847	sr:competitor:3036	sr:competitor:49531	1	1	closed	8	sr:venue:2013	2024-10-04 19:15:00
-sr:sport_event:51389343	sr:season:119847	sr:competitor:3010	sr:competitor:25777	\N	\N	not_started	33	sr:venue:2539	2025-05-11 17:00:00
 sr:sport_event:51095137	sr:season:118699	sr:competitor:21	sr:competitor:24	3	0	closed	8	sr:venue:3002	2024-10-02 18:45:00
 sr:sport_event:51095305	sr:season:118699	sr:competitor:8	sr:competitor:61	0	0	closed	12	sr:venue:1136	2024-10-26 14:00:00
 sr:sport_event:51095257	sr:season:118699	sr:competitor:58	sr:competitor:34	0	0	closed	12	sr:venue:2505	2024-10-26 11:30:00
@@ -1120,26 +1112,19 @@ sr:sport_event:51095409	sr:season:118699	sr:competitor:21	sr:competitor:41	0	0	c
 sr:sport_event:51095035	sr:season:118699	sr:competitor:46	sr:competitor:1	2	0	closed	7	sr:venue:631	2024-09-28 11:30:00
 sr:sport_event:51094973	sr:season:118699	sr:competitor:72	sr:competitor:1	1	2	closed	4	sr:venue:2178	2024-08-30 19:00:00
 sr:sport_event:51095047	sr:season:118699	sr:competitor:95	sr:competitor:6	0	0	closed	7	sr:venue:2366	2024-09-28 14:00:00
-sr:sport_event:50850667	sr:season:118689	sr:competitor:48	sr:competitor:32	\N	\N	not_started	35	sr:venue:12	2025-05-03 14:00:00
 sr:sport_event:51095133	sr:season:118699	sr:competitor:58	sr:competitor:12	0	0	closed	8	sr:venue:2505	2024-10-02 19:00:00
 sr:sport_event:51388903	sr:season:119847	sr:competitor:25777	sr:competitor:3006	\N	\N	not_started	12	sr:venue:8289	2024-12-01 18:00:00
 sr:sport_event:51389013	sr:season:119847	sr:competitor:744135	sr:competitor:2999	\N	\N	not_started	18	sr:venue:53523	2025-01-19 18:00:00
 sr:sport_event:51095171	sr:season:118699	sr:competitor:34	sr:competitor:15	2	0	closed	10	sr:venue:2223	2024-10-18 19:00:00
 sr:sport_event:51388919	sr:season:119847	sr:competitor:3001	sr:competitor:3011	\N	\N	not_started	12	sr:venue:910	2024-11-30 20:30:00
 sr:sport_event:46655537	sr:season:114317	sr:competitor:3203	sr:competitor:3215	4	4	closed	1	sr:venue:4750	2024-05-12 20:45:00
-sr:sport_event:51389325	sr:season:119847	sr:competitor:3001	sr:competitor:3010	\N	\N	not_started	32	sr:venue:910	2025-05-04 17:00:00
 sr:sport_event:46655583	sr:season:114317	sr:competitor:3206	sr:competitor:191648	2	0	closed	2	sr:venue:1007	2024-05-20 22:00:00
-sr:sport_event:51389367	sr:season:119847	sr:competitor:3002	sr:competitor:3013	\N	\N	not_started	34	sr:venue:907	2025-05-17 17:00:00
-sr:sport_event:51389225	sr:season:119847	sr:competitor:3002	sr:competitor:1031053	\N	\N	not_started	26	sr:venue:907	2025-03-16 18:00:00
 sr:sport_event:51388763	sr:season:119847	sr:competitor:3014	sr:competitor:3006	1	1	closed	4	sr:venue:5312	2024-08-30 19:15:00
-sr:sport_event:51389093	sr:season:119847	sr:competitor:3010	sr:competitor:49531	\N	\N	not_started	22	sr:venue:2539	2025-02-16 18:00:00
-sr:sport_event:51389203	sr:season:119847	sr:competitor:2995	sr:competitor:3009	\N	\N	not_started	25	sr:venue:14556	2025-03-09 18:00:00
 sr:sport_event:51388973	sr:season:119847	sr:competitor:2995	sr:competitor:1031053	\N	\N	not_started	15	sr:venue:14556	2024-12-21 18:00:00
 sr:sport_event:51094987	sr:season:118699	sr:competitor:46	sr:competitor:58	3	0	closed	5	sr:venue:631	2024-09-14 14:00:00
 sr:sport_event:51095351	sr:season:118699	sr:competitor:12	sr:competitor:24	2	6	closed	13	sr:venue:2547	2024-11-02 15:00:00
 sr:sport_event:51389047	sr:season:119847	sr:competitor:3011	sr:competitor:36365	\N	\N	not_started	20	sr:venue:5318	2025-02-02 18:00:00
 sr:sport_event:46655611	sr:season:114317	sr:competitor:3212	sr:competitor:36839	1	0	closed	3	sr:venue:1567	2024-05-25 20:30:00
-sr:sport_event:51389195	sr:season:119847	sr:competitor:3011	sr:competitor:3014	\N	\N	not_started	25	sr:venue:5318	2025-03-09 18:00:00
 sr:sport_event:51389079	sr:season:119847	sr:competitor:49531	sr:competitor:3009	\N	\N	not_started	21	sr:venue:16520	2025-02-09 18:00:00
 sr:sport_event:51095461	sr:season:118699	sr:competitor:24	sr:competitor:95	1	0	closed	15	sr:venue:813	2024-11-08 20:00:00
 sr:sport_event:51095445	sr:season:118699	sr:competitor:2	sr:competitor:21	3	1	closed	15	sr:venue:638	2024-11-09 15:00:00
@@ -1149,86 +1134,79 @@ sr:sport_event:46655663	sr:season:114317	sr:competitor:3205	sr:competitor:65668	
 sr:sport_event:51095955	sr:season:118699	sr:competitor:71	sr:competitor:58	\N	\N	not_started	25	sr:venue:660	2025-01-01 12:30:00
 sr:sport_event:51094969	sr:season:118699	sr:competitor:27	sr:competitor:58	3	0	closed	4	sr:venue:852	2024-08-31 14:00:00
 sr:sport_event:51095993	sr:season:118699	sr:competitor:36	sr:competitor:61	\N	\N	not_started	26	sr:venue:743	2025-01-04 15:00:00
-sr:sport_event:51096437	sr:season:118699	sr:competitor:36	sr:competitor:95	\N	\N	not_started	39	sr:venue:743	2025-03-29 15:00:00
 sr:sport_event:51095885	sr:season:118699	sr:competitor:11	sr:competitor:25	\N	\N	not_started	24	sr:venue:2194	2024-12-29 15:00:00
 sr:sport_event:51092201	sr:season:118699	sr:competitor:61	sr:competitor:41	0	2	closed	1	sr:venue:1514	2024-08-10 11:30:00
-sr:sport_event:51096373	sr:season:118699	sr:competitor:24	sr:competitor:25	\N	\N	not_started	36	sr:venue:813	2025-03-08 15:00:00
 sr:sport_event:51095231	sr:season:118699	sr:competitor:12	sr:competitor:74	0	0	closed	11	sr:venue:2547	2024-10-22 18:45:00
 sr:sport_event:51094939	sr:season:118699	sr:competitor:46	sr:competitor:95	2	1	closed	3	sr:venue:631	2024-08-24 14:00:00
-sr:sport_event:51096251	sr:season:118699	sr:competitor:29	sr:competitor:36	\N	\N	not_started	31	sr:venue:1135	2025-02-07 20:00:00
+sr:sport_event:51389271	sr:season:119847	sr:competitor:3010	sr:competitor:3009	\N	\N	not_started	29	sr:venue:2539	2025-04-13 17:00:00
+sr:sport_event:51389309	sr:season:119847	sr:competitor:3006	sr:competitor:1031053	\N	\N	not_started	31	sr:venue:902	2025-04-27 17:00:00
+sr:sport_event:51389343	sr:season:119847	sr:competitor:3010	sr:competitor:25777	\N	\N	not_started	33	sr:venue:2539	2025-05-11 17:00:00
+sr:sport_event:51389225	sr:season:119847	sr:competitor:3002	sr:competitor:1031053	\N	\N	not_started	26	sr:venue:907	2025-03-16 18:00:00
+sr:sport_event:51389367	sr:season:119847	sr:competitor:3002	sr:competitor:3013	\N	\N	not_started	34	sr:venue:907	2025-05-17 17:00:00
+sr:sport_event:51389195	sr:season:119847	sr:competitor:3011	sr:competitor:3014	\N	\N	not_started	25	sr:venue:5318	2025-03-09 18:00:00
+sr:sport_event:51389203	sr:season:119847	sr:competitor:2995	sr:competitor:3009	\N	\N	not_started	25	sr:venue:14556	2025-03-09 18:00:00
+sr:sport_event:50850667	sr:season:118689	sr:competitor:48	sr:competitor:32	\N	\N	not_started	35	sr:venue:12	2025-05-03 14:00:00
+sr:sport_event:51096437	sr:season:118699	sr:competitor:36	sr:competitor:95	\N	\N	not_started	39	sr:venue:743	2025-03-29 15:00:00
+sr:sport_event:51096373	sr:season:118699	sr:competitor:24	sr:competitor:25	\N	\N	not_started	36	sr:venue:813	2025-03-08 15:00:00
 sr:sport_event:51095577	sr:season:118699	sr:competitor:11	sr:competitor:61	\N	\N	not_started	18	sr:venue:2194	2024-11-30 15:00:00
-sr:sport_event:51096407	sr:season:118699	sr:competitor:72	sr:competitor:36	\N	\N	not_started	38	sr:venue:2178	2025-03-15 15:00:00
 sr:sport_event:51096265	sr:season:118699	sr:competitor:71	sr:competitor:25	\N	\N	not_started	32	sr:venue:660	2025-02-11 19:45:00
-sr:sport_event:51096329	sr:season:118699	sr:competitor:46	sr:competitor:263	\N	\N	not_started	35	sr:venue:631	2025-03-01 15:00:00
 sr:sport_event:51095715	sr:season:118699	sr:competitor:1	sr:competitor:95	\N	\N	not_started	20	sr:venue:1693	2024-12-11 19:45:00
-sr:sport_event:51096443	sr:season:118699	sr:competitor:15	sr:competitor:11	\N	\N	not_started	39	sr:venue:598	2025-03-29 15:00:00
-sr:sport_event:51096575	sr:season:118699	sr:competitor:27	sr:competitor:6	\N	\N	not_started	41	sr:venue:852	2025-04-09 18:45:00
 sr:sport_event:51095791	sr:season:118699	sr:competitor:72	sr:competitor:27	\N	\N	not_started	22	sr:venue:2178	2024-12-20 20:00:00
-sr:sport_event:51096853	sr:season:118699	sr:competitor:46	sr:competitor:25	\N	\N	not_started	43	sr:venue:631	2025-04-18 14:00:00
 sr:sport_event:51096151	sr:season:118699	sr:competitor:2	sr:competitor:36	\N	\N	not_started	27	sr:venue:638	2025-01-18 15:00:00
-sr:sport_event:51096923	sr:season:118699	sr:competitor:15	sr:competitor:46	\N	\N	not_started	46	sr:venue:598	2025-05-03 14:00:00
 sr:sport_event:51095161	sr:season:118699	sr:competitor:24	sr:competitor:36	2	1	closed	9	sr:venue:813	2024-10-05 14:00:00
 sr:sport_event:51095039	sr:season:118699	sr:competitor:96	sr:competitor:61	4	1	closed	7	sr:venue:1138	2024-09-28 14:00:00
-sr:sport_event:51096361	sr:season:118699	sr:competitor:263	sr:competitor:95	\N	\N	not_started	36	sr:venue:2221	2025-03-08 15:00:00
-sr:sport_event:51389171	sr:season:119847	sr:competitor:4500	sr:competitor:3036	\N	\N	not_started	23	sr:venue:5326	2025-02-23 18:00:00
-sr:sport_event:51389181	sr:season:119847	sr:competitor:3009	sr:competitor:36365	\N	\N	not_started	24	sr:venue:1137	2025-03-02 18:00:00
 sr:sport_event:51388841	sr:season:119847	sr:competitor:2998	sr:competitor:4500	1	0	closed	8	sr:venue:12069	2024-10-06 14:30:00
-sr:sport_event:51389281	sr:season:119847	sr:competitor:744135	sr:competitor:2998	\N	\N	not_started	29	sr:venue:53523	2025-04-13 17:00:00
-sr:sport_event:51389315	sr:season:119847	sr:competitor:36365	sr:competitor:4500	\N	\N	not_started	31	sr:venue:43626	2025-04-27 17:00:00
-sr:sport_event:51389185	sr:season:119847	sr:competitor:3014	sr:competitor:744135	\N	\N	not_started	24	sr:venue:5312	2025-03-02 18:00:00
-sr:sport_event:51389191	sr:season:119847	sr:competitor:25777	sr:competitor:3002	\N	\N	not_started	24	sr:venue:8289	2025-03-02 18:00:00
 sr:sport_event:51389039	sr:season:119847	sr:competitor:25777	sr:competitor:3014	\N	\N	not_started	19	sr:venue:8289	2025-01-26 18:00:00
-sr:sport_event:51389253	sr:season:119847	sr:competitor:3036	sr:competitor:2995	\N	\N	not_started	28	sr:venue:2013	2025-04-06 17:00:00
 sr:sport_event:51095067	sr:season:118699	sr:competitor:1	sr:competitor:96	1	3	closed	8	sr:venue:1693	2024-10-01 18:45:00
-sr:sport_event:51389357	sr:season:119847	sr:competitor:2999	sr:competitor:3006	\N	\N	not_started	34	sr:venue:951	2025-05-17 17:00:00
 sr:sport_event:46655547	sr:season:114317	sr:competitor:6074	sr:competitor:65668	0	1	closed	1	sr:venue:15676	2024-05-11 18:30:00
-sr:sport_event:51389301	sr:season:119847	sr:competitor:1031053	sr:competitor:36365	\N	\N	not_started	30	sr:venue:8249	2025-04-19 17:00:00
 sr:sport_event:51389041	sr:season:119847	sr:competitor:4500	sr:competitor:3009	\N	\N	not_started	19	sr:venue:5326	2025-01-26 18:00:00
 sr:sport_event:46655543	sr:season:114317	sr:competitor:191648	sr:competitor:3201	1	0	closed	1	sr:venue:17150	2024-05-12 18:30:00
-sr:sport_event:51389199	sr:season:119847	sr:competitor:3006	sr:competitor:3013	\N	\N	not_started	25	sr:venue:902	2025-03-09 18:00:00
 sr:sport_event:51094985	sr:season:118699	sr:competitor:8	sr:competitor:74	1	0	closed	4	sr:venue:1136	2024-08-31 14:00:00
 sr:sport_event:46655607	sr:season:114317	sr:competitor:7629	sr:competitor:4937	1	0	closed	3	sr:venue:12021	2024-05-26 18:30:00
 sr:sport_event:51095557	sr:season:118699	sr:competitor:27	sr:competitor:74	1	2	closed	17	sr:venue:852	2024-11-27 20:00:00
 sr:sport_event:51096163	sr:season:118699	sr:competitor:27	sr:competitor:41	\N	\N	not_started	28	sr:venue:852	2025-01-21 19:45:00
 sr:sport_event:51095145	sr:season:118699	sr:competitor:11	sr:competitor:12	1	2	closed	9	sr:venue:2194	2024-10-05 14:00:00
 sr:sport_event:51095843	sr:season:118699	sr:competitor:36	sr:competitor:12	\N	\N	not_started	23	sr:venue:743	2024-12-26 15:00:00
-sr:sport_event:50850665	sr:season:118689	sr:competitor:7	sr:competitor:14	\N	\N	not_started	35	sr:venue:10	2025-05-03 14:00:00
 sr:sport_event:46655575	sr:season:114317	sr:competitor:4937	sr:competitor:3204	1	1	closed	2	sr:venue:12033	2024-05-18 23:30:00
 sr:sport_event:51094835	sr:season:118699	sr:competitor:6	sr:competitor:61	5	0	closed	2	sr:venue:806	2024-08-17 14:00:00
-sr:sport_event:51095647	sr:season:118699	sr:competitor:71	sr:competitor:95	\N	\N	not_started	19	sr:venue:660	2024-12-07 15:00:00
 sr:sport_event:51095177	sr:season:118699	sr:competitor:36	sr:competitor:58	0	2	closed	10	sr:venue:743	2024-10-19 14:00:00
-sr:sport_event:51096839	sr:season:118699	sr:competitor:12	sr:competitor:95	\N	\N	not_started	42	sr:venue:2547	2025-04-12 14:00:00
 sr:sport_event:51095437	sr:season:118699	sr:competitor:36	sr:competitor:72	5	1	closed	15	sr:venue:743	2024-11-09 12:30:00
-sr:sport_event:51096889	sr:season:118699	sr:competitor:6	sr:competitor:15	\N	\N	not_started	44	sr:venue:806	2025-04-21 14:00:00
 sr:sport_event:51095585	sr:season:118699	sr:competitor:36	sr:competitor:96	\N	\N	not_started	18	sr:venue:743	2024-11-30 12:30:00
 sr:sport_event:51096301	sr:season:118699	sr:competitor:12	sr:competitor:11	\N	\N	not_started	33	sr:venue:2547	2025-02-15 15:00:00
 sr:sport_event:46655653	sr:season:114317	sr:competitor:3218	sr:competitor:3215	2	0	closed	5	sr:venue:981	2024-06-14 00:15:00
 sr:sport_event:51096277	sr:season:118699	sr:competitor:41	sr:competitor:72	\N	\N	not_started	32	sr:venue:851	2025-02-12 19:45:00
-sr:sport_event:51096343	sr:season:118699	sr:competitor:95	sr:competitor:11	\N	\N	not_started	35	sr:venue:2366	2025-03-01 15:00:00
 sr:sport_event:51095483	sr:season:118699	sr:competitor:25	sr:competitor:41	1	1	closed	16	sr:venue:2352	2024-11-23 15:00:00
 sr:sport_event:51095033	sr:season:118699	sr:competitor:8	sr:competitor:71	1	0	closed	6	sr:venue:1136	2024-09-21 14:00:00
+sr:sport_event:51389253	sr:season:119847	sr:competitor:3036	sr:competitor:2995	\N	\N	not_started	28	sr:venue:2013	2025-04-06 17:00:00
+sr:sport_event:51389301	sr:season:119847	sr:competitor:1031053	sr:competitor:36365	\N	\N	not_started	30	sr:venue:8249	2025-04-19 17:00:00
+sr:sport_event:51389181	sr:season:119847	sr:competitor:3009	sr:competitor:36365	\N	\N	not_started	24	sr:venue:1137	2025-03-02 18:00:00
+sr:sport_event:51389315	sr:season:119847	sr:competitor:36365	sr:competitor:4500	\N	\N	not_started	31	sr:venue:43626	2025-04-27 17:00:00
+sr:sport_event:51389199	sr:season:119847	sr:competitor:3006	sr:competitor:3013	\N	\N	not_started	25	sr:venue:902	2025-03-09 18:00:00
+sr:sport_event:51389357	sr:season:119847	sr:competitor:2999	sr:competitor:3006	\N	\N	not_started	34	sr:venue:951	2025-05-17 17:00:00
+sr:sport_event:51389185	sr:season:119847	sr:competitor:3014	sr:competitor:744135	\N	\N	not_started	24	sr:venue:5312	2025-03-02 18:00:00
+sr:sport_event:51389171	sr:season:119847	sr:competitor:4500	sr:competitor:3036	\N	\N	not_started	23	sr:venue:5326	2025-02-23 18:00:00
+sr:sport_event:50850665	sr:season:118689	sr:competitor:7	sr:competitor:14	\N	\N	not_started	35	sr:venue:10	2025-05-03 14:00:00
+sr:sport_event:51096443	sr:season:118699	sr:competitor:15	sr:competitor:11	\N	\N	not_started	39	sr:venue:598	2025-03-29 15:00:00
+sr:sport_event:51096575	sr:season:118699	sr:competitor:27	sr:competitor:6	\N	\N	not_started	41	sr:venue:852	2025-04-09 18:45:00
+sr:sport_event:51096839	sr:season:118699	sr:competitor:12	sr:competitor:95	\N	\N	not_started	42	sr:venue:2547	2025-04-12 14:00:00
+sr:sport_event:51096853	sr:season:118699	sr:competitor:46	sr:competitor:25	\N	\N	not_started	43	sr:venue:631	2025-04-18 14:00:00
+sr:sport_event:51096889	sr:season:118699	sr:competitor:6	sr:competitor:15	\N	\N	not_started	44	sr:venue:806	2025-04-21 14:00:00
+sr:sport_event:51096251	sr:season:118699	sr:competitor:29	sr:competitor:36	\N	\N	postponed	31	sr:venue:1135	2025-02-07 20:00:00
+sr:sport_event:51096329	sr:season:118699	sr:competitor:46	sr:competitor:263	\N	\N	not_started	35	sr:venue:631	2025-03-01 15:00:00
+sr:sport_event:51096343	sr:season:118699	sr:competitor:95	sr:competitor:11	\N	\N	not_started	35	sr:venue:2366	2025-03-01 15:00:00
+sr:sport_event:51096361	sr:season:118699	sr:competitor:263	sr:competitor:95	\N	\N	not_started	36	sr:venue:2221	2025-03-08 15:00:00
+sr:sport_event:51096407	sr:season:118699	sr:competitor:72	sr:competitor:36	\N	\N	not_started	38	sr:venue:2178	2025-03-15 15:00:00
 sr:sport_event:51095701	sr:season:118699	sr:competitor:41	sr:competitor:58	\N	\N	not_started	20	sr:venue:851	2024-12-10 19:45:00
 sr:sport_event:51095621	sr:season:118699	sr:competitor:6	sr:competitor:36	\N	\N	not_started	19	sr:venue:806	2024-12-06 20:00:00
 sr:sport_event:51094965	sr:season:118699	sr:competitor:61	sr:competitor:36	0	2	closed	4	sr:venue:1514	2024-08-31 11:30:00
 sr:sport_event:51095659	sr:season:118699	sr:competitor:12	sr:competitor:21	\N	\N	not_started	19	sr:venue:2547	2024-12-07 12:30:00
 sr:sport_event:51389065	sr:season:119847	sr:competitor:4500	sr:competitor:2995	\N	\N	not_started	21	sr:venue:5326	2025-02-09 18:00:00
-sr:sport_event:51096915	sr:season:118699	sr:competitor:8	sr:competitor:72	\N	\N	not_started	46	sr:venue:1136	2025-05-03 14:00:00
 sr:sport_event:51095261	sr:season:118699	sr:competitor:6	sr:competitor:1	0	0	closed	12	sr:venue:806	2024-10-26 14:00:00
-sr:sport_event:51096457	sr:season:118699	sr:competitor:72	sr:competitor:34	\N	\N	not_started	40	sr:venue:2178	2025-04-05 11:30:00
-sr:sport_event:51096467	sr:season:118699	sr:competitor:1	sr:competitor:61	\N	\N	not_started	40	sr:venue:1693	2025-04-05 14:00:00
-sr:sport_event:51096919	sr:season:118699	sr:competitor:74	sr:competitor:95	\N	\N	not_started	46	sr:venue:1689	2025-05-03 14:00:00
-sr:sport_event:51389163	sr:season:119847	sr:competitor:3006	sr:competitor:2995	\N	\N	not_started	23	sr:venue:902	2025-02-23 18:00:00
-sr:sport_event:51389341	sr:season:119847	sr:competitor:36365	sr:competitor:2999	\N	\N	not_started	33	sr:venue:43626	2025-05-11 17:00:00
 sr:sport_event:51095335	sr:season:118699	sr:competitor:25	sr:competitor:6	1	0	closed	13	sr:venue:2352	2024-11-03 15:00:00
 sr:sport_event:51389067	sr:season:119847	sr:competitor:3006	sr:competitor:3014	\N	\N	not_started	21	sr:venue:902	2025-02-09 18:00:00
 sr:sport_event:46655535	sr:season:114317	sr:competitor:3211	sr:competitor:65676	3	0	closed	1	sr:venue:1009	2024-05-11 22:45:00
-sr:sport_event:51389211	sr:season:119847	sr:competitor:49531	sr:competitor:3036	\N	\N	not_started	25	sr:venue:16520	2025-03-09 18:00:00
-sr:sport_event:51389307	sr:season:119847	sr:competitor:3010	sr:competitor:2998	\N	\N	not_started	31	sr:venue:2539	2025-04-27 17:00:00
-sr:sport_event:51389249	sr:season:119847	sr:competitor:3002	sr:competitor:3006	\N	\N	not_started	28	sr:venue:907	2025-04-06 17:00:00
 sr:sport_event:51094981	sr:season:118699	sr:competitor:2	sr:competitor:41	1	3	closed	4	sr:venue:638	2024-08-31 14:00:00
 sr:sport_event:51389043	sr:season:119847	sr:competitor:2998	sr:competitor:3036	\N	\N	not_started	19	sr:venue:12069	2025-01-26 18:00:00
-sr:sport_event:51389373	sr:season:119847	sr:competitor:1031053	sr:competitor:3014	\N	\N	not_started	34	sr:venue:8249	2025-05-17 17:00:00
-sr:sport_event:51389349	sr:season:119847	sr:competitor:744135	sr:competitor:1031053	\N	\N	not_started	33	sr:venue:53523	2025-05-11 17:00:00
 sr:sport_event:51388891	sr:season:119847	sr:competitor:2995	sr:competitor:3036	0	2	closed	11	sr:venue:14556	2024-11-09 20:30:00
 sr:sport_event:46655593	sr:season:114317	sr:competitor:3216	sr:competitor:3211	1	0	closed	3	sr:venue:613	2024-05-25 18:00:00
 sr:sport_event:46655605	sr:season:114317	sr:competitor:3204	sr:competitor:65668	2	0	closed	3	sr:venue:4754	2024-05-27 22:00:00
@@ -1248,41 +1226,36 @@ sr:sport_event:51095799	sr:season:118699	sr:competitor:71	sr:competitor:36	\N	\N
 sr:sport_event:51096261	sr:season:118699	sr:competitor:27	sr:competitor:95	\N	\N	not_started	32	sr:venue:852	2025-02-11 19:45:00
 sr:sport_event:51096045	sr:season:118699	sr:competitor:11	sr:competitor:58	\N	\N	not_started	27	sr:venue:2194	2025-01-18 15:00:00
 sr:sport_event:50852241	sr:season:118691	sr:competitor:2859	sr:competitor:2820	1	1	closed	9	sr:venue:608	2024-10-05 14:15:00
-sr:sport_event:51096363	sr:season:118699	sr:competitor:71	sr:competitor:12	\N	\N	not_started	36	sr:venue:660	2025-03-08 15:00:00
 sr:sport_event:51095761	sr:season:118699	sr:competitor:29	sr:competitor:61	\N	\N	not_started	21	sr:venue:1135	2024-12-14 15:00:00
 sr:sport_event:55569685	sr:season:118699	sr:competitor:6	sr:competitor:34	\N	\N	not_started	29	sr:venue:806	2025-01-27 20:00:00
-sr:sport_event:51096315	sr:season:118699	sr:competitor:71	sr:competitor:61	\N	\N	not_started	34	sr:venue:660	2025-02-22 12:30:00
 sr:sport_event:51095513	sr:season:118699	sr:competitor:8	sr:competitor:263	2	2	closed	16	sr:venue:1136	2024-11-23 15:00:00
 sr:sport_event:51096219	sr:season:118699	sr:competitor:25	sr:competitor:1	\N	\N	not_started	30	sr:venue:2352	2025-02-01 15:00:00
+sr:sport_event:51096155	sr:season:118699	sr:competitor:15	sr:competitor:263	\N	\N	not_started	27	sr:venue:598	2025-01-18 15:00:00
+sr:sport_event:51389307	sr:season:119847	sr:competitor:3010	sr:competitor:2998	\N	\N	not_started	31	sr:venue:2539	2025-04-27 17:00:00
+sr:sport_event:51389349	sr:season:119847	sr:competitor:744135	sr:competitor:1031053	\N	\N	not_started	33	sr:venue:53523	2025-05-11 17:00:00
+sr:sport_event:51389373	sr:season:119847	sr:competitor:1031053	sr:competitor:3014	\N	\N	not_started	34	sr:venue:8249	2025-05-17 17:00:00
+sr:sport_event:51389211	sr:season:119847	sr:competitor:49531	sr:competitor:3036	\N	\N	not_started	25	sr:venue:16520	2025-03-09 18:00:00
+sr:sport_event:51096457	sr:season:118699	sr:competitor:72	sr:competitor:34	\N	\N	not_started	40	sr:venue:2178	2025-04-05 11:30:00
+sr:sport_event:51096467	sr:season:118699	sr:competitor:1	sr:competitor:61	\N	\N	not_started	40	sr:venue:1693	2025-04-05 14:00:00
+sr:sport_event:51096453	sr:season:118699	sr:competitor:58	sr:competitor:24	\N	\N	not_started	40	sr:venue:2505	2025-04-05 14:00:00
 sr:sport_event:51096595	sr:season:118699	sr:competitor:2	sr:competitor:27	\N	\N	not_started	42	sr:venue:638	2025-04-12 14:00:00
 sr:sport_event:51096391	sr:season:118699	sr:competitor:96	sr:competitor:95	\N	\N	not_started	37	sr:venue:1138	2025-03-12 19:45:00
-sr:sport_event:51096155	sr:season:118699	sr:competitor:15	sr:competitor:263	\N	\N	not_started	27	sr:venue:598	2025-01-18 15:00:00
-sr:sport_event:51095565	sr:season:118699	sr:competitor:2	sr:competitor:25	\N	\N	abandoned	17	sr:venue:638	2024-11-27 19:45:00
-sr:sport_event:51096453	sr:season:118699	sr:competitor:58	sr:competitor:24	\N	\N	not_started	40	sr:venue:2505	2025-04-05 14:00:00
-sr:sport_event:51096381	sr:season:118699	sr:competitor:27	sr:competitor:11	\N	\N	not_started	37	sr:venue:852	2025-03-11 19:45:00
+sr:sport_event:51096919	sr:season:118699	sr:competitor:74	sr:competitor:95	\N	\N	not_started	46	sr:venue:1689	2025-05-03 14:00:00
+sr:sport_event:51096915	sr:season:118699	sr:competitor:8	sr:competitor:72	\N	\N	not_started	46	sr:venue:1136	2025-05-03 14:00:00
+sr:sport_event:51095565	sr:season:118699	sr:competitor:2	sr:competitor:25	\N	\N	postponed	17	sr:venue:638	2024-11-27 19:45:00
+sr:sport_event:51096315	sr:season:118699	sr:competitor:71	sr:competitor:61	\N	\N	not_started	34	sr:venue:660	2025-02-22 12:30:00
 sr:sport_event:51388849	sr:season:119847	sr:competitor:3011	sr:competitor:3010	2	1	closed	9	sr:venue:5318	2024-10-25 19:45:00
-sr:sport_event:51096465	sr:season:118699	sr:competitor:21	sr:competitor:29	\N	\N	not_started	40	sr:venue:3002	2025-04-05 14:00:00
-sr:sport_event:51096933	sr:season:118699	sr:competitor:11	sr:competitor:36	\N	\N	not_started	46	sr:venue:2194	2025-05-03 14:00:00
 sr:sport_event:51096031	sr:season:118699	sr:competitor:6	sr:competitor:41	\N	\N	not_started	27	sr:venue:806	2025-01-17 20:00:00
 sr:sport_event:51096159	sr:season:118699	sr:competitor:8	sr:competitor:29	\N	\N	not_started	27	sr:venue:1136	2025-01-18 15:00:00
-sr:sport_event:51096875	sr:season:118699	sr:competitor:1	sr:competitor:74	\N	\N	not_started	44	sr:venue:1693	2025-04-21 14:00:00
 sr:sport_event:51095227	sr:season:118699	sr:competitor:1	sr:competitor:11	1	1	closed	11	sr:venue:1693	2024-10-22 19:00:00
-sr:sport_event:51389257	sr:season:119847	sr:competitor:3013	sr:competitor:744135	\N	\N	not_started	28	sr:venue:1335	2025-04-06 17:00:00
-sr:sport_event:51389265	sr:season:119847	sr:competitor:1031053	sr:competitor:4500	\N	\N	not_started	28	sr:venue:8249	2025-04-06 17:00:00
 sr:sport_event:46655541	sr:season:114317	sr:competitor:7628	sr:competitor:3206	0	1	closed	1	sr:venue:4738	2024-05-12 18:30:00
 sr:sport_event:51388967	sr:season:119847	sr:competitor:3014	sr:competitor:3002	\N	\N	not_started	15	sr:venue:5312	2024-12-21 20:30:00
-sr:sport_event:51389197	sr:season:119847	sr:competitor:1031053	sr:competitor:25777	\N	\N	not_started	25	sr:venue:8249	2025-03-09 18:00:00
-sr:sport_event:51389231	sr:season:119847	sr:competitor:3011	sr:competitor:3013	\N	\N	not_started	27	sr:venue:5318	2025-03-30 17:00:00
 sr:sport_event:51388745	sr:season:119847	sr:competitor:2999	sr:competitor:3014	3	1	closed	3	sr:venue:951	2024-08-25 19:30:00
-sr:sport_event:51389303	sr:season:119847	sr:competitor:3011	sr:competitor:25777	\N	\N	not_started	31	sr:venue:5318	2025-04-27 17:00:00
-sr:sport_event:51389327	sr:season:119847	sr:competitor:3036	sr:competitor:744135	\N	\N	not_started	32	sr:venue:2013	2025-05-04 17:00:00
 sr:sport_event:51094933	sr:season:118699	sr:competitor:74	sr:competitor:21	3	0	closed	2	sr:venue:1689	2024-08-17 14:00:00
-sr:sport_event:51389205	sr:season:119847	sr:competitor:36365	sr:competitor:3001	\N	\N	not_started	25	sr:venue:43626	2025-03-09 18:00:00
 sr:sport_event:51389083	sr:season:119847	sr:competitor:3011	sr:competitor:3006	\N	\N	not_started	22	sr:venue:5318	2025-02-16 18:00:00
 sr:sport_event:51095611	sr:season:118699	sr:competitor:74	sr:competitor:2	\N	\N	not_started	18	sr:venue:1689	2024-11-30 15:00:00
 sr:sport_event:51389001	sr:season:119847	sr:competitor:3010	sr:competitor:3036	\N	\N	not_started	17	sr:venue:2539	2025-01-05 18:00:00
 sr:sport_event:46655553	sr:season:114317	sr:competitor:7629	sr:competitor:36839	3	1	closed	1	sr:venue:12021	2024-05-11 17:30:00
-sr:sport_event:51389239	sr:season:119847	sr:competitor:3006	sr:competitor:2998	\N	\N	not_started	27	sr:venue:902	2025-03-30 17:00:00
 sr:sport_event:51095441	sr:season:118699	sr:competitor:263	sr:competitor:58	0	2	closed	15	sr:venue:2221	2024-11-09 15:00:00
 sr:sport_event:51094991	sr:season:118699	sr:competitor:96	sr:competitor:15	0	2	closed	5	sr:venue:1138	2024-09-13 19:00:00
 sr:sport_event:51095131	sr:season:118699	sr:competitor:8	sr:competitor:36	0	1	closed	8	sr:venue:1136	2024-10-01 19:00:00
@@ -1292,41 +1265,41 @@ sr:sport_event:46655585	sr:season:114317	sr:competitor:3217	sr:competitor:7628	1
 sr:sport_event:51095449	sr:season:118699	sr:competitor:15	sr:competitor:12	1	0	closed	15	sr:venue:598	2024-11-10 12:30:00
 sr:sport_event:51095821	sr:season:118699	sr:competitor:8	sr:competitor:58	\N	\N	not_started	22	sr:venue:1136	2024-12-22 15:00:00
 sr:sport_event:51096167	sr:season:118699	sr:competitor:36	sr:competitor:8	\N	\N	not_started	28	sr:venue:743	2025-01-21 19:45:00
-sr:sport_event:51095467	sr:season:118699	sr:competitor:46	sr:competitor:2	\N	\N	postponed	16	sr:venue:631	2024-11-23 15:00:00
 sr:sport_event:51095881	sr:season:118699	sr:competitor:58	sr:competitor:2	\N	\N	not_started	24	sr:venue:2505	2024-12-29 15:00:00
 sr:sport_event:51096285	sr:season:118699	sr:competitor:96	sr:competitor:263	\N	\N	not_started	33	sr:venue:1138	2025-02-15 15:00:00
-sr:sport_event:51096369	sr:season:118699	sr:competitor:41	sr:competitor:61	\N	\N	not_started	36	sr:venue:851	2025-03-08 15:00:00
 sr:sport_event:51096211	sr:season:118699	sr:competitor:27	sr:competitor:15	\N	\N	not_started	30	sr:venue:852	2025-02-01 15:00:00
-sr:sport_event:51096411	sr:season:118699	sr:competitor:95	sr:competitor:24	\N	\N	not_started	38	sr:venue:2366	2025-03-15 15:00:00
-sr:sport_event:51096485	sr:season:118699	sr:competitor:15	sr:competitor:25	\N	\N	not_started	41	sr:venue:598	2025-04-08 18:45:00
 sr:sport_event:46655637	sr:season:114317	sr:competitor:3206	sr:competitor:6074	1	1	closed	4	sr:venue:1007	2024-06-04 00:15:00
 sr:sport_event:46655677	sr:season:114317	sr:competitor:3208	sr:competitor:3210	3	0	closed	6	sr:venue:1079	2024-07-21 23:00:00
-sr:sport_event:51096837	sr:season:118699	sr:competitor:41	sr:competitor:74	\N	\N	not_started	42	sr:venue:851	2025-04-12 14:00:00
 sr:sport_event:51095383	sr:season:118699	sr:competitor:12	sr:competitor:263	2	0	closed	14	sr:venue:2547	2024-11-05 19:45:00
-sr:sport_event:51096395	sr:season:118699	sr:competitor:263	sr:competitor:12	\N	\N	not_started	37	sr:venue:2221	2025-03-12 19:45:00
 sr:sport_event:51095723	sr:season:118699	sr:competitor:46	sr:competitor:72	\N	\N	not_started	21	sr:venue:631	2024-12-14 15:00:00
-sr:sport_event:51096881	sr:season:118699	sr:competitor:72	sr:competitor:58	\N	\N	not_started	44	sr:venue:2178	2025-04-21 14:00:00
-sr:sport_event:51096931	sr:season:118699	sr:competitor:27	sr:competitor:29	\N	\N	not_started	46	sr:venue:852	2025-05-03 14:00:00
 sr:sport_event:51095847	sr:season:118699	sr:competitor:263	sr:competitor:25	\N	\N	not_started	23	sr:venue:2221	2024-12-26 15:00:00
-sr:sport_event:51096435	sr:season:118699	sr:competitor:34	sr:competitor:74	\N	\N	not_started	39	sr:venue:2223	2025-03-29 15:00:00
+sr:sport_event:51389265	sr:season:119847	sr:competitor:1031053	sr:competitor:4500	\N	\N	not_started	28	sr:venue:8249	2025-04-06 17:00:00
+sr:sport_event:51389257	sr:season:119847	sr:competitor:3013	sr:competitor:744135	\N	\N	not_started	28	sr:venue:1335	2025-04-06 17:00:00
+sr:sport_event:51389327	sr:season:119847	sr:competitor:3036	sr:competitor:744135	\N	\N	not_started	32	sr:venue:2013	2025-05-04 17:00:00
+sr:sport_event:51389197	sr:season:119847	sr:competitor:1031053	sr:competitor:25777	\N	\N	not_started	25	sr:venue:8249	2025-03-09 18:00:00
+sr:sport_event:51389239	sr:season:119847	sr:competitor:3006	sr:competitor:2998	\N	\N	not_started	27	sr:venue:902	2025-03-30 17:00:00
 sr:sport_event:51389169	sr:season:119847	sr:competitor:36365	sr:competitor:3010	\N	\N	not_started	23	sr:venue:43626	2025-02-23 18:00:00
+sr:sport_event:51389231	sr:season:119847	sr:competitor:3011	sr:competitor:3013	\N	\N	not_started	27	sr:venue:5318	2025-03-30 17:00:00
+sr:sport_event:51096435	sr:season:118699	sr:competitor:34	sr:competitor:74	\N	\N	not_started	39	sr:venue:2223	2025-03-29 15:00:00
+sr:sport_event:51096465	sr:season:118699	sr:competitor:21	sr:competitor:29	\N	\N	not_started	40	sr:venue:3002	2025-04-05 14:00:00
+sr:sport_event:51096411	sr:season:118699	sr:competitor:95	sr:competitor:24	\N	\N	not_started	38	sr:venue:2366	2025-03-15 15:00:00
+sr:sport_event:51096485	sr:season:118699	sr:competitor:15	sr:competitor:25	\N	\N	not_started	41	sr:venue:598	2025-04-08 18:45:00
+sr:sport_event:51096837	sr:season:118699	sr:competitor:41	sr:competitor:74	\N	\N	not_started	42	sr:venue:851	2025-04-12 14:00:00
+sr:sport_event:51096881	sr:season:118699	sr:competitor:72	sr:competitor:58	\N	\N	not_started	44	sr:venue:2178	2025-04-21 14:00:00
 sr:sport_event:51096895	sr:season:118699	sr:competitor:12	sr:competitor:2	\N	\N	not_started	45	sr:venue:2547	2025-04-26 14:00:00
+sr:sport_event:51096931	sr:season:118699	sr:competitor:27	sr:competitor:29	\N	\N	not_started	46	sr:venue:852	2025-05-03 14:00:00
+sr:sport_event:51096933	sr:season:118699	sr:competitor:11	sr:competitor:36	\N	\N	not_started	46	sr:venue:2194	2025-05-03 14:00:00
+sr:sport_event:51096395	sr:season:118699	sr:competitor:263	sr:competitor:12	\N	\N	not_started	37	sr:venue:2221	2025-03-12 19:45:00
 sr:sport_event:51092209	sr:season:118699	sr:competitor:36	sr:competitor:74	1	0	closed	1	sr:venue:743	2024-08-10 11:30:00
 sr:sport_event:51389073	sr:season:119847	sr:competitor:25777	sr:competitor:3036	\N	\N	not_started	21	sr:venue:8289	2025-02-09 18:00:00
 sr:sport_event:51095021	sr:season:118699	sr:competitor:263	sr:competitor:24	4	1	closed	6	sr:venue:2221	2024-09-21 11:30:00
 sr:sport_event:51095045	sr:season:118699	sr:competitor:25	sr:competitor:21	3	1	closed	7	sr:venue:2352	2024-09-28 14:00:00
 sr:sport_event:51388901	sr:season:119847	sr:competitor:4500	sr:competitor:1031053	0	0	closed	11	sr:venue:5326	2024-11-09 15:30:00
 sr:sport_event:51389051	sr:season:119847	sr:competitor:3036	sr:competitor:3002	\N	\N	not_started	20	sr:venue:2013	2025-02-02 18:00:00
-sr:sport_event:51389217	sr:season:119847	sr:competitor:3014	sr:competitor:2995	\N	\N	not_started	26	sr:venue:5312	2025-03-16 18:00:00
-sr:sport_event:46655589	sr:season:114317	sr:competitor:3211	sr:competitor:3203	\N	\N	postponed	2	sr:venue:1009	2024-05-11 22:45:00
-sr:sport_event:51389243	sr:season:119847	sr:competitor:36365	sr:competitor:3036	\N	\N	not_started	27	sr:venue:43626	2025-03-30 17:00:00
 sr:sport_event:51388843	sr:season:119847	sr:competitor:3010	sr:competitor:744135	3	0	closed	8	sr:venue:2539	2024-10-05 14:30:00
-sr:sport_event:51389269	sr:season:119847	sr:competitor:3006	sr:competitor:25777	\N	\N	not_started	29	sr:venue:902	2025-04-13 17:00:00
 sr:sport_event:51388939	sr:season:119847	sr:competitor:2999	sr:competitor:49531	\N	\N	not_started	14	sr:venue:951	2024-12-16 18:45:00
 sr:sport_event:51092279	sr:season:118699	sr:competitor:29	sr:competitor:11	1	0	closed	1	sr:venue:1135	2024-08-10 11:30:00
-sr:sport_event:51389273	sr:season:119847	sr:competitor:49531	sr:competitor:4500	\N	\N	not_started	29	sr:venue:16520	2025-04-13 17:00:00
 sr:sport_event:51095505	sr:season:118699	sr:competitor:12	sr:competitor:61	1	1	closed	16	sr:venue:2547	2024-11-23 12:30:00
-sr:sport_event:51389319	sr:season:119847	sr:competitor:3014	sr:competitor:3013	\N	\N	not_started	31	sr:venue:5312	2025-04-27 17:00:00
 sr:sport_event:46655563	sr:season:114317	sr:competitor:65676	sr:competitor:3202	2	4	closed	2	sr:venue:49307	2024-05-19 23:00:00
 sr:sport_event:51095155	sr:season:118699	sr:competitor:15	sr:competitor:72	2	0	closed	9	sr:venue:598	2024-10-05 14:00:00
 sr:sport_event:51095607	sr:season:118699	sr:competitor:29	sr:competitor:6	\N	\N	not_started	18	sr:venue:1135	2024-11-30 15:00:00
@@ -1334,47 +1307,43 @@ sr:sport_event:51095745	sr:season:118699	sr:competitor:263	sr:competitor:6	\N	\N
 sr:sport_event:51388771	sr:season:119847	sr:competitor:744135	sr:competitor:36365	0	1	closed	4	sr:venue:53523	2024-08-31 17:00:00
 sr:sport_event:51092175	sr:season:118699	sr:competitor:46	sr:competitor:27	4	2	closed	1	sr:venue:631	2024-08-09 19:00:00
 sr:sport_event:51095153	sr:season:118699	sr:competitor:2	sr:competitor:95	1	1	closed	9	sr:venue:638	2024-10-05 11:30:00
-sr:sport_event:51096461	sr:season:118699	sr:competitor:95	sr:competitor:15	\N	\N	not_started	40	sr:venue:2366	2025-04-05 14:00:00
 sr:sport_event:51095283	sr:season:118699	sr:competitor:2	sr:competitor:12	1	2	closed	12	sr:venue:638	2024-10-25 19:00:00
 sr:sport_event:51095989	sr:season:118699	sr:competitor:96	sr:competitor:34	\N	\N	not_started	26	sr:venue:1138	2025-01-04 15:00:00
 sr:sport_event:51095749	sr:season:118699	sr:competitor:95	sr:competitor:12	\N	\N	not_started	21	sr:venue:2366	2024-12-14 15:00:00
 sr:sport_event:51095873	sr:season:118699	sr:competitor:24	sr:competitor:2	\N	\N	not_started	23	sr:venue:813	2024-12-26 15:00:00
 sr:sport_event:51094945	sr:season:118699	sr:competitor:36	sr:competitor:2	2	2	closed	3	sr:venue:743	2024-08-24 14:00:00
-sr:sport_event:51096423	sr:season:118699	sr:competitor:74	sr:competitor:6	\N	\N	not_started	38	sr:venue:1689	2025-03-15 15:00:00
 sr:sport_event:51095135	sr:season:118699	sr:competitor:263	sr:competitor:34	1	1	closed	8	sr:venue:2221	2024-10-01 18:45:00
-sr:sport_event:51096843	sr:season:118699	sr:competitor:21	sr:competitor:1	\N	\N	not_started	43	sr:venue:3002	2025-04-18 14:00:00
-sr:sport_event:51096577	sr:season:118699	sr:competitor:95	sr:competitor:1	\N	\N	not_started	41	sr:venue:2366	2025-04-09 18:45:00
 sr:sport_event:46655751	sr:season:114317	sr:competitor:3211	sr:competitor:42338	1	0	closed	8	sr:venue:1009	2024-07-28 21:30:00
 sr:sport_event:51095915	sr:season:118699	sr:competitor:29	sr:competitor:41	\N	\N	not_started	24	sr:venue:1135	2024-12-29 15:00:00
-sr:sport_event:51096593	sr:season:118699	sr:competitor:71	sr:competitor:15	\N	\N	not_started	42	sr:venue:660	2025-04-12 14:00:00
 sr:sport_event:51096181	sr:season:118699	sr:competitor:2	sr:competitor:29	\N	\N	not_started	28	sr:venue:638	2025-01-22 19:45:00
-sr:sport_event:51096357	sr:season:118699	sr:competitor:11	sr:competitor:29	\N	\N	not_started	36	sr:venue:2194	2025-03-08 15:00:00
-sr:sport_event:51096345	sr:season:118699	sr:competitor:21	sr:competitor:74	\N	\N	not_started	35	sr:venue:3002	2025-03-01 15:00:00
 sr:sport_event:51095413	sr:season:118699	sr:competitor:6	sr:competitor:74	1	0	closed	15	sr:venue:806	2024-11-10 15:00:00
-sr:sport_event:51096927	sr:season:118699	sr:competitor:71	sr:competitor:34	\N	\N	not_started	46	sr:venue:660	2025-05-03 14:00:00
-sr:sport_event:51096319	sr:season:118699	sr:competitor:15	sr:competitor:34	\N	\N	postponed	34	sr:venue:598	2025-02-22 15:00:00
-sr:sport_event:51096305	sr:season:118699	sr:competitor:58	sr:competitor:36	\N	\N	not_started	34	sr:venue:2505	2025-02-21 19:45:00
 sr:sport_event:51095027	sr:season:118699	sr:competitor:15	sr:competitor:27	1	0	closed	6	sr:venue:598	2024-09-21 14:00:00
 sr:sport_event:51095705	sr:season:118699	sr:competitor:61	sr:competitor:21	\N	\N	not_started	20	sr:venue:1514	2024-12-11 19:45:00
 sr:sport_event:51096195	sr:season:118699	sr:competitor:263	sr:competitor:74	\N	\N	not_started	29	sr:venue:2221	2025-01-25 12:30:00
-sr:sport_event:51096879	sr:season:118699	sr:competitor:25	sr:competitor:263	\N	\N	not_started	44	sr:venue:2352	2025-04-21 14:00:00
-sr:sport_event:51096893	sr:season:118699	sr:competitor:29	sr:competitor:15	\N	\N	not_started	45	sr:venue:1135	2025-04-26 14:00:00
 sr:sport_event:46655561	sr:season:114317	sr:competitor:36833	sr:competitor:3202	1	0	closed	1	sr:venue:12017	2024-05-12 23:15:00
 sr:sport_event:51389055	sr:season:119847	sr:competitor:3013	sr:competitor:25777	\N	\N	not_started	20	sr:venue:1335	2025-02-02 18:00:00
 sr:sport_event:51388935	sr:season:119847	sr:competitor:744135	sr:competitor:25777	\N	\N	not_started	13	sr:venue:53523	2024-12-09 20:15:00
-sr:sport_event:51389305	sr:season:119847	sr:competitor:49531	sr:competitor:2999	\N	\N	not_started	31	sr:venue:16520	2025-04-27 17:00:00
-sr:sport_event:50955925	sr:season:119835	sr:competitor:1684	sr:competitor:1659	\N	\N	not_started	33	sr:venue:19889	2025-05-11 17:00:00
+sr:sport_event:51389269	sr:season:119847	sr:competitor:3006	sr:competitor:25777	\N	\N	not_started	29	sr:venue:902	2025-04-13 17:00:00
+sr:sport_event:51389319	sr:season:119847	sr:competitor:3014	sr:competitor:3013	\N	\N	not_started	31	sr:venue:5312	2025-04-27 17:00:00
+sr:sport_event:51389243	sr:season:119847	sr:competitor:36365	sr:competitor:3036	\N	\N	not_started	27	sr:venue:43626	2025-03-30 17:00:00
+sr:sport_event:51389217	sr:season:119847	sr:competitor:3014	sr:competitor:2995	\N	\N	not_started	26	sr:venue:5312	2025-03-16 18:00:00
+sr:sport_event:51096461	sr:season:118699	sr:competitor:95	sr:competitor:15	\N	\N	not_started	40	sr:venue:2366	2025-04-05 14:00:00
+sr:sport_event:51096577	sr:season:118699	sr:competitor:95	sr:competitor:1	\N	\N	not_started	41	sr:venue:2366	2025-04-09 18:45:00
+sr:sport_event:51096305	sr:season:118699	sr:competitor:58	sr:competitor:36	\N	\N	not_started	34	sr:venue:2505	2025-02-21 19:45:00
+sr:sport_event:51096843	sr:season:118699	sr:competitor:21	sr:competitor:1	\N	\N	not_started	43	sr:venue:3002	2025-04-18 14:00:00
+sr:sport_event:51096593	sr:season:118699	sr:competitor:71	sr:competitor:15	\N	\N	not_started	42	sr:venue:660	2025-04-12 14:00:00
+sr:sport_event:51096879	sr:season:118699	sr:competitor:25	sr:competitor:263	\N	\N	not_started	44	sr:venue:2352	2025-04-21 14:00:00
+sr:sport_event:51096893	sr:season:118699	sr:competitor:29	sr:competitor:15	\N	\N	not_started	45	sr:venue:1135	2025-04-26 14:00:00
+sr:sport_event:51096927	sr:season:118699	sr:competitor:71	sr:competitor:34	\N	\N	not_started	46	sr:venue:660	2025-05-03 14:00:00
+sr:sport_event:51096357	sr:season:118699	sr:competitor:11	sr:competitor:29	\N	\N	not_started	36	sr:venue:2194	2025-03-08 15:00:00
+sr:sport_event:51096319	sr:season:118699	sr:competitor:15	sr:competitor:34	\N	\N	postponed	34	sr:venue:598	2025-02-22 15:00:00
+sr:sport_event:46655589	sr:season:114317	sr:competitor:3211	sr:competitor:3203	\N	\N	postponed	2	sr:venue:1009	2024-05-11 22:45:00
 sr:sport_event:51388915	sr:season:119847	sr:competitor:2998	sr:competitor:744135	\N	\N	not_started	12	sr:venue:12069	2024-11-29 20:15:00
-sr:sport_event:51389299	sr:season:119847	sr:competitor:25777	sr:competitor:744135	\N	\N	not_started	30	sr:venue:8289	2025-04-19 17:00:00
-sr:sport_event:51389201	sr:season:119847	sr:competitor:2999	sr:competitor:3002	\N	\N	not_started	25	sr:venue:951	2025-03-09 18:00:00
 sr:sport_event:51389069	sr:season:119847	sr:competitor:3002	sr:competitor:3001	\N	\N	not_started	21	sr:venue:907	2025-02-09 18:00:00
 sr:sport_event:51388997	sr:season:119847	sr:competitor:3009	sr:competitor:3001	\N	\N	not_started	17	sr:venue:1137	2025-01-05 18:00:00
-sr:sport_event:51389285	sr:season:119847	sr:competitor:3009	sr:competitor:3006	\N	\N	not_started	30	sr:venue:1137	2025-04-19 17:00:00
 sr:sport_event:51095201	sr:season:118699	sr:competitor:29	sr:competitor:263	1	1	closed	10	sr:venue:1135	2024-10-19 14:00:00
 sr:sport_event:51388971	sr:season:119847	sr:competitor:36365	sr:competitor:25777	\N	\N	not_started	15	sr:venue:43626	2024-12-20 20:15:00
-sr:sport_event:50955779	sr:season:119835	sr:competitor:1682	sr:competitor:1646	\N	\N	not_started	25	sr:venue:1871	2025-03-09 17:00:00
 sr:sport_event:51389091	sr:season:119847	sr:competitor:3013	sr:competitor:4500	\N	\N	not_started	22	sr:venue:1335	2025-02-16 18:00:00
-sr:sport_event:51389251	sr:season:119847	sr:competitor:3001	sr:competitor:2999	\N	\N	not_started	28	sr:venue:910	2025-04-06 17:00:00
 sr:sport_event:51095005	sr:season:118699	sr:competitor:12	sr:competitor:1	1	1	closed	5	sr:venue:2547	2024-09-14 14:00:00
 sr:sport_event:51095063	sr:season:118699	sr:competitor:11	sr:competitor:46	3	0	closed	8	sr:venue:2194	2024-10-01 18:45:00
 sr:sport_event:51095151	sr:season:118699	sr:competitor:71	sr:competitor:46	2	1	closed	9	sr:venue:660	2024-10-05 14:00:00
@@ -1386,43 +1355,42 @@ sr:sport_event:51094937	sr:season:118699	sr:competitor:8	sr:competitor:34	0	0	cl
 sr:sport_event:51095291	sr:season:118699	sr:competitor:41	sr:competitor:95	2	0	closed	12	sr:venue:851	2024-10-26 14:00:00
 sr:sport_event:51095741	sr:season:118699	sr:competitor:36	sr:competitor:25	\N	\N	not_started	21	sr:venue:743	2024-12-14 15:00:00
 sr:sport_event:51096271	sr:season:118699	sr:competitor:24	sr:competitor:34	\N	\N	not_started	32	sr:venue:813	2025-02-11 19:45:00
-sr:sport_event:51096377	sr:season:118699	sr:competitor:6	sr:competitor:8	\N	\N	not_started	37	sr:venue:806	2025-03-11 19:45:00
 sr:sport_event:52359043	sr:season:118699	sr:competitor:1	sr:competitor:72	\N	\N	not_started	26	sr:venue:1693	2025-01-06 20:00:00
-sr:sport_event:51096335	sr:season:118699	sr:competitor:34	sr:competitor:8	\N	\N	not_started	35	sr:venue:2223	2025-03-01 15:00:00
 sr:sport_event:46655621	sr:season:114317	sr:competitor:36837	sr:competitor:3202	1	0	closed	4	sr:venue:12712	2024-06-02 17:30:00
 sr:sport_event:51095007	sr:season:118699	sr:competitor:74	sr:competitor:263	1	0	closed	5	sr:venue:1689	2024-09-14 14:00:00
 sr:sport_event:51096293	sr:season:118699	sr:competitor:25	sr:competitor:8	\N	\N	not_started	33	sr:venue:2352	2025-02-15 15:00:00
 sr:sport_event:51095535	sr:season:118699	sr:competitor:15	sr:competitor:95	3	0	closed	17	sr:venue:598	2024-11-26 19:45:00
 sr:sport_event:51095525	sr:season:118699	sr:competitor:34	sr:competitor:72	3	0	closed	17	sr:venue:2223	2024-11-27 19:45:00
-sr:sport_event:51096479	sr:season:118699	sr:competitor:36	sr:competitor:34	\N	\N	not_started	41	sr:venue:743	2025-04-08 18:45:00
-sr:sport_event:51096867	sr:season:118699	sr:competitor:71	sr:competitor:11	\N	\N	not_started	44	sr:venue:660	2025-04-21 14:00:00
 sr:sport_event:51094943	sr:season:118699	sr:competitor:96	sr:competitor:25	0	0	closed	3	sr:venue:1138	2024-08-24 11:30:00
-sr:sport_event:51096877	sr:season:118699	sr:competitor:2	sr:competitor:24	\N	\N	not_started	44	sr:venue:638	2025-04-21 14:00:00
-sr:sport_event:51096389	sr:season:118699	sr:competitor:41	sr:competitor:21	\N	\N	not_started	37	sr:venue:851	2025-03-11 19:45:00
 sr:sport_event:51095929	sr:season:118699	sr:competitor:6	sr:competitor:29	\N	\N	not_started	25	sr:venue:806	2025-01-01 15:00:00
-sr:sport_event:51096431	sr:season:118699	sr:competitor:27	sr:competitor:21	\N	\N	not_started	39	sr:venue:852	2025-03-29 15:00:00
 sr:sport_event:51095599	sr:season:118699	sr:competitor:21	sr:competitor:8	\N	\N	not_started	18	sr:venue:3002	2024-11-30 15:00:00
 sr:sport_event:51096173	sr:season:118699	sr:competitor:74	sr:competitor:15	\N	\N	not_started	28	sr:venue:1689	2025-01-21 19:45:00
-sr:sport_event:51096873	sr:season:118699	sr:competitor:12	sr:competitor:36	\N	\N	not_started	44	sr:venue:2547	2025-04-21 14:00:00
 sr:sport_event:51096297	sr:season:118699	sr:competitor:21	sr:competitor:6	\N	\N	not_started	33	sr:venue:3002	2025-02-15 12:30:00
 sr:sport_event:51389063	sr:season:119847	sr:competitor:2995	sr:competitor:49531	\N	\N	not_started	20	sr:venue:14556	2025-02-02 18:00:00
-sr:sport_event:51096589	sr:season:118699	sr:competitor:72	sr:competitor:46	\N	\N	not_started	42	sr:venue:2178	2025-04-12 14:00:00
 sr:sport_event:51095471	sr:season:118699	sr:competitor:58	sr:competitor:6	0	1	closed	16	sr:venue:2505	2024-11-23 12:30:00
 sr:sport_event:51389023	sr:season:119847	sr:competitor:2995	sr:competitor:36365	\N	\N	not_started	18	sr:venue:14556	2025-01-19 18:00:00
-sr:sport_event:51389267	sr:season:119847	sr:competitor:3011	sr:competitor:3001	\N	\N	not_started	29	sr:venue:5318	2025-04-13 17:00:00
 sr:sport_event:46655609	sr:season:114317	sr:competitor:3205	sr:competitor:3219	3	0	closed	3	sr:venue:12003	2024-05-26 20:45:00
-sr:sport_event:51389177	sr:season:119847	sr:competitor:3010	sr:competitor:3006	\N	\N	not_started	24	sr:venue:2539	2025-03-02 18:00:00
-sr:sport_event:51389275	sr:season:119847	sr:competitor:2999	sr:competitor:1031053	\N	\N	not_started	29	sr:venue:951	2025-04-13 17:00:00
-sr:sport_event:51389207	sr:season:119847	sr:competitor:4500	sr:competitor:2998	\N	\N	not_started	25	sr:venue:5326	2025-03-09 18:00:00
 sr:sport_event:46655549	sr:season:114317	sr:competitor:42338	sr:competitor:4937	1	2	closed	1	sr:venue:8975	2024-05-10 22:00:00
-sr:sport_event:51389323	sr:season:119847	sr:competitor:3013	sr:competitor:3009	\N	\N	not_started	32	sr:venue:1335	2025-05-04 17:00:00
+sr:sport_event:51389251	sr:season:119847	sr:competitor:3001	sr:competitor:2999	\N	\N	not_started	28	sr:venue:910	2025-04-06 17:00:00
+sr:sport_event:51389275	sr:season:119847	sr:competitor:2999	sr:competitor:1031053	\N	\N	not_started	29	sr:venue:951	2025-04-13 17:00:00
+sr:sport_event:51389267	sr:season:119847	sr:competitor:3011	sr:competitor:3001	\N	\N	not_started	29	sr:venue:5318	2025-04-13 17:00:00
+sr:sport_event:51389299	sr:season:119847	sr:competitor:25777	sr:competitor:744135	\N	\N	not_started	30	sr:venue:8289	2025-04-19 17:00:00
+sr:sport_event:51389207	sr:season:119847	sr:competitor:4500	sr:competitor:2998	\N	\N	not_started	25	sr:venue:5326	2025-03-09 18:00:00
+sr:sport_event:51096431	sr:season:118699	sr:competitor:27	sr:competitor:21	\N	\N	not_started	39	sr:venue:852	2025-03-29 15:00:00
+sr:sport_event:51096479	sr:season:118699	sr:competitor:36	sr:competitor:34	\N	\N	not_started	41	sr:venue:743	2025-04-08 18:45:00
+sr:sport_event:51096589	sr:season:118699	sr:competitor:72	sr:competitor:46	\N	\N	not_started	42	sr:venue:2178	2025-04-12 14:00:00
+sr:sport_event:51096867	sr:season:118699	sr:competitor:71	sr:competitor:11	\N	\N	not_started	44	sr:venue:660	2025-04-21 14:00:00
+sr:sport_event:51096873	sr:season:118699	sr:competitor:12	sr:competitor:36	\N	\N	not_started	44	sr:venue:2547	2025-04-21 14:00:00
+sr:sport_event:51096877	sr:season:118699	sr:competitor:2	sr:competitor:24	\N	\N	not_started	44	sr:venue:638	2025-04-21 14:00:00
+sr:sport_event:51096377	sr:season:118699	sr:competitor:6	sr:competitor:8	\N	\N	not_started	37	sr:venue:806	2025-03-11 19:45:00
+sr:sport_event:51096389	sr:season:118699	sr:competitor:41	sr:competitor:21	\N	\N	not_started	37	sr:venue:851	2025-03-11 19:45:00
+sr:sport_event:51096335	sr:season:118699	sr:competitor:34	sr:competitor:8	\N	\N	not_started	35	sr:venue:2223	2025-03-01 15:00:00
+sr:sport_event:50955779	sr:season:119835	sr:competitor:1682	sr:competitor:1646	\N	\N	not_started	25	sr:venue:1871	2025-03-09 17:00:00
+sr:sport_event:50955925	sr:season:119835	sr:competitor:1684	sr:competitor:1659	\N	\N	not_started	33	sr:venue:19889	2025-05-11 17:00:00
 sr:sport_event:51095197	sr:season:118699	sr:competitor:12	sr:competitor:6	0	2	closed	10	sr:venue:2547	2024-10-19 14:00:00
-sr:sport_event:51389297	sr:season:119847	sr:competitor:3036	sr:competitor:3011	\N	\N	not_started	30	sr:venue:2013	2025-04-19 17:00:00
-sr:sport_event:51389331	sr:season:119847	sr:competitor:2998	sr:competitor:49531	\N	\N	not_started	32	sr:venue:12069	2025-05-04 17:00:00
 sr:sport_event:46655601	sr:season:114317	sr:competitor:6074	sr:competitor:3201	1	1	closed	3	sr:venue:15676	2024-05-25 20:30:00
 sr:sport_event:51389037	sr:season:119847	sr:competitor:3002	sr:competitor:3011	\N	\N	not_started	19	sr:venue:907	2025-01-26 18:00:00
 sr:sport_event:46655555	sr:season:114317	sr:competitor:3205	sr:competitor:3208	3	1	closed	1	sr:venue:12003	2024-05-13 22:00:00
-sr:sport_event:51389291	sr:season:119847	sr:competitor:3013	sr:competitor:3010	\N	\N	not_started	30	sr:venue:1335	2025-04-19 17:00:00
 sr:sport_event:51095497	sr:season:118699	sr:competitor:21	sr:competitor:27	1	1	closed	16	sr:venue:3002	2024-11-23 15:00:00
 sr:sport_event:51095037	sr:season:118699	sr:competitor:27	sr:competitor:263	2	3	closed	7	sr:venue:852	2024-09-28 11:30:00
 sr:sport_event:51096171	sr:season:118699	sr:competitor:95	sr:competitor:72	\N	\N	not_started	28	sr:venue:2366	2025-01-21 19:45:00
@@ -1432,95 +1400,91 @@ sr:sport_event:46655631	sr:season:114317	sr:competitor:65668	sr:competitor:7629	
 sr:sport_event:51095001	sr:season:118699	sr:competitor:71	sr:competitor:41	3	2	closed	5	sr:venue:660	2024-09-14 14:00:00
 sr:sport_event:51094955	sr:season:118699	sr:competitor:29	sr:competitor:8	1	2	closed	3	sr:venue:1135	2024-08-24 14:00:00
 sr:sport_event:51095757	sr:season:118699	sr:competitor:15	sr:competitor:71	\N	\N	not_started	21	sr:venue:598	2024-12-14 15:00:00
-sr:sport_event:51096579	sr:season:118699	sr:competitor:74	sr:competitor:71	\N	\N	not_started	41	sr:venue:1689	2025-04-09 18:45:00
 sr:sport_event:51096143	sr:season:118699	sr:competitor:95	sr:competitor:46	\N	\N	not_started	27	sr:venue:2366	2025-01-18 15:00:00
 sr:sport_event:51095633	sr:season:118699	sr:competitor:34	sr:competitor:27	\N	\N	not_started	19	sr:venue:2223	2024-12-07 12:30:00
 sr:sport_event:51095429	sr:season:118699	sr:competitor:96	sr:competitor:8	1	2	closed	15	sr:venue:1138	2024-11-10 13:00:00
 sr:sport_event:51095817	sr:season:118699	sr:competitor:41	sr:competitor:263	\N	\N	not_started	22	sr:venue:851	2024-12-21 15:00:00
-sr:sport_event:51096573	sr:season:118699	sr:competitor:11	sr:competitor:2	\N	\N	not_started	41	sr:venue:2194	2025-04-09 18:45:00
 sr:sport_event:46655669	sr:season:114317	sr:competitor:36833	sr:competitor:36839	1	1	closed	5	sr:venue:12017	2024-06-15 23:30:00
 sr:sport_event:51388861	sr:season:119847	sr:competitor:49531	sr:competitor:3001	0	3	closed	9	sr:venue:16520	2024-10-26 19:30:00
-sr:sport_event:51096313	sr:season:118699	sr:competitor:263	sr:competitor:29	\N	\N	not_started	34	sr:venue:2221	2025-02-22 15:00:00
 sr:sport_event:51096273	sr:season:118699	sr:competitor:6	sr:competitor:96	\N	\N	not_started	32	sr:venue:806	2025-02-12 19:45:00
 sr:sport_event:51095531	sr:season:118699	sr:competitor:263	sr:competitor:71	6	1	closed	17	sr:venue:2221	2024-11-26 19:45:00
 sr:sport_event:51096239	sr:season:118699	sr:competitor:11	sr:competitor:34	\N	\N	not_started	31	sr:venue:2194	2025-02-08 15:00:00
-sr:sport_event:51096403	sr:season:118699	sr:competitor:58	sr:competitor:263	\N	\N	not_started	38	sr:venue:2505	2025-03-15 15:00:00
 sr:sport_event:51095603	sr:season:118699	sr:competitor:15	sr:competitor:41	\N	\N	not_started	18	sr:venue:598	2024-11-29 20:00:00
 sr:sport_event:51095591	sr:season:118699	sr:competitor:263	sr:competitor:72	\N	\N	not_started	18	sr:venue:2221	2024-11-30 15:00:00
-sr:sport_event:51096845	sr:season:118699	sr:competitor:15	sr:competitor:61	\N	\N	not_started	43	sr:venue:598	2025-04-18 14:00:00
-sr:sport_event:51096383	sr:season:118699	sr:competitor:36	sr:competitor:1	\N	\N	not_started	37	sr:venue:743	2025-03-11 19:45:00
 sr:sport_event:51096213	sr:season:118699	sr:competitor:96	sr:competitor:29	\N	\N	not_started	30	sr:venue:1138	2025-02-01 15:00:00
 sr:sport_event:51095709	sr:season:118699	sr:competitor:96	sr:competitor:24	\N	\N	not_started	20	sr:venue:1138	2024-12-11 19:45:00
-sr:sport_event:51095625	sr:season:118699	sr:competitor:61	sr:competitor:24	\N	\N	not_started	19	sr:venue:1514	2024-12-07 15:00:00
-sr:sport_event:51096891	sr:season:118699	sr:competitor:34	sr:competitor:58	\N	\N	not_started	45	sr:venue:2223	2025-04-26 14:00:00
-sr:sport_event:51096929	sr:season:118699	sr:competitor:263	sr:competitor:61	\N	\N	not_started	46	sr:venue:2221	2025-05-03 14:00:00
 sr:sport_event:51094935	sr:season:118699	sr:competitor:24	sr:competitor:29	3	0	closed	2	sr:venue:813	2024-08-17 14:00:00
 sr:sport_event:51095141	sr:season:118699	sr:competitor:58	sr:competitor:61	1	1	closed	9	sr:venue:2505	2024-10-06 14:00:00
 sr:sport_event:51388965	sr:season:119847	sr:competitor:744135	sr:competitor:3036	\N	\N	not_started	15	sr:venue:53523	2024-12-23 20:45:00
 sr:sport_event:51388765	sr:season:119847	sr:competitor:3001	sr:competitor:3002	2	0	closed	4	sr:venue:910	2024-08-31 19:30:00
 sr:sport_event:46655591	sr:season:114317	sr:competitor:3203	sr:competitor:65676	2	1	closed	3	sr:venue:4750	2024-05-25 00:15:00
-sr:sport_event:51389293	sr:season:119847	sr:competitor:3001	sr:competitor:3014	\N	\N	not_started	30	sr:venue:910	2025-04-19 17:00:00
 sr:sport_event:51388995	sr:season:119847	sr:competitor:3006	sr:competitor:2999	\N	\N	not_started	17	sr:venue:902	2025-01-05 18:00:00
-sr:sport_event:51389085	sr:season:119847	sr:competitor:3009	sr:competitor:2999	\N	\N	not_started	22	sr:venue:1137	2025-02-16 18:00:00
-sr:sport_event:51389347	sr:season:119847	sr:competitor:3009	sr:competitor:2998	\N	\N	not_started	33	sr:venue:1137	2025-05-11 17:00:00
-sr:sport_event:51389317	sr:season:119847	sr:competitor:744135	sr:competitor:3002	\N	\N	not_started	31	sr:venue:53523	2025-04-27 17:00:00
-sr:sport_event:51389173	sr:season:119847	sr:competitor:49531	sr:competitor:3014	\N	\N	not_started	23	sr:venue:16520	2025-02-23 18:00:00
-sr:sport_event:51389359	sr:season:119847	sr:competitor:3001	sr:competitor:3009	\N	\N	not_started	34	sr:venue:910	2025-05-17 17:00:00
 sr:sport_event:51389213	sr:season:119847	sr:competitor:3036	sr:competitor:3006	\N	\N	not_started	26	sr:venue:2013	2025-03-16 18:00:00
+sr:sport_event:51389291	sr:season:119847	sr:competitor:3013	sr:competitor:3010	\N	\N	not_started	30	sr:venue:1335	2025-04-19 17:00:00
+sr:sport_event:51389297	sr:season:119847	sr:competitor:3036	sr:competitor:3011	\N	\N	not_started	30	sr:venue:2013	2025-04-19 17:00:00
+sr:sport_event:51389317	sr:season:119847	sr:competitor:744135	sr:competitor:3002	\N	\N	not_started	31	sr:venue:53523	2025-04-27 17:00:00
+sr:sport_event:51389323	sr:season:119847	sr:competitor:3013	sr:competitor:3009	\N	\N	not_started	32	sr:venue:1335	2025-05-04 17:00:00
+sr:sport_event:51389347	sr:season:119847	sr:competitor:3009	sr:competitor:2998	\N	\N	not_started	33	sr:venue:1137	2025-05-11 17:00:00
+sr:sport_event:51389359	sr:season:119847	sr:competitor:3001	sr:competitor:3009	\N	\N	not_started	34	sr:venue:910	2025-05-17 17:00:00
+sr:sport_event:51389173	sr:season:119847	sr:competitor:49531	sr:competitor:3014	\N	\N	not_started	23	sr:venue:16520	2025-02-23 18:00:00
+sr:sport_event:51096403	sr:season:118699	sr:competitor:58	sr:competitor:263	\N	\N	not_started	38	sr:venue:2505	2025-03-15 15:00:00
+sr:sport_event:51095625	sr:season:118699	sr:competitor:61	sr:competitor:24	\N	\N	postponed	19	sr:venue:1514	2024-12-07 15:00:00
+sr:sport_event:51096579	sr:season:118699	sr:competitor:74	sr:competitor:71	\N	\N	not_started	41	sr:venue:1689	2025-04-09 18:45:00
+sr:sport_event:51096573	sr:season:118699	sr:competitor:11	sr:competitor:2	\N	\N	not_started	41	sr:venue:2194	2025-04-09 18:45:00
+sr:sport_event:51096845	sr:season:118699	sr:competitor:15	sr:competitor:61	\N	\N	not_started	43	sr:venue:598	2025-04-18 14:00:00
+sr:sport_event:51096891	sr:season:118699	sr:competitor:34	sr:competitor:58	\N	\N	not_started	45	sr:venue:2223	2025-04-26 14:00:00
+sr:sport_event:51096929	sr:season:118699	sr:competitor:263	sr:competitor:61	\N	\N	not_started	46	sr:venue:2221	2025-05-03 14:00:00
+sr:sport_event:51096383	sr:season:118699	sr:competitor:36	sr:competitor:1	\N	\N	not_started	37	sr:venue:743	2025-03-11 19:45:00
+sr:sport_event:51096313	sr:season:118699	sr:competitor:263	sr:competitor:29	\N	\N	not_started	34	sr:venue:2221	2025-02-22 15:00:00
 sr:sport_event:51388839	sr:season:119847	sr:competitor:3001	sr:competitor:36365	2	0	closed	8	sr:venue:910	2024-10-05 19:30:00
-sr:sport_event:51389279	sr:season:119847	sr:competitor:36365	sr:competitor:3002	\N	\N	not_started	29	sr:venue:43626	2025-04-13 17:00:00
 sr:sport_event:51094997	sr:season:118699	sr:competitor:25	sr:competitor:72	0	1	closed	5	sr:venue:2352	2024-09-14 11:30:00
 sr:sport_event:51095479	sr:season:118699	sr:competitor:72	sr:competitor:96	1	0	closed	16	sr:venue:2178	2024-11-23 15:00:00
 sr:sport_event:51095265	sr:season:118699	sr:competitor:11	sr:competitor:72	3	2	closed	12	sr:venue:2194	2024-10-26 11:30:00
 sr:sport_event:51095313	sr:season:118699	sr:competitor:61	sr:competitor:263	2	1	closed	13	sr:venue:1514	2024-11-02 15:00:00
 sr:sport_event:51095693	sr:season:118699	sr:competitor:2	sr:competitor:263	\N	\N	not_started	20	sr:venue:638	2024-12-10 19:45:00
-sr:sport_event:51096481	sr:season:118699	sr:competitor:263	sr:competitor:41	\N	\N	not_started	41	sr:venue:2221	2025-04-08 18:45:00
-sr:sport_event:51389167	sr:season:119847	sr:competitor:25777	sr:competitor:2998	\N	\N	not_started	23	sr:venue:8289	2025-02-23 18:00:00
 sr:sport_event:46655577	sr:season:114317	sr:competitor:65668	sr:competitor:42338	1	1	closed	2	sr:venue:69401	2024-05-19 18:00:00
 sr:sport_event:51094837	sr:season:118699	sr:competitor:11	sr:competitor:95	3	2	closed	2	sr:venue:2194	2024-08-16 19:00:00
 sr:sport_event:46655683	sr:season:114317	sr:competitor:4937	sr:competitor:3209	3	1	closed	6	sr:venue:2388	2024-07-19 00:00:00
 sr:sport_event:51095041	sr:season:118699	sr:competitor:34	sr:competitor:11	3	0	closed	7	sr:venue:2223	2024-09-28 14:00:00
 sr:sport_event:51095951	sr:season:118699	sr:competitor:25	sr:competitor:95	\N	\N	not_started	25	sr:venue:2352	2025-01-01 13:00:00
-sr:sport_event:51096449	sr:season:118699	sr:competitor:24	sr:competitor:71	\N	\N	not_started	39	sr:venue:813	2025-03-29 15:00:00
 sr:sport_event:51095269	sr:season:118699	sr:competitor:27	sr:competitor:96	1	1	closed	12	sr:venue:852	2024-10-26 14:00:00
 sr:sport_event:51095377	sr:season:118699	sr:competitor:1	sr:competitor:36	1	4	closed	14	sr:venue:1693	2024-11-05 19:45:00
-sr:sport_event:51096217	sr:season:118699	sr:competitor:36	sr:competitor:41	\N	\N	postponed	30	sr:venue:743	2025-02-01 15:00:00
 sr:sport_event:51095671	sr:season:118699	sr:competitor:6	sr:competitor:27	\N	\N	not_started	20	sr:venue:806	2024-12-10 19:45:00
 sr:sport_event:51096175	sr:season:118699	sr:competitor:24	sr:competitor:21	\N	\N	not_started	28	sr:venue:813	2025-01-21 19:45:00
-sr:sport_event:51096187	sr:season:118699	sr:competitor:6	sr:competitor:34	\N	\N	postponed	29	sr:venue:806	2024-11-27 20:00:00
 sr:sport_event:51096203	sr:season:118699	sr:competitor:29	sr:competitor:95	\N	\N	not_started	29	sr:venue:1135	2025-01-25 12:30:00
 sr:sport_event:51096199	sr:season:118699	sr:competitor:1	sr:competitor:12	\N	\N	not_started	29	sr:venue:1693	2025-01-25 15:00:00
 sr:sport_event:51095069	sr:season:118699	sr:competitor:15	sr:competitor:74	1	0	closed	8	sr:venue:598	2024-10-02 18:45:00
 sr:sport_event:51096209	sr:season:118699	sr:competitor:46	sr:competitor:21	\N	\N	not_started	30	sr:venue:631	2025-01-31 20:00:00
-sr:sport_event:51096591	sr:season:118699	sr:competitor:25	sr:competitor:36	\N	\N	not_started	42	sr:venue:2352	2025-04-12 14:00:00
 sr:sport_event:46655625	sr:season:114317	sr:competitor:36839	sr:competitor:3209	0	0	closed	4	sr:venue:12025	2024-06-04 00:15:00
-sr:sport_event:51096359	sr:season:118699	sr:competitor:27	sr:competitor:46	\N	\N	not_started	36	sr:venue:852	2025-03-08 15:00:00
-sr:sport_event:51096337	sr:season:118699	sr:competitor:72	sr:competitor:2	\N	\N	not_started	35	sr:venue:2178	2025-03-01 15:00:00
-sr:sport_event:51096441	sr:season:118699	sr:competitor:2	sr:competitor:46	\N	\N	not_started	39	sr:venue:638	2025-03-29 15:00:00
 sr:sport_event:51096243	sr:season:118699	sr:competitor:263	sr:competitor:27	\N	\N	not_started	31	sr:venue:2221	2025-02-08 15:00:00
-sr:sport_event:51096005	sr:season:118699	sr:competitor:1	sr:competitor:72	\N	\N	postponed	26	sr:venue:1693	2025-01-04 15:00:00
-sr:sport_event:51096841	sr:season:118699	sr:competitor:1	sr:competitor:58	\N	\N	not_started	42	sr:venue:1693	2025-04-12 14:00:00
-sr:sport_event:51096865	sr:season:118699	sr:competitor:95	sr:competitor:34	\N	\N	not_started	43	sr:venue:2366	2025-04-18 14:00:00
 sr:sport_event:51094931	sr:season:118699	sr:competitor:41	sr:competitor:12	4	0	closed	2	sr:venue:851	2024-08-18 11:00:00
 sr:sport_event:51389025	sr:season:119847	sr:competitor:3036	sr:competitor:3001	\N	\N	not_started	18	sr:venue:2013	2025-01-19 18:00:00
 sr:sport_event:46655659	sr:season:114317	sr:competitor:3204	sr:competitor:3201	2	1	closed	5	sr:venue:4754	2024-06-15 19:00:00
 sr:sport_event:51095167	sr:season:118699	sr:competitor:61	sr:competitor:71	5	0	closed	10	sr:venue:1514	2024-10-19 11:30:00
 sr:sport_event:51388907	sr:season:119847	sr:competitor:4500	sr:competitor:49531	\N	\N	not_started	12	sr:venue:5326	2024-12-01 15:30:00
 sr:sport_event:46655539	sr:season:114317	sr:competitor:3216	sr:competitor:3217	3	2	closed	1	sr:venue:613	2024-05-11 00:15:00
-sr:sport_event:51389215	sr:season:119847	sr:competitor:2998	sr:competitor:2999	\N	\N	not_started	26	sr:venue:12069	2025-03-16 18:00:00
-sr:sport_event:51389363	sr:season:119847	sr:competitor:3036	sr:competitor:3010	\N	\N	not_started	34	sr:venue:2013	2025-05-17 17:00:00
 sr:sport_event:51389027	sr:season:119847	sr:competitor:3010	sr:competitor:3002	\N	\N	not_started	18	sr:venue:2539	2025-01-19 18:00:00
-sr:sport_event:51389221	sr:season:119847	sr:competitor:3009	sr:competitor:744135	\N	\N	not_started	26	sr:venue:1137	2025-03-16 18:00:00
-sr:sport_event:51389237	sr:season:119847	sr:competitor:49531	sr:competitor:1031053	\N	\N	not_started	27	sr:venue:16520	2025-03-30 17:00:00
-sr:sport_event:51389295	sr:season:119847	sr:competitor:3002	sr:competitor:49531	\N	\N	not_started	30	sr:venue:907	2025-04-19 17:00:00
 sr:sport_event:51389049	sr:season:119847	sr:competitor:744135	sr:competitor:3006	\N	\N	not_started	20	sr:venue:53523	2025-02-02 18:00:00
 sr:sport_event:51388833	sr:season:119847	sr:competitor:3013	sr:competitor:3006	\N	\N	postponed	8	sr:venue:1335	2024-10-06 17:00:00
 sr:sport_event:50955525	sr:season:119835	sr:competitor:1642	sr:competitor:1715	3	1	closed	11	sr:venue:1275	2024-11-10 16:00:00
 sr:sport_event:46655559	sr:season:114317	sr:competitor:3209	sr:competitor:3210	1	3	closed	1	sr:venue:1099	2024-05-11 20:30:00
 sr:sport_event:46655597	sr:season:114317	sr:competitor:191648	sr:competitor:3217	0	2	closed	3	sr:venue:17150	2024-05-24 18:30:00
 sr:sport_event:51095195	sr:season:118699	sr:competitor:1	sr:competitor:2	1	2	closed	10	sr:venue:1693	2024-10-19 14:00:00
+sr:sport_event:51389221	sr:season:119847	sr:competitor:3009	sr:competitor:744135	\N	\N	not_started	26	sr:venue:1137	2025-03-16 18:00:00
+sr:sport_event:51389279	sr:season:119847	sr:competitor:36365	sr:competitor:3002	\N	\N	not_started	29	sr:venue:43626	2025-04-13 17:00:00
+sr:sport_event:51389295	sr:season:119847	sr:competitor:3002	sr:competitor:49531	\N	\N	not_started	30	sr:venue:907	2025-04-19 17:00:00
+sr:sport_event:51389237	sr:season:119847	sr:competitor:49531	sr:competitor:1031053	\N	\N	not_started	27	sr:venue:16520	2025-03-30 17:00:00
+sr:sport_event:51389363	sr:season:119847	sr:competitor:3036	sr:competitor:3010	\N	\N	not_started	34	sr:venue:2013	2025-05-17 17:00:00
+sr:sport_event:51096187	sr:season:118699	sr:competitor:6	sr:competitor:34	\N	\N	postponed	29	sr:venue:806	2024-11-27 20:00:00
+sr:sport_event:51096441	sr:season:118699	sr:competitor:2	sr:competitor:46	\N	\N	not_started	39	sr:venue:638	2025-03-29 15:00:00
+sr:sport_event:51096481	sr:season:118699	sr:competitor:263	sr:competitor:41	\N	\N	not_started	41	sr:venue:2221	2025-04-08 18:45:00
+sr:sport_event:51096841	sr:season:118699	sr:competitor:1	sr:competitor:58	\N	\N	not_started	42	sr:venue:1693	2025-04-12 14:00:00
+sr:sport_event:51096591	sr:season:118699	sr:competitor:25	sr:competitor:36	\N	\N	not_started	42	sr:venue:2352	2025-04-12 14:00:00
+sr:sport_event:51096005	sr:season:118699	sr:competitor:1	sr:competitor:72	\N	\N	postponed	26	sr:venue:1693	2025-01-04 15:00:00
+sr:sport_event:51096217	sr:season:118699	sr:competitor:36	sr:competitor:41	\N	\N	postponed	30	sr:venue:743	2025-02-01 15:00:00
+sr:sport_event:51096449	sr:season:118699	sr:competitor:24	sr:competitor:71	\N	\N	not_started	39	sr:venue:813	2025-03-29 15:00:00
+sr:sport_event:51096337	sr:season:118699	sr:competitor:72	sr:competitor:2	\N	\N	not_started	35	sr:venue:2178	2025-03-01 15:00:00
 sr:sport_event:51095011	sr:season:118699	sr:competitor:58	sr:competitor:95	2	1	closed	6	sr:venue:2505	2024-09-21 14:00:00
-sr:sport_event:51096871	sr:season:118699	sr:competitor:41	sr:competitor:46	\N	\N	not_started	44	sr:venue:851	2025-04-21 14:00:00
 sr:sport_event:51094929	sr:season:118699	sr:competitor:15	sr:competitor:1	2	2	closed	2	sr:venue:598	2024-08-17 14:00:00
 sr:sport_event:51389061	sr:season:119847	sr:competitor:3009	sr:competitor:1031053	\N	\N	not_started	20	sr:venue:1137	2025-02-02 18:00:00
 sr:sport_event:51092183	sr:season:118699	sr:competitor:95	sr:competitor:263	2	0	closed	1	sr:venue:2366	2024-08-10 11:30:00
@@ -1529,42 +1493,24 @@ sr:sport_event:51095043	sr:season:118699	sr:competitor:36	sr:competitor:29	2	0	c
 sr:sport_event:51095967	sr:season:118699	sr:competitor:12	sr:competitor:27	\N	\N	not_started	25	sr:venue:2547	2025-01-01 15:00:00
 sr:sport_event:51096165	sr:season:118699	sr:competitor:96	sr:competitor:1	\N	\N	not_started	28	sr:venue:1138	2025-01-21 19:45:00
 sr:sport_event:51095401	sr:season:118699	sr:competitor:11	sr:competitor:27	1	2	closed	14	sr:venue:2194	2024-11-06 19:45:00
-sr:sport_event:51096321	sr:season:118699	sr:competitor:41	sr:competitor:96	\N	\N	not_started	34	sr:venue:851	2025-02-22 12:30:00
 sr:sport_event:51095581	sr:season:118699	sr:competitor:27	sr:competitor:12	\N	\N	not_started	18	sr:venue:852	2024-12-01 15:00:00
 sr:sport_event:51096201	sr:season:118699	sr:competitor:15	sr:competitor:96	\N	\N	not_started	29	sr:venue:598	2025-01-24 20:00:00
-sr:sport_event:51389339	sr:season:119847	sr:competitor:3011	sr:competitor:49531	\N	\N	not_started	33	sr:venue:5318	2025-05-11 17:00:00
-sr:sport_event:51096353	sr:season:118699	sr:competitor:58	sr:competitor:96	\N	\N	not_started	36	sr:venue:2505	2025-03-08 15:00:00
 sr:sport_event:51095175	sr:season:118699	sr:competitor:72	sr:competitor:24	3	0	closed	10	sr:venue:2178	2024-10-19 11:30:00
 sr:sport_event:51095769	sr:season:118699	sr:competitor:24	sr:competitor:8	\N	\N	not_started	21	sr:venue:813	2024-12-15 14:00:00
-sr:sport_event:51096855	sr:season:118699	sr:competitor:263	sr:competitor:2	\N	\N	not_started	43	sr:venue:2221	2025-04-18 14:00:00
 sr:sport_event:51095295	sr:season:118699	sr:competitor:74	sr:competitor:25	0	1	closed	12	sr:venue:1689	2024-10-26 14:00:00
-sr:sport_event:51096439	sr:season:118699	sr:competitor:263	sr:competitor:8	\N	\N	not_started	39	sr:venue:2221	2025-03-29 15:00:00
 sr:sport_event:55549257	sr:season:118699	sr:competitor:36	sr:competitor:41	\N	\N	not_started	30	sr:venue:743	2025-02-03 20:00:00
-sr:sport_event:51096909	sr:season:118699	sr:competitor:61	sr:competitor:8	\N	\N	not_started	45	sr:venue:1514	2025-04-26 14:00:00
-sr:sport_event:51096339	sr:season:118699	sr:competitor:36	sr:competitor:27	\N	\N	not_started	35	sr:venue:743	2025-03-01 15:00:00
 sr:sport_event:51096235	sr:season:118699	sr:competitor:6	sr:competitor:95	\N	\N	not_started	31	sr:venue:806	2025-02-08 15:00:00
 sr:sport_event:51095907	sr:season:118699	sr:competitor:21	sr:competitor:12	\N	\N	not_started	24	sr:venue:3002	2024-12-29 12:30:00
 sr:sport_event:51095675	sr:season:118699	sr:competitor:34	sr:competitor:36	\N	\N	not_started	20	sr:venue:2223	2024-12-10 20:00:00
 sr:sport_event:51095475	sr:season:118699	sr:competitor:11	sr:competitor:15	2	2	closed	16	sr:venue:2194	2024-11-23 12:30:00
-sr:sport_event:51096427	sr:season:118699	sr:competitor:6	sr:competitor:58	\N	\N	not_started	39	sr:venue:806	2025-03-29 15:00:00
-sr:sport_event:51096455	sr:season:118699	sr:competitor:11	sr:competitor:6	\N	\N	not_started	40	sr:venue:2194	2025-04-05 14:00:00
 sr:sport_event:51095877	sr:season:118699	sr:competitor:46	sr:competitor:96	\N	\N	not_started	24	sr:venue:631	2024-12-29 15:00:00
 sr:sport_event:51094979	sr:season:118699	sr:competitor:71	sr:competitor:29	0	1	closed	4	sr:venue:660	2024-08-31 14:00:00
 sr:sport_event:51095143	sr:season:118699	sr:competitor:6	sr:competitor:21	0	0	closed	9	sr:venue:806	2024-10-05 11:30:00
-sr:sport_event:51389345	sr:season:119847	sr:competitor:3014	sr:competitor:4500	\N	\N	not_started	33	sr:venue:5312	2025-05-11 17:00:00
-sr:sport_event:51389235	sr:season:119847	sr:competitor:3014	sr:competitor:3009	\N	\N	not_started	27	sr:venue:5312	2025-03-30 17:00:00
-sr:sport_event:51389255	sr:season:119847	sr:competitor:2998	sr:competitor:36365	\N	\N	not_started	28	sr:venue:12069	2025-04-06 17:00:00
-sr:sport_event:51389175	sr:season:119847	sr:competitor:1031053	sr:competitor:3001	\N	\N	not_started	23	sr:venue:8249	2025-02-23 18:00:00
-sr:sport_event:51389193	sr:season:119847	sr:competitor:2995	sr:competitor:3011	\N	\N	not_started	24	sr:venue:14556	2025-03-02 18:00:00
-sr:sport_event:51389353	sr:season:119847	sr:competitor:2995	sr:competitor:3002	\N	\N	not_started	33	sr:venue:14556	2025-05-11 17:00:00
 sr:sport_event:51389005	sr:season:119847	sr:competitor:3013	sr:competitor:3002	\N	\N	not_started	17	sr:venue:1335	2025-01-05 18:00:00
-sr:sport_event:51389371	sr:season:119847	sr:competitor:25777	sr:competitor:2995	\N	\N	not_started	34	sr:venue:8289	2025-05-17 17:00:00
 sr:sport_event:51388749	sr:season:119847	sr:competitor:4500	sr:competitor:3010	0	0	closed	3	sr:venue:5326	2024-08-25 17:00:00
 sr:sport_event:46655599	sr:season:114317	sr:competitor:3218	sr:competitor:3206	2	1	closed	3	sr:venue:981	2024-05-25 00:15:00
 sr:sport_event:51095287	sr:season:118699	sr:competitor:15	sr:competitor:29	2	0	closed	12	sr:venue:598	2024-10-26 14:00:00
-sr:sport_event:51389223	sr:season:119847	sr:competitor:3001	sr:competitor:49531	\N	\N	not_started	26	sr:venue:910	2025-03-16 18:00:00
 sr:sport_event:51094949	sr:season:118699	sr:competitor:21	sr:competitor:72	1	0	closed	3	sr:venue:3002	2024-08-24 14:00:00
-sr:sport_event:51096287	sr:season:118699	sr:competitor:34	sr:competitor:41	\N	\N	postponed	33	sr:venue:2223	2024-11-17 20:00:00
 sr:sport_event:51095387	sr:season:118699	sr:competitor:74	sr:competitor:24	1	0	closed	14	sr:venue:1689	2024-11-05 20:00:00
 sr:sport_event:51095325	sr:season:118699	sr:competitor:72	sr:competitor:8	1	1	closed	13	sr:venue:2178	2024-11-01 20:00:00
 sr:sport_event:51388943	sr:season:119847	sr:competitor:2998	sr:competitor:3010	\N	\N	not_started	14	sr:venue:12069	2024-12-14 15:30:00
@@ -1572,43 +1518,38 @@ sr:sport_event:51388769	sr:season:119847	sr:competitor:3036	sr:competitor:25777	
 sr:sport_event:49973577	sr:season:114317	sr:competitor:3211	sr:competitor:3203	3	0	closed	2	sr:venue:1009	2024-05-18 21:00:00
 sr:sport_event:51095903	sr:season:118699	sr:competitor:95	sr:competitor:71	\N	\N	not_started	24	sr:venue:2366	2024-12-29 15:00:00
 sr:sport_event:51096231	sr:season:118699	sr:competitor:24	sr:competitor:263	\N	\N	not_started	30	sr:venue:813	2025-02-01 12:30:00
-sr:sport_event:51096835	sr:season:118699	sr:competitor:8	sr:competitor:24	\N	\N	not_started	42	sr:venue:1136	2025-04-12 14:00:00
-sr:sport_event:55549267	sr:season:118699	sr:competitor:34	sr:competitor:41	\N	\N	not_started	33	sr:venue:2223	2025-02-17 20:00:00
+sr:sport_event:51389339	sr:season:119847	sr:competitor:3011	sr:competitor:49531	\N	\N	not_started	33	sr:venue:5318	2025-05-11 17:00:00
+sr:sport_event:51389371	sr:season:119847	sr:competitor:25777	sr:competitor:2995	\N	\N	not_started	34	sr:venue:8289	2025-05-17 17:00:00
+sr:sport_event:51389223	sr:season:119847	sr:competitor:3001	sr:competitor:49531	\N	\N	not_started	26	sr:venue:910	2025-03-16 18:00:00
+sr:sport_event:51389235	sr:season:119847	sr:competitor:3014	sr:competitor:3009	\N	\N	not_started	27	sr:venue:5312	2025-03-30 17:00:00
+sr:sport_event:51389175	sr:season:119847	sr:competitor:1031053	sr:competitor:3001	\N	\N	not_started	23	sr:venue:8249	2025-02-23 18:00:00
+sr:sport_event:51096427	sr:season:118699	sr:competitor:6	sr:competitor:58	\N	\N	not_started	39	sr:venue:806	2025-03-29 15:00:00
+sr:sport_event:51096339	sr:season:118699	sr:competitor:36	sr:competitor:27	\N	\N	not_started	35	sr:venue:743	2025-03-01 15:00:00
+sr:sport_event:51096287	sr:season:118699	sr:competitor:34	sr:competitor:41	\N	\N	postponed	33	sr:venue:2223	2024-11-17 20:00:00
+sr:sport_event:51096439	sr:season:118699	sr:competitor:263	sr:competitor:8	\N	\N	not_started	39	sr:venue:2221	2025-03-29 15:00:00
+sr:sport_event:51096455	sr:season:118699	sr:competitor:11	sr:competitor:6	\N	\N	not_started	40	sr:venue:2194	2025-04-05 14:00:00
+sr:sport_event:51096855	sr:season:118699	sr:competitor:263	sr:competitor:2	\N	\N	not_started	43	sr:venue:2221	2025-04-18 14:00:00
+sr:sport_event:51096871	sr:season:118699	sr:competitor:41	sr:competitor:46	\N	\N	not_started	44	sr:venue:851	2025-04-21 14:00:00
+sr:sport_event:51096909	sr:season:118699	sr:competitor:61	sr:competitor:8	\N	\N	not_started	45	sr:venue:1514	2025-04-26 14:00:00
+sr:sport_event:51096353	sr:season:118699	sr:competitor:58	sr:competitor:96	\N	\N	not_started	36	sr:venue:2505	2025-03-08 15:00:00
 sr:sport_event:51096169	sr:season:118699	sr:competitor:25	sr:competitor:61	\N	\N	not_started	28	sr:venue:2352	2025-01-21 20:00:00
 sr:sport_event:46655719	sr:season:114317	sr:competitor:3212	sr:competitor:36842	0	0	closed	7	sr:venue:1567	2024-07-23 21:45:00
 sr:sport_event:51095813	sr:season:118699	sr:competitor:12	sr:competitor:29	\N	\N	not_started	22	sr:venue:2547	2024-12-21 12:30:00
-sr:sport_event:51096463	sr:season:118699	sr:competitor:71	sr:competitor:263	\N	\N	not_started	40	sr:venue:660	2025-04-05 14:00:00
 sr:sport_event:51096185	sr:season:118699	sr:competitor:58	sr:competitor:46	\N	\N	not_started	29	sr:venue:2505	2025-01-25 15:00:00
 sr:sport_event:51095355	sr:season:118699	sr:competitor:29	sr:competitor:27	2	1	closed	13	sr:venue:1135	2024-11-02 12:30:00
 sr:sport_event:51095561	sr:season:118699	sr:competitor:36	sr:competitor:46	0	1	closed	17	sr:venue:743	2024-11-27 19:45:00
-sr:sport_event:51096417	sr:season:118699	sr:competitor:21	sr:competitor:2	\N	\N	not_started	38	sr:venue:3002	2025-03-15 15:00:00
-sr:sport_event:51096237	sr:season:118699	sr:competitor:61	sr:competitor:96	\N	\N	not_started	31	sr:venue:1514	2025-02-08 15:00:00
-sr:sport_event:51096351	sr:season:118699	sr:competitor:29	sr:competitor:24	\N	\N	not_started	35	sr:venue:1135	2025-03-01 15:00:00
-sr:sport_event:51096309	sr:season:118699	sr:competitor:11	sr:competitor:21	\N	\N	not_started	34	sr:venue:2194	2025-02-22 15:00:00
-sr:sport_event:51096429	sr:season:118699	sr:competitor:61	sr:competitor:12	\N	\N	not_started	39	sr:venue:1514	2025-03-29 15:00:00
-sr:sport_event:51096371	sr:season:118699	sr:competitor:74	sr:competitor:36	\N	\N	not_started	36	sr:venue:1689	2025-03-08 15:00:00
 sr:sport_event:51095971	sr:season:118699	sr:competitor:41	sr:competitor:15	\N	\N	not_started	25	sr:venue:851	2025-01-01 20:00:00
 sr:sport_event:51095207	sr:season:118699	sr:competitor:61	sr:competitor:2	2	0	closed	11	sr:venue:1514	2024-10-22 18:45:00
 sr:sport_event:51096263	sr:season:118699	sr:competitor:263	sr:competitor:21	\N	\N	not_started	32	sr:venue:2221	2025-02-11 20:00:00
 sr:sport_event:51092203	sr:season:118699	sr:competitor:96	sr:competitor:58	1	1	closed	1	sr:venue:1138	2024-08-10 11:30:00
-sr:sport_event:51096587	sr:season:118699	sr:competitor:34	sr:competitor:21	\N	\N	not_started	42	sr:venue:2223	2025-04-12 14:00:00
 sr:sport_event:51095727	sr:season:118699	sr:competitor:58	sr:competitor:1	\N	\N	not_started	21	sr:venue:2505	2024-12-14 12:30:00
-sr:sport_event:51096477	sr:season:118699	sr:competitor:58	sr:competitor:8	\N	\N	not_started	41	sr:venue:2505	2025-04-08 18:45:00
-sr:sport_event:51096913	sr:season:118699	sr:competitor:25	sr:competitor:74	\N	\N	not_started	45	sr:venue:2352	2025-04-26 14:00:00
 sr:sport_event:51095053	sr:season:118699	sr:competitor:12	sr:competitor:8	3	2	closed	7	sr:venue:2547	2024-09-28 11:30:00
 sr:sport_event:51389071	sr:season:119847	sr:competitor:2999	sr:competitor:3010	\N	\N	not_started	21	sr:venue:951	2025-02-09 18:00:00
 sr:sport_event:51094957	sr:season:118699	sr:competitor:41	sr:competitor:6	1	0	closed	3	sr:venue:851	2024-08-24 14:00:00
-sr:sport_event:51096869	sr:season:118699	sr:competitor:8	sr:competitor:27	\N	\N	not_started	44	sr:venue:1136	2025-04-21 14:00:00
 sr:sport_event:51095941	sr:season:118699	sr:competitor:34	sr:competitor:46	\N	\N	not_started	25	sr:venue:2223	2025-01-01 15:00:00
 sr:sport_event:51095149	sr:season:118699	sr:competitor:263	sr:competitor:96	4	0	closed	9	sr:venue:2221	2024-10-05 11:30:00
 sr:sport_event:51388933	sr:season:119847	sr:competitor:49531	sr:competitor:3002	\N	\N	not_started	13	sr:venue:16520	2024-12-07 20:30:00
-sr:sport_event:51389277	sr:season:119847	sr:competitor:2995	sr:competitor:3013	\N	\N	not_started	29	sr:venue:14556	2025-04-13 17:00:00
 sr:sport_event:51388877	sr:season:119847	sr:competitor:3036	sr:competitor:36365	2	2	closed	10	sr:venue:2013	2024-11-02 15:30:00
-sr:sport_event:51389241	sr:season:119847	sr:competitor:2995	sr:competitor:3010	\N	\N	not_started	27	sr:venue:14556	2025-03-30 17:00:00
-sr:sport_event:51389245	sr:season:119847	sr:competitor:4500	sr:competitor:3002	\N	\N	not_started	27	sr:venue:5326	2025-03-30 17:00:00
-sr:sport_event:51389333	sr:season:119847	sr:competitor:2999	sr:competitor:3011	\N	\N	not_started	32	sr:venue:951	2025-05-04 17:00:00
-sr:sport_event:51389337	sr:season:119847	sr:competitor:1031053	sr:competitor:2995	\N	\N	not_started	32	sr:venue:8249	2025-05-04 17:00:00
-sr:sport_event:51389365	sr:season:119847	sr:competitor:4500	sr:competitor:744135	\N	\N	not_started	34	sr:venue:5326	2025-05-17 17:00:00
 sr:sport_event:51388923	sr:season:119847	sr:competitor:3006	sr:competitor:3009	\N	\N	not_started	13	sr:venue:902	2024-12-07 18:00:00
 sr:sport_event:51094925	sr:season:118699	sr:competitor:71	sr:competitor:96	1	1	closed	2	sr:venue:660	2024-08-17 14:00:00
 sr:sport_event:46655581	sr:season:114317	sr:competitor:3201	sr:competitor:3218	1	1	closed	2	sr:venue:14324	2024-05-20 22:00:00
@@ -1623,24 +1564,34 @@ sr:sport_event:51388925	sr:season:119847	sr:competitor:2999	sr:competitor:4500	\
 sr:sport_event:51389017	sr:season:119847	sr:competitor:3014	sr:competitor:2998	\N	\N	not_started	18	sr:venue:5312	2025-01-19 18:00:00
 sr:sport_event:51095163	sr:season:118699	sr:competitor:8	sr:competitor:25	0	0	closed	9	sr:venue:1136	2024-10-05 14:00:00
 sr:sport_event:51095731	sr:season:118699	sr:competitor:11	sr:competitor:96	\N	\N	not_started	21	sr:venue:2194	2024-12-14 12:30:00
+sr:sport_event:51389337	sr:season:119847	sr:competitor:1031053	sr:competitor:2995	\N	\N	not_started	32	sr:venue:8249	2025-05-04 17:00:00
+sr:sport_event:51389333	sr:season:119847	sr:competitor:2999	sr:competitor:3011	\N	\N	not_started	32	sr:venue:951	2025-05-04 17:00:00
+sr:sport_event:51389365	sr:season:119847	sr:competitor:4500	sr:competitor:744135	\N	\N	not_started	34	sr:venue:5326	2025-05-17 17:00:00
+sr:sport_event:51096429	sr:season:118699	sr:competitor:61	sr:competitor:12	\N	\N	not_started	39	sr:venue:1514	2025-03-29 15:00:00
+sr:sport_event:51096477	sr:season:118699	sr:competitor:58	sr:competitor:8	\N	\N	not_started	41	sr:venue:2505	2025-04-08 18:45:00
+sr:sport_event:51096417	sr:season:118699	sr:competitor:21	sr:competitor:2	\N	\N	not_started	38	sr:venue:3002	2025-03-15 15:00:00
+sr:sport_event:51096463	sr:season:118699	sr:competitor:71	sr:competitor:263	\N	\N	not_started	40	sr:venue:660	2025-04-05 14:00:00
+sr:sport_event:51096835	sr:season:118699	sr:competitor:8	sr:competitor:24	\N	\N	not_started	42	sr:venue:1136	2025-04-12 14:00:00
+sr:sport_event:51096587	sr:season:118699	sr:competitor:34	sr:competitor:21	\N	\N	not_started	42	sr:venue:2223	2025-04-12 14:00:00
+sr:sport_event:51096869	sr:season:118699	sr:competitor:8	sr:competitor:27	\N	\N	not_started	44	sr:venue:1136	2025-04-21 14:00:00
+sr:sport_event:51096913	sr:season:118699	sr:competitor:25	sr:competitor:74	\N	\N	not_started	45	sr:venue:2352	2025-04-26 14:00:00
+sr:sport_event:51096237	sr:season:118699	sr:competitor:61	sr:competitor:96	\N	\N	postponed	31	sr:venue:1514	2025-02-08 15:00:00
+sr:sport_event:55549267	sr:season:118699	sr:competitor:34	sr:competitor:41	\N	\N	not_started	33	sr:venue:2223	2025-02-17 20:00:00
+sr:sport_event:51096309	sr:season:118699	sr:competitor:11	sr:competitor:21	\N	\N	not_started	34	sr:venue:2194	2025-02-22 15:00:00
+sr:sport_event:51096371	sr:season:118699	sr:competitor:74	sr:competitor:36	\N	\N	not_started	36	sr:venue:1689	2025-03-08 15:00:00
 sr:sport_event:51096327	sr:season:118699	sr:competitor:8	sr:competitor:95	\N	\N	not_started	34	sr:venue:1136	2025-02-22 15:00:00
-sr:sport_event:51096311	sr:season:118699	sr:competitor:27	sr:competitor:25	\N	\N	not_started	34	sr:venue:852	2025-02-22 12:30:00
+sr:sport_event:51096351	sr:season:118699	sr:competitor:29	sr:competitor:24	\N	\N	not_started	35	sr:venue:1135	2025-03-01 15:00:00
 sr:sport_event:51095681	sr:season:118699	sr:competitor:72	sr:competitor:29	\N	\N	not_started	20	sr:venue:2178	2024-12-10 19:45:00
 sr:sport_event:46655689	sr:season:114317	sr:competitor:3201	sr:competitor:7629	1	1	closed	6	sr:venue:14324	2024-07-20 18:00:00
-sr:sport_event:51096393	sr:season:118699	sr:competitor:34	sr:competitor:25	\N	\N	not_started	37	sr:venue:2223	2025-03-12 19:45:00
 sr:sport_event:51095417	sr:season:118699	sr:competitor:61	sr:competitor:46	1	3	closed	15	sr:venue:1514	2024-11-09 12:30:00
 sr:sport_event:46655807	sr:season:114317	sr:competitor:3203	sr:competitor:3204	1	1	closed	10	sr:venue:4750	2024-08-09 22:00:00
 sr:sport_event:51096161	sr:season:118699	sr:competitor:46	sr:competitor:11	\N	\N	not_started	28	sr:venue:631	2025-01-21 19:45:00
-sr:sport_event:51096469	sr:season:118699	sr:competitor:12	sr:competitor:96	\N	\N	not_started	40	sr:venue:2547	2025-04-05 14:00:00
 sr:sport_event:51095787	sr:season:118699	sr:competitor:34	sr:competitor:95	\N	\N	not_started	22	sr:venue:2223	2024-12-21 15:00:00
 sr:sport_event:51095615	sr:season:118699	sr:competitor:24	sr:competitor:1	\N	\N	not_started	18	sr:venue:813	2024-11-30 12:30:00
 sr:sport_event:51096035	sr:season:118699	sr:competitor:61	sr:competitor:74	\N	\N	not_started	27	sr:venue:1514	2025-01-18 12:30:00
 sr:sport_event:51096183	sr:season:118699	sr:competitor:12	sr:competitor:58	\N	\N	not_started	28	sr:venue:2547	2025-01-22 19:45:00
 sr:sport_event:51092181	sr:season:118699	sr:competitor:21	sr:competitor:15	0	2	closed	1	sr:venue:3002	2024-08-09 19:00:00
-sr:sport_event:51096581	sr:season:118699	sr:competitor:6	sr:competitor:263	\N	\N	not_started	42	sr:venue:806	2025-04-12 14:00:00
 sr:sport_event:51095183	sr:season:118699	sr:competitor:25	sr:competitor:27	1	1	closed	10	sr:venue:2352	2024-10-19 14:00:00
-sr:sport_event:51096905	sr:season:118699	sr:competitor:72	sr:competitor:11	\N	\N	not_started	45	sr:venue:2178	2025-04-26 14:00:00
-sr:sport_event:51096925	sr:season:118699	sr:competitor:2	sr:competitor:96	\N	\N	not_started	46	sr:venue:638	2025-05-03 14:00:00
 sr:sport_event:51095997	sr:season:118699	sr:competitor:263	sr:competitor:11	\N	\N	not_started	26	sr:venue:2221	2025-01-04 15:00:00
 sr:sport_event:51095825	sr:season:118699	sr:competitor:46	sr:competitor:41	\N	\N	not_started	23	sr:venue:631	2024-12-26 15:00:00
 sr:sport_event:51096275	sr:season:118699	sr:competitor:15	sr:competitor:36	\N	\N	not_started	32	sr:venue:598	2025-02-12 20:00:00
@@ -1657,29 +1608,26 @@ sr:sport_event:51095829	sr:season:118699	sr:competitor:58	sr:competitor:72	\N	\N
 sr:sport_event:51095365	sr:season:118699	sr:competitor:25	sr:competitor:34	1	0	closed	14	sr:venue:2352	2024-11-06 19:45:00
 sr:sport_event:51092217	sr:season:118699	sr:competitor:1	sr:competitor:8	1	3	closed	1	sr:venue:1693	2024-08-10 11:30:00
 sr:sport_event:51096221	sr:season:118699	sr:competitor:95	sr:competitor:58	\N	\N	not_started	30	sr:venue:2366	2025-02-01 12:30:00
-sr:sport_event:51096333	sr:season:118699	sr:competitor:96	sr:competitor:71	\N	\N	not_started	35	sr:venue:1138	2025-03-01 15:00:00
-sr:sport_event:51096317	sr:season:118699	sr:competitor:2	sr:competitor:1	\N	\N	not_started	34	sr:venue:638	2025-02-22 15:00:00
-sr:sport_event:51096473	sr:season:118699	sr:competitor:8	sr:competitor:41	\N	\N	not_started	40	sr:venue:1136	2025-04-05 14:00:00
 sr:sport_event:51095937	sr:season:118699	sr:competitor:96	sr:competitor:36	\N	\N	not_started	25	sr:venue:1138	2025-01-01 17:30:00
 sr:sport_event:51094983	sr:season:118699	sr:competitor:15	sr:competitor:24	1	0	closed	4	sr:venue:598	2024-09-01 14:00:00
 sr:sport_event:51095945	sr:season:118699	sr:competitor:72	sr:competitor:263	\N	\N	not_started	25	sr:venue:2178	2025-01-01 15:00:00
 sr:sport_event:51096193	sr:season:118699	sr:competitor:72	sr:competitor:25	\N	\N	not_started	29	sr:venue:2178	2025-01-25 12:30:00
-sr:sport_event:51096323	sr:season:118699	sr:competitor:74	sr:competitor:46	\N	\N	not_started	34	sr:venue:1689	2025-02-22 15:00:00
-sr:sport_event:51096325	sr:season:118699	sr:competitor:24	sr:competitor:72	\N	\N	not_started	34	sr:venue:813	2025-02-23 12:00:00
 sr:sport_event:51096147	sr:season:118699	sr:competitor:71	sr:competitor:1	\N	\N	not_started	27	sr:venue:660	2025-01-18 12:30:00
-sr:sport_event:51096349	sr:season:118699	sr:competitor:12	sr:competitor:41	\N	\N	not_started	35	sr:venue:2547	2025-03-01 15:00:00
-sr:sport_event:51096367	sr:season:118699	sr:competitor:15	sr:competitor:21	\N	\N	not_started	36	sr:venue:598	2025-03-08 15:00:00
 sr:sport_event:51096197	sr:season:118699	sr:competitor:21	sr:competitor:36	\N	\N	not_started	29	sr:venue:3002	2025-01-25 15:00:00
-sr:sport_event:51096887	sr:season:118699	sr:competitor:61	sr:competitor:95	\N	\N	not_started	44	sr:venue:1514	2025-04-21 14:00:00
-sr:sport_event:51096935	sr:season:118699	sr:competitor:6	sr:competitor:25	\N	\N	not_started	46	sr:venue:806	2025-05-03 14:00:00
 sr:sport_event:51095697	sr:season:118699	sr:competitor:12	sr:competitor:46	\N	\N	not_started	20	sr:venue:2547	2024-12-10 19:45:00
-sr:sport_event:51096375	sr:season:118699	sr:competitor:8	sr:competitor:1	\N	\N	not_started	36	sr:venue:1136	2025-03-08 15:00:00
 sr:sport_event:51095667	sr:season:118699	sr:competitor:8	sr:competitor:15	\N	\N	not_started	19	sr:venue:1136	2024-12-08 15:00:00
 sr:sport_event:51095835	sr:season:118699	sr:competitor:11	sr:competitor:71	\N	\N	not_started	23	sr:venue:2194	2024-12-26 15:00:00
+sr:sport_event:51096393	sr:season:118699	sr:competitor:34	sr:competitor:25	\N	\N	not_started	37	sr:venue:2223	2025-03-12 19:45:00
+sr:sport_event:51096469	sr:season:118699	sr:competitor:12	sr:competitor:96	\N	\N	not_started	40	sr:venue:2547	2025-04-05 14:00:00
+sr:sport_event:51096473	sr:season:118699	sr:competitor:8	sr:competitor:41	\N	\N	not_started	40	sr:venue:1136	2025-04-05 14:00:00
+sr:sport_event:51096311	sr:season:118699	sr:competitor:27	sr:competitor:25	\N	\N	not_started	34	sr:venue:852	2025-02-22 12:30:00
+sr:sport_event:51096581	sr:season:118699	sr:competitor:6	sr:competitor:263	\N	\N	not_started	42	sr:venue:806	2025-04-12 14:00:00
+sr:sport_event:51096887	sr:season:118699	sr:competitor:61	sr:competitor:95	\N	\N	not_started	44	sr:venue:1514	2025-04-21 14:00:00
+sr:sport_event:51096925	sr:season:118699	sr:competitor:2	sr:competitor:96	\N	\N	not_started	46	sr:venue:638	2025-05-03 14:00:00
+sr:sport_event:51096349	sr:season:118699	sr:competitor:12	sr:competitor:41	\N	\N	not_started	35	sr:venue:2547	2025-03-01 15:00:00
+sr:sport_event:51096323	sr:season:118699	sr:competitor:74	sr:competitor:46	\N	\N	not_started	34	sr:venue:1689	2025-02-22 15:00:00
+sr:sport_event:51096333	sr:season:118699	sr:competitor:96	sr:competitor:71	\N	\N	not_started	35	sr:venue:1138	2025-03-01 15:00:00
 sr:sport_event:46655645	sr:season:114317	sr:competitor:3203	sr:competitor:3216	1	0	closed	4	sr:venue:4750	2024-06-01 23:15:00
-sr:sport_event:51096399	sr:season:118699	sr:competitor:24	sr:competitor:74	\N	\N	not_started	37	sr:venue:813	2025-03-12 19:45:00
-sr:sport_event:51096387	sr:season:118699	sr:competitor:29	sr:competitor:46	\N	\N	not_started	37	sr:venue:1135	2025-03-11 19:45:00
-sr:sport_event:51096849	sr:season:118699	sr:competitor:74	sr:competitor:96	\N	\N	not_started	43	sr:venue:1689	2025-04-18 14:00:00
 sr:sport_event:46655687	sr:season:114317	sr:competitor:36842	sr:competitor:3205	1	0	closed	6	sr:venue:15676	2024-07-18 22:00:00
 sr:sport_event:51096127	sr:season:118699	sr:competitor:27	sr:competitor:24	\N	\N	not_started	27	sr:venue:852	2025-01-18 15:00:00
 sr:sport_event:51096205	sr:season:118699	sr:competitor:41	sr:competitor:71	\N	\N	not_started	29	sr:venue:851	2025-01-25 15:00:00
@@ -1694,9 +1642,6 @@ sr:sport_event:51095031	sr:season:118699	sr:competitor:41	sr:competitor:36	1	0	c
 sr:sport_event:51095057	sr:season:118699	sr:competitor:24	sr:competitor:41	2	1	closed	7	sr:venue:813	2024-09-28 14:00:00
 sr:sport_event:51095547	sr:season:118699	sr:competitor:24	sr:competitor:58	1	0	closed	17	sr:venue:813	2024-11-26 19:45:00
 sr:sport_event:51095795	sr:season:118699	sr:competitor:25	sr:competitor:46	\N	\N	not_started	22	sr:venue:2352	2024-12-21 15:00:00
-sr:sport_event:51096585	sr:season:118699	sr:competitor:96	sr:competitor:11	\N	\N	not_started	42	sr:venue:1138	2025-04-12 14:00:00
-sr:sport_event:55549269	sr:season:118699	sr:competitor:15	sr:competitor:34	\N	\N	not_started	34	sr:venue:598	2025-02-24 20:00:00
-sr:sport_event:51096851	sr:season:118699	sr:competitor:24	sr:competitor:6	\N	\N	not_started	43	sr:venue:813	2025-04-18 14:00:00
 sr:sport_event:46655801	sr:season:114317	sr:competitor:3217	sr:competitor:3212	1	0	closed	10	sr:venue:1329	2024-08-10 19:30:00
 sr:sport_event:46655753	sr:season:114317	sr:competitor:3203	sr:competitor:6074	1	0	closed	8	sr:venue:4750	2024-07-30 00:00:00
 sr:sport_event:46655783	sr:season:114317	sr:competitor:36837	sr:competitor:3219	0	1	closed	9	sr:venue:12712	2024-08-05 23:00:00
@@ -1724,16 +1669,15 @@ sr:sport_event:51096135	sr:season:118699	sr:competitor:72	sr:competitor:21	\N	\N
 sr:sport_event:51096269	sr:season:118699	sr:competitor:74	sr:competitor:12	\N	\N	not_started	32	sr:venue:1689	2025-02-12 19:45:00
 sr:sport_event:51096279	sr:season:118699	sr:competitor:8	sr:competitor:46	\N	\N	not_started	32	sr:venue:1136	2025-02-12 20:00:00
 sr:sport_event:51096401	sr:season:118699	sr:competitor:46	sr:competitor:61	\N	\N	not_started	38	sr:venue:631	2025-03-15 15:00:00
-sr:sport_event:51096307	sr:season:118699	sr:competitor:6	sr:competitor:12	\N	\N	not_started	34	sr:venue:806	2025-02-21 20:00:00
-sr:sport_event:51096409	sr:season:118699	sr:competitor:25	sr:competitor:29	\N	\N	not_started	38	sr:venue:2352	2025-03-15 15:00:00
-sr:sport_event:51096415	sr:season:118699	sr:competitor:71	sr:competitor:27	\N	\N	not_started	38	sr:venue:660	2025-03-15 15:00:00
 sr:sport_event:51096433	sr:season:118699	sr:competitor:96	sr:competitor:72	\N	\N	not_started	39	sr:venue:1138	2025-03-29 15:00:00
-sr:sport_event:51096447	sr:season:118699	sr:competitor:41	sr:competitor:25	\N	\N	not_started	39	sr:venue:851	2025-03-29 15:00:00
+sr:sport_event:51096585	sr:season:118699	sr:competitor:96	sr:competitor:11	\N	\N	not_started	42	sr:venue:1138	2025-04-12 14:00:00
+sr:sport_event:51096399	sr:season:118699	sr:competitor:24	sr:competitor:74	\N	\N	not_started	37	sr:venue:813	2025-03-12 19:45:00
+sr:sport_event:51096415	sr:season:118699	sr:competitor:71	sr:competitor:27	\N	\N	not_started	38	sr:venue:660	2025-03-15 15:00:00
+sr:sport_event:51096307	sr:season:118699	sr:competitor:6	sr:competitor:12	\N	\N	not_started	34	sr:venue:806	2025-02-21 20:00:00
+sr:sport_event:51096387	sr:season:118699	sr:competitor:29	sr:competitor:46	\N	\N	not_started	37	sr:venue:1135	2025-03-11 19:45:00
+sr:sport_event:55549269	sr:season:118699	sr:competitor:15	sr:competitor:34	\N	\N	not_started	34	sr:venue:598	2025-02-24 20:00:00
 sr:sport_event:46655643	sr:season:114317	sr:competitor:3211	sr:competitor:7628	3	1	closed	4	sr:venue:1009	2024-06-02 23:15:00
-sr:sport_event:51096901	sr:season:118699	sr:competitor:95	sr:competitor:41	\N	\N	not_started	45	sr:venue:2366	2025-04-26 14:00:00
-sr:sport_event:51096421	sr:season:118699	sr:competitor:12	sr:competitor:15	\N	\N	not_started	38	sr:venue:2547	2025-03-15 15:00:00
 sr:sport_event:51096027	sr:season:118699	sr:competitor:24	sr:competitor:15	\N	\N	not_started	26	sr:venue:813	2025-01-04 15:00:00
-sr:sport_event:51096921	sr:season:118699	sr:competitor:41	sr:competitor:1	\N	\N	not_started	46	sr:venue:851	2025-05-03 14:00:00
 sr:sport_event:46655735	sr:season:114317	sr:competitor:3219	sr:competitor:3210	1	1	closed	8	sr:venue:634	2024-07-28 18:00:00
 sr:sport_event:46655667	sr:season:114317	sr:competitor:3209	sr:competitor:3219	2	1	closed	5	sr:venue:1099	2024-06-13 00:15:00
 sr:sport_event:46655837	sr:season:114317	sr:competitor:36837	sr:competitor:65668	0	0	closed	11	sr:venue:12712	2024-08-16 22:00:00
@@ -1746,7 +1690,6 @@ sr:sport_event:51096001	sr:season:118699	sr:competitor:21	sr:competitor:95	\N	\N
 sr:sport_event:51095491	sr:season:118699	sr:competitor:71	sr:competitor:24	2	2	closed	16	sr:venue:660	2024-11-22 20:00:00
 sr:sport_event:51095369	sr:season:118699	sr:competitor:95	sr:competitor:96	1	0	closed	14	sr:venue:2366	2024-11-05 19:45:00
 sr:sport_event:46655809	sr:season:114317	sr:competitor:3216	sr:competitor:42338	0	0	closed	10	sr:venue:613	2024-08-08 18:00:00
-sr:sport_event:46657147	sr:season:114317	sr:competitor:4937	sr:competitor:3211	\N	\N	postponed	21	sr:venue:12033	2024-10-07 00:30:00
 sr:sport_event:46655911	sr:season:114317	sr:competitor:3215	sr:competitor:3202	2	1	closed	14	sr:venue:1082	2024-09-14 20:30:00
 sr:sport_event:46655821	sr:season:114317	sr:competitor:3204	sr:competitor:3216	3	0	closed	11	sr:venue:4754	2024-08-19 21:45:00
 sr:sport_event:46655675	sr:season:114317	sr:competitor:65676	sr:competitor:36837	0	2	closed	6	sr:venue:57376	2024-07-21 20:15:00
@@ -1767,30 +1710,26 @@ sr:sport_event:46655727	sr:season:114317	sr:competitor:3210	sr:competitor:36839	
 sr:sport_event:46655797	sr:season:114317	sr:competitor:3201	sr:competitor:36833	0	1	closed	10	sr:venue:14324	2024-08-10 17:30:00
 sr:sport_event:51095569	sr:season:118699	sr:competitor:46	sr:competitor:34	\N	\N	not_started	18	sr:venue:631	2024-11-30 13:30:00
 sr:sport_event:46655867	sr:season:114317	sr:competitor:191648	sr:competitor:42338	2	1	closed	12	sr:venue:17150	2024-08-24 17:30:00
-sr:sport_event:51096355	sr:season:118699	sr:competitor:6	sr:competitor:72	\N	\N	not_started	36	sr:venue:806	2025-03-08 15:00:00
 sr:sport_event:51096225	sr:season:118699	sr:competitor:2	sr:competitor:6	\N	\N	not_started	30	sr:venue:638	2025-02-01 15:00:00
 sr:sport_event:51096257	sr:season:118699	sr:competitor:58	sr:competitor:29	\N	\N	not_started	32	sr:venue:2505	2025-02-12 19:45:00
 sr:sport_event:51095641	sr:season:118699	sr:competitor:25	sr:competitor:11	\N	\N	not_started	19	sr:venue:2352	2024-12-07 15:00:00
-sr:sport_event:51096341	sr:season:118699	sr:competitor:25	sr:competitor:58	\N	\N	not_started	35	sr:venue:2352	2025-03-01 15:00:00
 sr:sport_event:51095975	sr:season:118699	sr:competitor:8	sr:competitor:21	\N	\N	not_started	25	sr:venue:1136	2025-01-01 15:00:00
-sr:sport_event:51096445	sr:season:118699	sr:competitor:29	sr:competitor:1	\N	\N	not_started	39	sr:venue:1135	2025-03-29 15:00:00
-sr:sport_event:51096471	sr:season:118699	sr:competitor:74	sr:competitor:27	\N	\N	not_started	40	sr:venue:1689	2025-04-05 14:00:00
 sr:sport_event:46655885	sr:season:114317	sr:competitor:36833	sr:competitor:3215	1	0	closed	13	sr:venue:12017	2024-09-01 22:00:00
-sr:sport_event:51096475	sr:season:118699	sr:competitor:46	sr:competitor:12	\N	\N	not_started	41	sr:venue:631	2025-04-08 18:45:00
 sr:sport_event:51095869	sr:season:118699	sr:competitor:74	sr:competitor:1	\N	\N	not_started	23	sr:venue:1689	2024-12-26 15:00:00
-sr:sport_event:51096483	sr:season:118699	sr:competitor:21	sr:competitor:61	\N	\N	not_started	41	sr:venue:3002	2025-04-08 18:45:00
+sr:sport_event:51096471	sr:season:118699	sr:competitor:74	sr:competitor:27	\N	\N	not_started	40	sr:venue:1689	2025-04-05 14:00:00
+sr:sport_event:51096445	sr:season:118699	sr:competitor:29	sr:competitor:1	\N	\N	not_started	39	sr:venue:1135	2025-03-29 15:00:00
 sr:sport_event:51096459	sr:season:118699	sr:competitor:25	sr:competitor:2	\N	\N	not_started	40	sr:venue:2352	2025-04-05 14:00:00
-sr:sport_event:51096857	sr:season:118699	sr:competitor:36	sr:competitor:71	\N	\N	not_started	43	sr:venue:743	2025-04-18 14:00:00
-sr:sport_event:51096907	sr:season:118699	sr:competitor:96	sr:competitor:27	\N	\N	not_started	45	sr:venue:1138	2025-04-26 14:00:00
+sr:sport_event:51096901	sr:season:118699	sr:competitor:95	sr:competitor:41	\N	\N	not_started	45	sr:venue:2366	2025-04-26 14:00:00
+sr:sport_event:51096921	sr:season:118699	sr:competitor:41	sr:competitor:1	\N	\N	not_started	46	sr:venue:851	2025-05-03 14:00:00
+sr:sport_event:51096341	sr:season:118699	sr:competitor:25	sr:competitor:58	\N	\N	not_started	35	sr:venue:2352	2025-03-01 15:00:00
+sr:sport_event:46657147	sr:season:114317	sr:competitor:4937	sr:competitor:3211	\N	\N	postponed	21	sr:venue:12033	2024-10-07 00:30:00
 sr:sport_event:46655931	sr:season:114317	sr:competitor:7629	sr:competitor:3218	3	0	closed	15	sr:venue:12021	2024-09-22 17:30:00
 sr:sport_event:46655829	sr:season:114317	sr:competitor:3209	sr:competitor:3217	1	0	closed	11	sr:venue:1099	2024-08-17 18:30:00
 sr:sport_event:46655937	sr:season:114317	sr:competitor:3209	sr:competitor:3216	0	0	closed	15	sr:venue:1099	2024-09-22 17:30:00
 sr:sport_event:51095187	sr:season:118699	sr:competitor:95	sr:competitor:8	1	1	closed	10	sr:venue:2366	2024-10-19 11:30:00
 sr:sport_event:51095921	sr:season:118699	sr:competitor:74	sr:competitor:72	\N	\N	not_started	24	sr:venue:1689	2024-12-29 15:00:00
 sr:sport_event:51096139	sr:season:118699	sr:competitor:25	sr:competitor:96	\N	\N	not_started	27	sr:venue:2352	2025-01-18 12:30:00
-sr:sport_event:51096489	sr:season:118699	sr:competitor:24	sr:competitor:96	\N	\N	not_started	41	sr:venue:813	2025-04-08 18:45:00
 sr:sport_event:51096249	sr:season:118699	sr:competitor:15	sr:competitor:2	\N	\N	not_started	31	sr:venue:598	2025-02-08 15:00:00
-sr:sport_event:51096331	sr:season:118699	sr:competitor:61	sr:competitor:6	\N	\N	not_started	35	sr:venue:1514	2025-03-01 15:00:00
 sr:sport_event:46655701	sr:season:114317	sr:competitor:3216	sr:competitor:7628	0	2	closed	6	sr:venue:613	2024-07-18 21:45:00
 sr:sport_event:46655749	sr:season:114317	sr:competitor:3215	sr:competitor:3204	2	1	closed	8	sr:venue:12033	2024-07-28 20:15:00
 sr:sport_event:46655941	sr:season:114317	sr:competitor:3202	sr:competitor:3211	0	1	closed	15	sr:venue:44628	2024-09-21 19:00:00
@@ -1812,28 +1751,26 @@ sr:sport_event:46655875	sr:season:114317	sr:competitor:3204	sr:competitor:191648
 sr:sport_event:46655803	sr:season:114317	sr:competitor:3215	sr:competitor:3205	0	1	closed	10	sr:venue:1082	2024-08-10 00:00:00
 sr:sport_event:46655849	sr:season:114317	sr:competitor:36842	sr:competitor:36837	0	2	closed	12	sr:venue:12031	2024-08-23 21:00:00
 sr:sport_event:46655833	sr:season:114317	sr:competitor:3202	sr:competitor:3201	3	2	closed	11	sr:venue:44628	2024-08-18 17:30:00
-sr:sport_event:51096425	sr:season:118699	sr:competitor:8	sr:competitor:96	\N	\N	not_started	38	sr:venue:1136	2025-03-15 15:00:00
-sr:sport_event:51096347	sr:season:118699	sr:competitor:1	sr:competitor:15	\N	\N	not_started	35	sr:venue:1693	2025-03-01 15:00:00
 sr:sport_event:51095765	sr:season:118699	sr:competitor:74	sr:competitor:41	\N	\N	not_started	21	sr:venue:1689	2024-12-14 15:00:00
 sr:sport_event:51096255	sr:season:118699	sr:competitor:8	sr:competitor:12	\N	\N	not_started	31	sr:venue:1136	2025-02-08 12:30:00
-sr:sport_event:51096385	sr:season:118699	sr:competitor:2	sr:competitor:71	\N	\N	not_started	37	sr:venue:638	2025-03-11 19:45:00
 sr:sport_event:46655713	sr:season:114317	sr:competitor:3204	sr:competitor:3217	1	0	closed	7	sr:venue:4754	2024-07-31 21:30:00
 sr:sport_event:51096011	sr:season:118699	sr:competitor:12	sr:competitor:25	\N	\N	not_started	26	sr:venue:2547	2025-01-04 15:00:00
-sr:sport_event:51096451	sr:season:118699	sr:competitor:46	sr:competitor:36	\N	\N	not_started	40	sr:venue:631	2025-04-05 14:00:00
-sr:sport_event:51096917	sr:season:118699	sr:competitor:24	sr:competitor:12	\N	\N	not_started	46	sr:venue:813	2025-05-03 14:00:00
 sr:sport_event:51095595	sr:season:118699	sr:competitor:95	sr:competitor:25	\N	\N	not_started	18	sr:venue:2366	2024-11-30 12:30:00
-sr:sport_event:51096583	sr:season:118699	sr:competitor:61	sr:competitor:29	\N	\N	not_started	42	sr:venue:1514	2025-04-12 14:00:00
 sr:sport_event:51095551	sr:season:118699	sr:competitor:61	sr:competitor:1	0	2	closed	17	sr:venue:1514	2024-11-27 19:45:00
 sr:sport_event:51096191	sr:season:118699	sr:competitor:11	sr:competitor:24	\N	\N	not_started	29	sr:venue:2194	2025-01-25 15:00:00
-sr:sport_event:51096859	sr:season:118699	sr:competitor:27	sr:competitor:72	\N	\N	not_started	43	sr:venue:852	2025-04-18 14:00:00
-sr:sport_event:51096885	sr:season:118699	sr:competitor:96	sr:competitor:21	\N	\N	not_started	44	sr:venue:1138	2025-04-21 14:00:00
 sr:sport_event:46655755	sr:season:114317	sr:competitor:3216	sr:competitor:3218	2	0	closed	8	sr:venue:613	2024-07-30 00:00:00
 sr:sport_event:46655861	sr:season:114317	sr:competitor:3203	sr:competitor:3205	0	1	closed	12	sr:venue:4750	2024-08-26 21:30:00
 sr:sport_event:46656987	sr:season:114317	sr:competitor:65676	sr:competitor:65668	2	1	closed	16	sr:venue:49307	2024-09-29 17:30:00
 sr:sport_event:46655725	sr:season:114317	sr:competitor:3202	sr:competitor:3219	3	0	closed	7	sr:venue:44628	2024-07-31 23:30:00
 sr:sport_event:46655919	sr:season:114317	sr:competitor:7628	sr:competitor:3205	1	1	closed	14	sr:venue:4738	2024-09-14 23:00:00
-sr:sport_event:51096897	sr:season:118699	sr:competitor:1	sr:competitor:6	\N	\N	not_started	45	sr:venue:1693	2025-04-26 14:00:00
-sr:sport_event:51096883	sr:season:118699	sr:competitor:34	sr:competitor:29	\N	\N	not_started	44	sr:venue:2223	2025-04-21 14:00:00
+sr:sport_event:51096583	sr:season:118699	sr:competitor:61	sr:competitor:29	\N	\N	not_started	42	sr:venue:1514	2025-04-12 14:00:00
+sr:sport_event:51096489	sr:season:118699	sr:competitor:24	sr:competitor:96	\N	\N	not_started	41	sr:venue:813	2025-04-08 18:45:00
+sr:sport_event:51096857	sr:season:118699	sr:competitor:36	sr:competitor:71	\N	\N	not_started	43	sr:venue:743	2025-04-18 14:00:00
+sr:sport_event:51096859	sr:season:118699	sr:competitor:27	sr:competitor:72	\N	\N	not_started	43	sr:venue:852	2025-04-18 14:00:00
+sr:sport_event:51096917	sr:season:118699	sr:competitor:24	sr:competitor:12	\N	\N	not_started	46	sr:venue:813	2025-05-03 14:00:00
+sr:sport_event:51096347	sr:season:118699	sr:competitor:1	sr:competitor:15	\N	\N	not_started	35	sr:venue:1693	2025-03-01 15:00:00
+sr:sport_event:51096385	sr:season:118699	sr:competitor:2	sr:competitor:71	\N	\N	not_started	37	sr:venue:638	2025-03-11 19:45:00
+sr:sport_event:51096331	sr:season:118699	sr:competitor:61	sr:competitor:6	\N	\N	not_started	35	sr:venue:1514	2025-03-01 15:00:00
 sr:sport_event:46655759	sr:season:114317	sr:competitor:191648	sr:competitor:65676	1	0	closed	9	sr:venue:17150	2024-08-05 17:30:00
 sr:sport_event:46655925	sr:season:114317	sr:competitor:6074	sr:competitor:42338	1	1	closed	14	sr:venue:15676	2024-09-15 18:00:00
 sr:sport_event:46655939	sr:season:114317	sr:competitor:36833	sr:competitor:3203	2	4	closed	15	sr:venue:12017	2024-09-22 22:30:00
@@ -1849,7 +1786,6 @@ sr:sport_event:46655779	sr:season:114317	sr:competitor:3202	sr:competitor:65668	
 sr:sport_event:46655763	sr:season:114317	sr:competitor:6074	sr:competitor:3216	1	0	closed	9	sr:venue:15676	2024-08-03 18:00:00
 sr:sport_event:46655893	sr:season:114317	sr:competitor:3208	sr:competitor:36842	4	0	closed	13	sr:venue:1079	2024-08-31 21:00:00
 sr:sport_event:46655769	sr:season:114317	sr:competitor:7629	sr:competitor:3215	0	0	closed	9	sr:venue:12021	2024-08-03 23:30:00
-sr:sport_event:51096241	sr:season:118699	sr:competitor:72	sr:competitor:71	\N	\N	not_started	31	sr:venue:2178	2025-02-08 15:00:00
 sr:sport_event:46655703	sr:season:114317	sr:competitor:7628	sr:competitor:65676	1	1	closed	7	sr:venue:4738	2024-07-26 00:00:00
 sr:sport_event:46655851	sr:season:114317	sr:competitor:3201	sr:competitor:3210	2	0	closed	12	sr:venue:14324	2024-08-25 17:30:00
 sr:sport_event:46655895	sr:season:114317	sr:competitor:36839	sr:competitor:65668	1	0	closed	13	sr:venue:12025	2024-08-31 18:00:00
@@ -1893,7 +1829,6 @@ sr:sport_event:46657115	sr:season:114317	sr:competitor:191648	sr:competitor:3210
 sr:sport_event:46657103	sr:season:114317	sr:competitor:3217	sr:competitor:65668	0	1	closed	20	sr:venue:1329	2024-11-01 00:15:00
 sr:sport_event:46657011	sr:season:114317	sr:competitor:6074	sr:competitor:7629	1	1	closed	16	sr:venue:15676	2024-09-28 20:30:00
 sr:sport_event:46657121	sr:season:114317	sr:competitor:42338	sr:competitor:3209	0	0	closed	20	sr:venue:8975	2024-10-31 22:00:00
-sr:sport_event:46656995	sr:season:114317	sr:competitor:3217	sr:competitor:3208	\N	\N	postponed	16	sr:venue:1329	2024-09-29 20:00:00
 sr:sport_event:46657125	sr:season:114317	sr:competitor:7629	sr:competitor:3205	0	0	closed	20	sr:venue:12021	2024-11-01 22:45:00
 sr:sport_event:46655827	sr:season:114317	sr:competitor:3212	sr:competitor:3215	0	1	closed	11	sr:venue:1567	2024-08-17 00:00:00
 sr:sport_event:46657027	sr:season:114317	sr:competitor:3202	sr:competitor:3216	1	0	closed	17	sr:venue:44628	2024-10-07 00:00:00
@@ -1921,21 +1856,20 @@ sr:sport_event:46657033	sr:season:114317	sr:competitor:3208	sr:competitor:3215	1
 sr:sport_event:46657019	sr:season:114317	sr:competitor:3205	sr:competitor:6074	0	1	closed	17	sr:venue:12003	2024-10-05 20:30:00
 sr:sport_event:46657039	sr:season:114317	sr:competitor:4937	sr:competitor:3201	2	0	closed	17	sr:venue:12033	2024-10-05 23:00:00
 sr:sport_event:46656989	sr:season:114317	sr:competitor:36842	sr:competitor:4937	1	1	closed	16	sr:venue:12031	2024-09-28 00:00:00
-sr:sport_event:51389159	sr:season:119847	sr:competitor:3002	sr:competitor:3009	\N	\N	not_started	23	sr:venue:907	2025-02-23 18:00:00
 sr:sport_event:51388825	sr:season:119847	sr:competitor:49531	sr:competitor:3013	0	0	closed	7	sr:venue:16520	2024-09-29 14:30:00
-sr:sport_event:51389259	sr:season:119847	sr:competitor:3009	sr:competitor:3011	\N	\N	not_started	28	sr:venue:1137	2025-04-06 17:00:00
 sr:sport_event:46655815	sr:season:114317	sr:competitor:3218	sr:competitor:65676	1	1	closed	11	sr:venue:981	2024-08-17 18:00:00
-sr:sport_event:51389233	sr:season:119847	sr:competitor:2999	sr:competitor:25777	\N	\N	not_started	27	sr:venue:951	2025-03-30 17:00:00
 sr:sport_event:51388921	sr:season:119847	sr:competitor:3011	sr:competitor:3036	\N	\N	not_started	13	sr:venue:5318	2024-12-07 18:00:00
 sr:sport_event:51388985	sr:season:119847	sr:competitor:3001	sr:competitor:3006	\N	\N	not_started	16	sr:venue:910	2024-12-29 20:30:00
-sr:sport_event:46657153	sr:season:114317	sr:competitor:3201	sr:competitor:3206	\N	\N	postponed	21	sr:venue:14324	2024-10-05 21:45:00
 sr:sport_event:51388893	sr:season:119847	sr:competitor:36365	sr:competitor:2998	1	1	closed	11	sr:venue:2645	2024-11-09 15:30:00
 sr:sport_event:51094963	sr:season:118699	sr:competitor:6	sr:competitor:46	1	1	closed	4	sr:venue:806	2024-08-31 11:30:00
 sr:sport_event:51389081	sr:season:119847	sr:competitor:1031053	sr:competitor:3011	\N	\N	not_started	21	sr:venue:8249	2025-02-09 18:00:00
-sr:sport_event:51389283	sr:season:119847	sr:competitor:3014	sr:competitor:3036	\N	\N	not_started	29	sr:venue:5312	2025-04-13 17:00:00
 sr:sport_event:51388947	sr:season:119847	sr:competitor:3036	sr:competitor:3009	\N	\N	not_started	14	sr:venue:2013	2024-12-16 20:45:00
 sr:sport_event:51095061	sr:season:118699	sr:competitor:61	sr:competitor:25	1	0	closed	8	sr:venue:1514	2024-10-01 18:45:00
+sr:sport_event:51389259	sr:season:119847	sr:competitor:3009	sr:competitor:3011	\N	\N	not_started	28	sr:venue:1137	2025-04-06 17:00:00
 sr:sport_event:51389355	sr:season:119847	sr:competitor:3013	sr:competitor:3036	\N	\N	not_started	33	sr:venue:1335	2025-05-11 17:00:00
+sr:sport_event:51389233	sr:season:119847	sr:competitor:2999	sr:competitor:25777	\N	\N	not_started	27	sr:venue:951	2025-03-30 17:00:00
+sr:sport_event:51389159	sr:season:119847	sr:competitor:3002	sr:competitor:3009	\N	\N	not_started	23	sr:venue:907	2025-02-23 18:00:00
+sr:sport_event:46656995	sr:season:114317	sr:competitor:3217	sr:competitor:3208	\N	\N	postponed	16	sr:venue:1329	2024-09-29 20:00:00
 sr:sport_event:46657053	sr:season:114317	sr:competitor:3211	sr:competitor:3208	1	1	closed	18	sr:venue:1009	2024-10-19 00:00:00
 sr:sport_event:51389053	sr:season:119847	sr:competitor:3014	sr:competitor:2999	\N	\N	not_started	20	sr:venue:5312	2025-02-02 18:00:00
 sr:sport_event:51095147	sr:season:118699	sr:competitor:27	sr:competitor:1	2	0	closed	9	sr:venue:852	2024-10-05 14:00:00
@@ -1963,21 +1897,15 @@ sr:sport_event:46657107	sr:season:114317	sr:competitor:3211	sr:competitor:3219	3
 sr:sport_event:46657119	sr:season:114317	sr:competitor:6074	sr:competitor:36833	1	1	closed	20	sr:venue:15676	2024-11-01 00:15:00
 sr:sport_event:46657025	sr:season:114317	sr:competitor:36833	sr:competitor:7628	1	2	closed	17	sr:venue:12017	2024-10-08 00:00:00
 sr:sport_event:51388855	sr:season:119847	sr:competitor:2995	sr:competitor:3014	0	2	closed	9	sr:venue:14556	2024-10-26 17:00:00
-sr:sport_event:51389165	sr:season:119847	sr:competitor:2999	sr:competitor:3013	\N	\N	not_started	23	sr:venue:951	2025-02-23 18:00:00
-sr:sport_event:51389263	sr:season:119847	sr:competitor:3010	sr:competitor:3014	\N	\N	not_started	28	sr:venue:2539	2025-04-06 17:00:00
 sr:sport_event:46657099	sr:season:114317	sr:competitor:65676	sr:competitor:3201	0	1	closed	20	sr:venue:49307	2024-11-01 22:00:00
 sr:sport_event:46657097	sr:season:114317	sr:competitor:36842	sr:competitor:3201	1	0	closed	19	sr:venue:12031	2024-10-27 00:45:00
-sr:sport_event:46657005	sr:season:114317	sr:competitor:7628	sr:competitor:3209	\N	\N	postponed	16	sr:venue:4738	2024-09-29 20:00:00
 sr:sport_event:51095775	sr:season:118699	sr:competitor:6	sr:competitor:24	\N	\N	not_started	22	sr:venue:806	2024-12-21 15:00:00
 sr:sport_event:51095895	sr:season:118699	sr:competitor:36	sr:competitor:6	\N	\N	not_started	24	sr:venue:743	2024-12-29 20:00:00
 sr:sport_event:51095655	sr:season:118699	sr:competitor:1	sr:competitor:263	\N	\N	not_started	19	sr:venue:1693	2024-12-07 15:00:00
 sr:sport_event:51095981	sr:season:118699	sr:competitor:46	sr:competitor:6	\N	\N	not_started	26	sr:venue:631	2025-01-04 12:30:00
 sr:sport_event:51096189	sr:season:118699	sr:competitor:61	sr:competitor:27	\N	\N	not_started	29	sr:venue:1514	2025-01-25 15:00:00
 sr:sport_event:51096177	sr:season:118699	sr:competitor:34	sr:competitor:263	\N	\N	not_started	28	sr:venue:2223	2025-01-22 19:45:00
-sr:sport_event:50850521	sr:season:118689	sr:competitor:7	sr:competitor:32	\N	\N	not_started	28	sr:venue:10	2025-03-08 15:00:00
-sr:sport_event:50850639	sr:season:118689	sr:competitor:30	sr:competitor:37	\N	\N	not_started	34	sr:venue:2443	2025-04-26 14:00:00
 sr:sport_event:50850427	sr:season:118689	sr:competitor:60	sr:competitor:44	\N	\N	not_started	24	sr:venue:2990	2025-02-01 15:00:00
-sr:sport_event:50850619	sr:season:118689	sr:competitor:7	sr:competitor:60	\N	\N	not_started	33	sr:venue:10	2025-04-19 14:00:00
 sr:sport_event:50850341	sr:season:118689	sr:competitor:35	sr:competitor:39	\N	\N	not_started	19	sr:venue:9	2024-12-30 20:00:00
 sr:sport_event:50850147	sr:season:118689	sr:competitor:60	sr:competitor:17	2	1	closed	10	sr:venue:2990	2024-11-02 15:00:00
 sr:sport_event:50850457	sr:season:118689	sr:competitor:44	sr:competitor:3	\N	\N	not_started	25	sr:venue:579	2025-02-15 15:00:00
@@ -1985,13 +1913,14 @@ sr:sport_event:50850287	sr:season:118689	sr:competitor:40	sr:competitor:17	\N	\N
 sr:sport_event:50850053	sr:season:118689	sr:competitor:43	sr:competitor:39	3	1	closed	5	sr:venue:611	2024-09-21 14:00:00
 sr:sport_event:50850401	sr:season:118689	sr:competitor:39	sr:competitor:60	\N	\N	not_started	22	sr:venue:765	2025-01-18 12:30:00
 sr:sport_event:50850023	sr:season:118689	sr:competitor:14	sr:competitor:3	1	1	closed	3	sr:venue:2230	2024-08-31 14:00:00
-sr:sport_event:50850541	sr:season:118689	sr:competitor:48	sr:competitor:37	\N	\N	not_started	29	sr:venue:12	2025-03-15 15:00:00
 sr:sport_event:50850179	sr:season:118689	sr:competitor:14	sr:competitor:39	1	3	closed	11	sr:venue:2230	2024-11-10 14:00:00
+sr:sport_event:51389165	sr:season:119847	sr:competitor:2999	sr:competitor:3013	\N	\N	not_started	23	sr:venue:951	2025-02-23 18:00:00
+sr:sport_event:50850521	sr:season:118689	sr:competitor:7	sr:competitor:32	\N	\N	not_started	28	sr:venue:10	2025-03-08 15:00:00
+sr:sport_event:50850639	sr:season:118689	sr:competitor:30	sr:competitor:37	\N	\N	not_started	34	sr:venue:2443	2025-04-26 14:00:00
 sr:sport_event:50850687	sr:season:118689	sr:competitor:14	sr:competitor:31	\N	\N	not_started	36	sr:venue:2230	2025-05-10 14:00:00
-sr:sport_event:50850545	sr:season:118689	sr:competitor:32	sr:competitor:14	\N	\N	not_started	29	sr:venue:2188	2025-03-15 15:00:00
+sr:sport_event:46657005	sr:season:114317	sr:competitor:7628	sr:competitor:3209	\N	\N	postponed	16	sr:venue:4738	2024-09-29 20:00:00
 sr:sport_event:46657279	sr:season:114317	sr:competitor:191648	sr:competitor:65668	\N	\N	not_started	26	sr:venue:17150	2024-12-08 23:00:00
 sr:sport_event:46657185	sr:season:114317	sr:competitor:3209	sr:competitor:3205	1	0	closed	23	sr:venue:1099	2024-11-21 22:15:00
-sr:sport_event:51096847	sr:season:118699	sr:competitor:29	sr:competitor:12	\N	\N	not_started	43	sr:venue:1135	2025-04-18 14:00:00
 sr:sport_event:51095543	sr:season:118699	sr:competitor:41	sr:competitor:8	0	0	closed	17	sr:venue:851	2024-11-26 20:00:00
 sr:sport_event:51095245	sr:season:118699	sr:competitor:72	sr:competitor:41	1	2	closed	11	sr:venue:2178	2024-10-23 18:45:00
 sr:sport_event:46655847	sr:season:114317	sr:competitor:65668	sr:competitor:3208	0	5	closed	12	sr:venue:12021	2024-08-26 19:00:00
@@ -1999,25 +1928,16 @@ sr:sport_event:51095629	sr:season:118699	sr:competitor:96	sr:competitor:46	\N	\N
 sr:sport_event:46657187	sr:season:114317	sr:competitor:36833	sr:competitor:7629	4	2	closed	23	sr:venue:12017	2024-11-19 00:30:00
 sr:sport_event:51096291	sr:season:118699	sr:competitor:36	sr:competitor:24	\N	\N	not_started	33	sr:venue:743	2025-02-15 15:00:00
 sr:sport_event:50850121	sr:season:118689	sr:competitor:45	sr:competitor:31	2	3	closed	8	sr:venue:2231	2024-10-19 14:00:00
-sr:sport_event:51096365	sr:season:118699	sr:competitor:2	sr:competitor:34	\N	\N	not_started	36	sr:venue:638	2025-03-08 15:00:00
-sr:sport_event:51096397	sr:season:118699	sr:competitor:15	sr:competitor:58	\N	\N	not_started	37	sr:venue:598	2025-03-12 19:45:00
-sr:sport_event:51096419	sr:season:118699	sr:competitor:1	sr:competitor:34	\N	\N	not_started	38	sr:venue:1693	2025-03-15 15:00:00
 sr:sport_event:51096283	sr:season:118699	sr:competitor:61	sr:competitor:58	\N	\N	not_started	33	sr:venue:1514	2025-02-15 12:30:00
-sr:sport_event:51096405	sr:season:118699	sr:competitor:11	sr:competitor:41	\N	\N	not_started	38	sr:venue:2194	2025-03-15 15:00:00
-sr:sport_event:51096487	sr:season:118699	sr:competitor:29	sr:competitor:72	\N	\N	not_started	41	sr:venue:1135	2025-04-08 18:45:00
 sr:sport_event:46657305	sr:season:114317	sr:competitor:3208	sr:competitor:7629	\N	\N	not_started	27	sr:venue:1079	2024-12-15 23:00:00
-sr:sport_event:51096903	sr:season:118699	sr:competitor:36	sr:competitor:263	\N	\N	not_started	45	sr:venue:743	2025-04-26 14:00:00
 sr:sport_event:51095735	sr:season:118699	sr:competitor:27	sr:competitor:2	\N	\N	not_started	21	sr:venue:852	2024-12-13 20:00:00
 sr:sport_event:46657109	sr:season:114317	sr:competitor:3203	sr:competitor:36839	1	2	closed	20	sr:venue:4750	2024-11-02 23:00:00
 sr:sport_event:50850195	sr:season:118689	sr:competitor:43	sr:competitor:3	1	4	closed	12	sr:venue:611	2024-11-23 15:00:00
-sr:sport_event:51096937	sr:season:118699	sr:competitor:58	sr:competitor:21	\N	\N	not_started	46	sr:venue:2505	2025-05-03 14:00:00
 sr:sport_event:46657227	sr:season:114317	sr:competitor:6074	sr:competitor:3208	0	0	closed	24	sr:venue:15676	2024-11-24 22:15:00
 sr:sport_event:51095235	sr:season:118699	sr:competitor:29	sr:competitor:58	2	2	closed	11	sr:venue:1135	2024-10-22 18:45:00
 sr:sport_event:50850381	sr:season:118689	sr:competitor:38	sr:competitor:60	\N	\N	not_started	21	sr:venue:799	2025-01-14 19:30:00
-sr:sport_event:50850587	sr:season:118689	sr:competitor:31	sr:competitor:39	\N	\N	not_started	31	sr:venue:2183	2025-04-05 14:00:00
 sr:sport_event:51095753	sr:season:118699	sr:competitor:21	sr:competitor:34	\N	\N	not_started	21	sr:venue:3002	2024-12-14 12:30:00
 sr:sport_event:50850133	sr:season:118689	sr:competitor:30	sr:competitor:3	2	2	closed	9	sr:venue:2443	2024-10-26 14:00:00
-sr:sport_event:50850709	sr:season:118689	sr:competitor:31	sr:competitor:32	\N	\N	not_started	37	sr:venue:2183	2025-05-18 14:00:00
 sr:sport_event:50850061	sr:season:118689	sr:competitor:45	sr:competitor:32	1	1	closed	5	sr:venue:2231	2024-09-21 14:00:00
 sr:sport_event:50850101	sr:season:118689	sr:competitor:31	sr:competitor:60	1	0	closed	7	sr:venue:2183	2024-10-05 14:00:00
 sr:sport_event:50850119	sr:season:118689	sr:competitor:14	sr:competitor:7	1	0	closed	8	sr:venue:2230	2024-10-21 19:00:00
@@ -2025,24 +1945,29 @@ sr:sport_event:50850155	sr:season:118689	sr:competitor:35	sr:competitor:38	1	1	c
 sr:sport_event:50850127	sr:season:118689	sr:competitor:42	sr:competitor:44	2	2	closed	9	sr:venue:624	2024-10-27 16:30:00
 sr:sport_event:46657051	sr:season:114317	sr:competitor:3215	sr:competitor:36839	4	3	closed	18	sr:venue:1082	2024-10-19 20:00:00
 sr:sport_event:50850033	sr:season:118689	sr:competitor:7	sr:competitor:31	2	2	closed	4	sr:venue:10	2024-09-14 14:00:00
-sr:sport_event:50852313	sr:season:118691	sr:competitor:2819	sr:competitor:2818	\N	\N	postponed	12	sr:venue:619	2024-11-02 17:30:00
 sr:sport_event:46657069	sr:season:114317	sr:competitor:3204	sr:competitor:7629	0	1	closed	18	sr:venue:4754	2024-10-20 00:15:00
 sr:sport_event:50852133	sr:season:118691	sr:competitor:2819	sr:competitor:2821	4	3	closed	3	sr:venue:619	2024-08-26 19:30:00
 sr:sport_event:50852171	sr:season:118691	sr:competitor:24264	sr:competitor:2817	1	4	closed	5	sr:venue:11380	2024-09-15 14:15:00
-sr:sport_event:50852315	sr:season:118691	sr:competitor:2828	sr:competitor:2829	\N	\N	postponed	12	sr:venue:691	2024-11-02 20:00:00
 sr:sport_event:50852439	sr:season:118691	sr:competitor:6577	sr:competitor:2814	\N	\N	not_started	18	sr:venue:974	2024-12-22 17:30:00
 sr:sport_event:50852233	sr:season:118691	sr:competitor:2819	sr:competitor:6577	3	1	closed	8	sr:venue:619	2024-09-30 19:00:00
 sr:sport_event:50852421	sr:season:118691	sr:competitor:2816	sr:competitor:2818	\N	\N	not_started	18	sr:venue:1045	2024-12-22 20:00:00
-sr:sport_event:50852739	sr:season:118691	sr:competitor:2828	sr:competitor:2814	\N	\N	not_started	33	sr:venue:691	2025-04-23 17:00:00
-sr:sport_event:50852791	sr:season:118691	sr:competitor:2824	sr:competitor:2821	\N	\N	not_started	36	sr:venue:581	2025-05-14 17:00:00
-sr:sport_event:50852773	sr:season:118691	sr:competitor:6577	sr:competitor:2818	\N	\N	not_started	35	sr:venue:974	2025-05-11 17:00:00
-sr:sport_event:50852655	sr:season:118691	sr:competitor:2814	sr:competitor:2836	\N	\N	not_started	29	sr:venue:1307	2025-03-30 17:00:00
 sr:sport_event:50850029	sr:season:118689	sr:competitor:40	sr:competitor:48	3	2	closed	4	sr:venue:815	2024-09-14 16:30:00
 sr:sport_event:50852503	sr:season:118691	sr:competitor:2859	sr:competitor:2833	\N	\N	not_started	22	sr:venue:608	2025-02-02 19:00:00
 sr:sport_event:50852277	sr:season:118691	sr:competitor:2828	sr:competitor:6577	2	3	closed	10	sr:venue:691	2024-10-21 19:00:00
 sr:sport_event:50852377	sr:season:118691	sr:competitor:2819	sr:competitor:24264	\N	\N	not_started	15	sr:venue:619	2024-12-01 13:00:00
-sr:sport_event:50852827	sr:season:118691	sr:competitor:2885	sr:competitor:2820	\N	\N	not_started	38	sr:venue:9311	2025-05-25 17:00:00
-sr:sport_event:50852659	sr:season:118691	sr:competitor:2829	sr:competitor:2845	\N	\N	not_started	29	sr:venue:754	2025-03-30 17:00:00
+sr:sport_event:50850709	sr:season:118689	sr:competitor:31	sr:competitor:32	\N	\N	not_started	37	sr:venue:2183	2025-05-18 14:00:00
+sr:sport_event:50852313	sr:season:118691	sr:competitor:2819	sr:competitor:2818	\N	\N	postponed	12	sr:venue:619	2024-11-02 17:30:00
+sr:sport_event:50852739	sr:season:118691	sr:competitor:2828	sr:competitor:2814	\N	\N	not_started	33	sr:venue:691	2025-04-23 17:00:00
+sr:sport_event:50852791	sr:season:118691	sr:competitor:2824	sr:competitor:2821	\N	\N	not_started	36	sr:venue:581	2025-05-14 17:00:00
+sr:sport_event:50852773	sr:season:118691	sr:competitor:6577	sr:competitor:2818	\N	\N	not_started	35	sr:venue:974	2025-05-11 17:00:00
+sr:sport_event:51096419	sr:season:118699	sr:competitor:1	sr:competitor:34	\N	\N	not_started	38	sr:venue:1693	2025-03-15 15:00:00
+sr:sport_event:51096405	sr:season:118699	sr:competitor:11	sr:competitor:41	\N	\N	not_started	38	sr:venue:2194	2025-03-15 15:00:00
+sr:sport_event:51096487	sr:season:118699	sr:competitor:29	sr:competitor:72	\N	\N	not_started	41	sr:venue:1135	2025-04-08 18:45:00
+sr:sport_event:51096847	sr:season:118699	sr:competitor:29	sr:competitor:12	\N	\N	not_started	43	sr:venue:1135	2025-04-18 14:00:00
+sr:sport_event:51096365	sr:season:118699	sr:competitor:2	sr:competitor:34	\N	\N	not_started	36	sr:venue:638	2025-03-08 15:00:00
+sr:sport_event:51096903	sr:season:118699	sr:competitor:36	sr:competitor:263	\N	\N	not_started	45	sr:venue:743	2025-04-26 14:00:00
+sr:sport_event:51096937	sr:season:118699	sr:competitor:58	sr:competitor:21	\N	\N	not_started	46	sr:venue:2505	2025-05-03 14:00:00
+sr:sport_event:51096397	sr:season:118699	sr:competitor:15	sr:competitor:58	\N	\N	not_started	37	sr:venue:598	2025-03-12 19:45:00
 sr:sport_event:50850205	sr:season:118689	sr:competitor:45	sr:competitor:44	2	3	closed	12	sr:venue:2231	2024-11-24 14:00:00
 sr:sport_event:50852537	sr:season:118691	sr:competitor:2828	sr:competitor:2845	\N	\N	not_started	23	sr:venue:691	2025-02-09 19:00:00
 sr:sport_event:46657091	sr:season:114317	sr:competitor:3219	sr:competitor:3215	2	1	closed	19	sr:venue:634	2024-10-27 20:15:00
@@ -2063,37 +1988,33 @@ sr:sport_event:46657265	sr:season:114317	sr:competitor:3217	sr:competitor:3215	\
 sr:sport_event:50852095	sr:season:118691	sr:competitor:2821	sr:competitor:2885	2	1	closed	1	sr:venue:697	2024-08-16 17:00:00
 sr:sport_event:50852207	sr:season:118691	sr:competitor:2833	sr:competitor:2831	2	1	closed	7	sr:venue:730	2024-09-24 17:00:00
 sr:sport_event:51095253	sr:season:118699	sr:competitor:25	sr:competitor:71	1	0	closed	11	sr:venue:2352	2024-10-23 18:45:00
-sr:sport_event:51095393	sr:season:118699	sr:competitor:8	sr:competitor:6	\N	\N	postponed	14	sr:venue:1136	2024-11-05 19:45:00
-sr:sport_event:50852671	sr:season:118691	sr:competitor:2833	sr:competitor:2836	\N	\N	not_started	30	sr:venue:730	2025-04-06 17:00:00
 sr:sport_event:50850035	sr:season:118689	sr:competitor:43	sr:competitor:37	1	1	closed	4	sr:venue:611	2024-09-14 14:00:00
 sr:sport_event:50850183	sr:season:118689	sr:competitor:37	sr:competitor:48	0	0	closed	11	sr:venue:18379	2024-11-09 15:00:00
 sr:sport_event:50850235	sr:season:118689	sr:competitor:43	sr:competitor:30	\N	\N	not_started	14	sr:venue:611	2024-12-05 19:30:00
-sr:sport_event:50850485	sr:season:118689	sr:competitor:32	sr:competitor:33	\N	\N	not_started	26	sr:venue:2188	2025-02-22 15:00:00
 sr:sport_event:50850393	sr:season:118689	sr:competitor:48	sr:competitor:33	\N	\N	not_started	22	sr:venue:12	2025-01-19 14:00:00
 sr:sport_event:50850451	sr:season:118689	sr:competitor:7	sr:competitor:48	\N	\N	not_started	25	sr:venue:10	2025-02-15 15:00:00
 sr:sport_event:50850339	sr:season:118689	sr:competitor:31	sr:competitor:17	\N	\N	not_started	19	sr:venue:2183	2024-12-29 14:30:00
 sr:sport_event:50850371	sr:season:118689	sr:competitor:48	sr:competitor:40	\N	\N	not_started	21	sr:venue:12	2025-01-15 19:30:00
 sr:sport_event:46657055	sr:season:114317	sr:competitor:3203	sr:competitor:36837	0	1	closed	18	sr:venue:4750	2024-10-19 20:00:00
-sr:sport_event:50850547	sr:season:118689	sr:competitor:31	sr:competitor:35	\N	\N	not_started	29	sr:venue:2183	2025-03-15 15:00:00
 sr:sport_event:50850167	sr:season:118689	sr:competitor:50	sr:competitor:60	3	2	closed	11	sr:venue:53349	2024-11-09 15:00:00
 sr:sport_event:50850041	sr:season:118689	sr:competitor:45	sr:competitor:35	0	3	closed	4	sr:venue:2231	2024-09-14 11:30:00
-sr:sport_event:50850515	sr:season:118689	sr:competitor:50	sr:competitor:40	\N	\N	not_started	28	sr:venue:53349	2025-03-08 15:00:00
 sr:sport_event:50850305	sr:season:118689	sr:competitor:37	sr:competitor:30	\N	\N	not_started	17	sr:venue:18379	2024-12-21 15:00:00
 sr:sport_event:50850361	sr:season:118689	sr:competitor:45	sr:competitor:50	\N	\N	not_started	20	sr:venue:2231	2025-01-04 15:00:00
 sr:sport_event:46657117	sr:season:114317	sr:competitor:3218	sr:competitor:3202	1	0	closed	20	sr:venue:981	2024-11-03 22:30:00
 sr:sport_event:46657105	sr:season:114317	sr:competitor:3215	sr:competitor:4937	2	0	closed	20	sr:venue:1082	2024-11-03 20:30:00
 sr:sport_event:50850363	sr:season:118689	sr:competitor:33	sr:competitor:39	\N	\N	not_started	20	sr:venue:28762	2025-01-04 12:30:00
-sr:sport_event:50850479	sr:season:118689	sr:competitor:40	sr:competitor:38	\N	\N	not_started	26	sr:venue:815	2025-02-22 15:00:00
 sr:sport_event:50850137	sr:season:118689	sr:competitor:7	sr:competitor:33	1	0	closed	9	sr:venue:10	2024-10-27 14:00:00
 sr:sport_event:50850263	sr:season:118689	sr:competitor:33	sr:competitor:38	\N	\N	not_started	15	sr:venue:28762	2024-12-08 16:30:00
 sr:sport_event:46657247	sr:season:114317	sr:competitor:36837	sr:competitor:3204	\N	\N	not_started	25	sr:venue:12712	2024-12-02 21:30:00
 sr:sport_event:50850181	sr:season:118689	sr:competitor:33	sr:competitor:32	1	2	closed	11	sr:venue:28762	2024-11-10 14:00:00
 sr:sport_event:50850279	sr:season:118689	sr:competitor:39	sr:competitor:31	\N	\N	not_started	16	sr:venue:765	2024-12-14 15:00:00
-sr:sport_event:50850253	sr:season:118689	sr:competitor:48	sr:competitor:44	\N	\N	not_started	15	sr:venue:12	2024-12-07 12:30:00
 sr:sport_event:46657143	sr:season:114317	sr:competitor:36839	sr:competitor:3216	2	1	closed	21	sr:venue:12025	2024-11-07 22:00:00
 sr:sport_event:50850411	sr:season:118689	sr:competitor:30	sr:competitor:48	\N	\N	not_started	23	sr:venue:2443	2025-01-25 15:00:00
 sr:sport_event:50850323	sr:season:118689	sr:competitor:45	sr:competitor:37	\N	\N	not_started	18	sr:venue:2231	2024-12-26 15:00:00
-sr:sport_event:50850535	sr:season:118689	sr:competitor:60	sr:competitor:50	\N	\N	not_started	29	sr:venue:2990	2025-03-15 15:00:00
+sr:sport_event:50852659	sr:season:118691	sr:competitor:2829	sr:competitor:2845	\N	\N	not_started	29	sr:venue:754	2025-03-30 17:00:00
+sr:sport_event:50852671	sr:season:118691	sr:competitor:2833	sr:competitor:2836	\N	\N	not_started	30	sr:venue:730	2025-04-06 17:00:00
+sr:sport_event:50852827	sr:season:118691	sr:competitor:2885	sr:competitor:2820	\N	\N	not_started	38	sr:venue:9311	2025-05-25 17:00:00
+sr:sport_event:51095393	sr:season:118699	sr:competitor:8	sr:competitor:6	\N	\N	postponed	14	sr:venue:1136	2024-11-05 19:45:00
 sr:sport_event:46657189	sr:season:114317	sr:competitor:3202	sr:competitor:3204	1	0	closed	23	sr:venue:44628	2024-11-21 00:30:00
 sr:sport_event:50850221	sr:season:118689	sr:competitor:33	sr:competitor:43	\N	\N	not_started	13	sr:venue:28762	2024-12-01 13:30:00
 sr:sport_event:50850211	sr:season:118689	sr:competitor:38	sr:competitor:40	\N	\N	not_started	13	sr:venue:799	2024-12-01 13:30:00
@@ -2112,10 +2033,7 @@ sr:sport_event:50850289	sr:season:118689	sr:competitor:50	sr:competitor:14	\N	\N
 sr:sport_event:50850439	sr:season:118689	sr:competitor:35	sr:competitor:7	\N	\N	not_started	24	sr:venue:9	2025-02-01 15:00:00
 sr:sport_event:50850357	sr:season:118689	sr:competitor:44	sr:competitor:35	\N	\N	not_started	20	sr:venue:579	2025-01-05 16:30:00
 sr:sport_event:53785495	sr:season:114317	sr:competitor:3217	sr:competitor:3208	3	0	closed	16	sr:venue:1329	2024-10-01 23:30:00
-sr:sport_event:50850525	sr:season:118689	sr:competitor:35	sr:competitor:42	\N	\N	not_started	28	sr:venue:9	2025-03-08 15:00:00
 sr:sport_event:50850389	sr:season:118689	sr:competitor:50	sr:competitor:44	\N	\N	not_started	22	sr:venue:53349	2025-01-18 15:00:00
-sr:sport_event:50850593	sr:season:118689	sr:competitor:37	sr:competitor:60	\N	\N	not_started	31	sr:venue:18379	2025-04-05 14:00:00
-sr:sport_event:50850557	sr:season:118689	sr:competitor:42	sr:competitor:43	\N	\N	not_started	30	sr:venue:624	2025-04-01 14:00:00
 sr:sport_event:50850367	sr:season:118689	sr:competitor:42	sr:competitor:33	\N	\N	not_started	21	sr:venue:624	2025-01-15 20:00:00
 sr:sport_event:50850293	sr:season:118689	sr:competitor:48	sr:competitor:38	\N	\N	not_started	17	sr:venue:12	2024-12-22 14:00:00
 sr:sport_event:50850177	sr:season:118689	sr:competitor:35	sr:competitor:31	3	0	closed	11	sr:venue:9	2024-11-10 14:00:00
@@ -2123,14 +2041,11 @@ sr:sport_event:50850447	sr:season:118689	sr:competitor:40	sr:competitor:32	\N	\N
 sr:sport_event:50850045	sr:season:118689	sr:competitor:3	sr:competitor:39	1	2	closed	4	sr:venue:1272	2024-09-15 15:30:00
 sr:sport_event:46657057	sr:season:114317	sr:competitor:3216	sr:competitor:3210	3	0	closed	18	sr:venue:613	2024-10-20 18:00:00
 sr:sport_event:50850249	sr:season:118689	sr:competitor:50	sr:competitor:39	\N	\N	not_started	15	sr:venue:53349	2024-12-07 15:00:00
-sr:sport_event:50850539	sr:season:118689	sr:competitor:40	sr:competitor:44	\N	\N	not_started	29	sr:venue:815	2025-03-15 15:00:00
 sr:sport_event:46657079	sr:season:114317	sr:competitor:36833	sr:competitor:3218	1	0	closed	19	sr:venue:12017	2024-10-28 00:15:00
 sr:sport_event:50850355	sr:season:118689	sr:competitor:43	sr:competitor:32	\N	\N	not_started	20	sr:venue:611	2025-01-05 14:00:00
-sr:sport_event:50850489	sr:season:118689	sr:competitor:17	sr:competitor:44	\N	\N	not_started	26	sr:venue:606	2025-02-22 15:00:00
 sr:sport_event:50850021	sr:season:118689	sr:competitor:39	sr:competitor:33	2	1	closed	3	sr:venue:765	2024-09-01 12:30:00
 sr:sport_event:50850123	sr:season:118689	sr:competitor:33	sr:competitor:37	4	1	closed	8	sr:venue:28762	2024-10-19 11:30:00
 sr:sport_event:50850267	sr:season:118689	sr:competitor:60	sr:competitor:37	\N	\N	not_started	16	sr:venue:2990	2024-12-16 20:00:00
-sr:sport_event:50850487	sr:season:118689	sr:competitor:31	sr:competitor:50	\N	\N	not_started	26	sr:venue:2183	2025-02-22 15:00:00
 sr:sport_event:50850413	sr:season:118689	sr:competitor:7	sr:competitor:50	\N	\N	not_started	23	sr:venue:10	2025-01-26 14:00:00
 sr:sport_event:46657065	sr:season:114317	sr:competitor:6074	sr:competitor:3212	2	0	closed	18	sr:venue:15676	2024-10-20 22:30:00
 sr:sport_event:46657283	sr:season:114317	sr:competitor:6074	sr:competitor:3219	\N	\N	not_started	26	sr:venue:15676	2024-12-08 23:00:00
@@ -2139,7 +2054,6 @@ sr:sport_event:46657135	sr:season:114317	sr:competitor:3202	sr:competitor:6074	4
 sr:sport_event:50850057	sr:season:118689	sr:competitor:44	sr:competitor:60	3	0	closed	5	sr:venue:579	2024-09-21 14:00:00
 sr:sport_event:50850333	sr:season:118689	sr:competitor:48	sr:competitor:14	\N	\N	not_started	19	sr:venue:12	2024-12-29 15:00:00
 sr:sport_event:50850459	sr:season:118689	sr:competitor:17	sr:competitor:39	\N	\N	not_started	25	sr:venue:606	2025-02-15 15:00:00
-sr:sport_event:50850511	sr:season:118689	sr:competitor:44	sr:competitor:39	\N	\N	not_started	27	sr:venue:579	2025-02-26 20:00:00
 sr:sport_event:50850277	sr:season:118689	sr:competitor:17	sr:competitor:35	\N	\N	not_started	16	sr:venue:606	2024-12-15 16:30:00
 sr:sport_event:46657083	sr:season:114317	sr:competitor:3210	sr:competitor:7628	1	1	closed	19	sr:venue:2388	2024-10-28 00:15:00
 sr:sport_event:46657013	sr:season:114317	sr:competitor:42338	sr:competitor:3204	1	0	closed	16	sr:venue:8975	2024-09-29 22:30:00
@@ -2162,35 +2076,21 @@ sr:sport_event:50850307	sr:season:118689	sr:competitor:60	sr:competitor:7	\N	\N	
 sr:sport_event:50850443	sr:season:118689	sr:competitor:14	sr:competitor:30	\N	\N	not_started	24	sr:venue:2230	2025-02-01 15:00:00
 sr:sport_event:50850377	sr:season:118689	sr:competitor:14	sr:competitor:44	\N	\N	not_started	21	sr:venue:2230	2025-01-14 20:00:00
 sr:sport_event:50850009	sr:season:118689	sr:competitor:50	sr:competitor:45	3	1	closed	3	sr:venue:53349	2024-08-31 14:00:00
-sr:sport_event:50850497	sr:season:118689	sr:competitor:30	sr:competitor:60	\N	\N	not_started	27	sr:venue:2443	2025-02-25 19:45:00
 sr:sport_event:50850099	sr:season:118689	sr:competitor:48	sr:competitor:39	0	0	closed	7	sr:venue:12	2024-10-05 16:30:00
-sr:sport_event:50850523	sr:season:118689	sr:competitor:44	sr:competitor:45	\N	\N	not_started	28	sr:venue:579	2025-03-08 15:00:00
 sr:sport_event:46657029	sr:season:114317	sr:competitor:3210	sr:competitor:3203	0	0	closed	17	sr:venue:2388	2024-10-06 19:30:00
 sr:sport_event:50850309	sr:season:118689	sr:competitor:42	sr:competitor:32	\N	\N	not_started	18	sr:venue:624	2024-12-27 20:15:00
 sr:sport_event:50850291	sr:season:118689	sr:competitor:7	sr:competitor:42	\N	\N	not_started	17	sr:venue:10	2024-12-21 17:30:00
-sr:sport_event:50850727	sr:season:118689	sr:competitor:14	sr:competitor:38	\N	\N	not_started	38	sr:venue:2230	2025-05-25 15:00:00
-sr:sport_event:50850501	sr:season:118689	sr:competitor:33	sr:competitor:17	\N	\N	not_started	27	sr:venue:28762	2025-02-25 19:45:00
 sr:sport_event:46657059	sr:season:114317	sr:competitor:7628	sr:competitor:3202	3	0	closed	18	sr:venue:4738	2024-10-19 22:15:00
-sr:sport_event:50850621	sr:season:118689	sr:competitor:48	sr:competitor:17	\N	\N	not_started	33	sr:venue:12	2025-04-19 14:00:00
-sr:sport_event:50850559	sr:season:118689	sr:competitor:30	sr:competitor:40	\N	\N	not_started	30	sr:venue:2443	2025-04-01 14:00:00
-sr:sport_event:50850543	sr:season:118689	sr:competitor:43	sr:competitor:33	\N	\N	not_started	29	sr:venue:611	2025-03-15 15:00:00
 sr:sport_event:50850395	sr:season:118689	sr:competitor:32	sr:competitor:17	\N	\N	not_started	22	sr:venue:2188	2025-01-19 16:30:00
-sr:sport_event:50850565	sr:season:118689	sr:competitor:38	sr:competitor:33	\N	\N	not_started	30	sr:venue:799	2025-04-02 14:00:00
 sr:sport_event:50850207	sr:season:118689	sr:competitor:50	sr:competitor:31	\N	\N	not_started	13	sr:venue:53349	2024-11-30 15:00:00
 sr:sport_event:50850017	sr:season:118689	sr:competitor:31	sr:competitor:40	1	2	closed	3	sr:venue:2183	2024-08-31 14:00:00
-sr:sport_event:50850677	sr:season:118689	sr:competitor:43	sr:competitor:48	\N	\N	not_started	36	sr:venue:611	2025-05-10 14:00:00
-sr:sport_event:50850599	sr:season:118689	sr:competitor:30	sr:competitor:31	\N	\N	not_started	32	sr:venue:2443	2025-04-12 14:00:00
 sr:sport_event:50850295	sr:season:118689	sr:competitor:43	sr:competitor:45	\N	\N	not_started	17	sr:venue:611	2024-12-22 14:00:00
 sr:sport_event:50850189	sr:season:118689	sr:competitor:42	sr:competitor:14	3	0	closed	12	sr:venue:624	2024-11-23 15:00:00
-sr:sport_event:50850625	sr:season:118689	sr:competitor:32	sr:competitor:42	\N	\N	not_started	33	sr:venue:2188	2025-04-19 14:00:00
 sr:sport_event:50850423	sr:season:118689	sr:competitor:33	sr:competitor:31	\N	\N	not_started	23	sr:venue:28762	2025-01-26 14:00:00
 sr:sport_event:50850369	sr:season:118689	sr:competitor:50	sr:competitor:17	\N	\N	not_started	21	sr:venue:53349	2025-01-14 19:30:00
 sr:sport_event:50850241	sr:season:118689	sr:competitor:17	sr:competitor:14	\N	\N	not_started	14	sr:venue:606	2024-12-04 19:30:00
-sr:sport_event:50850571	sr:season:118689	sr:competitor:45	sr:competitor:7	\N	\N	not_started	30	sr:venue:2231	2025-04-02 14:00:00
 sr:sport_event:50850433	sr:season:118689	sr:competitor:38	sr:competitor:37	\N	\N	not_started	24	sr:venue:799	2025-02-01 15:00:00
 sr:sport_event:50850163	sr:season:118689	sr:competitor:33	sr:competitor:40	4	1	closed	10	sr:venue:28762	2024-11-03 14:00:00
-sr:sport_event:50850699	sr:season:118689	sr:competitor:50	sr:competitor:43	\N	\N	not_started	37	sr:venue:53349	2025-05-18 14:00:00
-sr:sport_event:50850499	sr:season:118689	sr:competitor:14	sr:competitor:42	\N	\N	not_started	27	sr:venue:2230	2025-02-25 19:45:00
 sr:sport_event:50850465	sr:season:118689	sr:competitor:37	sr:competitor:50	\N	\N	not_started	25	sr:venue:18379	2025-02-15 15:00:00
 sr:sport_event:46657049	sr:season:114317	sr:competitor:3217	sr:competitor:3219	1	1	closed	18	sr:venue:1329	2024-10-20 20:15:00
 sr:sport_event:46657095	sr:season:114317	sr:competitor:65668	sr:competitor:3206	1	1	closed	19	sr:venue:69401	2024-10-25 18:00:00
@@ -2199,23 +2099,18 @@ sr:sport_event:50850387	sr:season:118689	sr:competitor:42	sr:competitor:40	\N	\N
 sr:sport_event:46657213	sr:season:114317	sr:competitor:3215	sr:competitor:3206	\N	\N	not_started	24	sr:venue:1082	2024-12-04 22:00:00
 sr:sport_event:54879045	sr:season:114317	sr:competitor:4937	sr:competitor:3211	2	3	closed	21	sr:venue:2388	2024-11-07 00:30:00
 sr:sport_event:50852085	sr:season:118691	sr:competitor:2826	sr:competitor:2829	1	1	closed	1	sr:venue:760	2024-08-18 19:30:00
+sr:sport_event:50850677	sr:season:118689	sr:competitor:43	sr:competitor:48	\N	\N	not_started	36	sr:venue:611	2025-05-10 14:00:00
+sr:sport_event:50850699	sr:season:118689	sr:competitor:50	sr:competitor:43	\N	\N	not_started	37	sr:venue:53349	2025-05-18 14:00:00
+sr:sport_event:50850727	sr:season:118689	sr:competitor:14	sr:competitor:38	\N	\N	not_started	38	sr:venue:2230	2025-05-25 15:00:00
 sr:sport_event:50852113	sr:season:118691	sr:competitor:2845	sr:competitor:6577	2	1	closed	2	sr:venue:14888	2024-08-25 17:00:00
 sr:sport_event:50850271	sr:season:118689	sr:competitor:30	sr:competitor:7	\N	\N	not_started	16	sr:venue:2443	2024-12-15 14:00:00
-sr:sport_event:50850579	sr:season:118689	sr:competitor:7	sr:competitor:30	\N	\N	not_started	31	sr:venue:10	2025-04-05 14:00:00
 sr:sport_event:50850425	sr:season:118689	sr:competitor:3	sr:competitor:42	\N	\N	not_started	23	sr:venue:1272	2025-01-25 15:00:00
-sr:sport_event:50850573	sr:season:118689	sr:competitor:44	sr:competitor:48	\N	\N	not_started	30	sr:venue:579	2025-04-02 19:00:00
 sr:sport_event:50850349	sr:season:118689	sr:competitor:40	sr:competitor:31	\N	\N	not_started	20	sr:venue:815	2025-01-04 15:00:00
 sr:sport_event:50850213	sr:season:118689	sr:competitor:7	sr:competitor:39	\N	\N	not_started	13	sr:venue:10	2024-11-30 15:00:00
-sr:sport_event:50850645	sr:season:118689	sr:competitor:17	sr:competitor:40	\N	\N	not_started	34	sr:venue:606	2025-04-26 14:00:00
 sr:sport_event:50850373	sr:season:118689	sr:competitor:32	sr:competitor:30	\N	\N	not_started	21	sr:venue:2188	2025-01-16 19:30:00
 sr:sport_event:50850027	sr:season:118689	sr:competitor:60	sr:competitor:38	0	1	closed	4	sr:venue:2990	2024-09-14 19:00:00
-sr:sport_event:50850683	sr:season:118689	sr:competitor:35	sr:competitor:37	\N	\N	not_started	36	sr:venue:9	2025-05-10 14:00:00
-sr:sport_event:50850669	sr:season:118689	sr:competitor:31	sr:competitor:45	\N	\N	not_started	35	sr:venue:2183	2025-05-03 14:00:00
-sr:sport_event:50850519	sr:season:118689	sr:competitor:38	sr:competitor:31	\N	\N	not_started	28	sr:venue:799	2025-03-08 15:00:00
 sr:sport_event:50850105	sr:season:118689	sr:competitor:37	sr:competitor:32	4	1	closed	7	sr:venue:18379	2024-10-05 14:00:00
 sr:sport_event:50850415	sr:season:118689	sr:competitor:43	sr:competitor:35	\N	\N	not_started	23	sr:venue:611	2025-01-26 19:00:00
-sr:sport_event:50850633	sr:season:118689	sr:competitor:37	sr:competitor:45	\N	\N	not_started	33	sr:venue:18379	2025-04-19 14:00:00
-sr:sport_event:50850731	sr:season:118689	sr:competitor:33	sr:competitor:30	\N	\N	not_started	38	sr:venue:28762	2025-05-25 15:00:00
 sr:sport_event:46657031	sr:season:114317	sr:competitor:36837	sr:competitor:3211	0	0	closed	17	sr:venue:12712	2024-10-06 22:00:00
 sr:sport_event:50852215	sr:season:118691	sr:competitor:6577	sr:competitor:2816	1	1	closed	7	sr:venue:974	2024-09-26 17:00:00
 sr:sport_event:46657073	sr:season:114317	sr:competitor:3205	sr:competitor:3204	2	3	closed	19	sr:venue:12003	2024-10-28 22:00:00
@@ -2229,17 +2124,11 @@ sr:sport_event:50852301	sr:season:118691	sr:competitor:2825	sr:competitor:2816	1
 sr:sport_event:50852163	sr:season:118691	sr:competitor:2816	sr:competitor:2845	2	0	closed	5	sr:venue:1045	2024-09-13 19:00:00
 sr:sport_event:50852329	sr:season:118691	sr:competitor:2831	sr:competitor:2825	1	1	closed	13	sr:venue:880	2024-11-10 17:30:00
 sr:sport_event:50852287	sr:season:118691	sr:competitor:2816	sr:competitor:2836	1	0	closed	11	sr:venue:1045	2024-10-27 17:30:00
-sr:sport_event:50852793	sr:season:118691	sr:competitor:2831	sr:competitor:24264	\N	\N	not_started	36	sr:venue:880	2025-05-14 17:00:00
 sr:sport_event:50852433	sr:season:118691	sr:competitor:2820	sr:competitor:2825	\N	\N	not_started	18	sr:venue:739	2024-12-21 17:30:00
-sr:sport_event:50852595	sr:season:118691	sr:competitor:2831	sr:competitor:6577	\N	\N	not_started	26	sr:venue:880	2025-03-02 18:00:00
 sr:sport_event:50852527	sr:season:118691	sr:competitor:6577	sr:competitor:2819	\N	\N	not_started	23	sr:venue:974	2025-02-09 19:00:00
 sr:sport_event:50850197	sr:season:118689	sr:competitor:32	sr:competitor:35	1	1	closed	12	sr:venue:2188	2024-11-24 16:30:00
 sr:sport_event:50850297	sr:season:118689	sr:competitor:32	sr:competitor:39	\N	\N	not_started	17	sr:venue:2188	2024-12-21 15:00:00
-sr:sport_event:50852689	sr:season:118691	sr:competitor:2885	sr:competitor:2829	\N	\N	not_started	31	sr:venue:9311	2025-04-13 17:00:00
-sr:sport_event:50852629	sr:season:118691	sr:competitor:2845	sr:competitor:2816	\N	\N	not_started	28	sr:venue:14888	2025-03-16 18:00:00
-sr:sport_event:50852709	sr:season:118691	sr:competitor:6577	sr:competitor:2836	\N	\N	not_started	32	sr:venue:974	2025-04-20 17:00:00
 sr:sport_event:50852505	sr:season:118691	sr:competitor:24264	sr:competitor:6577	\N	\N	not_started	22	sr:venue:11380	2025-02-02 19:00:00
-sr:sport_event:50852621	sr:season:118691	sr:competitor:2836	sr:competitor:2817	\N	\N	not_started	28	sr:venue:21414	2025-03-16 18:00:00
 sr:sport_event:46657169	sr:season:114317	sr:competitor:191648	sr:competitor:3208	1	1	closed	22	sr:venue:17150	2024-11-11 19:00:00
 sr:sport_event:46657229	sr:season:114317	sr:competitor:42338	sr:competitor:36837	1	0	closed	24	sr:venue:8975	2024-11-27 00:15:00
 sr:sport_event:46657155	sr:season:114317	sr:competitor:65676	sr:competitor:3206	1	1	closed	22	sr:venue:57376	2024-11-10 19:00:00
@@ -2248,22 +2137,26 @@ sr:sport_event:46657307	sr:season:114317	sr:competitor:36839	sr:competitor:3204	
 sr:sport_event:46657295	sr:season:114317	sr:competitor:3209	sr:competitor:36833	\N	\N	not_started	26	sr:venue:1099	2024-12-08 23:00:00
 sr:sport_event:50852173	sr:season:118691	sr:competitor:2833	sr:competitor:2859	1	0	closed	5	sr:venue:730	2024-09-14 16:30:00
 sr:sport_event:50852261	sr:season:118691	sr:competitor:2836	sr:competitor:2845	3	1	closed	10	sr:venue:21414	2024-10-20 14:15:00
-sr:sport_event:50850467	sr:season:118689	sr:competitor:60	sr:competitor:3	\N	\N	not_started	26	sr:venue:2990	2025-02-22 15:00:00
 sr:sport_event:50850153	sr:season:118689	sr:competitor:44	sr:competitor:30	2	1	closed	10	sr:venue:579	2024-11-02 15:00:00
+sr:sport_event:50850645	sr:season:118689	sr:competitor:17	sr:competitor:40	\N	\N	not_started	34	sr:venue:606	2025-04-26 14:00:00
+sr:sport_event:50850669	sr:season:118689	sr:competitor:31	sr:competitor:45	\N	\N	not_started	35	sr:venue:2183	2025-05-03 14:00:00
+sr:sport_event:50850683	sr:season:118689	sr:competitor:35	sr:competitor:37	\N	\N	not_started	36	sr:venue:9	2025-05-10 14:00:00
 sr:sport_event:50850679	sr:season:118689	sr:competitor:32	sr:competitor:50	\N	\N	not_started	36	sr:venue:2188	2025-05-10 14:00:00
+sr:sport_event:50850731	sr:season:118689	sr:competitor:33	sr:competitor:30	\N	\N	not_started	38	sr:venue:28762	2025-05-25 15:00:00
+sr:sport_event:50852595	sr:season:118691	sr:competitor:2831	sr:competitor:6577	\N	\N	not_started	26	sr:venue:880	2025-03-02 18:00:00
+sr:sport_event:50852621	sr:season:118691	sr:competitor:2836	sr:competitor:2817	\N	\N	not_started	28	sr:venue:21414	2025-03-16 18:00:00
+sr:sport_event:50852629	sr:season:118691	sr:competitor:2845	sr:competitor:2816	\N	\N	not_started	28	sr:venue:14888	2025-03-16 18:00:00
+sr:sport_event:50852689	sr:season:118691	sr:competitor:2885	sr:competitor:2829	\N	\N	not_started	31	sr:venue:9311	2025-04-13 17:00:00
+sr:sport_event:50852709	sr:season:118691	sr:competitor:6577	sr:competitor:2836	\N	\N	not_started	32	sr:venue:974	2025-04-20 17:00:00
+sr:sport_event:50852793	sr:season:118691	sr:competitor:2831	sr:competitor:24264	\N	\N	not_started	36	sr:venue:880	2025-05-14 17:00:00
 sr:sport_event:46657101	sr:season:114317	sr:competitor:3206	sr:competitor:36842	1	1	closed	20	sr:venue:1007	2024-10-31 22:00:00
-sr:sport_event:50850569	sr:season:118689	sr:competitor:39	sr:competitor:50	\N	\N	not_started	30	sr:venue:765	2025-04-02 14:00:00
 sr:sport_event:50850409	sr:season:118689	sr:competitor:40	sr:competitor:37	\N	\N	not_started	23	sr:venue:815	2025-01-26 16:30:00
 sr:sport_event:50850315	sr:season:118689	sr:competitor:44	sr:competitor:31	\N	\N	not_started	18	sr:venue:579	2024-12-26 20:00:00
 sr:sport_event:50850397	sr:season:118689	sr:competitor:31	sr:competitor:43	\N	\N	not_started	22	sr:venue:2183	2025-01-18 15:00:00
 sr:sport_event:50852271	sr:season:118691	sr:competitor:2885	sr:competitor:2831	2	3	closed	10	sr:venue:9311	2024-10-18 19:00:00
 sr:sport_event:46657047	sr:season:114317	sr:competitor:3206	sr:competitor:4937	3	2	closed	18	sr:venue:1007	2024-10-20 20:15:00
-sr:sport_event:50850635	sr:season:118689	sr:competitor:60	sr:competitor:35	\N	\N	not_started	34	sr:venue:2990	2025-04-26 14:00:00
-sr:sport_event:50850717	sr:season:118689	sr:competitor:43	sr:competitor:17	\N	\N	not_started	38	sr:venue:611	2025-05-25 15:00:00
 sr:sport_event:50850463	sr:season:118689	sr:competitor:33	sr:competitor:35	\N	\N	not_started	25	sr:venue:28762	2025-02-15 15:00:00
 sr:sport_event:50850175	sr:season:118689	sr:competitor:44	sr:competitor:40	2	0	closed	11	sr:venue:579	2024-11-09 20:00:00
-sr:sport_event:50850533	sr:season:118689	sr:competitor:3	sr:competitor:48	\N	\N	not_started	28	sr:venue:1272	2025-03-08 15:00:00
-sr:sport_event:50850577	sr:season:118689	sr:competitor:50	sr:competitor:38	\N	\N	not_started	31	sr:venue:53349	2025-04-05 14:00:00
 sr:sport_event:50850269	sr:season:118689	sr:competitor:42	sr:competitor:48	\N	\N	not_started	16	sr:venue:624	2024-12-14 15:00:00
 sr:sport_event:50850015	sr:season:118689	sr:competitor:32	sr:competitor:43	1	1	closed	3	sr:venue:2188	2024-08-31 14:00:00
 sr:sport_event:50850251	sr:season:118689	sr:competitor:7	sr:competitor:17	\N	\N	not_started	15	sr:venue:10	2024-12-07 15:00:00
@@ -2278,17 +2171,12 @@ sr:sport_event:50852337	sr:season:118691	sr:competitor:2818	sr:competitor:6577	1
 sr:sport_event:50852091	sr:season:118691	sr:competitor:2828	sr:competitor:2817	1	2	closed	1	sr:venue:691	2024-08-17 19:30:00
 sr:sport_event:50852553	sr:season:118691	sr:competitor:2831	sr:competitor:2833	\N	\N	not_started	24	sr:venue:880	2025-02-16 19:00:00
 sr:sport_event:46657161	sr:season:114317	sr:competitor:3211	sr:competitor:65668	3	0	closed	22	sr:venue:1009	2024-11-10 20:15:00
-sr:sport_event:50852735	sr:season:118691	sr:competitor:2885	sr:competitor:2824	\N	\N	not_started	33	sr:venue:9311	2025-04-23 17:00:00
 sr:sport_event:46657319	sr:season:114317	sr:competitor:3206	sr:competitor:3216	\N	\N	not_started	27	sr:venue:1007	2024-12-15 23:00:00
 sr:sport_event:50850111	sr:season:118689	sr:competitor:32	sr:competitor:48	0	2	closed	8	sr:venue:2188	2024-10-19 14:15:00
 sr:sport_event:50852519	sr:season:118691	sr:competitor:2817	sr:competitor:2885	\N	\N	not_started	22	sr:venue:714	2025-02-02 19:00:00
 sr:sport_event:50852237	sr:season:118691	sr:competitor:2818	sr:competitor:2845	1	1	closed	8	sr:venue:2440	2024-09-28 14:15:00
-sr:sport_event:50852583	sr:season:118691	sr:competitor:2816	sr:competitor:2829	\N	\N	not_started	26	sr:venue:1045	2025-03-02 18:00:00
 sr:sport_event:50852411	sr:season:118691	sr:competitor:2819	sr:competitor:2816	\N	\N	not_started	17	sr:venue:619	2024-12-15 17:30:00
-sr:sport_event:50852681	sr:season:118691	sr:competitor:2825	sr:competitor:2818	\N	\N	not_started	31	sr:venue:751	2025-04-13 17:00:00
-sr:sport_event:50852637	sr:season:118691	sr:competitor:6577	sr:competitor:2885	\N	\N	not_started	28	sr:venue:974	2025-03-16 18:00:00
 sr:sport_event:50852223	sr:season:118691	sr:competitor:2836	sr:competitor:2829	1	1	closed	8	sr:venue:21414	2024-09-29 19:00:00
-sr:sport_event:50852705	sr:season:118691	sr:competitor:2814	sr:competitor:2859	\N	\N	not_started	32	sr:venue:1307	2025-04-20 17:00:00
 sr:sport_event:50850437	sr:season:118689	sr:competitor:32	sr:competitor:45	\N	\N	not_started	24	sr:venue:2188	2025-02-01 15:00:00
 sr:sport_event:50850239	sr:season:118689	sr:competitor:31	sr:competitor:37	\N	\N	not_started	14	sr:venue:2183	2024-12-03 20:15:00
 sr:sport_event:46657239	sr:season:114317	sr:competitor:3209	sr:competitor:65676	\N	\N	not_started	25	sr:venue:1099	2024-12-01 20:00:00
@@ -2296,21 +2184,21 @@ sr:sport_event:50852399	sr:season:118691	sr:competitor:2859	sr:competitor:2814	\
 sr:sport_event:50852121	sr:season:118691	sr:competitor:2825	sr:competitor:2828	1	0	closed	3	sr:venue:751	2024-08-28 17:00:00
 sr:sport_event:50852199	sr:season:118691	sr:competitor:2829	sr:competitor:2814	4	1	closed	6	sr:venue:754	2024-09-21 19:00:00
 sr:sport_event:50852267	sr:season:118691	sr:competitor:24264	sr:competitor:2824	0	1	closed	10	sr:venue:11380	2024-10-19 16:30:00
-sr:sport_event:50850657	sr:season:118689	sr:competitor:40	sr:competitor:43	\N	\N	not_started	35	sr:venue:815	2025-05-03 14:00:00
 sr:sport_event:50850129	sr:season:118689	sr:competitor:40	sr:competitor:60	1	1	closed	9	sr:venue:815	2024-10-26 14:00:00
 sr:sport_event:46657175	sr:season:114317	sr:competitor:42338	sr:competitor:3202	0	2	closed	22	sr:venue:8975	2024-11-11 00:30:00
 sr:sport_event:50850343	sr:season:118689	sr:competitor:33	sr:competitor:3	\N	\N	not_started	19	sr:venue:28762	2024-12-29 15:00:00
-sr:sport_event:50850517	sr:season:118689	sr:competitor:30	sr:competitor:43	\N	\N	not_started	28	sr:venue:2443	2025-03-08 15:00:00
 sr:sport_event:50850301	sr:season:118689	sr:competitor:35	sr:competitor:60	\N	\N	not_started	17	sr:venue:9	2024-12-22 14:00:00
-sr:sport_event:50850601	sr:season:118689	sr:competitor:38	sr:competitor:32	\N	\N	not_started	32	sr:venue:799	2025-04-12 14:00:00
+sr:sport_event:50850717	sr:season:118689	sr:competitor:43	sr:competitor:17	\N	\N	not_started	38	sr:venue:611	2025-05-25 15:00:00
+sr:sport_event:50852583	sr:season:118691	sr:competitor:2816	sr:competitor:2829	\N	\N	not_started	26	sr:venue:1045	2025-03-02 18:00:00
+sr:sport_event:50852637	sr:season:118691	sr:competitor:6577	sr:competitor:2885	\N	\N	not_started	28	sr:venue:974	2025-03-16 18:00:00
+sr:sport_event:50852705	sr:season:118691	sr:competitor:2814	sr:competitor:2859	\N	\N	not_started	32	sr:venue:1307	2025-04-20 17:00:00
+sr:sport_event:50852681	sr:season:118691	sr:competitor:2825	sr:competitor:2818	\N	\N	not_started	31	sr:venue:751	2025-04-13 17:00:00
+sr:sport_event:50852735	sr:season:118691	sr:competitor:2885	sr:competitor:2824	\N	\N	not_started	33	sr:venue:9311	2025-04-23 17:00:00
 sr:sport_event:50852191	sr:season:118691	sr:competitor:2819	sr:competitor:2817	1	5	closed	6	sr:venue:619	2024-09-22 16:30:00
 sr:sport_event:50850383	sr:season:118689	sr:competitor:39	sr:competitor:3	\N	\N	not_started	21	sr:venue:765	2025-01-15 19:30:00
-sr:sport_event:50850675	sr:season:118689	sr:competitor:60	sr:competitor:40	\N	\N	not_started	36	sr:venue:2990	2025-05-10 14:00:00
 sr:sport_event:50850359	sr:season:118689	sr:competitor:17	sr:competitor:37	\N	\N	not_started	20	sr:venue:606	2025-01-04 15:00:00
 sr:sport_event:46657197	sr:season:114317	sr:competitor:36839	sr:competitor:191648	1	1	closed	23	sr:venue:12025	2024-11-18 22:15:00
-sr:sport_event:50850695	sr:season:118689	sr:competitor:42	sr:competitor:39	\N	\N	not_started	37	sr:venue:624	2025-05-18 14:00:00
 sr:sport_event:50850259	sr:season:118689	sr:competitor:31	sr:competitor:30	\N	\N	not_started	15	sr:venue:2183	2024-12-08 14:00:00
-sr:sport_event:50850531	sr:season:118689	sr:competitor:37	sr:competitor:39	\N	\N	not_started	28	sr:venue:18379	2025-03-08 15:00:00
 sr:sport_event:50850065	sr:season:118689	sr:competitor:37	sr:competitor:38	0	3	closed	5	sr:venue:18379	2024-09-21 11:30:00
 sr:sport_event:50850391	sr:season:118689	sr:competitor:38	sr:competitor:3	\N	\N	not_started	22	sr:venue:799	2025-01-20 20:00:00
 sr:sport_event:50850449	sr:season:118689	sr:competitor:30	sr:competitor:38	\N	\N	not_started	25	sr:venue:2443	2025-02-15 15:00:00
@@ -2318,20 +2206,12 @@ sr:sport_event:46657205	sr:season:114317	sr:competitor:36842	sr:competitor:3211	
 sr:sport_event:50852081	sr:season:118691	sr:competitor:2825	sr:competitor:2859	1	1	closed	1	sr:venue:751	2024-08-15 17:00:00
 sr:sport_event:50852395	sr:season:118691	sr:competitor:2828	sr:competitor:2818	\N	\N	not_started	16	sr:venue:691	2024-12-07 17:30:00
 sr:sport_event:50852299	sr:season:118691	sr:competitor:2818	sr:competitor:2885	1	0	closed	11	sr:venue:2440	2024-10-26 14:15:00
-sr:sport_event:50850493	sr:season:118689	sr:competitor:45	sr:competitor:30	\N	\N	not_started	26	sr:venue:2231	2025-02-22 15:00:00
-sr:sport_event:50852653	sr:season:118691	sr:competitor:2885	sr:competitor:2818	\N	\N	not_started	29	sr:venue:9311	2025-03-30 17:00:00
-sr:sport_event:50852701	sr:season:118691	sr:competitor:2817	sr:competitor:2821	\N	\N	not_started	32	sr:venue:714	2025-04-20 17:00:00
-sr:sport_event:50852801	sr:season:118691	sr:competitor:2836	sr:competitor:2816	\N	\N	not_started	37	sr:venue:21414	2025-05-18 17:00:00
 sr:sport_event:46657215	sr:season:114317	sr:competitor:3211	sr:competitor:3201	\N	\N	not_started	24	sr:venue:1009	2024-12-05 00:00:00
 sr:sport_event:46657297	sr:season:114317	sr:competitor:36833	sr:competitor:65676	\N	\N	not_started	27	sr:venue:12017	2024-12-15 23:00:00
 sr:sport_event:46657321	sr:season:114317	sr:competitor:3217	sr:competitor:3203	\N	\N	not_started	27	sr:venue:1329	2024-12-15 23:00:00
-sr:sport_event:50852711	sr:season:118691	sr:competitor:24264	sr:competitor:2816	\N	\N	not_started	32	sr:venue:11380	2025-04-20 17:00:00
 sr:sport_event:50852249	sr:season:118691	sr:competitor:2814	sr:competitor:2826	2	1	closed	9	sr:venue:1307	2024-10-05 12:00:00
 sr:sport_event:50852457	sr:season:118691	sr:competitor:2818	sr:competitor:2821	\N	\N	not_started	19	sr:venue:2440	2025-01-12 19:00:00
 sr:sport_event:50852539	sr:season:118691	sr:competitor:2824	sr:competitor:2814	\N	\N	not_started	23	sr:venue:581	2025-02-09 19:00:00
-sr:sport_event:50852831	sr:season:118691	sr:competitor:2814	sr:competitor:6577	\N	\N	not_started	38	sr:venue:1307	2025-05-25 17:00:00
-sr:sport_event:50852755	sr:season:118691	sr:competitor:2818	sr:competitor:2859	\N	\N	not_started	34	sr:venue:2440	2025-05-04 17:00:00
-sr:sport_event:50852777	sr:season:118691	sr:competitor:2825	sr:competitor:2885	\N	\N	not_started	35	sr:venue:751	2025-05-11 17:00:00
 sr:sport_event:50852373	sr:season:118691	sr:competitor:2824	sr:competitor:2816	\N	\N	not_started	15	sr:venue:581	2024-12-01 20:00:00
 sr:sport_event:50852367	sr:season:118691	sr:competitor:2814	sr:competitor:2821	\N	\N	not_started	15	sr:venue:1307	2024-11-30 17:30:00
 sr:sport_event:50852285	sr:season:118691	sr:competitor:2826	sr:competitor:2825	0	0	closed	11	sr:venue:760	2024-10-28 20:00:00
@@ -2339,27 +2219,32 @@ sr:sport_event:50850039	sr:season:118689	sr:competitor:17	sr:competitor:50	2	1	c
 sr:sport_event:50850203	sr:season:118689	sr:competitor:39	sr:competitor:37	0	2	closed	12	sr:venue:765	2024-11-25 20:00:00
 sr:sport_event:50850109	sr:season:118689	sr:competitor:43	sr:competitor:40	1	3	closed	8	sr:venue:611	2024-10-19 14:00:00
 sr:sport_event:50852339	sr:season:118691	sr:competitor:2819	sr:competitor:2885	3	0	closed	13	sr:venue:619	2024-11-09 15:15:00
-sr:sport_event:50852577	sr:season:118691	sr:competitor:2833	sr:competitor:2826	\N	\N	not_started	25	sr:venue:730	2025-02-23 19:00:00
 sr:sport_event:50852115	sr:season:118691	sr:competitor:2814	sr:competitor:2824	0	1	closed	2	sr:venue:1307	2024-08-24 19:30:00
 sr:sport_event:50852185	sr:season:118691	sr:competitor:2859	sr:competitor:2845	1	1	closed	6	sr:venue:608	2024-09-22 12:00:00
 sr:sport_event:50852495	sr:season:118691	sr:competitor:2818	sr:competitor:24264	\N	\N	not_started	21	sr:venue:2440	2025-01-26 19:00:00
 sr:sport_event:50852179	sr:season:118691	sr:competitor:2814	sr:competitor:2885	3	2	closed	5	sr:venue:1307	2024-09-14 14:15:00
-sr:sport_event:50850583	sr:season:118689	sr:competitor:43	sr:competitor:44	\N	\N	not_started	31	sr:venue:611	2025-04-05 14:00:00
 sr:sport_event:50850233	sr:season:118689	sr:competitor:48	sr:competitor:3	\N	\N	not_started	14	sr:venue:12	2024-12-04 19:30:00
 sr:sport_event:50850379	sr:season:118689	sr:competitor:37	sr:competitor:43	\N	\N	not_started	21	sr:venue:18379	2025-01-14 19:30:00
-sr:sport_event:50850725	sr:season:118689	sr:competitor:39	sr:competitor:48	\N	\N	not_started	38	sr:venue:765	2025-05-25 15:00:00
-sr:sport_event:50850681	sr:season:118689	sr:competitor:44	sr:competitor:42	\N	\N	not_started	36	sr:venue:579	2025-05-10 14:00:00
-sr:sport_event:50850527	sr:season:118689	sr:competitor:14	sr:competitor:17	\N	\N	not_started	28	sr:venue:2230	2025-03-08 15:00:00
-sr:sport_event:50850563	sr:season:118689	sr:competitor:3	sr:competitor:37	\N	\N	not_started	30	sr:venue:1272	2025-04-01 14:00:00
 sr:sport_event:50850135	sr:season:118689	sr:competitor:38	sr:competitor:39	2	1	closed	9	sr:venue:799	2024-10-27 14:00:00
 sr:sport_event:50850337	sr:season:118689	sr:competitor:32	sr:competitor:38	\N	\N	not_started	19	sr:venue:2188	2024-12-30 19:45:00
-sr:sport_event:50850673	sr:season:118689	sr:competitor:37	sr:competitor:33	\N	\N	not_started	35	sr:venue:18379	2025-05-03 14:00:00
 sr:sport_event:46657075	sr:season:114317	sr:competitor:3212	sr:competitor:42338	1	1	closed	19	sr:venue:1567	2024-10-26 20:15:00
+sr:sport_event:50850673	sr:season:118689	sr:competitor:37	sr:competitor:33	\N	\N	not_started	35	sr:venue:18379	2025-05-03 14:00:00
+sr:sport_event:50850675	sr:season:118689	sr:competitor:60	sr:competitor:40	\N	\N	not_started	36	sr:venue:2990	2025-05-10 14:00:00
+sr:sport_event:50850681	sr:season:118689	sr:competitor:44	sr:competitor:42	\N	\N	not_started	36	sr:venue:579	2025-05-10 14:00:00
+sr:sport_event:50850695	sr:season:118689	sr:competitor:42	sr:competitor:39	\N	\N	not_started	37	sr:venue:624	2025-05-18 14:00:00
+sr:sport_event:50850725	sr:season:118689	sr:competitor:39	sr:competitor:48	\N	\N	not_started	38	sr:venue:765	2025-05-25 15:00:00
+sr:sport_event:50852577	sr:season:118691	sr:competitor:2833	sr:competitor:2826	\N	\N	not_started	25	sr:venue:730	2025-02-23 19:00:00
+sr:sport_event:50852653	sr:season:118691	sr:competitor:2885	sr:competitor:2818	\N	\N	not_started	29	sr:venue:9311	2025-03-30 17:00:00
+sr:sport_event:50852701	sr:season:118691	sr:competitor:2817	sr:competitor:2821	\N	\N	not_started	32	sr:venue:714	2025-04-20 17:00:00
+sr:sport_event:50852755	sr:season:118691	sr:competitor:2818	sr:competitor:2859	\N	\N	not_started	34	sr:venue:2440	2025-05-04 17:00:00
+sr:sport_event:50852711	sr:season:118691	sr:competitor:24264	sr:competitor:2816	\N	\N	not_started	32	sr:venue:11380	2025-04-20 17:00:00
+sr:sport_event:50852801	sr:season:118691	sr:competitor:2836	sr:competitor:2816	\N	\N	not_started	37	sr:venue:21414	2025-05-18 17:00:00
+sr:sport_event:50852777	sr:season:118691	sr:competitor:2825	sr:competitor:2885	\N	\N	not_started	35	sr:venue:751	2025-05-11 17:00:00
+sr:sport_event:50852831	sr:season:118691	sr:competitor:2814	sr:competitor:6577	\N	\N	not_started	38	sr:venue:1307	2025-05-25 17:00:00
 sr:sport_event:46657003	sr:season:114317	sr:competitor:3216	sr:competitor:36833	0	0	closed	16	sr:venue:613	2024-09-30 22:00:00
 sr:sport_event:50850283	sr:season:118689	sr:competitor:45	sr:competitor:33	\N	\N	not_started	16	sr:venue:2231	2024-12-15 19:00:00
 sr:sport_event:46657233	sr:season:114317	sr:competitor:7629	sr:competitor:3202	0	0	closed	24	sr:venue:12021	2024-11-24 00:45:00
 sr:sport_event:50850429	sr:season:118689	sr:competitor:42	sr:competitor:17	\N	\N	not_started	24	sr:venue:624	2025-02-01 15:00:00
-sr:sport_event:50850605	sr:season:118689	sr:competitor:17	sr:competitor:7	\N	\N	not_started	32	sr:venue:606	2025-04-12 14:00:00
 sr:sport_event:50850403	sr:season:118689	sr:competitor:14	sr:competitor:45	\N	\N	not_started	22	sr:venue:2230	2025-01-19 14:00:00
 sr:sport_event:50850321	sr:season:118689	sr:competitor:14	sr:competitor:33	\N	\N	not_started	18	sr:venue:2230	2024-12-26 15:00:00
 sr:sport_event:50852361	sr:season:118691	sr:competitor:2817	sr:competitor:6577	\N	\N	not_started	15	sr:venue:714	2024-11-30 13:00:00
@@ -2367,23 +2252,13 @@ sr:sport_event:50852189	sr:season:118691	sr:competitor:2818	sr:competitor:2836	1
 sr:sport_event:50852387	sr:season:118691	sr:competitor:24264	sr:competitor:2829	\N	\N	not_started	16	sr:venue:11380	2024-12-07 20:00:00
 sr:sport_event:50852475	sr:season:118691	sr:competitor:2828	sr:competitor:2824	\N	\N	not_started	20	sr:venue:691	2025-01-19 19:00:00
 sr:sport_event:50852159	sr:season:118691	sr:competitor:2833	sr:competitor:24264	0	2	closed	4	sr:venue:730	2024-09-01 17:00:00
-sr:sport_event:50852639	sr:season:118691	sr:competitor:2826	sr:competitor:2814	\N	\N	not_started	28	sr:venue:760	2025-03-16 18:00:00
-sr:sport_event:50852663	sr:season:118691	sr:competitor:2829	sr:competitor:2828	\N	\N	not_started	30	sr:venue:754	2025-04-06 17:00:00
 sr:sport_event:50852445	sr:season:118691	sr:competitor:2824	sr:competitor:2819	\N	\N	not_started	19	sr:venue:581	2025-01-12 19:00:00
 sr:sport_event:46657225	sr:season:114317	sr:competitor:3218	sr:competitor:36839	0	0	closed	24	sr:venue:981	2024-11-25 00:30:00
-sr:sport_event:50852825	sr:season:118691	sr:competitor:2829	sr:competitor:2824	\N	\N	not_started	38	sr:venue:754	2025-05-25 17:00:00
 sr:sport_event:50852481	sr:season:118691	sr:competitor:2825	sr:competitor:2845	\N	\N	not_started	21	sr:venue:751	2025-01-26 19:00:00
 sr:sport_event:50852307	sr:season:118691	sr:competitor:24264	sr:competitor:2845	4	3	closed	12	sr:venue:11380	2024-11-02 15:15:00
-sr:sport_event:50852569	sr:season:118691	sr:competitor:2828	sr:competitor:2836	\N	\N	not_started	25	sr:venue:691	2025-02-23 19:00:00
-sr:sport_event:50852725	sr:season:118691	sr:competitor:2817	sr:competitor:2826	\N	\N	not_started	33	sr:venue:714	2025-04-23 17:00:00
-sr:sport_event:50852835	sr:season:118691	sr:competitor:2859	sr:competitor:2821	\N	\N	not_started	38	sr:venue:608	2025-05-25 17:00:00
 sr:sport_event:50852265	sr:season:118691	sr:competitor:2821	sr:competitor:2829	1	2	closed	10	sr:venue:697	2024-10-19 19:00:00
-sr:sport_event:50852673	sr:season:118691	sr:competitor:2826	sr:competitor:2821	\N	\N	not_started	30	sr:venue:760	2025-04-06 17:00:00
-sr:sport_event:50852761	sr:season:118691	sr:competitor:2836	sr:competitor:2824	\N	\N	not_started	35	sr:venue:21414	2025-05-11 17:00:00
 sr:sport_event:50850107	sr:season:118689	sr:competitor:60	sr:competitor:42	2	0	closed	8	sr:venue:2990	2024-10-19 16:30:00
-sr:sport_event:50852805	sr:season:118691	sr:competitor:2821	sr:competitor:2818	\N	\N	not_started	37	sr:venue:697	2025-05-18 17:00:00
 sr:sport_event:50850089	sr:season:118689	sr:competitor:40	sr:competitor:35	0	0	closed	7	sr:venue:815	2024-10-06 13:00:00
-sr:sport_event:50850491	sr:season:118689	sr:competitor:39	sr:competitor:14	\N	\N	not_started	26	sr:venue:765	2025-02-22 15:00:00
 sr:sport_event:46657259	sr:season:114317	sr:competitor:36842	sr:competitor:3216	\N	\N	not_started	25	sr:venue:12031	2024-12-03 00:00:00
 sr:sport_event:46657277	sr:season:114317	sr:competitor:7628	sr:competitor:36842	\N	\N	not_started	26	sr:venue:4738	2024-12-08 23:00:00
 sr:sport_event:50852345	sr:season:118691	sr:competitor:2820	sr:competitor:2819	2	2	closed	14	sr:venue:739	2024-11-24 13:00:00
@@ -2393,20 +2268,25 @@ sr:sport_event:50852197	sr:season:118691	sr:competitor:2820	sr:competitor:6577	2
 sr:sport_event:50852455	sr:season:118691	sr:competitor:2831	sr:competitor:2816	\N	\N	not_started	19	sr:venue:880	2025-01-12 19:00:00
 sr:sport_event:50850125	sr:season:118689	sr:competitor:3	sr:competitor:17	1	2	closed	8	sr:venue:1272	2024-10-20 13:00:00
 sr:sport_event:50850055	sr:season:118689	sr:competitor:31	sr:competitor:48	1	1	closed	5	sr:venue:2183	2024-09-21 14:00:00
-sr:sport_event:50850721	sr:season:118689	sr:competitor:44	sr:competitor:7	\N	\N	not_started	38	sr:venue:579	2025-05-25 15:00:00
 sr:sport_event:46657071	sr:season:114317	sr:competitor:7629	sr:competitor:65676	0	0	closed	19	sr:venue:12021	2024-10-29 00:00:00
 sr:sport_event:46657133	sr:season:114317	sr:competitor:36833	sr:competitor:42338	1	0	closed	21	sr:venue:12017	2024-11-04 22:00:00
-sr:sport_event:50850575	sr:season:118689	sr:competitor:40	sr:competitor:14	\N	\N	not_started	31	sr:venue:815	2025-04-05 14:00:00
-sr:sport_event:50850647	sr:season:118689	sr:competitor:39	sr:competitor:32	\N	\N	not_started	34	sr:venue:765	2025-04-26 14:00:00
-sr:sport_event:50850505	sr:season:118689	sr:competitor:3	sr:competitor:43	\N	\N	not_started	27	sr:venue:1272	2025-02-25 19:45:00
 sr:sport_event:50850261	sr:season:118689	sr:competitor:35	sr:competitor:14	\N	\N	not_started	15	sr:venue:9	2024-12-07 17:30:00
 sr:sport_event:50850051	sr:season:118689	sr:competitor:7	sr:competitor:35	0	0	closed	5	sr:venue:10	2024-09-21 16:30:00
 sr:sport_event:50850257	sr:season:118689	sr:competitor:32	sr:competitor:60	\N	\N	not_started	15	sr:venue:2188	2024-12-08 14:00:00
 sr:sport_event:54783977	sr:season:118689	sr:competitor:60	sr:competitor:33	\N	\N	not_started	14	sr:venue:2990	2024-12-05 20:15:00
-sr:sport_event:50850611	sr:season:118689	sr:competitor:45	sr:competitor:40	\N	\N	not_started	32	sr:venue:2231	2025-04-12 14:00:00
-sr:sport_event:50850551	sr:season:118689	sr:competitor:39	sr:competitor:7	\N	\N	not_started	29	sr:venue:765	2025-03-15 15:00:00
+sr:sport_event:50850647	sr:season:118689	sr:competitor:39	sr:competitor:32	\N	\N	not_started	34	sr:venue:765	2025-04-26 14:00:00
 sr:sport_event:50850663	sr:season:118689	sr:competitor:38	sr:competitor:44	\N	\N	not_started	35	sr:venue:799	2025-05-03 14:00:00
+sr:sport_event:50850721	sr:season:118689	sr:competitor:44	sr:competitor:7	\N	\N	not_started	38	sr:venue:579	2025-05-25 15:00:00
 sr:sport_event:50852123	sr:season:118691	sr:competitor:2816	sr:competitor:2859	\N	\N	postponed	3	sr:venue:1045	2024-08-28 19:00:00
+sr:sport_event:50852569	sr:season:118691	sr:competitor:2828	sr:competitor:2836	\N	\N	not_started	25	sr:venue:691	2025-02-23 19:00:00
+sr:sport_event:50852639	sr:season:118691	sr:competitor:2826	sr:competitor:2814	\N	\N	not_started	28	sr:venue:760	2025-03-16 18:00:00
+sr:sport_event:50852663	sr:season:118691	sr:competitor:2829	sr:competitor:2828	\N	\N	not_started	30	sr:venue:754	2025-04-06 17:00:00
+sr:sport_event:50852673	sr:season:118691	sr:competitor:2826	sr:competitor:2821	\N	\N	not_started	30	sr:venue:760	2025-04-06 17:00:00
+sr:sport_event:50852805	sr:season:118691	sr:competitor:2821	sr:competitor:2818	\N	\N	not_started	37	sr:venue:697	2025-05-18 17:00:00
+sr:sport_event:50852725	sr:season:118691	sr:competitor:2817	sr:competitor:2826	\N	\N	not_started	33	sr:venue:714	2025-04-23 17:00:00
+sr:sport_event:50852761	sr:season:118691	sr:competitor:2836	sr:competitor:2824	\N	\N	not_started	35	sr:venue:21414	2025-05-11 17:00:00
+sr:sport_event:50852825	sr:season:118691	sr:competitor:2829	sr:competitor:2824	\N	\N	not_started	38	sr:venue:754	2025-05-25 17:00:00
+sr:sport_event:50852835	sr:season:118691	sr:competitor:2859	sr:competitor:2821	\N	\N	not_started	38	sr:venue:608	2025-05-25 17:00:00
 sr:sport_event:50850405	sr:season:118689	sr:competitor:37	sr:competitor:7	\N	\N	not_started	22	sr:venue:18379	2025-01-18 15:00:00
 sr:sport_event:50850317	sr:season:118689	sr:competitor:17	sr:competitor:48	\N	\N	not_started	18	sr:venue:606	2024-12-26 12:30:00
 sr:sport_event:50850217	sr:season:118689	sr:competitor:35	sr:competitor:48	\N	\N	not_started	13	sr:venue:9	2024-12-01 13:30:00
@@ -2418,20 +2298,10 @@ sr:sport_event:50852213	sr:season:118691	sr:competitor:2821	sr:competitor:2836	0
 sr:sport_event:50852465	sr:season:118691	sr:competitor:2814	sr:competitor:2831	\N	\N	not_started	20	sr:venue:1307	2025-01-19 19:00:00
 sr:sport_event:50852263	sr:season:118691	sr:competitor:2817	sr:competitor:2833	5	1	closed	10	sr:venue:714	2024-10-20 19:00:00
 sr:sport_event:50852521	sr:season:118691	sr:competitor:2825	sr:competitor:24264	\N	\N	not_started	23	sr:venue:751	2025-02-09 19:00:00
-sr:sport_event:50852649	sr:season:118691	sr:competitor:2859	sr:competitor:2819	\N	\N	not_started	29	sr:venue:608	2025-03-30 17:00:00
 sr:sport_event:50852401	sr:season:118691	sr:competitor:2836	sr:competitor:2859	\N	\N	not_started	17	sr:venue:21414	2024-12-15 13:00:00
-sr:sport_event:50852643	sr:season:118691	sr:competitor:2817	sr:competitor:24264	\N	\N	not_started	29	sr:venue:714	2025-03-30 17:00:00
-sr:sport_event:50852599	sr:season:118691	sr:competitor:2819	sr:competitor:2814	\N	\N	not_started	26	sr:venue:619	2025-03-02 18:00:00
-sr:sport_event:50852607	sr:season:118691	sr:competitor:2821	sr:competitor:2845	\N	\N	not_started	27	sr:venue:697	2025-03-09 18:00:00
-sr:sport_event:50852685	sr:season:118691	sr:competitor:2816	sr:competitor:2819	\N	\N	not_started	31	sr:venue:1045	2025-04-13 17:00:00
-sr:sport_event:50852815	sr:season:118691	sr:competitor:2831	sr:competitor:2885	\N	\N	not_started	37	sr:venue:880	2025-05-18 17:00:00
-sr:sport_event:50852693	sr:season:118691	sr:competitor:2820	sr:competitor:24264	\N	\N	not_started	31	sr:venue:739	2025-04-13 17:00:00
-sr:sport_event:50852731	sr:season:118691	sr:competitor:2859	sr:competitor:2829	\N	\N	not_started	33	sr:venue:608	2025-04-23 17:00:00
-sr:sport_event:50852749	sr:season:118691	sr:competitor:2824	sr:competitor:2825	\N	\N	not_started	34	sr:venue:581	2025-05-04 17:00:00
 sr:sport_event:46657257	sr:season:114317	sr:competitor:65668	sr:competitor:7628	\N	\N	not_started	25	sr:venue:69401	2024-12-02 20:00:00
 sr:sport_event:50849969	sr:season:118689	sr:competitor:32	sr:competitor:44	0	2	closed	1	sr:venue:2188	2024-08-17 11:30:00
 sr:sport_event:50850419	sr:season:118689	sr:competitor:17	sr:competitor:38	\N	\N	not_started	23	sr:venue:606	2025-01-25 17:30:00
-sr:sport_event:50850483	sr:season:118689	sr:competitor:43	sr:competitor:7	\N	\N	not_started	26	sr:venue:611	2025-02-22 15:00:00
 sr:sport_event:46657089	sr:season:114317	sr:competitor:36839	sr:competitor:3211	0	0	closed	19	sr:venue:12025	2024-10-26 00:00:00
 sr:sport_event:46655843	sr:season:114317	sr:competitor:65676	sr:competitor:3219	0	0	closed	12	sr:venue:49307	2024-08-26 19:00:00
 sr:sport_event:46657263	sr:season:114317	sr:competitor:3206	sr:competitor:3211	\N	\N	not_started	25	sr:venue:1007	2024-11-30 00:00:00
@@ -2439,43 +2309,42 @@ sr:sport_event:50852093	sr:season:118691	sr:competitor:2824	sr:competitor:2818	1
 sr:sport_event:50852177	sr:season:118691	sr:competitor:2824	sr:competitor:2829	0	2	closed	5	sr:venue:581	2024-09-14 19:00:00
 sr:sport_event:50852381	sr:season:118691	sr:competitor:2825	sr:competitor:2819	\N	\N	not_started	16	sr:venue:751	2024-12-08 15:15:00
 sr:sport_event:50850345	sr:season:118689	sr:competitor:37	sr:competitor:44	\N	\N	not_started	19	sr:venue:18379	2024-12-29 17:15:00
-sr:sport_event:50850701	sr:season:118689	sr:competitor:30	sr:competitor:44	\N	\N	not_started	37	sr:venue:2443	2025-05-18 14:00:00
-sr:sport_event:50850549	sr:season:118689	sr:competitor:17	sr:competitor:30	\N	\N	not_started	29	sr:venue:606	2025-03-15 15:00:00
 sr:sport_event:50850149	sr:season:118689	sr:competitor:43	sr:competitor:50	2	1	closed	10	sr:venue:611	2024-11-04 20:00:00
 sr:sport_event:50850143	sr:season:118689	sr:competitor:17	sr:competitor:45	1	0	closed	9	sr:venue:606	2024-10-26 14:00:00
-sr:sport_event:50850655	sr:season:118689	sr:competitor:42	sr:competitor:60	\N	\N	not_started	35	sr:venue:624	2025-05-03 14:00:00
 sr:sport_event:46657171	sr:season:114317	sr:competitor:3218	sr:competitor:36837	0	0	closed	22	sr:venue:981	2024-11-11 21:45:00
 sr:sport_event:50852349	sr:season:118691	sr:competitor:2845	sr:competitor:2829	0	3	closed	14	sr:venue:14888	2024-11-24 17:30:00
 sr:sport_event:50850281	sr:season:118689	sr:competitor:14	sr:competitor:40	\N	\N	not_started	16	sr:venue:2230	2024-12-14 17:30:00
 sr:sport_event:50850117	sr:season:118689	sr:competitor:39	sr:competitor:30	0	1	closed	8	sr:venue:765	2024-10-19 14:00:00
-sr:sport_event:50850729	sr:season:118689	sr:competitor:45	sr:competitor:42	\N	\N	not_started	38	sr:venue:2231	2025-05-25 15:00:00
 sr:sport_event:46657193	sr:season:114317	sr:competitor:36837	sr:competitor:6074	1	0	closed	23	sr:venue:12712	2024-11-18 22:15:00
 sr:sport_event:50852219	sr:season:118691	sr:competitor:2829	sr:competitor:2885	3	2	closed	7	sr:venue:754	2024-09-24 19:00:00
-sr:sport_event:50850659	sr:season:118689	sr:competitor:50	sr:competitor:35	\N	\N	not_started	35	sr:venue:53349	2025-05-03 14:00:00
 sr:sport_event:50850231	sr:season:118689	sr:competitor:40	sr:competitor:50	\N	\N	not_started	14	sr:venue:815	2024-12-04 20:15:00
-sr:sport_event:50850603	sr:season:118689	sr:competitor:44	sr:competitor:37	\N	\N	not_started	32	sr:venue:579	2025-04-12 14:00:00
-sr:sport_event:50850503	sr:season:118689	sr:competitor:37	sr:competitor:31	\N	\N	not_started	27	sr:venue:18379	2025-02-25 19:45:00
 sr:sport_event:50850399	sr:season:118689	sr:competitor:35	sr:competitor:30	\N	\N	not_started	22	sr:venue:9	2025-01-19 14:00:00
 sr:sport_event:46657181	sr:season:114317	sr:competitor:3205	sr:competitor:3212	1	0	closed	22	sr:venue:12003	2024-11-09 20:00:00
 sr:sport_event:46657183	sr:season:114317	sr:competitor:3212	sr:competitor:65676	2	3	closed	23	sr:venue:1567	2024-11-20 20:00:00
 sr:sport_event:50850159	sr:season:118689	sr:competitor:14	sr:competitor:37	3	0	closed	10	sr:venue:2230	2024-11-02 15:00:00
+sr:sport_event:50850655	sr:season:118689	sr:competitor:42	sr:competitor:60	\N	\N	not_started	35	sr:venue:624	2025-05-03 14:00:00
+sr:sport_event:50850701	sr:season:118689	sr:competitor:30	sr:competitor:44	\N	\N	not_started	37	sr:venue:2443	2025-05-18 14:00:00
+sr:sport_event:50850729	sr:season:118689	sr:competitor:45	sr:competitor:42	\N	\N	not_started	38	sr:venue:2231	2025-05-25 15:00:00
+sr:sport_event:50852599	sr:season:118691	sr:competitor:2819	sr:competitor:2814	\N	\N	not_started	26	sr:venue:619	2025-03-02 18:00:00
+sr:sport_event:50852607	sr:season:118691	sr:competitor:2821	sr:competitor:2845	\N	\N	not_started	27	sr:venue:697	2025-03-09 18:00:00
+sr:sport_event:50852643	sr:season:118691	sr:competitor:2817	sr:competitor:24264	\N	\N	not_started	29	sr:venue:714	2025-03-30 17:00:00
+sr:sport_event:50852649	sr:season:118691	sr:competitor:2859	sr:competitor:2819	\N	\N	not_started	29	sr:venue:608	2025-03-30 17:00:00
+sr:sport_event:50852693	sr:season:118691	sr:competitor:2820	sr:competitor:24264	\N	\N	not_started	31	sr:venue:739	2025-04-13 17:00:00
+sr:sport_event:50852685	sr:season:118691	sr:competitor:2816	sr:competitor:2819	\N	\N	not_started	31	sr:venue:1045	2025-04-13 17:00:00
+sr:sport_event:50852731	sr:season:118691	sr:competitor:2859	sr:competitor:2829	\N	\N	not_started	33	sr:venue:608	2025-04-23 17:00:00
+sr:sport_event:50852749	sr:season:118691	sr:competitor:2824	sr:competitor:2825	\N	\N	not_started	34	sr:venue:581	2025-05-04 17:00:00
+sr:sport_event:50852815	sr:season:118691	sr:competitor:2831	sr:competitor:2885	\N	\N	not_started	37	sr:venue:880	2025-05-18 17:00:00
 sr:sport_event:50852109	sr:season:118691	sr:competitor:2833	sr:competitor:2819	1	2	closed	2	sr:venue:730	2024-08-23 19:30:00
 sr:sport_event:50852483	sr:season:118691	sr:competitor:2836	sr:competitor:2819	\N	\N	not_started	21	sr:venue:21414	2025-01-26 19:00:00
 sr:sport_event:50852383	sr:season:118691	sr:competitor:2836	sr:competitor:2833	\N	\N	not_started	16	sr:venue:21414	2024-12-08 20:00:00
 sr:sport_event:50852469	sr:season:118691	sr:competitor:2845	sr:competitor:2836	\N	\N	not_started	20	sr:venue:14888	2025-01-19 19:00:00
 sr:sport_event:50852405	sr:season:118691	sr:competitor:2818	sr:competitor:2829	\N	\N	not_started	17	sr:venue:2440	2024-12-14 20:00:00
 sr:sport_event:50852555	sr:season:118691	sr:competitor:2819	sr:competitor:2828	\N	\N	not_started	24	sr:venue:619	2025-02-16 19:00:00
-sr:sport_event:50852625	sr:season:118691	sr:competitor:2818	sr:competitor:2824	\N	\N	not_started	28	sr:venue:2440	2025-03-16 18:00:00
 sr:sport_event:50850081	sr:season:118689	sr:competitor:39	sr:competitor:17	1	1	closed	6	sr:venue:765	2024-09-28 11:30:00
 sr:sport_event:46657303	sr:season:114317	sr:competitor:36837	sr:competitor:3205	\N	\N	not_started	27	sr:venue:12712	2024-12-15 23:00:00
 sr:sport_event:50852525	sr:season:118691	sr:competitor:2818	sr:competitor:2831	\N	\N	not_started	23	sr:venue:2440	2025-02-09 19:00:00
-sr:sport_event:50852785	sr:season:118691	sr:competitor:2859	sr:competitor:2825	\N	\N	not_started	36	sr:venue:608	2025-05-14 17:00:00
-sr:sport_event:50852683	sr:season:118691	sr:competitor:2836	sr:competitor:2831	\N	\N	not_started	31	sr:venue:21414	2025-04-13 17:00:00
 sr:sport_event:50852497	sr:season:118691	sr:competitor:2831	sr:competitor:2829	\N	\N	not_started	21	sr:venue:880	2025-01-26 19:00:00
 sr:sport_event:50852305	sr:season:118691	sr:competitor:2821	sr:competitor:2859	1	0	closed	12	sr:venue:697	2024-11-04 20:00:00
-sr:sport_event:50852717	sr:season:118691	sr:competitor:2833	sr:competitor:2885	\N	\N	not_started	32	sr:venue:730	2025-04-20 17:00:00
-sr:sport_event:50852781	sr:season:118691	sr:competitor:2885	sr:competitor:2828	\N	\N	not_started	36	sr:venue:9311	2025-05-14 17:00:00
-sr:sport_event:50852823	sr:season:118691	sr:competitor:2816	sr:competitor:2828	\N	\N	not_started	38	sr:venue:1045	2025-05-25 17:00:00
 sr:sport_event:50850299	sr:season:118689	sr:competitor:31	sr:competitor:3	\N	\N	not_started	17	sr:venue:2183	2024-12-22 14:00:00
 sr:sport_event:50850453	sr:season:118689	sr:competitor:43	sr:competitor:14	\N	\N	not_started	25	sr:venue:611	2025-02-15 15:00:00
 sr:sport_event:46657217	sr:season:114317	sr:competitor:3203	sr:competitor:36842	0	2	closed	24	sr:venue:4750	2024-11-26 00:15:00
@@ -2484,25 +2353,18 @@ sr:sport_event:46657273	sr:season:114317	sr:competitor:3203	sr:competitor:3206	\
 sr:sport_event:50852181	sr:season:118691	sr:competitor:2825	sr:competitor:2821	3	1	closed	6	sr:venue:751	2024-09-22 14:15:00
 sr:sport_event:50852125	sr:season:118691	sr:competitor:24264	sr:competitor:2820	4	0	closed	3	sr:venue:11380	2024-08-29 17:00:00
 sr:sport_event:50852175	sr:season:118691	sr:competitor:2818	sr:competitor:2820	3	1	closed	5	sr:venue:2440	2024-09-16 19:00:00
-sr:sport_event:50850537	sr:season:118689	sr:competitor:42	sr:competitor:38	\N	\N	not_started	29	sr:venue:624	2025-03-15 15:00:00
 sr:sport_event:50850441	sr:season:118689	sr:competitor:39	sr:competitor:43	\N	\N	not_started	24	sr:venue:765	2025-02-01 15:00:00
 sr:sport_event:50850353	sr:season:118689	sr:competitor:7	sr:competitor:38	\N	\N	not_started	20	sr:venue:10	2025-01-04 15:00:00
-sr:sport_event:50850507	sr:season:118689	sr:competitor:7	sr:competitor:40	\N	\N	not_started	27	sr:venue:10	2025-02-25 20:00:00
 sr:sport_event:50850417	sr:season:118689	sr:competitor:44	sr:competitor:32	\N	\N	not_started	23	sr:venue:579	2025-01-25 15:00:00
-sr:sport_event:50850591	sr:season:118689	sr:competitor:33	sr:competitor:45	\N	\N	not_started	31	sr:venue:28762	2025-04-05 14:00:00
-sr:sport_event:50850513	sr:season:118689	sr:competitor:35	sr:competitor:32	\N	\N	not_started	27	sr:venue:9	2025-02-26 20:00:00
 sr:sport_event:50850375	sr:season:118689	sr:competitor:31	sr:competitor:7	\N	\N	not_started	21	sr:venue:2183	2025-01-15 19:30:00
 sr:sport_event:50850303	sr:season:118689	sr:competitor:33	sr:competitor:44	\N	\N	not_started	17	sr:venue:28762	2024-12-22 16:30:00
 sr:sport_event:50850243	sr:season:118689	sr:competitor:39	sr:competitor:44	\N	\N	not_started	14	sr:venue:765	2024-12-04 19:30:00
-sr:sport_event:50850711	sr:season:118689	sr:competitor:17	sr:competitor:60	\N	\N	not_started	37	sr:venue:606	2025-05-18 14:00:00
 sr:sport_event:50850067	sr:season:118689	sr:competitor:60	sr:competitor:45	3	1	closed	6	sr:venue:2990	2024-09-30 19:00:00
 sr:sport_event:46655855	sr:season:114317	sr:competitor:3217	sr:competitor:36833	1	0	closed	12	sr:venue:1329	2024-08-26 21:30:00
-sr:sport_event:50850733	sr:season:118689	sr:competitor:3	sr:competitor:50	\N	\N	not_started	38	sr:venue:1272	2025-05-25 15:00:00
 sr:sport_event:46657015	sr:season:114317	sr:competitor:3204	sr:competitor:65676	0	2	closed	17	sr:venue:4754	2024-10-04 22:00:00
 sr:sport_event:50850209	sr:season:118689	sr:competitor:30	sr:competitor:45	\N	\N	not_started	13	sr:venue:2443	2024-11-29 20:00:00
 sr:sport_event:50850199	sr:season:118689	sr:competitor:31	sr:competitor:38	1	2	closed	12	sr:venue:2183	2024-11-23 12:30:00
 sr:sport_event:50850185	sr:season:118689	sr:competitor:3	sr:competitor:45	2	0	closed	11	sr:venue:1272	2024-11-09 15:00:00
-sr:sport_event:50850643	sr:season:118689	sr:competitor:44	sr:competitor:33	\N	\N	not_started	34	sr:venue:579	2025-04-26 14:00:00
 sr:sport_event:46657173	sr:season:114317	sr:competitor:6074	sr:competitor:3210	0	1	closed	22	sr:venue:15676	2024-11-10 22:15:00
 sr:sport_event:50852153	sr:season:118691	sr:competitor:2814	sr:competitor:2818	2	1	closed	4	sr:venue:1307	2024-08-31 17:15:00
 sr:sport_event:50852157	sr:season:118691	sr:competitor:2820	sr:competitor:2821	3	2	closed	4	sr:venue:739	2024-09-01 15:00:00
@@ -2511,19 +2373,20 @@ sr:sport_event:50852425	sr:season:118691	sr:competitor:2859	sr:competitor:2826	\
 sr:sport_event:50852227	sr:season:118691	sr:competitor:2824	sr:competitor:2828	3	0	closed	8	sr:venue:581	2024-09-28 16:30:00
 sr:sport_event:50852119	sr:season:118691	sr:competitor:2820	sr:competitor:2826	1	0	closed	2	sr:venue:739	2024-08-24 15:00:00
 sr:sport_event:50852459	sr:season:118691	sr:competitor:6577	sr:competitor:2859	\N	\N	not_started	19	sr:venue:974	2025-01-12 19:00:00
-sr:sport_event:50852707	sr:season:118691	sr:competitor:2829	sr:competitor:2825	\N	\N	not_started	32	sr:venue:754	2025-04-20 17:00:00
+sr:sport_event:50850643	sr:season:118689	sr:competitor:44	sr:competitor:33	\N	\N	not_started	34	sr:venue:579	2025-04-26 14:00:00
+sr:sport_event:50850711	sr:season:118689	sr:competitor:17	sr:competitor:60	\N	\N	not_started	37	sr:venue:606	2025-05-18 14:00:00
+sr:sport_event:50850733	sr:season:118689	sr:competitor:3	sr:competitor:50	\N	\N	not_started	38	sr:venue:1272	2025-05-25 15:00:00
+sr:sport_event:50852625	sr:season:118691	sr:competitor:2818	sr:competitor:2824	\N	\N	not_started	28	sr:venue:2440	2025-03-16 18:00:00
+sr:sport_event:50852683	sr:season:118691	sr:competitor:2836	sr:competitor:2831	\N	\N	not_started	31	sr:venue:21414	2025-04-13 17:00:00
+sr:sport_event:50852717	sr:season:118691	sr:competitor:2833	sr:competitor:2885	\N	\N	not_started	32	sr:venue:730	2025-04-20 17:00:00
+sr:sport_event:50852781	sr:season:118691	sr:competitor:2885	sr:competitor:2828	\N	\N	not_started	36	sr:venue:9311	2025-05-14 17:00:00
+sr:sport_event:50852823	sr:season:118691	sr:competitor:2816	sr:competitor:2828	\N	\N	not_started	38	sr:venue:1045	2025-05-25 17:00:00
+sr:sport_event:50852785	sr:season:118691	sr:competitor:2859	sr:competitor:2825	\N	\N	not_started	36	sr:venue:608	2025-05-14 17:00:00
 sr:sport_event:50852453	sr:season:118691	sr:competitor:2826	sr:competitor:2817	\N	\N	not_started	19	sr:venue:760	2024-12-03 18:00:00
-sr:sport_event:50852627	sr:season:118691	sr:competitor:2833	sr:competitor:2825	\N	\N	not_started	28	sr:venue:730	2025-03-16 18:00:00
-sr:sport_event:50852651	sr:season:118691	sr:competitor:2824	sr:competitor:2831	\N	\N	not_started	29	sr:venue:581	2025-03-30 17:00:00
 sr:sport_event:50852549	sr:season:118691	sr:competitor:2814	sr:competitor:2825	\N	\N	not_started	24	sr:venue:1307	2025-02-16 19:00:00
-sr:sport_event:50852543	sr:season:118691	sr:competitor:2817	sr:competitor:2818	\N	\N	not_started	24	sr:venue:714	2025-02-16 19:00:00
 sr:sport_event:50852413	sr:season:118691	sr:competitor:2833	sr:competitor:2821	\N	\N	not_started	17	sr:venue:730	2024-12-14 17:30:00
 sr:sport_event:50850083	sr:season:118689	sr:competitor:14	sr:competitor:43	0	1	closed	6	sr:venue:2230	2024-09-28 14:00:00
-sr:sport_event:50852675	sr:season:118691	sr:competitor:2831	sr:competitor:2859	\N	\N	not_started	30	sr:venue:880	2025-04-06 17:00:00
-sr:sport_event:50852699	sr:season:118691	sr:competitor:2821	sr:competitor:2814	\N	\N	not_started	31	sr:venue:697	2025-04-13 17:00:00
 sr:sport_event:50850335	sr:season:118689	sr:competitor:43	sr:competitor:60	\N	\N	not_started	19	sr:venue:611	2024-12-29 15:00:00
-sr:sport_event:50852809	sr:season:118691	sr:competitor:2826	sr:competitor:2859	\N	\N	not_started	37	sr:venue:760	2025-05-18 17:00:00
-sr:sport_event:50850555	sr:season:118689	sr:competitor:60	sr:competitor:32	\N	\N	not_started	30	sr:venue:2990	2025-04-01 14:00:00
 sr:sport_event:46657009	sr:season:114317	sr:competitor:3218	sr:competitor:3205	0	0	closed	16	sr:venue:981	2024-10-01 00:15:00
 sr:sport_event:46657269	sr:season:114317	sr:competitor:3211	sr:competitor:3217	\N	\N	not_started	26	sr:venue:1009	2024-12-08 23:00:00
 sr:sport_event:46657293	sr:season:114317	sr:competitor:3212	sr:competitor:3202	\N	\N	not_started	26	sr:venue:1567	2024-12-08 23:00:00
@@ -2532,46 +2395,44 @@ sr:sport_event:50852253	sr:season:118691	sr:competitor:2824	sr:competitor:2836	1
 sr:sport_event:50852203	sr:season:118691	sr:competitor:24264	sr:competitor:2818	0	0	closed	7	sr:venue:11380	2024-09-25 17:00:00
 sr:sport_event:50852311	sr:season:118691	sr:competitor:2885	sr:competitor:2826	1	0	closed	12	sr:venue:9311	2024-11-01 20:00:00
 sr:sport_event:50852513	sr:season:118691	sr:competitor:2814	sr:competitor:2829	\N	\N	not_started	22	sr:venue:1307	2025-02-02 19:00:00
-sr:sport_event:50850719	sr:season:118689	sr:competitor:32	sr:competitor:37	\N	\N	not_started	38	sr:venue:2188	2025-05-25 15:00:00
-sr:sport_event:50850227	sr:season:118689	sr:competitor:60	sr:competitor:33	\N	\N	postponed	14	sr:venue:2990	2024-12-03 19:45:00
 sr:sport_event:50850115	sr:season:118689	sr:competitor:35	sr:competitor:50	2	1	closed	8	sr:venue:9	2024-10-19 14:00:00
-sr:sport_event:50850581	sr:season:118689	sr:competitor:48	sr:competitor:42	\N	\N	not_started	31	sr:venue:12	2025-04-05 14:00:00
 sr:sport_event:50850407	sr:season:118689	sr:competitor:60	sr:competitor:14	\N	\N	not_started	23	sr:venue:2990	2025-01-25 15:00:00
 sr:sport_event:50850435	sr:season:118689	sr:competitor:48	sr:competitor:31	\N	\N	not_started	24	sr:venue:12	2025-02-01 15:00:00
 sr:sport_event:46657141	sr:season:114317	sr:competitor:3208	sr:competitor:7628	1	0	closed	21	sr:venue:1079	2024-11-08 00:15:00
 sr:sport_event:50850201	sr:season:118689	sr:competitor:17	sr:competitor:33	0	4	closed	12	sr:venue:606	2024-11-23 17:30:00
 sr:sport_event:50850285	sr:season:118689	sr:competitor:3	sr:competitor:32	\N	\N	not_started	16	sr:venue:1272	2024-12-14 15:00:00
-sr:sport_event:50850567	sr:season:118689	sr:competitor:17	sr:competitor:31	\N	\N	not_started	30	sr:venue:606	2025-04-02 14:00:00
 sr:sport_event:50850077	sr:season:118689	sr:competitor:32	sr:competitor:40	2	2	closed	6	sr:venue:2188	2024-09-29 13:00:00
 sr:sport_event:50850347	sr:season:118689	sr:competitor:60	sr:competitor:48	\N	\N	not_started	20	sr:venue:2990	2025-01-04 15:00:00
-sr:sport_event:50850637	sr:season:118689	sr:competitor:42	sr:competitor:7	\N	\N	not_started	34	sr:venue:624	2025-04-26 14:00:00
-sr:sport_event:50850477	sr:season:118689	sr:competitor:42	sr:competitor:37	\N	\N	not_started	26	sr:venue:624	2025-02-22 15:00:00
 sr:sport_event:46657167	sr:season:114317	sr:competitor:7628	sr:competitor:36839	0	4	closed	22	sr:venue:4738	2024-11-11 21:45:00
 sr:sport_event:50850165	sr:season:118689	sr:competitor:3	sr:competitor:7	2	2	closed	10	sr:venue:1272	2024-11-02 17:30:00
-sr:sport_event:50850661	sr:season:118689	sr:competitor:30	sr:competitor:39	\N	\N	not_started	35	sr:venue:2443	2025-05-03 14:00:00
 sr:sport_event:50852319	sr:season:118691	sr:competitor:2817	sr:competitor:2814	3	1	closed	12	sr:venue:714	2024-11-03 15:15:00
 sr:sport_event:50852309	sr:season:118691	sr:competitor:2820	sr:competitor:2831	1	0	closed	12	sr:venue:739	2024-11-02 13:00:00
 sr:sport_event:50852477	sr:season:118691	sr:competitor:2829	sr:competitor:6577	\N	\N	not_started	20	sr:venue:754	2025-01-19 19:00:00
 sr:sport_event:50852141	sr:season:118691	sr:competitor:2825	sr:competitor:2836	0	1	closed	4	sr:venue:751	2024-08-31 17:00:00
 sr:sport_event:50852515	sr:season:118691	sr:competitor:2816	sr:competitor:2825	\N	\N	not_started	22	sr:venue:1045	2025-02-02 19:00:00
 sr:sport_event:50852155	sr:season:118691	sr:competitor:2829	sr:competitor:2816	2	0	closed	4	sr:venue:754	2024-09-01 19:30:00
-sr:sport_event:50852715	sr:season:118691	sr:competitor:2819	sr:competitor:2824	\N	\N	not_started	32	sr:venue:619	2025-04-20 17:00:00
-sr:sport_event:50852561	sr:season:118691	sr:competitor:2825	sr:competitor:2831	\N	\N	not_started	25	sr:venue:751	2025-02-23 19:00:00
 sr:sport_event:50852451	sr:season:118691	sr:competitor:2814	sr:competitor:2845	\N	\N	not_started	19	sr:venue:1307	2025-01-12 19:00:00
-sr:sport_event:50852641	sr:season:118691	sr:competitor:2825	sr:competitor:2820	\N	\N	not_started	29	sr:venue:751	2025-03-30 17:00:00
 sr:sport_event:46657191	sr:season:114317	sr:competitor:3210	sr:competitor:42338	2	0	closed	23	sr:venue:2388	2024-11-21 22:15:00
-sr:sport_event:50852799	sr:season:118691	sr:competitor:2819	sr:competitor:2845	\N	\N	not_started	36	sr:venue:619	2025-05-14 17:00:00
 sr:sport_event:46657281	sr:season:114317	sr:competitor:3218	sr:competitor:4937	\N	\N	not_started	26	sr:venue:981	2024-12-08 23:00:00
+sr:sport_event:50850555	sr:season:118689	sr:competitor:60	sr:competitor:32	\N	\N	not_started	30	sr:venue:2990	2025-04-01 14:00:00
+sr:sport_event:50850661	sr:season:118689	sr:competitor:30	sr:competitor:39	\N	\N	not_started	35	sr:venue:2443	2025-05-03 14:00:00
+sr:sport_event:50850719	sr:season:118689	sr:competitor:32	sr:competitor:37	\N	\N	not_started	38	sr:venue:2188	2025-05-25 15:00:00
+sr:sport_event:50852543	sr:season:118691	sr:competitor:2817	sr:competitor:2818	\N	\N	not_started	24	sr:venue:714	2025-02-16 19:00:00
+sr:sport_event:50852561	sr:season:118691	sr:competitor:2825	sr:competitor:2831	\N	\N	not_started	25	sr:venue:751	2025-02-23 19:00:00
+sr:sport_event:50852627	sr:season:118691	sr:competitor:2833	sr:competitor:2825	\N	\N	not_started	28	sr:venue:730	2025-03-16 18:00:00
+sr:sport_event:50852641	sr:season:118691	sr:competitor:2825	sr:competitor:2820	\N	\N	not_started	29	sr:venue:751	2025-03-30 17:00:00
+sr:sport_event:50852651	sr:season:118691	sr:competitor:2824	sr:competitor:2831	\N	\N	not_started	29	sr:venue:581	2025-03-30 17:00:00
+sr:sport_event:50852707	sr:season:118691	sr:competitor:2829	sr:competitor:2825	\N	\N	not_started	32	sr:venue:754	2025-04-20 17:00:00
+sr:sport_event:50852699	sr:season:118691	sr:competitor:2821	sr:competitor:2814	\N	\N	not_started	31	sr:venue:697	2025-04-13 17:00:00
+sr:sport_event:50852715	sr:season:118691	sr:competitor:2819	sr:competitor:2824	\N	\N	not_started	32	sr:venue:619	2025-04-20 17:00:00
 sr:sport_event:50852741	sr:season:118691	sr:competitor:24264	sr:competitor:2826	\N	\N	not_started	34	sr:venue:11380	2025-05-04 17:00:00
-sr:sport_event:50852691	sr:season:118691	sr:competitor:2845	sr:competitor:2817	\N	\N	not_started	31	sr:venue:14888	2025-04-13 17:00:00
-sr:sport_event:50852573	sr:season:118691	sr:competitor:2859	sr:competitor:2816	\N	\N	not_started	25	sr:venue:608	2025-02-23 19:00:00
+sr:sport_event:50852799	sr:season:118691	sr:competitor:2819	sr:competitor:2845	\N	\N	not_started	36	sr:venue:619	2025-05-14 17:00:00
+sr:sport_event:50852809	sr:season:118691	sr:competitor:2826	sr:competitor:2859	\N	\N	not_started	37	sr:venue:760	2025-05-18 17:00:00
 sr:sport_event:55396411	sr:season:118691	sr:competitor:2819	sr:competitor:2818	\N	\N	not_started	12	sr:venue:619	2024-12-18 20:30:00
 sr:sport_event:50852251	sr:season:118691	sr:competitor:24264	sr:competitor:2825	2	1	closed	9	sr:venue:11380	2024-10-06 12:00:00
 sr:sport_event:50852239	sr:season:118691	sr:competitor:2816	sr:competitor:2814	1	0	closed	8	sr:venue:1045	2024-09-29 16:30:00
-sr:sport_event:50852829	sr:season:118691	sr:competitor:2845	sr:competitor:2831	\N	\N	not_started	38	sr:venue:14888	2025-05-25 17:00:00
 sr:sport_event:50852087	sr:season:118691	sr:competitor:6577	sr:competitor:2833	2	2	closed	1	sr:venue:974	2024-08-16 19:30:00
 sr:sport_event:50850311	sr:season:118689	sr:competitor:30	sr:competitor:50	\N	\N	not_started	18	sr:venue:2443	2024-12-27 19:30:00
-sr:sport_event:50850509	sr:season:118689	sr:competitor:38	sr:competitor:45	\N	\N	not_started	27	sr:venue:799	2025-02-26 19:45:00
 sr:sport_event:46657237	sr:season:114317	sr:competitor:3212	sr:competitor:3209	2	1	closed	24	sr:venue:1567	2024-11-26 22:00:00
 sr:sport_event:46657313	sr:season:114317	sr:competitor:65668	sr:competitor:3218	\N	\N	not_started	27	sr:venue:69401	2024-12-15 23:00:00
 sr:sport_event:46656997	sr:season:114317	sr:competitor:3215	sr:competitor:36837	1	1	closed	16	sr:venue:1082	2024-10-01 00:00:00
@@ -2585,10 +2446,6 @@ sr:sport_event:50868137	sr:season:119799	sr:competitor:2952	sr:competitor:2971	6
 sr:sport_event:50868117	sr:season:119799	sr:competitor:2962	sr:competitor:2964	3	0	closed	9	sr:venue:689	2024-10-19 18:00:00
 sr:sport_event:50868055	sr:season:119799	sr:competitor:2961	sr:competitor:2956	3	0	closed	5	sr:venue:826	2024-09-15 12:30:00
 sr:sport_event:50868101	sr:season:119799	sr:competitor:2952	sr:competitor:2960	2	1	closed	8	sr:venue:726	2024-10-05 18:00:00
-sr:sport_event:50850693	sr:season:118689	sr:competitor:3	sr:competitor:30	\N	\N	not_started	36	sr:venue:1272	2025-05-10 14:00:00
-sr:sport_event:50850597	sr:season:118689	sr:competitor:42	sr:competitor:50	\N	\N	not_started	32	sr:venue:624	2025-04-12 14:00:00
-sr:sport_event:50850641	sr:season:118689	sr:competitor:38	sr:competitor:48	\N	\N	not_started	34	sr:venue:799	2025-04-26 14:00:00
-sr:sport_event:50850723	sr:season:118689	sr:competitor:35	sr:competitor:40	\N	\N	not_started	38	sr:venue:9	2025-05-25 15:00:00
 sr:sport_event:50868029	sr:season:119799	sr:competitor:2964	sr:competitor:2947	4	0	closed	4	sr:venue:569	2024-08-31 18:00:00
 sr:sport_event:50868121	sr:season:119799	sr:competitor:2979	sr:competitor:2959	1	5	closed	9	sr:venue:3293	2024-10-19 19:00:00
 sr:sport_event:50852235	sr:season:118691	sr:competitor:2859	sr:competitor:2885	2	0	closed	8	sr:venue:608	2024-09-28 12:00:00
@@ -2598,30 +2455,29 @@ sr:sport_event:50852417	sr:season:118691	sr:competitor:2831	sr:competitor:2828	\
 sr:sport_event:50852487	sr:season:118691	sr:competitor:6577	sr:competitor:2820	\N	\N	not_started	21	sr:venue:974	2025-01-26 19:00:00
 sr:sport_event:50852479	sr:season:118691	sr:competitor:2816	sr:competitor:2885	\N	\N	not_started	20	sr:venue:1045	2025-01-19 19:00:00
 sr:sport_event:50852293	sr:season:118691	sr:competitor:6577	sr:competitor:24264	1	0	closed	11	sr:venue:974	2024-10-26 16:30:00
-sr:sport_event:50852579	sr:season:118691	sr:competitor:2824	sr:competitor:2845	\N	\N	not_started	25	sr:venue:581	2025-02-23 19:00:00
-sr:sport_event:50852623	sr:season:118691	sr:competitor:24264	sr:competitor:2828	\N	\N	not_started	28	sr:venue:11380	2025-03-16 18:00:00
 sr:sport_event:50852169	sr:season:118691	sr:competitor:6577	sr:competitor:2825	2	3	closed	5	sr:venue:974	2024-09-15 16:30:00
-sr:sport_event:50850623	sr:season:118689	sr:competitor:43	sr:competitor:38	\N	\N	not_started	33	sr:venue:611	2025-04-19 14:00:00
-sr:sport_event:50850595	sr:season:118689	sr:competitor:60	sr:competitor:43	\N	\N	not_started	32	sr:venue:2990	2025-04-12 14:00:00
-sr:sport_event:50852727	sr:season:118691	sr:competitor:2816	sr:competitor:2831	\N	\N	not_started	33	sr:venue:1045	2025-04-23 17:00:00
 sr:sport_event:50852333	sr:season:118691	sr:competitor:2824	sr:competitor:2817	1	0	closed	13	sr:venue:581	2024-11-10 20:00:00
-sr:sport_event:50852687	sr:season:118691	sr:competitor:2859	sr:competitor:6577	\N	\N	not_started	31	sr:venue:608	2025-04-13 17:00:00
-sr:sport_event:50852601	sr:season:118691	sr:competitor:2825	sr:competitor:2826	\N	\N	not_started	27	sr:venue:751	2025-03-09 18:00:00
 sr:sport_event:50852471	sr:season:118691	sr:competitor:2859	sr:competitor:2817	\N	\N	not_started	20	sr:venue:608	2025-01-19 19:00:00
-sr:sport_event:50852645	sr:season:118691	sr:competitor:2816	sr:competitor:2833	\N	\N	not_started	29	sr:venue:1045	2025-03-30 17:00:00
-sr:sport_event:50852719	sr:season:118691	sr:competitor:2826	sr:competitor:2845	\N	\N	not_started	32	sr:venue:760	2025-04-20 17:00:00
-sr:sport_event:50852759	sr:season:118691	sr:competitor:2833	sr:competitor:2845	\N	\N	not_started	34	sr:venue:730	2025-05-04 17:00:00
 sr:sport_event:50852501	sr:season:118691	sr:competitor:2836	sr:competitor:2826	\N	\N	not_started	22	sr:venue:21414	2025-02-02 19:00:00
-sr:sport_event:50852633	sr:season:118691	sr:competitor:2820	sr:competitor:2859	\N	\N	not_started	28	sr:venue:739	2025-03-16 18:00:00
 sr:sport_event:50852257	sr:season:118691	sr:competitor:6577	sr:competitor:2821	0	1	closed	9	sr:venue:974	2024-10-05 16:30:00
 sr:sport_event:50852343	sr:season:118691	sr:competitor:2859	sr:competitor:2831	2	0	closed	14	sr:venue:608	2024-11-22 20:00:00
+sr:sport_event:50850641	sr:season:118689	sr:competitor:38	sr:competitor:48	\N	\N	not_started	34	sr:venue:799	2025-04-26 14:00:00
+sr:sport_event:50850693	sr:season:118689	sr:competitor:3	sr:competitor:30	\N	\N	not_started	36	sr:venue:1272	2025-05-10 14:00:00
+sr:sport_event:50850723	sr:season:118689	sr:competitor:35	sr:competitor:40	\N	\N	not_started	38	sr:venue:9	2025-05-25 15:00:00
+sr:sport_event:50852573	sr:season:118691	sr:competitor:2859	sr:competitor:2816	\N	\N	not_started	25	sr:venue:608	2025-02-23 19:00:00
+sr:sport_event:50852579	sr:season:118691	sr:competitor:2824	sr:competitor:2845	\N	\N	not_started	25	sr:venue:581	2025-02-23 19:00:00
+sr:sport_event:50852601	sr:season:118691	sr:competitor:2825	sr:competitor:2826	\N	\N	not_started	27	sr:venue:751	2025-03-09 18:00:00
+sr:sport_event:50852623	sr:season:118691	sr:competitor:24264	sr:competitor:2828	\N	\N	not_started	28	sr:venue:11380	2025-03-16 18:00:00
+sr:sport_event:50852691	sr:season:118691	sr:competitor:2845	sr:competitor:2817	\N	\N	not_started	31	sr:venue:14888	2025-04-13 17:00:00
+sr:sport_event:50852719	sr:season:118691	sr:competitor:2826	sr:competitor:2845	\N	\N	not_started	32	sr:venue:760	2025-04-20 17:00:00
+sr:sport_event:50852645	sr:season:118691	sr:competitor:2816	sr:competitor:2833	\N	\N	not_started	29	sr:venue:1045	2025-03-30 17:00:00
+sr:sport_event:50852687	sr:season:118691	sr:competitor:2859	sr:competitor:6577	\N	\N	not_started	31	sr:venue:608	2025-04-13 17:00:00
+sr:sport_event:50852759	sr:season:118691	sr:competitor:2833	sr:competitor:2845	\N	\N	not_started	34	sr:venue:730	2025-05-04 17:00:00
+sr:sport_event:50852727	sr:season:118691	sr:competitor:2816	sr:competitor:2831	\N	\N	not_started	33	sr:venue:1045	2025-04-23 17:00:00
+sr:sport_event:50852829	sr:season:118691	sr:competitor:2845	sr:competitor:2831	\N	\N	not_started	38	sr:venue:14888	2025-05-25 17:00:00
 sr:sport_event:50852443	sr:season:118691	sr:competitor:2836	sr:competitor:2820	\N	\N	not_started	19	sr:venue:21414	2025-01-12 19:00:00
 sr:sport_event:50852531	sr:season:118691	sr:competitor:2829	sr:competitor:2836	\N	\N	not_started	23	sr:venue:754	2025-02-09 19:00:00
-sr:sport_event:50852779	sr:season:118691	sr:competitor:2845	sr:competitor:2814	\N	\N	not_started	35	sr:venue:14888	2025-05-11 17:00:00
-sr:sport_event:50852765	sr:season:118691	sr:competitor:2816	sr:competitor:2820	\N	\N	not_started	35	sr:venue:1045	2025-05-11 17:00:00
-sr:sport_event:50852587	sr:season:118691	sr:competitor:2818	sr:competitor:2833	\N	\N	not_started	26	sr:venue:2440	2025-03-02 18:00:00
 sr:sport_event:50852551	sr:season:118691	sr:competitor:24264	sr:competitor:2859	\N	\N	not_started	24	sr:venue:11380	2025-02-16 19:00:00
-sr:sport_event:50852819	sr:season:118691	sr:competitor:2820	sr:competitor:2814	\N	\N	not_started	37	sr:venue:739	2025-05-18 17:00:00
 sr:sport_event:50868087	sr:season:119799	sr:competitor:2971	sr:competitor:2990	1	0	closed	7	sr:venue:18994	2024-09-29 10:15:00
 sr:sport_event:50852099	sr:season:118691	sr:competitor:2831	sr:competitor:2814	1	0	closed	1	sr:venue:880	2024-08-19 17:00:00
 sr:sport_event:50852423	sr:season:118691	sr:competitor:2821	sr:competitor:2824	\N	\N	not_started	18	sr:venue:697	2024-12-21 15:15:00
@@ -2639,34 +2495,33 @@ sr:sport_event:50868269	sr:season:119799	sr:competitor:2956	sr:competitor:2971	\
 sr:sport_event:50868163	sr:season:119799	sr:competitor:2960	sr:competitor:2948	1	4	closed	11	sr:venue:656	2024-11-03 13:30:00
 sr:sport_event:50868147	sr:season:119799	sr:competitor:2953	sr:competitor:2961	1	0	closed	10	sr:venue:577	2024-10-27 15:45:00
 sr:sport_event:50868145	sr:season:119799	sr:competitor:2955	sr:competitor:2977	5	0	closed	10	sr:venue:584	2024-10-27 13:30:00
-sr:sport_event:50850705	sr:season:118689	sr:competitor:7	sr:competitor:3	\N	\N	not_started	37	sr:venue:10	2025-05-18 14:00:00
 sr:sport_event:50868023	sr:season:119799	sr:competitor:2961	sr:competitor:2960	1	2	closed	4	sr:venue:826	2024-08-31 19:00:00
-sr:sport_event:50850607	sr:season:118689	sr:competitor:39	sr:competitor:35	\N	\N	not_started	32	sr:venue:765	2025-04-12 14:00:00
 sr:sport_event:50868043	sr:season:119799	sr:competitor:2951	sr:competitor:2959	2	2	closed	5	sr:venue:35438	2024-09-14 16:45:00
-sr:sport_event:50852327	sr:season:118691	sr:competitor:2814	sr:competitor:2828	\N	\N	postponed	13	sr:venue:1307	2024-11-09 17:30:00
 sr:sport_event:50852347	sr:season:118691	sr:competitor:6577	sr:competitor:2826	2	3	closed	14	sr:venue:974	2024-11-23 17:30:00
 sr:sport_event:50852089	sr:season:118691	sr:competitor:2819	sr:competitor:2836	2	2	closed	1	sr:venue:619	2024-08-19 19:30:00
 sr:sport_event:50852363	sr:season:118691	sr:competitor:2826	sr:competitor:2828	\N	\N	not_started	15	sr:venue:760	2024-11-29 20:00:00
-sr:sport_event:50852605	sr:season:118691	sr:competitor:2816	sr:competitor:6577	\N	\N	not_started	27	sr:venue:1045	2025-03-09 18:00:00
-sr:sport_event:50852563	sr:season:118691	sr:competitor:2821	sr:competitor:2820	\N	\N	not_started	25	sr:venue:697	2025-02-23 19:00:00
 sr:sport_event:50852331	sr:season:118691	sr:competitor:2826	sr:competitor:2836	0	1	closed	13	sr:venue:760	2024-11-10 15:15:00
 sr:sport_event:50852493	sr:season:118691	sr:competitor:2824	sr:competitor:2859	\N	\N	not_started	21	sr:venue:581	2025-01-26 19:00:00
 sr:sport_event:50852429	sr:season:118691	sr:competitor:2829	sr:competitor:2833	\N	\N	not_started	18	sr:venue:754	2024-12-22 15:15:00
 sr:sport_event:50852259	sr:season:118691	sr:competitor:2831	sr:competitor:2818	1	2	closed	9	sr:venue:880	2024-10-05 16:30:00
 sr:sport_event:50852245	sr:season:118691	sr:competitor:2885	sr:competitor:2817	0	3	closed	9	sr:venue:9311	2024-10-06 14:15:00
-sr:sport_event:50852603	sr:season:118691	sr:competitor:2817	sr:competitor:2820	\N	\N	not_started	27	sr:venue:714	2025-03-09 18:00:00
-sr:sport_event:50852589	sr:season:118691	sr:competitor:2836	sr:competitor:2825	\N	\N	not_started	26	sr:venue:21414	2025-03-02 18:00:00
-sr:sport_event:50852647	sr:season:118691	sr:competitor:2821	sr:competitor:6577	\N	\N	not_started	29	sr:venue:697	2025-03-30 17:00:00
-sr:sport_event:50852837	sr:season:118691	sr:competitor:2818	sr:competitor:2826	\N	\N	not_started	38	sr:venue:2440	2025-05-25 17:00:00
 sr:sport_event:50852135	sr:season:118691	sr:competitor:2824	sr:competitor:2885	1	2	closed	3	sr:venue:581	2024-08-28 19:30:00
-sr:sport_event:50852747	sr:season:118691	sr:competitor:2814	sr:competitor:2816	\N	\N	not_started	34	sr:venue:1307	2025-05-04 17:00:00
-sr:sport_event:50852665	sr:season:118691	sr:competitor:6577	sr:competitor:2824	\N	\N	not_started	30	sr:venue:974	2025-04-06 17:00:00
 sr:sport_event:50852547	sr:season:118691	sr:competitor:2820	sr:competitor:2829	\N	\N	not_started	24	sr:venue:739	2025-02-16 19:00:00
-sr:sport_event:50852811	sr:season:118691	sr:competitor:2824	sr:competitor:24264	\N	\N	not_started	37	sr:venue:581	2025-05-18 17:00:00
-sr:sport_event:50850589	sr:season:118689	sr:competitor:35	sr:competitor:17	\N	\N	not_started	31	sr:venue:9	2025-04-05 14:00:00
-sr:sport_event:50850689	sr:season:118689	sr:competitor:45	sr:competitor:17	\N	\N	not_started	36	sr:venue:2231	2025-05-10 14:00:00
 sr:sport_event:50868095	sr:season:119799	sr:competitor:2947	sr:competitor:2962	1	0	closed	8	sr:venue:2081	2024-10-05 16:45:00
 sr:sport_event:50852183	sr:season:118691	sr:competitor:2816	sr:competitor:2826	1	2	closed	6	sr:venue:1045	2024-09-23 19:00:00
+sr:sport_event:50850689	sr:season:118689	sr:competitor:45	sr:competitor:17	\N	\N	not_started	36	sr:venue:2231	2025-05-10 14:00:00
+sr:sport_event:50850705	sr:season:118689	sr:competitor:7	sr:competitor:3	\N	\N	not_started	37	sr:venue:10	2025-05-18 14:00:00
+sr:sport_event:50852563	sr:season:118691	sr:competitor:2821	sr:competitor:2820	\N	\N	not_started	25	sr:venue:697	2025-02-23 19:00:00
+sr:sport_event:50852327	sr:season:118691	sr:competitor:2814	sr:competitor:2828	\N	\N	postponed	13	sr:venue:1307	2024-11-09 17:30:00
+sr:sport_event:50852589	sr:season:118691	sr:competitor:2836	sr:competitor:2825	\N	\N	not_started	26	sr:venue:21414	2025-03-02 18:00:00
+sr:sport_event:50852647	sr:season:118691	sr:competitor:2821	sr:competitor:6577	\N	\N	not_started	29	sr:venue:697	2025-03-30 17:00:00
+sr:sport_event:50852665	sr:season:118691	sr:competitor:6577	sr:competitor:2824	\N	\N	not_started	30	sr:venue:974	2025-04-06 17:00:00
+sr:sport_event:50852747	sr:season:118691	sr:competitor:2814	sr:competitor:2816	\N	\N	not_started	34	sr:venue:1307	2025-05-04 17:00:00
+sr:sport_event:50852765	sr:season:118691	sr:competitor:2816	sr:competitor:2820	\N	\N	not_started	35	sr:venue:1045	2025-05-11 17:00:00
+sr:sport_event:50852779	sr:season:118691	sr:competitor:2845	sr:competitor:2814	\N	\N	not_started	35	sr:venue:14888	2025-05-11 17:00:00
+sr:sport_event:50852819	sr:season:118691	sr:competitor:2820	sr:competitor:2814	\N	\N	not_started	37	sr:venue:739	2025-05-18 17:00:00
+sr:sport_event:50852837	sr:season:118691	sr:competitor:2818	sr:competitor:2826	\N	\N	not_started	38	sr:venue:2440	2025-05-25 17:00:00
+sr:sport_event:50852811	sr:season:118691	sr:competitor:2824	sr:competitor:24264	\N	\N	not_started	37	sr:venue:581	2025-05-18 17:00:00
 sr:sport_event:50852161	sr:season:118691	sr:competitor:2836	sr:competitor:2828	3	0	closed	5	sr:venue:21414	2024-09-15 19:00:00
 sr:sport_event:50868183	sr:season:119799	sr:competitor:2950	sr:competitor:2961	1	2	closed	12	sr:venue:615	2024-11-10 15:45:00
 sr:sport_event:50868289	sr:season:119799	sr:competitor:2971	sr:competitor:2962	\N	\N	not_started	18	sr:venue:18994	2025-01-11 19:00:00
@@ -2681,12 +2536,8 @@ sr:sport_event:50868343	sr:season:119799	sr:competitor:2964	sr:competitor:2957	\
 sr:sport_event:50868251	sr:season:119799	sr:competitor:2947	sr:competitor:2950	\N	\N	not_started	16	sr:venue:2081	2024-12-15 19:00:00
 sr:sport_event:50868265	sr:season:119799	sr:competitor:2977	sr:competitor:2951	\N	\N	not_started	17	sr:venue:729	2024-12-21 20:00:00
 sr:sport_event:50868037	sr:season:119799	sr:competitor:2971	sr:competitor:2977	3	0	closed	4	sr:venue:18994	2024-09-01 12:30:00
-sr:sport_event:50850627	sr:season:118689	sr:competitor:31	sr:competitor:44	\N	\N	not_started	33	sr:venue:2183	2025-04-19 14:00:00
 sr:sport_event:50868089	sr:season:119799	sr:competitor:2951	sr:competitor:2979	0	1	closed	7	sr:venue:35438	2024-09-29 12:30:00
 sr:sport_event:50868063	sr:season:119799	sr:competitor:2956	sr:competitor:2960	1	2	closed	6	sr:venue:685	2024-09-21 16:45:00
-sr:sport_event:50850671	sr:season:118689	sr:competitor:17	sr:competitor:3	\N	\N	not_started	35	sr:venue:606	2025-05-03 14:00:00
-sr:sport_event:50850697	sr:season:118689	sr:competitor:40	sr:competitor:33	\N	\N	not_started	37	sr:venue:815	2025-05-18 14:00:00
-sr:sport_event:50850609	sr:season:118689	sr:competitor:14	sr:competitor:48	\N	\N	not_started	32	sr:venue:2230	2025-04-12 14:00:00
 sr:sport_event:50852357	sr:season:118691	sr:competitor:2836	sr:competitor:2885	2	1	closed	14	sr:venue:21414	2024-11-23 15:15:00
 sr:sport_event:50852247	sr:season:118691	sr:competitor:2845	sr:competitor:2828	0	0	closed	9	sr:venue:14888	2024-10-04 19:00:00
 sr:sport_event:50852355	sr:season:118691	sr:competitor:2833	sr:competitor:2818	1	0	closed	14	sr:venue:730	2024-11-24 15:15:00
@@ -2694,23 +2545,14 @@ sr:sport_event:50852427	sr:season:118691	sr:competitor:24264	sr:competitor:2831	
 sr:sport_event:50852295	sr:season:118691	sr:competitor:2824	sr:competitor:2820	0	2	closed	11	sr:venue:581	2024-10-27 20:00:00
 sr:sport_event:50852375	sr:season:118691	sr:competitor:2829	sr:competitor:2859	\N	\N	not_started	15	sr:venue:754	2024-12-01 15:15:00
 sr:sport_event:50852535	sr:season:118691	sr:competitor:2821	sr:competitor:2816	\N	\N	not_started	23	sr:venue:697	2025-02-09 19:00:00
-sr:sport_event:50852723	sr:season:118691	sr:competitor:2836	sr:competitor:2818	\N	\N	not_started	33	sr:venue:21414	2025-04-23 17:00:00
-sr:sport_event:50852667	sr:season:118691	sr:competitor:2845	sr:competitor:2820	\N	\N	not_started	30	sr:venue:14888	2025-04-06 17:00:00
-sr:sport_event:50852591	sr:season:118691	sr:competitor:24264	sr:competitor:2821	\N	\N	not_started	26	sr:venue:11380	2025-03-02 18:00:00
 sr:sport_event:50852229	sr:season:118691	sr:competitor:2820	sr:competitor:2817	4	2	closed	8	sr:venue:739	2024-09-28 19:00:00
-sr:sport_event:50852839	sr:season:118691	sr:competitor:2819	sr:competitor:2833	\N	\N	not_started	38	sr:venue:619	2025-05-25 17:00:00
 sr:sport_event:50852323	sr:season:118691	sr:competitor:2859	sr:competitor:24264	0	1	closed	13	sr:venue:608	2024-11-10 17:30:00
 sr:sport_event:50852559	sr:season:118691	sr:competitor:2845	sr:competitor:2885	\N	\N	not_started	24	sr:venue:14888	2025-02-16 19:00:00
 sr:sport_event:50852107	sr:season:118691	sr:competitor:2829	sr:competitor:2831	3	0	closed	2	sr:venue:754	2024-08-25 15:00:00
 sr:sport_event:50852359	sr:season:118691	sr:competitor:24264	sr:competitor:2814	4	1	closed	14	sr:venue:11380	2024-11-23 17:30:00
-sr:sport_event:50852813	sr:season:118691	sr:competitor:2833	sr:competitor:2829	\N	\N	not_started	37	sr:venue:730	2025-05-18 17:00:00
 sr:sport_event:50852529	sr:season:118691	sr:competitor:2885	sr:competitor:2859	\N	\N	not_started	23	sr:venue:9311	2025-02-09 19:00:00
-sr:sport_event:50852767	sr:season:118691	sr:competitor:2821	sr:competitor:2833	\N	\N	not_started	35	sr:venue:697	2025-05-11 17:00:00
 sr:sport_event:50852147	sr:season:118691	sr:competitor:2828	sr:competitor:2819	1	1	closed	4	sr:venue:691	2024-08-31 19:30:00
-sr:sport_event:50852787	sr:season:118691	sr:competitor:2820	sr:competitor:2836	\N	\N	not_started	36	sr:venue:739	2025-05-14 17:00:00
 sr:sport_event:50850461	sr:season:118689	sr:competitor:45	sr:competitor:60	\N	\N	not_started	25	sr:venue:2231	2025-02-15 15:00:00
-sr:sport_event:50852575	sr:season:118691	sr:competitor:2829	sr:competitor:24264	\N	\N	not_started	25	sr:venue:754	2025-02-23 19:00:00
-sr:sport_event:50852679	sr:season:118691	sr:competitor:2818	sr:competitor:2814	\N	\N	not_started	30	sr:venue:2440	2025-04-06 17:00:00
 sr:sport_event:50868065	sr:season:119799	sr:competitor:2979	sr:competitor:2953	1	1	closed	6	sr:venue:3293	2024-09-21 18:00:00
 sr:sport_event:50852201	sr:season:118691	sr:competitor:2817	sr:competitor:2859	1	0	closed	7	sr:venue:714	2024-09-25 19:00:00
 sr:sport_event:50852167	sr:season:118691	sr:competitor:2826	sr:competitor:2819	1	2	closed	5	sr:venue:760	2024-09-14 12:00:00
@@ -2719,6 +2561,15 @@ sr:sport_event:50868167	sr:season:119799	sr:competitor:2948	sr:competitor:2977	1
 sr:sport_event:50868133	sr:season:119799	sr:competitor:2957	sr:competitor:2951	1	0	closed	10	sr:venue:2769	2024-10-26 14:30:00
 sr:sport_event:50868231	sr:season:119799	sr:competitor:2952	sr:competitor:2955	\N	\N	not_started	15	sr:venue:726	2024-12-06 19:00:00
 sr:sport_event:50868097	sr:season:119799	sr:competitor:2990	sr:competitor:2961	0	1	closed	8	sr:venue:3261	2024-10-04 18:00:00
+sr:sport_event:50850697	sr:season:118689	sr:competitor:40	sr:competitor:33	\N	\N	not_started	37	sr:venue:815	2025-05-18 14:00:00
+sr:sport_event:50852591	sr:season:118691	sr:competitor:24264	sr:competitor:2821	\N	\N	not_started	26	sr:venue:11380	2025-03-02 18:00:00
+sr:sport_event:50852575	sr:season:118691	sr:competitor:2829	sr:competitor:24264	\N	\N	not_started	25	sr:venue:754	2025-02-23 19:00:00
+sr:sport_event:50852679	sr:season:118691	sr:competitor:2818	sr:competitor:2814	\N	\N	not_started	30	sr:venue:2440	2025-04-06 17:00:00
+sr:sport_event:50852667	sr:season:118691	sr:competitor:2845	sr:competitor:2820	\N	\N	not_started	30	sr:venue:14888	2025-04-06 17:00:00
+sr:sport_event:50852787	sr:season:118691	sr:competitor:2820	sr:competitor:2836	\N	\N	not_started	36	sr:venue:739	2025-05-14 17:00:00
+sr:sport_event:50852767	sr:season:118691	sr:competitor:2821	sr:competitor:2833	\N	\N	not_started	35	sr:venue:697	2025-05-11 17:00:00
+sr:sport_event:50852723	sr:season:118691	sr:competitor:2836	sr:competitor:2818	\N	\N	not_started	33	sr:venue:21414	2025-04-23 17:00:00
+sr:sport_event:50852839	sr:season:118691	sr:competitor:2819	sr:competitor:2833	\N	\N	not_started	38	sr:venue:619	2025-05-25 17:00:00
 sr:sport_event:50868255	sr:season:119799	sr:competitor:2964	sr:competitor:2952	\N	\N	not_started	16	sr:venue:569	2024-12-14 17:45:00
 sr:sport_event:50868195	sr:season:119799	sr:competitor:2962	sr:competitor:2948	1	2	closed	13	sr:venue:689	2024-11-24 11:15:00
 sr:sport_event:50868213	sr:season:119799	sr:competitor:2948	sr:competitor:2952	\N	\N	not_started	14	sr:venue:786	2024-12-01 11:15:00
@@ -2729,9 +2580,6 @@ sr:sport_event:50868199	sr:season:119799	sr:competitor:2961	sr:competitor:2947	2
 sr:sport_event:50868241	sr:season:119799	sr:competitor:2955	sr:competitor:2951	\N	\N	not_started	16	sr:venue:584	2024-12-15 13:30:00
 sr:sport_event:50868005	sr:season:119799	sr:competitor:2953	sr:competitor:2957	5	0	closed	3	sr:venue:577	2024-09-18 18:00:00
 sr:sport_event:50868013	sr:season:119799	sr:competitor:2951	sr:competitor:2950	0	0	closed	3	sr:venue:35438	2024-08-25 10:15:00
-sr:sport_event:50850553	sr:season:118689	sr:competitor:45	sr:competitor:3	\N	\N	not_started	29	sr:venue:2231	2025-03-15 15:00:00
-sr:sport_event:50850651	sr:season:118689	sr:competitor:45	sr:competitor:43	\N	\N	not_started	34	sr:venue:2231	2025-04-26 14:00:00
-sr:sport_event:50850707	sr:season:118689	sr:competitor:48	sr:competitor:45	\N	\N	not_started	37	sr:venue:12	2025-05-18 14:00:00
 sr:sport_event:50868081	sr:season:119799	sr:competitor:2962	sr:competitor:2959	1	1	closed	7	sr:venue:689	2024-09-28 16:45:00
 sr:sport_event:50868203	sr:season:119799	sr:competitor:2964	sr:competitor:2956	\N	\N	not_started	14	sr:venue:569	2024-11-29 19:00:00
 sr:sport_event:50852231	sr:season:118691	sr:competitor:2831	sr:competitor:2826	1	2	closed	8	sr:venue:880	2024-09-27 19:00:00
@@ -2747,21 +2595,11 @@ sr:sport_event:50852557	sr:season:118691	sr:competitor:2826	sr:competitor:6577	\
 sr:sport_event:50852419	sr:season:118691	sr:competitor:2824	sr:competitor:6577	\N	\N	not_started	17	sr:venue:581	2024-12-15 17:30:00
 sr:sport_event:50852533	sr:season:118691	sr:competitor:2833	sr:competitor:2817	\N	\N	not_started	23	sr:venue:730	2025-02-09 19:00:00
 sr:sport_event:50852403	sr:season:118691	sr:competitor:2817	sr:competitor:2845	\N	\N	not_started	17	sr:venue:714	2024-12-15 20:00:00
-sr:sport_event:50852661	sr:season:118691	sr:competitor:2817	sr:competitor:2816	\N	\N	not_started	30	sr:venue:714	2025-04-06 17:00:00
-sr:sport_event:50852635	sr:season:118691	sr:competitor:2819	sr:competitor:2829	\N	\N	not_started	28	sr:venue:619	2025-03-16 18:00:00
-sr:sport_event:50852697	sr:season:118691	sr:competitor:2828	sr:competitor:2833	\N	\N	not_started	31	sr:venue:691	2025-04-13 17:00:00
-sr:sport_event:50852757	sr:season:118691	sr:competitor:2819	sr:competitor:2820	\N	\N	not_started	34	sr:venue:619	2025-05-04 17:00:00
-sr:sport_event:50852751	sr:season:118691	sr:competitor:2831	sr:competitor:2817	\N	\N	not_started	34	sr:venue:880	2025-05-04 17:00:00
-sr:sport_event:50852795	sr:season:118691	sr:competitor:2829	sr:competitor:2826	\N	\N	not_started	36	sr:venue:754	2025-05-14 17:00:00
-sr:sport_event:50852807	sr:season:118691	sr:competitor:2828	sr:competitor:2825	\N	\N	not_started	37	sr:venue:691	2025-05-18 17:00:00
-sr:sport_event:50850585	sr:season:118689	sr:competitor:32	sr:competitor:3	\N	\N	not_started	31	sr:venue:2188	2025-04-05 14:00:00
-sr:sport_event:50850631	sr:season:118689	sr:competitor:33	sr:competitor:14	\N	\N	not_started	33	sr:venue:28762	2025-04-19 14:00:00
 sr:sport_event:50868077	sr:season:119799	sr:competitor:2977	sr:competitor:2964	2	1	closed	7	sr:venue:729	2024-09-27 18:00:00
 sr:sport_event:50868165	sr:season:119799	sr:competitor:2956	sr:competitor:2990	2	0	closed	11	sr:venue:685	2024-11-03 15:45:00
 sr:sport_event:50852143	sr:season:118691	sr:competitor:2817	sr:competitor:2831	7	0	closed	4	sr:venue:714	2024-08-31 15:00:00
 sr:sport_event:50852127	sr:season:118691	sr:competitor:2826	sr:competitor:2833	0	0	closed	3	sr:venue:760	2024-08-27 17:00:00
 sr:sport_event:50852279	sr:season:118691	sr:competitor:2825	sr:competitor:2814	4	1	closed	10	sr:venue:751	2024-10-19 12:00:00
-sr:sport_event:50852609	sr:season:118691	sr:competitor:2824	sr:competitor:2833	\N	\N	not_started	27	sr:venue:581	2025-03-09 18:00:00
 sr:sport_event:50868253	sr:season:119799	sr:competitor:2971	sr:competitor:2961	\N	\N	not_started	16	sr:venue:18994	2024-12-13 19:00:00
 sr:sport_event:50868115	sr:season:119799	sr:competitor:2950	sr:competitor:2952	1	2	closed	9	sr:venue:615	2024-10-19 16:45:00
 sr:sport_event:50868245	sr:season:119799	sr:competitor:2959	sr:competitor:2977	\N	\N	not_started	16	sr:venue:612	2024-12-14 20:00:00
@@ -2771,14 +2609,20 @@ sr:sport_event:50868103	sr:season:119799	sr:competitor:2948	sr:competitor:2956	3
 sr:sport_event:50868209	sr:season:119799	sr:competitor:2959	sr:competitor:2957	\N	\N	not_started	14	sr:venue:612	2024-11-30 19:00:00
 sr:sport_event:50868061	sr:season:119799	sr:competitor:2948	sr:competitor:2961	3	2	closed	6	sr:venue:786	2024-09-21 14:30:00
 sr:sport_event:50868239	sr:season:119799	sr:competitor:2953	sr:competitor:2990	\N	\N	not_started	16	sr:venue:577	2024-12-15 15:45:00
+sr:sport_event:50850707	sr:season:118689	sr:competitor:48	sr:competitor:45	\N	\N	not_started	37	sr:venue:12	2025-05-18 14:00:00
+sr:sport_event:50852609	sr:season:118691	sr:competitor:2824	sr:competitor:2833	\N	\N	not_started	27	sr:venue:581	2025-03-09 18:00:00
+sr:sport_event:50852635	sr:season:118691	sr:competitor:2819	sr:competitor:2829	\N	\N	not_started	28	sr:venue:619	2025-03-16 18:00:00
+sr:sport_event:50852661	sr:season:118691	sr:competitor:2817	sr:competitor:2816	\N	\N	not_started	30	sr:venue:714	2025-04-06 17:00:00
+sr:sport_event:50852697	sr:season:118691	sr:competitor:2828	sr:competitor:2833	\N	\N	not_started	31	sr:venue:691	2025-04-13 17:00:00
+sr:sport_event:50852757	sr:season:118691	sr:competitor:2819	sr:competitor:2820	\N	\N	not_started	34	sr:venue:619	2025-05-04 17:00:00
+sr:sport_event:50852795	sr:season:118691	sr:competitor:2829	sr:competitor:2826	\N	\N	not_started	36	sr:venue:754	2025-05-14 17:00:00
+sr:sport_event:50852751	sr:season:118691	sr:competitor:2831	sr:competitor:2817	\N	\N	not_started	34	sr:venue:880	2025-05-04 17:00:00
+sr:sport_event:50852807	sr:season:118691	sr:competitor:2828	sr:competitor:2825	\N	\N	not_started	37	sr:venue:691	2025-05-18 17:00:00
 sr:sport_event:50868193	sr:season:119799	sr:competitor:2957	sr:competitor:2955	1	2	closed	13	sr:venue:2769	2024-11-23 20:00:00
 sr:sport_event:50868259	sr:season:119799	sr:competitor:2950	sr:competitor:2955	\N	\N	not_started	17	sr:venue:615	2024-12-21 19:00:00
 sr:sport_event:50868155	sr:season:119799	sr:competitor:2953	sr:competitor:2952	3	2	closed	11	sr:venue:577	2024-11-02 17:45:00
 sr:sport_event:50868157	sr:season:119799	sr:competitor:2957	sr:competitor:2964	3	0	closed	11	sr:venue:2769	2024-11-02 20:00:00
 sr:sport_event:50868215	sr:season:119799	sr:competitor:2950	sr:competitor:2977	\N	\N	not_started	14	sr:venue:615	2024-12-01 13:30:00
-sr:sport_event:50850649	sr:season:118689	sr:competitor:14	sr:competitor:50	\N	\N	not_started	34	sr:venue:2230	2025-04-26 14:00:00
-sr:sport_event:50850685	sr:season:118689	sr:competitor:39	sr:competitor:38	\N	\N	not_started	36	sr:venue:765	2025-05-10 14:00:00
-sr:sport_event:50850713	sr:season:118689	sr:competitor:37	sr:competitor:14	\N	\N	not_started	37	sr:venue:18379	2025-05-18 14:00:00
 sr:sport_event:50868049	sr:season:119799	sr:competitor:2952	sr:competitor:2962	2	0	closed	5	sr:venue:726	2024-09-14 14:30:00
 sr:sport_event:50852217	sr:season:118691	sr:competitor:2828	sr:competitor:2820	0	0	closed	7	sr:venue:691	2024-09-24 17:00:00
 sr:sport_event:50852273	sr:season:118691	sr:competitor:2820	sr:competitor:2816	1	2	closed	10	sr:venue:739	2024-10-19 14:15:00
@@ -2786,26 +2630,16 @@ sr:sport_event:50852431	sr:season:118691	sr:competitor:2845	sr:competitor:2819	\
 sr:sport_event:50852389	sr:season:118691	sr:competitor:6577	sr:competitor:2831	\N	\N	not_started	16	sr:venue:974	2024-12-07 13:00:00
 sr:sport_event:50852351	sr:season:118691	sr:competitor:2821	sr:competitor:2817	2	2	closed	14	sr:venue:697	2024-11-23 20:00:00
 sr:sport_event:50852145	sr:season:118691	sr:competitor:2859	sr:competitor:2824	0	0	closed	4	sr:venue:608	2024-09-01 17:15:00
-sr:sport_event:50852657	sr:season:118691	sr:competitor:2828	sr:competitor:2826	\N	\N	not_started	29	sr:venue:691	2025-03-30 17:00:00
-sr:sport_event:50852567	sr:season:118691	sr:competitor:2885	sr:competitor:2814	\N	\N	not_started	25	sr:venue:9311	2025-02-23 19:00:00
 sr:sport_event:50852209	sr:season:118691	sr:competitor:2814	sr:competitor:2819	1	2	closed	7	sr:venue:1307	2024-09-26 17:00:00
-sr:sport_event:50852613	sr:season:118691	sr:competitor:2885	sr:competitor:2819	\N	\N	not_started	27	sr:venue:9311	2025-03-09 18:00:00
 sr:sport_event:50852447	sr:season:118691	sr:competitor:2833	sr:competitor:2828	\N	\N	not_started	19	sr:venue:730	2025-01-12 19:00:00
-sr:sport_event:50852677	sr:season:118691	sr:competitor:24264	sr:competitor:2885	\N	\N	not_started	30	sr:venue:11380	2025-04-06 17:00:00
 sr:sport_event:50852511	sr:season:118691	sr:competitor:2845	sr:competitor:2818	\N	\N	not_started	22	sr:venue:14888	2025-02-02 19:00:00
 sr:sport_event:50852489	sr:season:118691	sr:competitor:2885	sr:competitor:2821	\N	\N	not_started	21	sr:venue:9311	2025-01-26 19:00:00
-sr:sport_event:50852771	sr:season:118691	sr:competitor:2826	sr:competitor:2831	\N	\N	not_started	35	sr:venue:760	2025-05-11 17:00:00
-sr:sport_event:50852743	sr:season:118691	sr:competitor:6577	sr:competitor:2828	\N	\N	not_started	34	sr:venue:974	2025-05-04 17:00:00
-sr:sport_event:50852745	sr:season:118691	sr:competitor:2885	sr:competitor:2836	\N	\N	not_started	34	sr:venue:9311	2025-05-04 17:00:00
-sr:sport_event:50852789	sr:season:118691	sr:competitor:2818	sr:competitor:2816	\N	\N	not_started	36	sr:venue:2440	2025-05-14 17:00:00
-sr:sport_event:50850613	sr:season:118689	sr:competitor:3	sr:competitor:33	\N	\N	not_started	32	sr:venue:1272	2025-04-12 14:00:00
 sr:sport_event:50868045	sr:season:119799	sr:competitor:2947	sr:competitor:2957	1	0	closed	5	sr:venue:2081	2024-09-14 18:00:00
 sr:sport_event:50868285	sr:season:119799	sr:competitor:2977	sr:competitor:2960	\N	\N	not_started	18	sr:venue:729	2025-01-11 15:30:00
 sr:sport_event:50868057	sr:season:119799	sr:competitor:2977	sr:competitor:2990	0	0	closed	5	sr:venue:729	2024-09-15 14:45:00
 sr:sport_event:50852083	sr:season:118691	sr:competitor:2816	sr:competitor:24264	1	1	closed	1	sr:venue:1045	2024-08-15 19:30:00
 sr:sport_event:50852129	sr:season:118691	sr:competitor:6577	sr:competitor:2829	1	1	closed	3	sr:venue:974	2024-08-29 19:30:00
 sr:sport_event:50852105	sr:season:118691	sr:competitor:2859	sr:competitor:2818	0	0	closed	2	sr:venue:608	2024-08-24 19:30:00
-sr:sport_event:50852593	sr:season:118691	sr:competitor:2845	sr:competitor:2859	\N	\N	not_started	26	sr:venue:14888	2025-03-02 18:00:00
 sr:sport_event:50852243	sr:season:118691	sr:competitor:2829	sr:competitor:2819	2	0	closed	9	sr:venue:754	2024-10-05 19:00:00
 sr:sport_event:50868261	sr:season:119799	sr:competitor:2948	sr:competitor:2957	\N	\N	not_started	17	sr:venue:786	2024-12-22 13:30:00
 sr:sport_event:50868275	sr:season:119799	sr:competitor:2953	sr:competitor:2956	\N	\N	not_started	18	sr:venue:577	2025-01-11 17:45:00
@@ -2820,9 +2654,19 @@ sr:sport_event:50868229	sr:season:119799	sr:competitor:2977	sr:competitor:2957	\
 sr:sport_event:50868173	sr:season:119799	sr:competitor:2947	sr:competitor:2952	0	3	closed	12	sr:venue:2081	2024-11-09 19:00:00
 sr:sport_event:50868125	sr:season:119799	sr:competitor:2951	sr:competitor:2948	0	1	closed	9	sr:venue:35438	2024-10-20 12:30:00
 sr:sport_event:50868039	sr:season:119799	sr:competitor:2952	sr:competitor:2979	3	0	closed	4	sr:venue:726	2024-09-01 14:45:00
-sr:sport_event:50850703	sr:season:118689	sr:competitor:38	sr:competitor:35	\N	\N	not_started	37	sr:venue:799	2025-05-18 14:00:00
 sr:sport_event:50850275	sr:season:118689	sr:competitor:44	sr:competitor:43	\N	\N	not_started	16	sr:venue:579	2024-12-14 15:00:00
 sr:sport_event:53185659	sr:season:119799	sr:competitor:2959	sr:competitor:2953	0	2	closed	4	sr:venue:612	2024-10-30 17:00:00
+sr:sport_event:50850713	sr:season:118689	sr:competitor:37	sr:competitor:14	\N	\N	not_started	37	sr:venue:18379	2025-05-18 14:00:00
+sr:sport_event:50850703	sr:season:118689	sr:competitor:38	sr:competitor:35	\N	\N	not_started	37	sr:venue:799	2025-05-18 14:00:00
+sr:sport_event:50852593	sr:season:118691	sr:competitor:2845	sr:competitor:2859	\N	\N	not_started	26	sr:venue:14888	2025-03-02 18:00:00
+sr:sport_event:50852613	sr:season:118691	sr:competitor:2885	sr:competitor:2819	\N	\N	not_started	27	sr:venue:9311	2025-03-09 18:00:00
+sr:sport_event:50852567	sr:season:118691	sr:competitor:2885	sr:competitor:2814	\N	\N	not_started	25	sr:venue:9311	2025-02-23 19:00:00
+sr:sport_event:50852677	sr:season:118691	sr:competitor:24264	sr:competitor:2885	\N	\N	not_started	30	sr:venue:11380	2025-04-06 17:00:00
+sr:sport_event:50852657	sr:season:118691	sr:competitor:2828	sr:competitor:2826	\N	\N	not_started	29	sr:venue:691	2025-03-30 17:00:00
+sr:sport_event:50852789	sr:season:118691	sr:competitor:2818	sr:competitor:2816	\N	\N	not_started	36	sr:venue:2440	2025-05-14 17:00:00
+sr:sport_event:50852743	sr:season:118691	sr:competitor:6577	sr:competitor:2828	\N	\N	not_started	34	sr:venue:974	2025-05-04 17:00:00
+sr:sport_event:50852745	sr:season:118691	sr:competitor:2885	sr:competitor:2836	\N	\N	not_started	34	sr:venue:9311	2025-05-04 17:00:00
+sr:sport_event:50852771	sr:season:118691	sr:competitor:2826	sr:competitor:2831	\N	\N	not_started	35	sr:venue:760	2025-05-11 17:00:00
 sr:sport_event:50868237	sr:season:119799	sr:competitor:2961	sr:competitor:2964	\N	\N	not_started	15	sr:venue:826	2024-12-08 13:30:00
 sr:sport_event:50852187	sr:season:118691	sr:competitor:2885	sr:competitor:2833	2	1	closed	6	sr:venue:9311	2024-09-20 19:00:00
 sr:sport_event:50852255	sr:season:118691	sr:competitor:2833	sr:competitor:2816	1	0	closed	9	sr:venue:730	2024-10-06 16:30:00
@@ -2831,143 +2675,104 @@ sr:sport_event:50852393	sr:season:118691	sr:competitor:2816	sr:competitor:2817	\
 sr:sport_event:50852151	sr:season:118691	sr:competitor:2845	sr:competitor:2826	0	1	closed	4	sr:venue:14888	2024-08-31 19:30:00
 sr:sport_event:50852353	sr:season:118691	sr:competitor:2828	sr:competitor:2816	4	2	closed	14	sr:venue:691	2024-11-23 13:00:00
 sr:sport_event:50852473	sr:season:118691	sr:competitor:2819	sr:competitor:2826	\N	\N	not_started	20	sr:venue:619	2025-01-19 19:00:00
-sr:sport_event:50852703	sr:season:118691	sr:competitor:2818	sr:competitor:2828	\N	\N	not_started	32	sr:venue:2440	2025-04-20 17:00:00
-sr:sport_event:50852695	sr:season:118691	sr:competitor:2824	sr:competitor:2826	\N	\N	not_started	31	sr:venue:581	2025-04-13 17:00:00
-sr:sport_event:50852803	sr:season:118691	sr:competitor:2817	sr:competitor:2819	\N	\N	not_started	37	sr:venue:714	2025-05-18 17:00:00
 sr:sport_event:50852321	sr:season:118691	sr:competitor:2816	sr:competitor:2821	2	2	closed	13	sr:venue:1045	2024-11-10 13:00:00
 sr:sport_event:50852341	sr:season:118691	sr:competitor:2825	sr:competitor:2824	1	0	closed	14	sr:venue:751	2024-11-24 20:00:00
 sr:sport_event:50852509	sr:season:118691	sr:competitor:2819	sr:competitor:2831	\N	\N	not_started	22	sr:venue:619	2025-02-02 19:00:00
-sr:sport_event:50852763	sr:season:118691	sr:competitor:2817	sr:competitor:2829	\N	\N	not_started	35	sr:venue:714	2025-05-11 17:00:00
-sr:sport_event:50852669	sr:season:118691	sr:competitor:2819	sr:competitor:2825	\N	\N	not_started	30	sr:venue:619	2025-04-06 17:00:00
-sr:sport_event:50852775	sr:season:118691	sr:competitor:2828	sr:competitor:2859	\N	\N	not_started	35	sr:venue:691	2025-05-11 17:00:00
 sr:sport_event:50852101	sr:season:118691	sr:competitor:2836	sr:competitor:24264	3	0	closed	2	sr:venue:21414	2024-08-25 19:30:00
-sr:sport_event:50852565	sr:season:118691	sr:competitor:2818	sr:competitor:2819	\N	\N	not_started	25	sr:venue:2440	2025-02-23 19:00:00
-sr:sport_event:50852545	sr:season:118691	sr:competitor:2816	sr:competitor:2824	\N	\N	not_started	24	sr:venue:1045	2025-02-16 19:00:00
-sr:sport_event:50852833	sr:season:118691	sr:competitor:24264	sr:competitor:2836	\N	\N	not_started	38	sr:venue:11380	2025-05-25 17:00:00
-sr:sport_event:50850615	sr:season:118689	sr:competitor:40	sr:competitor:39	\N	\N	not_started	33	sr:venue:815	2025-04-19 14:00:00
 sr:sport_event:50868123	sr:season:119799	sr:competitor:2961	sr:competitor:2957	0	0	closed	9	sr:venue:826	2024-10-20 10:15:00
 sr:sport_event:50868051	sr:season:119799	sr:competitor:2960	sr:competitor:2979	1	2	closed	5	sr:venue:656	2024-09-15 10:15:00
 sr:sport_event:50868175	sr:season:119799	sr:competitor:2956	sr:competitor:2962	0	3	closed	12	sr:venue:685	2024-11-09 20:00:00
 sr:sport_event:50852205	sr:season:118691	sr:competitor:2826	sr:competitor:2824	1	0	closed	7	sr:venue:760	2024-09-17 17:00:00
 sr:sport_event:50852449	sr:season:118691	sr:competitor:2885	sr:competitor:24264	\N	\N	not_started	19	sr:venue:9311	2025-01-12 19:00:00
-sr:sport_event:50852571	sr:season:118691	sr:competitor:6577	sr:competitor:2817	\N	\N	not_started	25	sr:venue:974	2025-02-23 19:00:00
-sr:sport_event:50852597	sr:season:118691	sr:competitor:2826	sr:competitor:2885	\N	\N	not_started	26	sr:venue:760	2025-03-02 18:00:00
-sr:sport_event:50868317	sr:season:119799	sr:competitor:2955	sr:competitor:2962	\N	\N	not_started	20	sr:venue:584	2025-01-26 19:00:00
-sr:sport_event:50868403	sr:season:119799	sr:competitor:2950	sr:competitor:2956	\N	\N	not_started	25	sr:venue:615	2025-03-07 17:00:00
 sr:sport_event:50868185	sr:season:119799	sr:competitor:2952	sr:competitor:2951	5	0	closed	13	sr:venue:726	2024-11-23 20:00:00
 sr:sport_event:50868353	sr:season:119799	sr:competitor:2948	sr:competitor:2990	\N	\N	not_started	22	sr:venue:786	2025-02-07 17:00:00
 sr:sport_event:50868333	sr:season:119799	sr:competitor:2979	sr:competitor:2955	\N	\N	not_started	21	sr:venue:3293	2025-02-02 13:30:00
-sr:sport_event:50868395	sr:season:119799	sr:competitor:2977	sr:competitor:2971	\N	\N	not_started	24	sr:venue:729	2025-02-28 17:00:00
-sr:sport_event:50868391	sr:season:119799	sr:competitor:2959	sr:competitor:2962	\N	\N	not_started	24	sr:venue:612	2025-02-28 17:00:00
-sr:sport_event:50868409	sr:season:119799	sr:competitor:2957	sr:competitor:2977	\N	\N	not_started	25	sr:venue:2769	2025-03-07 17:00:00
 sr:sport_event:50868153	sr:season:119799	sr:competitor:2961	sr:competitor:2955	0	1	closed	11	sr:venue:826	2024-11-02 15:30:00
 sr:sport_event:50868379	sr:season:119799	sr:competitor:2971	sr:competitor:2964	\N	\N	not_started	23	sr:venue:18994	2025-02-14 17:00:00
 sr:sport_event:50868271	sr:season:119799	sr:competitor:2960	sr:competitor:2953	\N	\N	not_started	17	sr:venue:656	2024-12-22 11:15:00
-sr:sport_event:50868419	sr:season:119799	sr:competitor:2961	sr:competitor:2948	\N	\N	not_started	25	sr:venue:826	2025-03-07 17:00:00
 sr:sport_event:50868243	sr:season:119799	sr:competitor:2948	sr:competitor:2979	\N	\N	not_started	16	sr:venue:786	2024-12-15 11:15:00
 sr:sport_event:54013215	sr:season:119799	sr:competitor:2953	sr:competitor:2948	\N	\N	not_started	5	sr:venue:577	2024-12-04 19:00:00
 sr:sport_event:50868159	sr:season:119799	sr:competitor:2979	sr:competitor:2971	2	2	closed	11	sr:venue:3293	2024-11-03 11:15:00
 sr:sport_event:50868003	sr:season:119799	sr:competitor:2955	sr:competitor:2964	2	0	closed	3	sr:venue:584	2024-09-17 18:00:00
 sr:sport_event:50868373	sr:season:119799	sr:competitor:2979	sr:competitor:2960	\N	\N	not_started	23	sr:venue:3293	2025-02-14 17:00:00
 sr:sport_event:50868127	sr:season:119799	sr:competitor:2977	sr:competitor:2953	3	4	closed	9	sr:venue:729	2024-10-20 12:30:00
-sr:sport_event:50852611	sr:season:118691	sr:competitor:2828	sr:competitor:2831	\N	\N	not_started	27	sr:venue:691	2025-03-09 18:00:00
 sr:sport_event:50868359	sr:season:119799	sr:competitor:2977	sr:competitor:2979	\N	\N	not_started	22	sr:venue:729	2025-02-07 17:00:00
 sr:sport_event:50868281	sr:season:119799	sr:competitor:2959	sr:competitor:2948	\N	\N	not_started	18	sr:venue:612	2025-01-12 13:30:00
-sr:sport_event:50868407	sr:season:119799	sr:competitor:2959	sr:competitor:2951	\N	\N	not_started	25	sr:venue:612	2025-03-07 17:00:00
 sr:sport_event:50868303	sr:season:119799	sr:competitor:2971	sr:competitor:2952	\N	\N	not_started	19	sr:venue:18994	2025-01-18 15:30:00
+sr:sport_event:50852565	sr:season:118691	sr:competitor:2818	sr:competitor:2819	\N	\N	not_started	25	sr:venue:2440	2025-02-23 19:00:00
+sr:sport_event:50852597	sr:season:118691	sr:competitor:2826	sr:competitor:2885	\N	\N	not_started	26	sr:venue:760	2025-03-02 18:00:00
+sr:sport_event:50852545	sr:season:118691	sr:competitor:2816	sr:competitor:2824	0	0	live	24	sr:venue:1045	2025-02-16 19:00:00
+sr:sport_event:50852695	sr:season:118691	sr:competitor:2824	sr:competitor:2826	\N	\N	not_started	31	sr:venue:581	2025-04-13 17:00:00
+sr:sport_event:50852703	sr:season:118691	sr:competitor:2818	sr:competitor:2828	\N	\N	not_started	32	sr:venue:2440	2025-04-20 17:00:00
+sr:sport_event:50852763	sr:season:118691	sr:competitor:2817	sr:competitor:2829	\N	\N	not_started	35	sr:venue:714	2025-05-11 17:00:00
+sr:sport_event:50852775	sr:season:118691	sr:competitor:2828	sr:competitor:2859	\N	\N	not_started	35	sr:venue:691	2025-05-11 17:00:00
+sr:sport_event:50852803	sr:season:118691	sr:competitor:2817	sr:competitor:2819	\N	\N	not_started	37	sr:venue:714	2025-05-18 17:00:00
+sr:sport_event:50852833	sr:season:118691	sr:competitor:24264	sr:competitor:2836	\N	\N	not_started	38	sr:venue:11380	2025-05-25 17:00:00
+sr:sport_event:50868395	sr:season:119799	sr:competitor:2977	sr:competitor:2971	\N	\N	not_started	24	sr:venue:729	2025-02-28 17:00:00
+sr:sport_event:50868419	sr:season:119799	sr:competitor:2961	sr:competitor:2948	\N	\N	not_started	25	sr:venue:826	2025-03-07 17:00:00
+sr:sport_event:50868409	sr:season:119799	sr:competitor:2957	sr:competitor:2977	\N	\N	not_started	25	sr:venue:2769	2025-03-07 17:00:00
+sr:sport_event:50868407	sr:season:119799	sr:competitor:2959	sr:competitor:2951	\N	\N	not_started	25	sr:venue:612	2025-03-07 17:00:00
 sr:sport_event:50868287	sr:season:119799	sr:competitor:2947	sr:competitor:2964	\N	\N	not_started	18	sr:venue:2081	2025-01-12 15:45:00
 sr:sport_event:50868219	sr:season:119799	sr:competitor:2962	sr:competitor:2953	\N	\N	not_started	14	sr:venue:689	2024-12-01 15:45:00
 sr:sport_event:50868347	sr:season:119799	sr:competitor:2961	sr:competitor:2950	\N	\N	not_started	21	sr:venue:826	2025-02-02 19:00:00
-sr:sport_event:50852797	sr:season:118691	sr:competitor:2833	sr:competitor:6577	\N	\N	not_started	36	sr:venue:730	2025-05-14 17:00:00
 sr:sport_event:50868367	sr:season:119799	sr:competitor:2953	sr:competitor:2977	\N	\N	not_started	23	sr:venue:577	2025-02-14 17:00:00
-sr:sport_event:50868319	sr:season:119799	sr:competitor:2959	sr:competitor:2990	\N	\N	not_started	20	sr:venue:612	2025-01-25 20:00:00
 sr:sport_event:50868337	sr:season:119799	sr:competitor:2947	sr:competitor:2977	\N	\N	not_started	21	sr:venue:2081	2025-01-31 19:00:00
 sr:sport_event:50868329	sr:season:119799	sr:competitor:2953	sr:competitor:2959	\N	\N	not_started	21	sr:venue:577	2025-02-02 13:30:00
 sr:sport_event:50868135	sr:season:119799	sr:competitor:2947	sr:competitor:2956	4	1	closed	10	sr:venue:2081	2024-10-26 18:00:00
 sr:sport_event:50868109	sr:season:119799	sr:competitor:2979	sr:competitor:2977	4	1	closed	8	sr:venue:3293	2024-10-06 10:15:00
-sr:sport_event:50852817	sr:season:118691	sr:competitor:6577	sr:competitor:2845	\N	\N	not_started	37	sr:venue:974	2025-05-18 17:00:00
 sr:sport_event:50867787	sr:season:119799	sr:competitor:2959	sr:competitor:2961	1	1	closed	1	sr:venue:612	2024-08-10 14:30:00
 sr:sport_event:50868075	sr:season:119799	sr:competitor:2957	sr:competitor:2952	1	3	closed	6	sr:venue:2769	2024-09-22 14:45:00
 sr:sport_event:50868179	sr:season:119799	sr:competitor:2955	sr:competitor:2953	2	2	closed	12	sr:venue:584	2024-11-10 13:30:00
-sr:sport_event:50868385	sr:season:119799	sr:competitor:2990	sr:competitor:2953	\N	\N	not_started	24	sr:venue:3261	2025-02-28 17:00:00
-sr:sport_event:50868413	sr:season:119799	sr:competitor:2947	sr:competitor:2960	\N	\N	not_started	25	sr:venue:2081	2025-03-07 17:00:00
-sr:sport_event:50868393	sr:season:119799	sr:competitor:2979	sr:competitor:2952	\N	\N	not_started	24	sr:venue:3293	2025-02-28 17:00:00
 sr:sport_event:50868375	sr:season:119799	sr:competitor:2962	sr:competitor:2990	\N	\N	not_started	23	sr:venue:689	2025-02-14 17:00:00
-sr:sport_event:50868421	sr:season:119799	sr:competitor:2953	sr:competitor:2950	\N	\N	not_started	26	sr:venue:577	2025-03-14 17:00:00
 sr:sport_event:50868323	sr:season:119799	sr:competitor:2977	sr:competitor:2948	\N	\N	not_started	20	sr:venue:729	2025-01-24 19:00:00
-sr:sport_event:50868397	sr:season:119799	sr:competitor:2956	sr:competitor:2957	\N	\N	not_started	24	sr:venue:685	2025-02-28 17:00:00
-sr:sport_event:50868425	sr:season:119799	sr:competitor:2951	sr:competitor:2957	\N	\N	not_started	26	sr:venue:35438	2025-03-14 17:00:00
 sr:sport_event:50868371	sr:season:119799	sr:competitor:2955	sr:competitor:2956	\N	\N	not_started	23	sr:venue:584	2025-02-14 17:00:00
 sr:sport_event:50868351	sr:season:119799	sr:competitor:2951	sr:competitor:2962	\N	\N	not_started	22	sr:venue:35438	2025-02-07 17:00:00
-sr:sport_event:50868427	sr:season:119799	sr:competitor:2955	sr:competitor:2959	\N	\N	not_started	26	sr:venue:584	2025-03-14 17:00:00
-sr:sport_event:50868415	sr:season:119799	sr:competitor:2971	sr:competitor:2953	\N	\N	not_started	25	sr:venue:18994	2025-03-07 17:00:00
 sr:sport_event:50868291	sr:season:119799	sr:competitor:2952	sr:competitor:2950	\N	\N	not_started	18	sr:venue:726	2025-01-11 20:00:00
-sr:sport_event:50868429	sr:season:119799	sr:competitor:2948	sr:competitor:2962	\N	\N	not_started	26	sr:venue:786	2025-03-14 17:00:00
 sr:sport_event:50868201	sr:season:119799	sr:competitor:2953	sr:competitor:2971	2	0	closed	13	sr:venue:577	2024-11-24 15:45:00
 sr:sport_event:50868171	sr:season:119799	sr:competitor:2971	sr:competitor:2957	3	1	closed	12	sr:venue:18994	2024-11-09 17:45:00
-sr:sport_event:50868389	sr:season:119799	sr:competitor:2948	sr:competitor:2947	\N	\N	not_started	24	sr:venue:786	2025-02-28 17:00:00
 sr:sport_event:50868225	sr:season:119799	sr:competitor:2951	sr:competitor:2971	\N	\N	not_started	15	sr:venue:35438	2024-12-08 11:15:00
 sr:sport_event:50868279	sr:season:119799	sr:competitor:2955	sr:competitor:2961	\N	\N	not_started	18	sr:venue:584	2025-01-12 11:15:00
 sr:sport_event:50868187	sr:season:119799	sr:competitor:2979	sr:competitor:2990	3	0	closed	13	sr:venue:3293	2024-11-23 15:30:00
-sr:sport_event:50868411	sr:season:119799	sr:competitor:2962	sr:competitor:2979	\N	\N	not_started	25	sr:venue:689	2025-03-07 17:00:00
 sr:sport_event:50868381	sr:season:119799	sr:competitor:2952	sr:competitor:2948	\N	\N	not_started	23	sr:venue:726	2025-02-14 17:00:00
-sr:sport_event:50868053	sr:season:119799	sr:competitor:2953	sr:competitor:2948	\N	\N	postponed	5	sr:venue:577	2024-09-15 12:30:00
 sr:sport_event:50868355	sr:season:119799	sr:competitor:2959	sr:competitor:2960	\N	\N	not_started	22	sr:venue:612	2025-02-07 17:00:00
-sr:sport_event:50868417	sr:season:119799	sr:competitor:2952	sr:competitor:2964	\N	\N	not_started	25	sr:venue:726	2025-03-07 17:00:00
 sr:sport_event:50868059	sr:season:119799	sr:competitor:2971	sr:competitor:2950	1	2	closed	6	sr:venue:18994	2024-09-20 18:00:00
 sr:sport_event:50868339	sr:season:119799	sr:competitor:2971	sr:competitor:2948	\N	\N	not_started	21	sr:venue:18994	2025-02-01 17:45:00
-sr:sport_event:50868405	sr:season:119799	sr:competitor:2955	sr:competitor:2990	\N	\N	not_started	25	sr:venue:584	2025-03-07 17:00:00
-sr:sport_event:50868387	sr:season:119799	sr:competitor:2951	sr:competitor:2955	\N	\N	not_started	24	sr:venue:35438	2025-02-28 17:00:00
 sr:sport_event:50868263	sr:season:119799	sr:competitor:2979	sr:competitor:2947	\N	\N	not_started	17	sr:venue:3293	2024-12-21 15:30:00
-sr:sport_event:50868401	sr:season:119799	sr:competitor:2964	sr:competitor:2950	\N	\N	not_started	24	sr:venue:569	2025-02-28 17:00:00
 sr:sport_event:50868067	sr:season:119799	sr:competitor:2962	sr:competitor:2977	1	2	closed	6	sr:venue:689	2024-09-21 19:00:00
 sr:sport_event:50868131	sr:season:119799	sr:competitor:2990	sr:competitor:2962	1	0	closed	10	sr:venue:3261	2024-10-25 18:00:00
-sr:sport_event:50868399	sr:season:119799	sr:competitor:2960	sr:competitor:2961	\N	\N	not_started	24	sr:venue:656	2025-02-28 17:00:00
 sr:sport_event:50868129	sr:season:119799	sr:competitor:2971	sr:competitor:2947	1	2	closed	9	sr:venue:18994	2024-10-20 14:45:00
 sr:sport_event:50868305	sr:season:119799	sr:competitor:2964	sr:competitor:2953	\N	\N	not_started	19	sr:venue:569	2025-01-19 13:30:00
-sr:sport_event:50852821	sr:season:118691	sr:competitor:2825	sr:competitor:2817	\N	\N	not_started	38	sr:venue:751	2025-05-25 17:00:00
-sr:sport_event:50852753	sr:season:118691	sr:competitor:2829	sr:competitor:2821	\N	\N	not_started	34	sr:venue:754	2025-05-04 17:00:00
-sr:sport_event:50852783	sr:season:118691	sr:competitor:2814	sr:competitor:2817	\N	\N	not_started	36	sr:venue:1307	2025-05-14 17:00:00
+sr:sport_event:50868053	sr:season:119799	sr:competitor:2953	sr:competitor:2948	\N	\N	postponed	5	sr:venue:577	2024-09-15 12:30:00
+sr:sport_event:50868401	sr:season:119799	sr:competitor:2964	sr:competitor:2950	\N	\N	not_started	24	sr:venue:569	2025-02-28 17:00:00
+sr:sport_event:50868397	sr:season:119799	sr:competitor:2956	sr:competitor:2957	\N	\N	not_started	24	sr:venue:685	2025-02-28 17:00:00
+sr:sport_event:50868405	sr:season:119799	sr:competitor:2955	sr:competitor:2990	\N	\N	not_started	25	sr:venue:584	2025-03-07 17:00:00
+sr:sport_event:50868393	sr:season:119799	sr:competitor:2979	sr:competitor:2952	\N	\N	not_started	24	sr:venue:3293	2025-02-28 17:00:00
+sr:sport_event:50868411	sr:season:119799	sr:competitor:2962	sr:competitor:2979	\N	\N	not_started	25	sr:venue:689	2025-03-07 17:00:00
 sr:sport_event:50868119	sr:season:119799	sr:competitor:2956	sr:competitor:2955	2	2	closed	9	sr:venue:685	2024-10-19 18:00:00
-sr:sport_event:50868035	sr:season:119799	sr:competitor:2959	sr:competitor:2953	\N	\N	postponed	4	sr:venue:612	2024-09-01 12:30:00
 sr:sport_event:50868335	sr:season:119799	sr:competitor:2962	sr:competitor:2952	\N	\N	not_started	21	sr:venue:689	2025-02-01 20:00:00
 sr:sport_event:50868331	sr:season:119799	sr:competitor:2990	sr:competitor:2956	\N	\N	not_started	21	sr:venue:3261	2025-02-02 11:15:00
 sr:sport_event:50868257	sr:season:119799	sr:competitor:2990	sr:competitor:2964	\N	\N	not_started	17	sr:venue:3261	2024-12-21 17:45:00
-sr:sport_event:50868423	sr:season:119799	sr:competitor:2990	sr:competitor:2947	\N	\N	not_started	26	sr:venue:3261	2025-03-14 17:00:00
-sr:sport_event:50850653	sr:season:118689	sr:competitor:3	sr:competitor:31	\N	\N	not_started	34	sr:venue:1272	2025-04-26 14:00:00
 sr:sport_event:50850151	sr:season:118689	sr:competitor:32	sr:competitor:31	1	1	closed	10	sr:venue:2188	2024-11-02 15:00:00
 sr:sport_event:46657137	sr:season:114317	sr:competitor:3210	sr:competitor:3218	1	2	closed	21	sr:venue:2388	2024-11-07 21:45:00
-sr:sport_event:50850691	sr:season:118689	sr:competitor:33	sr:competitor:7	\N	\N	not_started	36	sr:venue:28762	2025-05-10 14:00:00
-sr:sport_event:50850617	sr:season:118689	sr:competitor:50	sr:competitor:30	\N	\N	not_started	33	sr:venue:53349	2025-04-19 14:00:00
 sr:sport_event:50850223	sr:season:118689	sr:competitor:37	sr:competitor:42	\N	\N	not_started	13	sr:venue:18379	2024-11-30 17:30:00
 sr:sport_event:46657139	sr:season:114317	sr:competitor:36837	sr:competitor:191648	0	0	closed	21	sr:venue:12712	2024-11-08 00:00:00
 sr:sport_event:50850385	sr:season:118689	sr:competitor:35	sr:competitor:45	\N	\N	not_started	21	sr:venue:9	2025-01-16 20:00:00
-sr:sport_event:50850629	sr:season:118689	sr:competitor:35	sr:competitor:3	\N	\N	not_started	33	sr:venue:9	2025-04-19 14:00:00
 sr:sport_event:50852269	sr:season:118691	sr:competitor:2826	sr:competitor:2818	1	0	closed	10	sr:venue:760	2024-10-20 12:00:00
 sr:sport_event:50850245	sr:season:118689	sr:competitor:45	sr:competitor:38	\N	\N	not_started	14	sr:venue:2231	2024-12-04 19:30:00
 sr:sport_event:50850455	sr:season:118689	sr:competitor:31	sr:competitor:42	\N	\N	not_started	25	sr:venue:2183	2025-02-15 15:00:00
-sr:sport_event:50850715	sr:season:118689	sr:competitor:60	sr:competitor:31	\N	\N	not_started	38	sr:venue:2990	2025-05-25 15:00:00
 sr:sport_event:50850313	sr:season:118689	sr:competitor:38	sr:competitor:43	\N	\N	not_started	18	sr:venue:799	2024-12-26 15:00:00
 sr:sport_event:50850247	sr:season:118689	sr:competitor:40	sr:competitor:45	\N	\N	not_started	15	sr:venue:815	2024-12-07 15:00:00
-sr:sport_event:50850495	sr:season:118689	sr:competitor:50	sr:competitor:48	\N	\N	not_started	27	sr:venue:53349	2025-02-25 19:45:00
-sr:sport_event:50850561	sr:season:118689	sr:competitor:14	sr:competitor:35	\N	\N	not_started	30	sr:venue:2230	2025-04-01 14:00:00
 sr:sport_event:46656999	sr:season:114317	sr:competitor:3211	sr:competitor:3210	0	1	closed	16	sr:venue:1009	2024-09-29 21:15:00
-sr:sport_event:50850529	sr:season:118689	sr:competitor:33	sr:competitor:60	\N	\N	not_started	28	sr:venue:28762	2025-03-08 15:00:00
 sr:sport_event:50852165	sr:season:118691	sr:competitor:2821	sr:competitor:2831	3	1	closed	5	sr:venue:697	2024-09-15 12:00:00
 sr:sport_event:50852139	sr:season:118691	sr:competitor:2836	sr:competitor:2814	0	0	closed	3	sr:venue:21414	2024-08-28 19:30:00
 sr:sport_event:50852303	sr:season:118691	sr:competitor:2836	sr:competitor:6577	2	0	closed	12	sr:venue:21414	2024-11-03 13:00:00
-sr:sport_event:50852617	sr:season:118691	sr:competitor:2859	sr:competitor:2836	\N	\N	not_started	27	sr:venue:608	2025-03-09 18:00:00
 sr:sport_event:50852371	sr:season:118691	sr:competitor:2831	sr:competitor:2836	\N	\N	not_started	15	sr:venue:880	2024-11-30 20:00:00
 sr:sport_event:50852379	sr:season:118691	sr:competitor:2833	sr:competitor:2820	\N	\N	not_started	15	sr:venue:730	2024-12-02 20:00:00
 sr:sport_event:50850047	sr:season:118689	sr:competitor:40	sr:competitor:3	3	1	closed	5	sr:venue:815	2024-09-21 14:00:00
-sr:sport_event:50868445	sr:season:119799	sr:competitor:2977	sr:competitor:2955	\N	\N	not_started	27	sr:venue:729	2025-03-29 17:00:00
-sr:sport_event:50852721	sr:season:118691	sr:competitor:2825	sr:competitor:6577	\N	\N	not_started	33	sr:venue:751	2025-04-23 17:00:00
 sr:sport_event:46657255	sr:season:114317	sr:competitor:4937	sr:competitor:191648	\N	\N	not_started	25	sr:venue:12033	2024-12-01 00:45:00
-sr:sport_event:50852581	sr:season:118691	sr:competitor:2817	sr:competitor:2824	\N	\N	not_started	26	sr:venue:714	2025-03-02 18:00:00
 sr:sport_event:50852541	sr:season:118691	sr:competitor:2836	sr:competitor:2821	\N	\N	not_started	24	sr:venue:21414	2025-02-16 19:00:00
 sr:sport_event:50852441	sr:season:118691	sr:competitor:2825	sr:competitor:2829	\N	\N	not_started	19	sr:venue:751	2024-12-04 20:00:00
 sr:sport_event:50852523	sr:season:118691	sr:competitor:2826	sr:competitor:2820	\N	\N	not_started	23	sr:venue:760	2025-02-09 19:00:00
-sr:sport_event:50852631	sr:season:118691	sr:competitor:2831	sr:competitor:2821	\N	\N	not_started	28	sr:venue:880	2025-03-16 18:00:00
 sr:sport_event:50850351	sr:season:118689	sr:competitor:30	sr:competitor:42	\N	\N	not_started	20	sr:venue:2443	2025-01-04 17:30:00
 sr:sport_event:50850421	sr:season:118689	sr:competitor:45	sr:competitor:39	\N	\N	not_started	23	sr:venue:2231	2025-01-25 15:00:00
 sr:sport_event:46657231	sr:season:114317	sr:competitor:3204	sr:competitor:3210	2	3	closed	24	sr:venue:4754	2024-11-27 00:15:00
@@ -2977,8 +2782,19 @@ sr:sport_event:46657309	sr:season:114317	sr:competitor:3219	sr:competitor:42338	
 sr:sport_event:50852221	sr:season:118691	sr:competitor:2825	sr:competitor:2833	1	1	closed	8	sr:venue:751	2024-09-29 14:15:00
 sr:sport_event:50852297	sr:season:118691	sr:competitor:2831	sr:competitor:2819	1	2	closed	11	sr:venue:880	2024-10-26 12:00:00
 sr:sport_event:50852463	sr:season:118691	sr:competitor:2820	sr:competitor:2818	\N	\N	not_started	20	sr:venue:739	2025-01-19 19:00:00
-sr:sport_event:50852713	sr:season:118691	sr:competitor:2831	sr:competitor:2820	\N	\N	not_started	32	sr:venue:880	2025-04-20 17:00:00
 sr:sport_event:50852097	sr:season:118691	sr:competitor:2820	sr:competitor:2845	1	1	closed	1	sr:venue:739	2024-08-17 17:00:00
+sr:sport_event:50850653	sr:season:118689	sr:competitor:3	sr:competitor:31	\N	\N	not_started	34	sr:venue:1272	2025-04-26 14:00:00
+sr:sport_event:50850691	sr:season:118689	sr:competitor:33	sr:competitor:7	\N	\N	not_started	36	sr:venue:28762	2025-05-10 14:00:00
+sr:sport_event:50850715	sr:season:118689	sr:competitor:60	sr:competitor:31	\N	\N	not_started	38	sr:venue:2990	2025-05-25 15:00:00
+sr:sport_event:50852581	sr:season:118691	sr:competitor:2817	sr:competitor:2824	\N	\N	not_started	26	sr:venue:714	2025-03-02 18:00:00
+sr:sport_event:50852631	sr:season:118691	sr:competitor:2831	sr:competitor:2821	\N	\N	not_started	28	sr:venue:880	2025-03-16 18:00:00
+sr:sport_event:50852617	sr:season:118691	sr:competitor:2859	sr:competitor:2836	\N	\N	not_started	27	sr:venue:608	2025-03-09 18:00:00
+sr:sport_event:50852713	sr:season:118691	sr:competitor:2831	sr:competitor:2820	\N	\N	not_started	32	sr:venue:880	2025-04-20 17:00:00
+sr:sport_event:50852721	sr:season:118691	sr:competitor:2825	sr:competitor:6577	\N	\N	not_started	33	sr:venue:751	2025-04-23 17:00:00
+sr:sport_event:50852783	sr:season:118691	sr:competitor:2814	sr:competitor:2817	\N	\N	not_started	36	sr:venue:1307	2025-05-14 17:00:00
+sr:sport_event:50868423	sr:season:119799	sr:competitor:2990	sr:competitor:2947	\N	\N	not_started	26	sr:venue:3261	2025-03-14 17:00:00
+sr:sport_event:50868035	sr:season:119799	sr:competitor:2959	sr:competitor:2953	\N	\N	postponed	4	sr:venue:612	2024-09-01 12:30:00
+sr:sport_event:50868445	sr:season:119799	sr:competitor:2977	sr:competitor:2955	\N	\N	not_started	27	sr:venue:729	2025-03-29 17:00:00
 sr:sport_event:50852195	sr:season:118691	sr:competitor:2831	sr:competitor:2824	0	0	closed	6	sr:venue:880	2024-09-21 12:00:00
 sr:sport_event:50852397	sr:season:118691	sr:competitor:2820	sr:competitor:2885	\N	\N	not_started	16	sr:venue:739	2024-12-08 17:30:00
 sr:sport_event:51269005	sr:season:118693	sr:competitor:2673	sr:competitor:2542	4	2	closed	5	sr:venue:759	2024-09-27 18:30:00
@@ -2988,111 +2804,94 @@ sr:sport_event:51269057	sr:season:118693	sr:competitor:2547	sr:competitor:2673	2
 sr:sport_event:51268949	sr:season:118693	sr:competitor:2556	sr:competitor:2534	1	2	closed	3	sr:venue:2406	2024-09-15 15:30:00
 sr:sport_event:51269289	sr:season:118693	sr:competitor:2538	sr:competitor:2573	\N	\N	not_started	16	sr:venue:61056	2025-01-11 14:30:00
 sr:sport_event:51268853	sr:season:118693	sr:competitor:36360	sr:competitor:2542	1	0	closed	1	sr:venue:850	2024-08-24 13:30:00
-sr:sport_event:50955927	sr:season:119835	sr:competitor:1662	sr:competitor:1641	\N	\N	not_started	33	sr:venue:46514	2025-05-11 17:00:00
-sr:sport_event:50955797	sr:season:119835	sr:competitor:1661	sr:competitor:1646	\N	\N	not_started	26	sr:venue:13184	2025-03-16 17:00:00
-sr:sport_event:50955889	sr:season:119835	sr:competitor:1647	sr:competitor:1681	\N	\N	not_started	31	sr:venue:953	2025-04-27 17:00:00
 sr:sport_event:50955523	sr:season:119835	sr:competitor:1649	sr:competitor:1678	1	0	closed	11	sr:venue:17406	2024-11-10 19:45:00
-sr:sport_event:50852769	sr:season:118691	sr:competitor:24264	sr:competitor:2819	\N	\N	not_started	35	sr:venue:11380	2025-05-11 17:00:00
 sr:sport_event:50955611	sr:season:119835	sr:competitor:1653	sr:competitor:1644	\N	\N	not_started	16	sr:venue:831	2024-12-18 20:00:00
 sr:sport_event:50955675	sr:season:119835	sr:competitor:1681	sr:competitor:1642	\N	\N	not_started	19	sr:venue:848	2025-01-26 16:00:00
-sr:sport_event:50868537	sr:season:119799	sr:competitor:2959	sr:competitor:2952	\N	\N	not_started	32	sr:venue:612	2025-05-09 16:00:00
 sr:sport_event:50955395	sr:season:119835	sr:competitor:1646	sr:competitor:1653	0	3	closed	4	sr:venue:767	2024-09-14 17:00:00
 sr:sport_event:51268909	sr:season:118693	sr:competitor:2534	sr:competitor:2673	0	0	closed	2	sr:venue:821	2024-08-31 13:30:00
-sr:sport_event:50868455	sr:season:119799	sr:competitor:2961	sr:competitor:2990	\N	\N	not_started	27	sr:venue:826	2025-03-29 17:00:00
-sr:sport_event:50868579	sr:season:119799	sr:competitor:2964	sr:competitor:2959	\N	\N	not_started	34	sr:venue:569	2025-05-18 12:30:00
 sr:sport_event:51269173	sr:season:118693	sr:competitor:2677	sr:competitor:2674	2	3	closed	10	sr:venue:648	2024-11-10 16:30:00
-sr:sport_event:50868433	sr:season:119799	sr:competitor:2956	sr:competitor:2952	\N	\N	not_started	26	sr:venue:685	2025-03-14 17:00:00
-sr:sport_event:50868483	sr:season:119799	sr:competitor:2947	sr:competitor:2979	\N	\N	not_started	29	sr:venue:2081	2025-04-11 16:00:00
 sr:sport_event:50955485	sr:season:119835	sr:competitor:1661	sr:competitor:1653	2	1	closed	9	sr:venue:13184	2024-10-27 16:00:00
 sr:sport_event:50955405	sr:season:119835	sr:competitor:1659	sr:competitor:1684	1	1	closed	4	sr:venue:847	2024-09-15 15:00:00
 sr:sport_event:51269197	sr:season:118693	sr:competitor:2673	sr:competitor:2538	4	0	closed	11	sr:venue:759	2024-11-23 14:30:00
-sr:sport_event:51269511	sr:season:118693	sr:competitor:2542	sr:competitor:2677	\N	\N	not_started	28	sr:venue:738	2025-04-05 13:30:00
 sr:sport_event:50955503	sr:season:119835	sr:competitor:1646	sr:competitor:1658	4	0	closed	10	sr:venue:767	2024-11-03 16:00:00
 sr:sport_event:50955709	sr:season:119835	sr:competitor:1659	sr:competitor:1642	\N	\N	not_started	21	sr:venue:847	2025-02-09 16:00:00
 sr:sport_event:51269381	sr:season:118693	sr:competitor:2524	sr:competitor:2681	\N	\N	not_started	21	sr:venue:816	2025-02-08 14:30:00
 sr:sport_event:51269337	sr:season:118693	sr:competitor:2673	sr:competitor:2534	\N	\N	not_started	19	sr:venue:759	2025-01-25 14:30:00
-sr:sport_event:51269437	sr:season:118693	sr:competitor:2547	sr:competitor:2573	\N	\N	not_started	24	sr:venue:578	2025-03-01 14:30:00
 sr:sport_event:50955661	sr:season:119835	sr:competitor:1684	sr:competitor:1646	\N	\N	not_started	18	sr:venue:19889	2025-01-19 16:00:00
-sr:sport_event:51269559	sr:season:118693	sr:competitor:2569	sr:competitor:2673	\N	\N	not_started	31	sr:venue:1089	2025-04-26 13:30:00
 sr:sport_event:50955583	sr:season:119835	sr:competitor:1643	sr:competitor:1715	\N	\N	not_started	14	sr:venue:837	2024-12-06 18:00:00
-sr:sport_event:51269447	sr:season:118693	sr:competitor:2673	sr:competitor:2600	\N	\N	not_started	25	sr:venue:759	2025-03-08 14:30:00
 sr:sport_event:50868357	sr:season:119799	sr:competitor:2957	sr:competitor:2953	\N	\N	not_started	22	sr:venue:2769	2025-02-07 17:00:00
 sr:sport_event:50955739	sr:season:119835	sr:competitor:1653	sr:competitor:1647	\N	\N	not_started	22	sr:venue:831	2025-02-16 16:00:00
-sr:sport_event:51269427	sr:season:118693	sr:competitor:36360	sr:competitor:2556	\N	\N	not_started	24	sr:venue:850	2025-03-01 14:30:00
-sr:sport_event:51269569	sr:season:118693	sr:competitor:36360	sr:competitor:2672	\N	\N	not_started	32	sr:venue:850	2025-05-03 13:30:00
-sr:sport_event:50868535	sr:season:119799	sr:competitor:2955	sr:competitor:2948	\N	\N	not_started	32	sr:venue:584	2025-05-09 16:00:00
-sr:sport_event:50868497	sr:season:119799	sr:competitor:2950	sr:competitor:2947	\N	\N	not_started	30	sr:venue:615	2025-04-23 16:00:00
 sr:sport_event:51269113	sr:season:118693	sr:competitor:5885	sr:competitor:2569	0	0	closed	8	sr:venue:34054	2024-10-27 18:30:00
-sr:sport_event:50868541	sr:season:119799	sr:competitor:2971	sr:competitor:2979	\N	\N	not_started	32	sr:venue:18994	2025-05-09 16:00:00
 sr:sport_event:51269101	sr:season:118693	sr:competitor:2573	sr:competitor:2547	0	2	closed	7	sr:venue:659	2024-10-20 13:30:00
-sr:sport_event:50955831	sr:season:119835	sr:competitor:1641	sr:competitor:1681	\N	\N	not_started	28	sr:venue:839	2025-04-06 17:00:00
 sr:sport_event:51269207	sr:season:118693	sr:competitor:2573	sr:competitor:2556	0	3	closed	11	sr:venue:659	2024-11-24 14:30:00
 sr:sport_event:51268897	sr:season:118693	sr:competitor:2672	sr:competitor:2538	2	0	closed	2	sr:venue:574	2024-09-01 15:30:00
 sr:sport_event:51269095	sr:season:118693	sr:competitor:2556	sr:competitor:36360	0	2	closed	7	sr:venue:2406	2024-10-19 13:30:00
 sr:sport_event:51269201	sr:season:118693	sr:competitor:2569	sr:competitor:36360	4	3	closed	11	sr:venue:1089	2024-11-23 14:30:00
 sr:sport_event:51269361	sr:season:118693	sr:competitor:5885	sr:competitor:2673	\N	\N	not_started	20	sr:venue:34054	2025-02-01 14:30:00
+sr:sport_event:51269437	sr:season:118693	sr:competitor:2547	sr:competitor:2573	\N	\N	not_started	24	sr:venue:578	2025-03-01 14:30:00
+sr:sport_event:51269511	sr:season:118693	sr:competitor:2542	sr:competitor:2677	\N	\N	not_started	28	sr:venue:738	2025-04-05 13:30:00
+sr:sport_event:51269559	sr:season:118693	sr:competitor:2569	sr:competitor:2673	\N	\N	not_started	31	sr:venue:1089	2025-04-26 13:30:00
+sr:sport_event:51269569	sr:season:118693	sr:competitor:36360	sr:competitor:2672	\N	\N	not_started	32	sr:venue:850	2025-05-03 13:30:00
+sr:sport_event:50868455	sr:season:119799	sr:competitor:2961	sr:competitor:2990	\N	\N	not_started	27	sr:venue:826	2025-03-29 17:00:00
+sr:sport_event:50868433	sr:season:119799	sr:competitor:2956	sr:competitor:2952	\N	\N	not_started	26	sr:venue:685	2025-03-14 17:00:00
+sr:sport_event:50868483	sr:season:119799	sr:competitor:2947	sr:competitor:2979	\N	\N	not_started	29	sr:venue:2081	2025-04-11 16:00:00
+sr:sport_event:50868541	sr:season:119799	sr:competitor:2971	sr:competitor:2979	\N	\N	not_started	32	sr:venue:18994	2025-05-09 16:00:00
+sr:sport_event:50868537	sr:season:119799	sr:competitor:2959	sr:competitor:2952	\N	\N	not_started	32	sr:venue:612	2025-05-09 16:00:00
+sr:sport_event:50868535	sr:season:119799	sr:competitor:2955	sr:competitor:2948	\N	\N	not_started	32	sr:venue:584	2025-05-09 16:00:00
+sr:sport_event:50868579	sr:season:119799	sr:competitor:2964	sr:competitor:2959	\N	\N	not_started	34	sr:venue:569	2025-05-18 12:30:00
+sr:sport_event:50955797	sr:season:119835	sr:competitor:1661	sr:competitor:1646	\N	\N	not_started	26	sr:venue:13184	2025-03-16 17:00:00
+sr:sport_event:50955831	sr:season:119835	sr:competitor:1641	sr:competitor:1681	\N	\N	not_started	28	sr:venue:839	2025-04-06 17:00:00
+sr:sport_event:50955889	sr:season:119835	sr:competitor:1647	sr:competitor:1681	\N	\N	not_started	31	sr:venue:953	2025-04-27 17:00:00
+sr:sport_event:50955927	sr:season:119835	sr:competitor:1662	sr:competitor:1641	\N	\N	not_started	33	sr:venue:46514	2025-05-11 17:00:00
 sr:sport_event:51269275	sr:season:118693	sr:competitor:2524	sr:competitor:2673	\N	\N	not_started	15	sr:venue:816	2024-12-22 16:30:00
 sr:sport_event:51269209	sr:season:118693	sr:competitor:36360	sr:competitor:2524	\N	\N	not_started	12	sr:venue:850	2024-11-30 14:30:00
-sr:sport_event:51269485	sr:season:118693	sr:competitor:2674	sr:competitor:2677	\N	\N	not_started	27	sr:venue:67707	2025-03-29 14:30:00
 sr:sport_event:50955603	sr:season:119835	sr:competitor:1642	sr:competitor:1661	\N	\N	not_started	15	sr:venue:1275	2024-12-15 14:00:00
-sr:sport_event:50868555	sr:season:119799	sr:competitor:2959	sr:competitor:2956	\N	\N	not_started	33	sr:venue:612	2025-05-14 18:00:00
-sr:sport_event:50955835	sr:season:119835	sr:competitor:1715	sr:competitor:1653	\N	\N	not_started	28	sr:venue:1858	2025-04-06 17:00:00
 sr:sport_event:50955539	sr:season:119835	sr:competitor:1644	sr:competitor:1681	3	0	closed	12	sr:venue:843	2024-11-22 20:00:00
 sr:sport_event:50955545	sr:season:119835	sr:competitor:1678	sr:competitor:1642	1	0	closed	12	sr:venue:845	2024-11-23 18:00:00
-sr:sport_event:50955743	sr:season:119835	sr:competitor:1662	sr:competitor:1681	\N	\N	not_started	23	sr:venue:46514	2025-02-23 16:00:00
-sr:sport_event:50868441	sr:season:119799	sr:competitor:2959	sr:competitor:2979	\N	\N	not_started	27	sr:venue:612	2025-03-29 17:00:00
 sr:sport_event:50955715	sr:season:119835	sr:competitor:1644	sr:competitor:1653	\N	\N	not_started	21	sr:venue:843	2025-02-09 16:00:00
 sr:sport_event:51269639	sr:season:118693	sr:competitor:2527	sr:competitor:2681	2	3	closed	1	sr:venue:788	2024-08-23 18:30:00
-sr:sport_event:50868471	sr:season:119799	sr:competitor:2964	sr:competitor:2961	\N	\N	not_started	28	sr:venue:569	2025-04-04 16:00:00
-sr:sport_event:50955905	sr:season:119835	sr:competitor:1643	sr:competitor:1641	\N	\N	not_started	32	sr:venue:837	2025-05-04 17:00:00
 sr:sport_event:50955377	sr:season:119835	sr:competitor:1643	sr:competitor:1644	1	3	closed	3	sr:venue:837	2024-09-01 18:45:00
 sr:sport_event:50955443	sr:season:119835	sr:competitor:1681	sr:competitor:1649	1	2	closed	6	sr:venue:848	2024-09-29 13:00:00
-sr:sport_event:50955859	sr:season:119835	sr:competitor:1678	sr:competitor:1715	\N	\N	not_started	29	sr:venue:845	2025-04-13 17:00:00
 sr:sport_event:50955651	sr:season:119835	sr:competitor:1643	sr:competitor:1661	\N	\N	not_started	18	sr:venue:837	2025-01-19 16:00:00
 sr:sport_event:50955633	sr:season:119835	sr:competitor:1646	sr:competitor:1643	\N	\N	not_started	17	sr:venue:767	2025-01-12 16:00:00
-sr:sport_event:50955747	sr:season:119835	sr:competitor:1659	sr:competitor:1715	\N	\N	not_started	23	sr:venue:847	2025-02-23 16:00:00
 sr:sport_event:51269391	sr:season:118693	sr:competitor:2677	sr:competitor:2524	\N	\N	not_started	22	sr:venue:648	2025-02-15 14:30:00
-sr:sport_event:51269545	sr:season:118693	sr:competitor:2556	sr:competitor:2524	\N	\N	not_started	30	sr:venue:2406	2025-04-19 13:30:00
 sr:sport_event:51269319	sr:season:118693	sr:competitor:2677	sr:competitor:2538	\N	\N	not_started	18	sr:venue:648	2025-01-18 14:30:00
-sr:sport_event:51269455	sr:season:118693	sr:competitor:2524	sr:competitor:2526	\N	\N	not_started	25	sr:venue:816	2025-03-08 14:30:00
 sr:sport_event:51269377	sr:season:118693	sr:competitor:2569	sr:competitor:2547	\N	\N	not_started	21	sr:venue:1089	2025-02-08 14:30:00
 sr:sport_event:51269297	sr:season:118693	sr:competitor:2526	sr:competitor:2674	\N	\N	not_started	16	sr:venue:791	2025-01-11 14:30:00
-sr:sport_event:51269457	sr:season:118693	sr:competitor:2527	sr:competitor:2556	\N	\N	not_started	25	sr:venue:788	2025-03-08 14:30:00
-sr:sport_event:50868435	sr:season:119799	sr:competitor:2964	sr:competitor:2977	\N	\N	not_started	26	sr:venue:569	2025-03-14 17:00:00
 sr:sport_event:51269371	sr:season:118693	sr:competitor:2672	sr:competitor:2534	\N	\N	not_started	21	sr:venue:574	2025-02-08 14:30:00
 sr:sport_event:51268979	sr:season:118693	sr:competitor:2600	sr:competitor:2556	2	3	closed	4	sr:venue:1655	2024-09-20 18:30:00
-sr:sport_event:50955923	sr:season:119835	sr:competitor:1646	sr:competitor:1647	\N	\N	not_started	33	sr:venue:767	2025-05-11 17:00:00
-sr:sport_event:51269611	sr:season:118693	sr:competitor:5885	sr:competitor:2534	\N	\N	not_started	34	sr:venue:34054	2025-05-17 13:30:00
-sr:sport_event:50868499	sr:season:119799	sr:competitor:2951	sr:competitor:2977	\N	\N	not_started	30	sr:venue:35438	2025-04-23 16:00:00
-sr:sport_event:51269535	sr:season:118693	sr:competitor:2673	sr:competitor:2527	\N	\N	not_started	30	sr:venue:759	2025-04-19 13:30:00
-sr:sport_event:51269463	sr:season:118693	sr:competitor:36360	sr:competitor:2673	\N	\N	not_started	26	sr:venue:850	2025-03-15 14:30:00
-sr:sport_event:51269543	sr:season:118693	sr:competitor:2600	sr:competitor:2674	\N	\N	not_started	30	sr:venue:1655	2025-04-19 13:30:00
-sr:sport_event:51269563	sr:season:118693	sr:competitor:2524	sr:competitor:2538	\N	\N	not_started	31	sr:venue:816	2025-04-26 13:30:00
-sr:sport_event:51269475	sr:season:118693	sr:competitor:2542	sr:competitor:2674	\N	\N	not_started	26	sr:venue:738	2025-03-15 14:30:00
-sr:sport_event:51269473	sr:season:118693	sr:competitor:2547	sr:competitor:2672	\N	\N	not_started	26	sr:venue:578	2025-03-15 14:30:00
-sr:sport_event:50955865	sr:season:119835	sr:competitor:1653	sr:competitor:1641	\N	\N	not_started	29	sr:venue:831	2025-04-13 17:00:00
 sr:sport_event:50955617	sr:season:119835	sr:competitor:1678	sr:competitor:1682	\N	\N	not_started	16	sr:venue:845	2025-01-05 16:00:00
 sr:sport_event:51268983	sr:season:118693	sr:competitor:2547	sr:competitor:2569	2	1	closed	4	sr:venue:578	2024-09-21 13:30:00
 sr:sport_event:51269233	sr:season:118693	sr:competitor:2674	sr:competitor:2600	\N	\N	not_started	13	sr:venue:67707	2024-12-07 14:30:00
 sr:sport_event:51268941	sr:season:118693	sr:competitor:2600	sr:competitor:2526	3	1	closed	3	sr:venue:1655	2024-09-15 13:30:00
 sr:sport_event:51269353	sr:season:118693	sr:competitor:2681	sr:competitor:2569	\N	\N	not_started	20	sr:venue:593	2025-02-01 14:30:00
-sr:sport_event:51269459	sr:season:118693	sr:competitor:2573	sr:competitor:2677	\N	\N	not_started	25	sr:venue:659	2025-03-08 14:30:00
 sr:sport_event:51269145	sr:season:118693	sr:competitor:2672	sr:competitor:2547	3	0	closed	9	sr:venue:574	2024-11-02 14:30:00
-sr:sport_event:51269489	sr:season:118693	sr:competitor:2538	sr:competitor:2547	\N	\N	not_started	27	sr:venue:61056	2025-03-29 14:30:00
 sr:sport_event:51269137	sr:season:118693	sr:competitor:2526	sr:competitor:2524	0	0	closed	8	sr:venue:791	2024-10-26 13:30:00
 sr:sport_event:50955597	sr:season:119835	sr:competitor:1682	sr:competitor:1653	\N	\N	not_started	15	sr:venue:1871	2024-12-14 20:00:00
 sr:sport_event:50955469	sr:season:119835	sr:competitor:1681	sr:competitor:1684	1	1	closed	8	sr:venue:848	2024-10-20 15:00:00
+sr:sport_event:51269489	sr:season:118693	sr:competitor:2538	sr:competitor:2547	\N	\N	not_started	27	sr:venue:61056	2025-03-29 14:30:00
+sr:sport_event:51269485	sr:season:118693	sr:competitor:2674	sr:competitor:2677	\N	\N	not_started	27	sr:venue:67707	2025-03-29 14:30:00
+sr:sport_event:51269535	sr:season:118693	sr:competitor:2673	sr:competitor:2527	\N	\N	not_started	30	sr:venue:759	2025-04-19 13:30:00
+sr:sport_event:51269543	sr:season:118693	sr:competitor:2600	sr:competitor:2674	\N	\N	not_started	30	sr:venue:1655	2025-04-19 13:30:00
+sr:sport_event:51269545	sr:season:118693	sr:competitor:2556	sr:competitor:2524	\N	\N	not_started	30	sr:venue:2406	2025-04-19 13:30:00
+sr:sport_event:51269563	sr:season:118693	sr:competitor:2524	sr:competitor:2538	\N	\N	not_started	31	sr:venue:816	2025-04-26 13:30:00
+sr:sport_event:51269611	sr:season:118693	sr:competitor:5885	sr:competitor:2534	\N	\N	not_started	34	sr:venue:34054	2025-05-17 13:30:00
+sr:sport_event:50868435	sr:season:119799	sr:competitor:2964	sr:competitor:2977	\N	\N	not_started	26	sr:venue:569	2025-03-14 17:00:00
+sr:sport_event:50868499	sr:season:119799	sr:competitor:2951	sr:competitor:2977	\N	\N	not_started	30	sr:venue:35438	2025-04-23 16:00:00
+sr:sport_event:50868441	sr:season:119799	sr:competitor:2959	sr:competitor:2979	\N	\N	not_started	27	sr:venue:612	2025-03-29 17:00:00
+sr:sport_event:50868471	sr:season:119799	sr:competitor:2964	sr:competitor:2961	\N	\N	not_started	28	sr:venue:569	2025-04-04 16:00:00
 sr:sport_event:50868507	sr:season:119799	sr:competitor:2956	sr:competitor:2948	\N	\N	not_started	30	sr:venue:685	2025-04-23 16:00:00
-sr:sport_event:50868551	sr:season:119799	sr:competitor:2955	sr:competitor:2950	\N	\N	not_started	33	sr:venue:584	2025-05-14 18:00:00
-sr:sport_event:50955949	sr:season:119835	sr:competitor:1678	sr:competitor:1681	\N	\N	not_started	34	sr:venue:845	2025-05-18 17:00:00
+sr:sport_event:50868555	sr:season:119799	sr:competitor:2959	sr:competitor:2956	\N	\N	not_started	33	sr:venue:612	2025-05-14 18:00:00
+sr:sport_event:50955743	sr:season:119835	sr:competitor:1662	sr:competitor:1681	\N	\N	not_started	23	sr:venue:46514	2025-02-23 16:00:00
+sr:sport_event:50955747	sr:season:119835	sr:competitor:1659	sr:competitor:1715	\N	\N	not_started	23	sr:venue:847	2025-02-23 16:00:00
+sr:sport_event:50955835	sr:season:119835	sr:competitor:1715	sr:competitor:1653	\N	\N	not_started	28	sr:venue:1858	2025-04-06 17:00:00
+sr:sport_event:50955859	sr:season:119835	sr:competitor:1678	sr:competitor:1715	\N	\N	not_started	29	sr:venue:845	2025-04-13 17:00:00
+sr:sport_event:50955865	sr:season:119835	sr:competitor:1653	sr:competitor:1641	\N	\N	not_started	29	sr:venue:831	2025-04-13 17:00:00
+sr:sport_event:50955905	sr:season:119835	sr:competitor:1643	sr:competitor:1641	\N	\N	not_started	32	sr:venue:837	2025-05-04 17:00:00
+sr:sport_event:50955923	sr:season:119835	sr:competitor:1646	sr:competitor:1647	\N	\N	not_started	33	sr:venue:767	2025-05-11 17:00:00
 sr:sport_event:50955383	sr:season:119835	sr:competitor:1642	sr:competitor:1647	1	3	closed	3	sr:venue:1275	2024-08-31 17:00:00
 sr:sport_event:50955433	sr:season:119835	sr:competitor:1644	sr:competitor:1658	3	1	closed	6	sr:venue:843	2024-09-27 19:00:00
-sr:sport_event:50955781	sr:season:119835	sr:competitor:1647	sr:competitor:1659	\N	\N	not_started	25	sr:venue:953	2025-03-09 17:00:00
-sr:sport_event:50868581	sr:season:119799	sr:competitor:2960	sr:competitor:2952	\N	\N	not_started	34	sr:venue:656	2025-05-18 12:30:00
-sr:sport_event:50955827	sr:season:119835	sr:competitor:1643	sr:competitor:1648	\N	\N	not_started	27	sr:venue:837	2025-03-30 17:00:00
 sr:sport_event:50955631	sr:season:119835	sr:competitor:1647	sr:competitor:1653	\N	\N	not_started	17	sr:venue:953	2025-01-12 16:00:00
-sr:sport_event:50955919	sr:season:119835	sr:competitor:1646	sr:competitor:1662	\N	\N	not_started	32	sr:venue:767	2025-05-04 17:00:00
-sr:sport_event:50955801	sr:season:119835	sr:competitor:1715	sr:competitor:1682	\N	\N	not_started	26	sr:venue:1858	2025-03-16 17:00:00
 sr:sport_event:50955721	sr:season:119835	sr:competitor:1661	sr:competitor:1648	\N	\N	not_started	21	sr:venue:13184	2025-02-09 16:00:00
 sr:sport_event:50955677	sr:season:119835	sr:competitor:1662	sr:competitor:1715	\N	\N	not_started	19	sr:venue:46514	2025-01-26 16:00:00
 sr:sport_event:50955713	sr:season:119835	sr:competitor:1678	sr:competitor:1658	\N	\N	not_started	21	sr:venue:845	2025-02-09 16:00:00
@@ -3100,22 +2899,14 @@ sr:sport_event:50955551	sr:season:119835	sr:competitor:1653	sr:competitor:1715	3
 sr:sport_event:51773663	sr:season:118693	sr:competitor:2524	sr:competitor:2672	2	3	closed	1	sr:venue:816	2024-08-25 13:30:00
 sr:sport_event:50955537	sr:season:119835	sr:competitor:1684	sr:competitor:1644	2	4	closed	11	sr:venue:19889	2024-11-09 20:00:00
 sr:sport_event:50955693	sr:season:119835	sr:competitor:1643	sr:competitor:1678	\N	\N	not_started	20	sr:venue:837	2025-02-02 16:00:00
-sr:sport_event:50955751	sr:season:119835	sr:competitor:1678	sr:competitor:1684	\N	\N	not_started	23	sr:venue:845	2025-02-23 16:00:00
 sr:sport_event:51268991	sr:season:118693	sr:competitor:2526	sr:competitor:36360	0	0	closed	4	sr:venue:791	2024-09-22 17:30:00
 sr:sport_event:50955357	sr:season:119835	sr:competitor:1658	sr:competitor:1649	3	0	closed	1	sr:venue:844	2024-08-18 18:45:00
 sr:sport_event:50955491	sr:season:119835	sr:competitor:1649	sr:competitor:1646	2	2	closed	9	sr:venue:17406	2024-10-27 14:00:00
-sr:sport_event:51269565	sr:season:118693	sr:competitor:2542	sr:competitor:2547	\N	\N	not_started	31	sr:venue:738	2025-04-26 13:30:00
 sr:sport_event:51269387	sr:season:118693	sr:competitor:2573	sr:competitor:2542	\N	\N	not_started	21	sr:venue:659	2025-02-08 14:30:00
-sr:sport_event:51269583	sr:season:118693	sr:competitor:2547	sr:competitor:2534	\N	\N	not_started	32	sr:venue:578	2025-05-03 13:30:00
 sr:sport_event:50955649	sr:season:119835	sr:competitor:1648	sr:competitor:1644	\N	\N	not_started	18	sr:venue:835	2025-01-19 16:00:00
-sr:sport_event:51269609	sr:season:118693	sr:competitor:2569	sr:competitor:2672	\N	\N	not_started	34	sr:venue:1089	2025-05-17 13:30:00
 sr:sport_event:51269247	sr:season:118693	sr:competitor:2673	sr:competitor:2569	\N	\N	not_started	14	sr:venue:759	2024-12-15 16:30:00
-sr:sport_event:51269597	sr:season:118693	sr:competitor:2524	sr:competitor:2569	\N	\N	not_started	33	sr:venue:816	2025-05-10 13:30:00
-sr:sport_event:50868465	sr:season:119799	sr:competitor:2955	sr:competitor:2957	\N	\N	not_started	28	sr:venue:584	2025-04-04 16:00:00
 sr:sport_event:51269087	sr:season:118693	sr:competitor:2538	sr:competitor:2600	3	1	closed	7	sr:venue:61056	2024-10-19 13:30:00
 sr:sport_event:51269281	sr:season:118693	sr:competitor:36360	sr:competitor:2534	\N	\N	not_started	16	sr:venue:850	2025-01-12 14:30:00
-sr:sport_event:51269615	sr:season:118693	sr:competitor:2600	sr:competitor:2547	\N	\N	not_started	34	sr:venue:1655	2025-05-17 13:30:00
-sr:sport_event:50868485	sr:season:119799	sr:competitor:2971	sr:competitor:2955	\N	\N	not_started	29	sr:venue:18994	2025-04-11 16:00:00
 sr:sport_event:51269295	sr:season:118693	sr:competitor:2527	sr:competitor:2672	\N	\N	not_started	16	sr:venue:788	2025-01-11 17:30:00
 sr:sport_event:50955727	sr:season:119835	sr:competitor:1642	sr:competitor:1649	\N	\N	not_started	22	sr:venue:1275	2025-02-16 16:00:00
 sr:sport_event:50955441	sr:season:119835	sr:competitor:1662	sr:competitor:1643	0	3	closed	6	sr:venue:46514	2024-09-28 17:00:00
@@ -3125,48 +2916,39 @@ sr:sport_event:51269083	sr:season:118693	sr:competitor:2569	sr:competitor:2542	3
 sr:sport_event:51269325	sr:season:118693	sr:competitor:5885	sr:competitor:2526	\N	\N	not_started	18	sr:venue:34054	2025-01-18 14:30:00
 sr:sport_event:51269133	sr:season:118693	sr:competitor:2542	sr:competitor:2672	0	5	closed	8	sr:venue:738	2024-10-27 14:30:00
 sr:sport_event:51269287	sr:season:118693	sr:competitor:5885	sr:competitor:2547	\N	\N	not_started	16	sr:venue:34054	2025-01-11 14:30:00
-sr:sport_event:51269481	sr:season:118693	sr:competitor:2672	sr:competitor:2526	\N	\N	not_started	27	sr:venue:574	2025-03-29 14:30:00
-sr:sport_event:51269425	sr:season:118693	sr:competitor:2677	sr:competitor:2672	\N	\N	not_started	24	sr:venue:648	2025-03-01 14:30:00
-sr:sport_event:50955885	sr:season:119835	sr:competitor:1662	sr:competitor:1653	\N	\N	not_started	31	sr:venue:46514	2025-04-27 17:00:00
-sr:sport_event:50868457	sr:season:119799	sr:competitor:2953	sr:competitor:2947	\N	\N	not_started	28	sr:venue:577	2025-04-04 16:00:00
-sr:sport_event:50955845	sr:season:119835	sr:competitor:1682	sr:competitor:1659	\N	\N	not_started	28	sr:venue:1871	2025-04-06 17:00:00
 sr:sport_event:50955679	sr:season:119835	sr:competitor:1646	sr:competitor:1678	\N	\N	not_started	19	sr:venue:767	2025-01-26 16:00:00
-sr:sport_event:50955757	sr:season:119835	sr:competitor:1649	sr:competitor:1644	\N	\N	not_started	23	sr:venue:17406	2025-02-23 16:00:00
-sr:sport_event:50868515	sr:season:119799	sr:competitor:2979	sr:competitor:2950	\N	\N	not_started	31	sr:venue:3293	2025-05-02 16:00:00
 sr:sport_event:50955671	sr:season:119835	sr:competitor:1647	sr:competitor:1649	\N	\N	not_started	19	sr:venue:953	2025-01-26 16:00:00
+sr:sport_event:51269481	sr:season:118693	sr:competitor:2672	sr:competitor:2526	\N	\N	not_started	27	sr:venue:574	2025-03-29 14:30:00
+sr:sport_event:51269583	sr:season:118693	sr:competitor:2547	sr:competitor:2534	\N	\N	not_started	32	sr:venue:578	2025-05-03 13:30:00
+sr:sport_event:51269615	sr:season:118693	sr:competitor:2600	sr:competitor:2547	\N	\N	not_started	34	sr:venue:1655	2025-05-17 13:30:00
+sr:sport_event:51269609	sr:season:118693	sr:competitor:2569	sr:competitor:2672	\N	\N	not_started	34	sr:venue:1089	2025-05-17 13:30:00
+sr:sport_event:50868465	sr:season:119799	sr:competitor:2955	sr:competitor:2957	\N	\N	not_started	28	sr:venue:584	2025-04-04 16:00:00
+sr:sport_event:50868457	sr:season:119799	sr:competitor:2953	sr:competitor:2947	\N	\N	not_started	28	sr:venue:577	2025-04-04 16:00:00
+sr:sport_event:50868485	sr:season:119799	sr:competitor:2971	sr:competitor:2955	\N	\N	not_started	29	sr:venue:18994	2025-04-11 16:00:00
+sr:sport_event:50868515	sr:season:119799	sr:competitor:2979	sr:competitor:2950	\N	\N	not_started	31	sr:venue:3293	2025-05-02 16:00:00
+sr:sport_event:50868551	sr:season:119799	sr:competitor:2955	sr:competitor:2950	\N	\N	not_started	33	sr:venue:584	2025-05-14 18:00:00
+sr:sport_event:50868581	sr:season:119799	sr:competitor:2960	sr:competitor:2952	\N	\N	not_started	34	sr:venue:656	2025-05-18 12:30:00
+sr:sport_event:50955751	sr:season:119835	sr:competitor:1678	sr:competitor:1684	\N	\N	not_started	23	sr:venue:845	2025-02-23 16:00:00
+sr:sport_event:50955757	sr:season:119835	sr:competitor:1649	sr:competitor:1644	\N	\N	not_started	23	sr:venue:17406	2025-02-23 16:00:00
+sr:sport_event:50955801	sr:season:119835	sr:competitor:1715	sr:competitor:1682	\N	\N	not_started	26	sr:venue:1858	2025-03-16 17:00:00
+sr:sport_event:50955885	sr:season:119835	sr:competitor:1662	sr:competitor:1653	\N	\N	not_started	31	sr:venue:46514	2025-04-27 17:00:00
 sr:sport_event:50955935	sr:season:119835	sr:competitor:1642	sr:competitor:1644	\N	\N	not_started	33	sr:venue:1275	2025-05-11 17:00:00
-sr:sport_event:50955867	sr:season:119835	sr:competitor:1678	sr:competitor:1649	\N	\N	not_started	30	sr:venue:845	2025-04-20 17:00:00
+sr:sport_event:50955949	sr:season:119835	sr:competitor:1678	sr:competitor:1681	\N	\N	not_started	34	sr:venue:845	2025-05-18 17:00:00
+sr:sport_event:50955919	sr:season:119835	sr:competitor:1646	sr:competitor:1662	\N	\N	not_started	32	sr:venue:767	2025-05-04 17:00:00
 sr:sport_event:50955445	sr:season:119835	sr:competitor:1653	sr:competitor:1642	2	1	closed	6	sr:venue:831	2024-09-28 19:00:00
 sr:sport_event:50955605	sr:season:119835	sr:competitor:1715	sr:competitor:1647	\N	\N	not_started	15	sr:venue:1858	2024-12-15 16:00:00
 sr:sport_event:51268945	sr:season:118693	sr:competitor:2524	sr:competitor:2674	1	2	closed	3	sr:venue:816	2024-09-14 13:30:00
 sr:sport_event:51268999	sr:season:118693	sr:competitor:36360	sr:competitor:2600	4	0	closed	5	sr:venue:850	2024-09-28 13:30:00
-sr:sport_event:50868447	sr:season:119799	sr:competitor:2962	sr:competitor:2950	\N	\N	not_started	27	sr:venue:689	2025-03-29 17:00:00
-sr:sport_event:50868477	sr:season:119799	sr:competitor:2957	sr:competitor:2959	\N	\N	not_started	29	sr:venue:2769	2025-04-11 16:00:00
-sr:sport_event:50955789	sr:season:119835	sr:competitor:1643	sr:competitor:1642	\N	\N	not_started	25	sr:venue:837	2025-03-09 17:00:00
-sr:sport_event:50868519	sr:season:119799	sr:competitor:2962	sr:competitor:2961	\N	\N	not_started	31	sr:venue:689	2025-05-02 16:00:00
 sr:sport_event:50955415	sr:season:119835	sr:competitor:1661	sr:competitor:1678	8	0	closed	5	sr:venue:13184	2024-09-20 18:45:00
-sr:sport_event:50868569	sr:season:119799	sr:competitor:2957	sr:competitor:2948	\N	\N	not_started	34	sr:venue:2769	2025-05-18 12:30:00
 sr:sport_event:51269357	sr:season:118693	sr:competitor:2672	sr:competitor:2573	\N	\N	not_started	20	sr:venue:574	2025-02-01 14:30:00
-sr:sport_event:50868487	sr:season:119799	sr:competitor:2952	sr:competitor:2990	\N	\N	not_started	29	sr:venue:726	2025-04-11 16:00:00
 sr:sport_event:50955393	sr:season:119835	sr:competitor:1681	sr:competitor:1641	1	3	closed	3	sr:venue:848	2024-08-31 19:00:00
 sr:sport_event:50955565	sr:season:119835	sr:competitor:1715	sr:competitor:1659	\N	\N	not_started	13	sr:venue:1858	2024-11-30 18:00:00
-sr:sport_event:51269553	sr:season:118693	sr:competitor:2677	sr:competitor:5885	\N	\N	not_started	31	sr:venue:648	2025-04-26 13:30:00
-sr:sport_event:51269621	sr:season:118693	sr:competitor:2526	sr:competitor:2542	\N	\N	not_started	34	sr:venue:791	2025-05-17 13:30:00
 sr:sport_event:51269405	sr:season:118693	sr:competitor:2526	sr:competitor:2538	\N	\N	not_started	22	sr:venue:791	2025-02-15 14:30:00
 sr:sport_event:50955561	sr:season:119835	sr:competitor:1662	sr:competitor:1684	\N	\N	not_started	13	sr:venue:46514	2024-12-01 16:00:00
 sr:sport_event:51269375	sr:season:118693	sr:competitor:2673	sr:competitor:2677	\N	\N	not_started	21	sr:venue:759	2025-02-08 14:30:00
-sr:sport_event:51269577	sr:season:118693	sr:competitor:2600	sr:competitor:2573	\N	\N	not_started	32	sr:venue:1655	2025-05-03 13:30:00
 sr:sport_event:50868365	sr:season:119799	sr:competitor:2964	sr:competitor:2955	\N	\N	not_started	22	sr:venue:569	2025-02-07 17:00:00
-sr:sport_event:50868443	sr:season:119799	sr:competitor:2957	sr:competitor:2960	\N	\N	not_started	27	sr:venue:2769	2025-03-29 17:00:00
-sr:sport_event:50868549	sr:season:119799	sr:competitor:2951	sr:competitor:2953	\N	\N	not_started	33	sr:venue:35438	2025-05-14 18:00:00
 sr:sport_event:51269243	sr:season:118693	sr:competitor:2573	sr:competitor:36360	\N	\N	not_started	13	sr:venue:659	2024-12-07 14:30:00
 sr:sport_event:51269193	sr:season:118693	sr:competitor:2677	sr:competitor:2542	2	0	closed	11	sr:venue:648	2024-11-23 14:30:00
-sr:sport_event:50955833	sr:season:119835	sr:competitor:1661	sr:competitor:1647	\N	\N	not_started	28	sr:venue:13184	2025-04-06 17:00:00
-sr:sport_event:50955775	sr:season:119835	sr:competitor:1684	sr:competitor:1681	\N	\N	not_started	24	sr:venue:19889	2025-03-02 17:00:00
-sr:sport_event:50955771	sr:season:119835	sr:competitor:1646	sr:competitor:1659	\N	\N	not_started	24	sr:venue:767	2025-03-02 17:00:00
-sr:sport_event:50955877	sr:season:119835	sr:competitor:1641	sr:competitor:1642	\N	\N	not_started	30	sr:venue:839	2025-04-20 17:00:00
-sr:sport_event:50955817	sr:season:119835	sr:competitor:1662	sr:competitor:1647	\N	\N	not_started	27	sr:venue:46514	2025-03-30 17:00:00
-sr:sport_event:51269587	sr:season:118693	sr:competitor:2681	sr:competitor:2673	\N	\N	not_started	33	sr:venue:593	2025-05-10 13:30:00
 sr:sport_event:51269097	sr:season:118693	sr:competitor:2527	sr:competitor:5885	3	2	closed	7	sr:venue:788	2024-10-19 13:30:00
 sr:sport_event:51269267	sr:season:118693	sr:competitor:2672	sr:competitor:36360	\N	\N	not_started	15	sr:venue:574	2024-12-20 19:30:00
 sr:sport_event:51269079	sr:season:118693	sr:competitor:2673	sr:competitor:2526	2	1	closed	7	sr:venue:759	2024-10-18 18:30:00
@@ -3175,90 +2957,80 @@ sr:sport_event:51269117	sr:season:118693	sr:competitor:2534	sr:competitor:2681	2
 sr:sport_event:51269219	sr:season:118693	sr:competitor:2600	sr:competitor:2542	\N	\N	not_started	12	sr:venue:1655	2024-11-30 14:30:00
 sr:sport_event:50955409	sr:season:119835	sr:competitor:1641	sr:competitor:1661	2	0	closed	4	sr:venue:839	2024-09-14 15:00:00
 sr:sport_event:51268871	sr:season:118693	sr:competitor:2600	sr:competitor:2534	2	2	closed	1	sr:venue:1655	2024-08-24 13:30:00
-sr:sport_event:50868559	sr:season:119799	sr:competitor:2962	sr:competitor:2947	\N	\N	not_started	33	sr:venue:689	2025-05-14 18:00:00
-sr:sport_event:50868533	sr:season:119799	sr:competitor:2950	sr:competitor:2951	\N	\N	not_started	32	sr:venue:615	2025-05-09 16:00:00
-sr:sport_event:50868481	sr:season:119799	sr:competitor:2962	sr:competitor:2956	\N	\N	not_started	29	sr:venue:689	2025-04-11 16:00:00
 sr:sport_event:50955423	sr:season:119835	sr:competitor:1642	sr:competitor:1646	3	2	closed	5	sr:venue:1275	2024-09-22 15:00:00
 sr:sport_event:51269323	sr:season:118693	sr:competitor:2674	sr:competitor:2673	\N	\N	not_started	18	sr:venue:67707	2025-01-17 19:30:00
-sr:sport_event:51269421	sr:season:118693	sr:competitor:2527	sr:competitor:2600	\N	\N	not_started	23	sr:venue:788	2025-02-22 14:30:00
-sr:sport_event:51269449	sr:season:118693	sr:competitor:2674	sr:competitor:2547	\N	\N	not_started	25	sr:venue:67707	2025-03-08 14:30:00
 sr:sport_event:51268895	sr:season:118693	sr:competitor:2677	sr:competitor:2556	3	3	closed	2	sr:venue:648	2024-08-31 13:30:00
-sr:sport_event:51269593	sr:season:118693	sr:competitor:2674	sr:competitor:2526	\N	\N	not_started	33	sr:venue:67707	2025-05-10 13:30:00
-sr:sport_event:50868495	sr:season:119799	sr:competitor:2990	sr:competitor:2979	\N	\N	not_started	30	sr:venue:3261	2025-04-23 16:00:00
-sr:sport_event:51269547	sr:season:118693	sr:competitor:2547	sr:competitor:2677	\N	\N	not_started	30	sr:venue:578	2025-04-19 13:30:00
 sr:sport_event:51269495	sr:season:118693	sr:competitor:2573	sr:competitor:2534	\N	\N	not_started	27	sr:venue:659	2025-03-29 14:30:00
-sr:sport_event:51269519	sr:season:118693	sr:competitor:2672	sr:competitor:2673	\N	\N	not_started	29	sr:venue:574	2025-04-12 13:30:00
+sr:sport_event:51269553	sr:season:118693	sr:competitor:2677	sr:competitor:5885	\N	\N	not_started	31	sr:venue:648	2025-04-26 13:30:00
+sr:sport_event:51269577	sr:season:118693	sr:competitor:2600	sr:competitor:2573	\N	\N	not_started	32	sr:venue:1655	2025-05-03 13:30:00
+sr:sport_event:51269621	sr:season:118693	sr:competitor:2526	sr:competitor:2542	\N	\N	not_started	34	sr:venue:791	2025-05-17 13:30:00
+sr:sport_event:50868443	sr:season:119799	sr:competitor:2957	sr:competitor:2960	\N	\N	not_started	27	sr:venue:2769	2025-03-29 17:00:00
+sr:sport_event:50868487	sr:season:119799	sr:competitor:2952	sr:competitor:2990	\N	\N	not_started	29	sr:venue:726	2025-04-11 16:00:00
+sr:sport_event:50868447	sr:season:119799	sr:competitor:2962	sr:competitor:2950	\N	\N	not_started	27	sr:venue:689	2025-03-29 17:00:00
+sr:sport_event:50868477	sr:season:119799	sr:competitor:2957	sr:competitor:2959	\N	\N	not_started	29	sr:venue:2769	2025-04-11 16:00:00
+sr:sport_event:50868481	sr:season:119799	sr:competitor:2962	sr:competitor:2956	\N	\N	not_started	29	sr:venue:689	2025-04-11 16:00:00
+sr:sport_event:50868495	sr:season:119799	sr:competitor:2990	sr:competitor:2979	\N	\N	not_started	30	sr:venue:3261	2025-04-23 16:00:00
+sr:sport_event:50868519	sr:season:119799	sr:competitor:2962	sr:competitor:2961	\N	\N	not_started	31	sr:venue:689	2025-05-02 16:00:00
+sr:sport_event:50868533	sr:season:119799	sr:competitor:2950	sr:competitor:2951	\N	\N	not_started	32	sr:venue:615	2025-05-09 16:00:00
+sr:sport_event:50868549	sr:season:119799	sr:competitor:2951	sr:competitor:2953	\N	\N	not_started	33	sr:venue:35438	2025-05-14 18:00:00
+sr:sport_event:50868559	sr:season:119799	sr:competitor:2962	sr:competitor:2947	\N	\N	not_started	33	sr:venue:689	2025-05-14 18:00:00
+sr:sport_event:50955771	sr:season:119835	sr:competitor:1646	sr:competitor:1659	\N	\N	not_started	24	sr:venue:767	2025-03-02 17:00:00
+sr:sport_event:50955775	sr:season:119835	sr:competitor:1684	sr:competitor:1681	\N	\N	not_started	24	sr:venue:19889	2025-03-02 17:00:00
+sr:sport_event:50955789	sr:season:119835	sr:competitor:1643	sr:competitor:1642	\N	\N	not_started	25	sr:venue:837	2025-03-09 17:00:00
+sr:sport_event:50955817	sr:season:119835	sr:competitor:1662	sr:competitor:1647	\N	\N	not_started	27	sr:venue:46514	2025-03-30 17:00:00
+sr:sport_event:50955833	sr:season:119835	sr:competitor:1661	sr:competitor:1647	\N	\N	not_started	28	sr:venue:13184	2025-04-06 17:00:00
+sr:sport_event:50955867	sr:season:119835	sr:competitor:1678	sr:competitor:1649	\N	\N	not_started	30	sr:venue:845	2025-04-20 17:00:00
+sr:sport_event:50955877	sr:season:119835	sr:competitor:1641	sr:competitor:1642	\N	\N	not_started	30	sr:venue:839	2025-04-20 17:00:00
 sr:sport_event:51269217	sr:season:118693	sr:competitor:2538	sr:competitor:2527	\N	\N	not_started	12	sr:venue:61056	2024-11-30 14:30:00
 sr:sport_event:51269321	sr:season:118693	sr:competitor:2672	sr:competitor:2524	\N	\N	not_started	18	sr:venue:574	2025-01-18 14:30:00
 sr:sport_event:51269355	sr:season:118693	sr:competitor:2677	sr:competitor:2527	\N	\N	not_started	20	sr:venue:648	2025-02-01 14:30:00
 sr:sport_event:51269183	sr:season:118693	sr:competitor:2556	sr:competitor:2673	3	1	closed	10	sr:venue:2406	2024-11-09 14:30:00
-sr:sport_event:51269429	sr:season:118693	sr:competitor:2674	sr:competitor:2681	\N	\N	not_started	24	sr:venue:67707	2025-03-01 14:30:00
 sr:sport_event:51269227	sr:season:118693	sr:competitor:2681	sr:competitor:2526	\N	\N	not_started	13	sr:venue:593	2024-12-07 14:30:00
-sr:sport_event:51269423	sr:season:118693	sr:competitor:2573	sr:competitor:2681	\N	\N	not_started	23	sr:venue:659	2025-02-22 14:30:00
 sr:sport_event:51269235	sr:season:118693	sr:competitor:2569	sr:competitor:2538	\N	\N	not_started	13	sr:venue:1089	2024-12-08 16:30:00
-sr:sport_event:50868451	sr:season:119799	sr:competitor:2971	sr:competitor:2956	\N	\N	not_started	27	sr:venue:18994	2025-03-29 17:00:00
 sr:sport_event:51269401	sr:season:118693	sr:competitor:2547	sr:competitor:2527	\N	\N	not_started	22	sr:venue:578	2025-02-15 14:30:00
-sr:sport_event:51269527	sr:season:118693	sr:competitor:2527	sr:competitor:2538	\N	\N	not_started	29	sr:venue:788	2025-04-12 13:30:00
 sr:sport_event:50955435	sr:season:119835	sr:competitor:1646	sr:competitor:1715	3	0	closed	6	sr:venue:767	2024-09-27 17:00:00
-sr:sport_event:51269529	sr:season:118693	sr:competitor:2542	sr:competitor:2600	\N	\N	not_started	29	sr:venue:738	2025-04-12 13:30:00
 sr:sport_event:51269261	sr:season:118693	sr:competitor:2526	sr:competitor:2534	\N	\N	not_started	14	sr:venue:791	2024-12-14 17:30:00
 sr:sport_event:51269403	sr:season:118693	sr:competitor:2542	sr:competitor:2673	\N	\N	not_started	22	sr:venue:738	2025-02-15 14:30:00
-sr:sport_event:51269573	sr:season:118693	sr:competitor:5885	sr:competitor:2542	\N	\N	not_started	32	sr:venue:34054	2025-05-03 13:30:00
-sr:sport_event:50868463	sr:season:119799	sr:competitor:2951	sr:competitor:2952	\N	\N	not_started	28	sr:venue:35438	2025-04-04 16:00:00
 sr:sport_event:51268891	sr:season:118693	sr:competitor:2681	sr:competitor:36360	2	3	closed	2	sr:venue:593	2024-08-31 16:30:00
 sr:sport_event:51269013	sr:season:118693	sr:competitor:2538	sr:competitor:2526	0	3	closed	5	sr:venue:61056	2024-09-28 13:30:00
-sr:sport_event:50868513	sr:season:119799	sr:competitor:2948	sr:competitor:2953	\N	\N	not_started	31	sr:venue:786	2025-05-02 16:00:00
 sr:sport_event:51269367	sr:season:118693	sr:competitor:2542	sr:competitor:2538	\N	\N	not_started	20	sr:venue:738	2025-02-01 14:30:00
-sr:sport_event:51269471	sr:season:118693	sr:competitor:2556	sr:competitor:2538	\N	\N	not_started	26	sr:venue:2406	2025-03-15 14:30:00
-sr:sport_event:51269497	sr:season:118693	sr:competitor:36360	sr:competitor:2569	\N	\N	not_started	28	sr:venue:850	2025-04-05 13:30:00
 sr:sport_event:51268937	sr:season:118693	sr:competitor:2538	sr:competitor:2542	2	1	closed	3	sr:venue:61056	2024-09-14 13:30:00
-sr:sport_event:50868531	sr:season:119799	sr:competitor:2990	sr:competitor:2960	\N	\N	not_started	32	sr:venue:3261	2025-05-09 16:00:00
 sr:sport_event:51269185	sr:season:118693	sr:competitor:2547	sr:competitor:2538	0	0	closed	10	sr:venue:578	2024-11-08 19:30:00
 sr:sport_event:51268961	sr:season:118693	sr:competitor:2681	sr:competitor:2524	4	3	closed	4	sr:venue:593	2024-09-22 13:30:00
 sr:sport_event:51269153	sr:season:118693	sr:competitor:2674	sr:competitor:2542	7	2	closed	9	sr:venue:67707	2024-11-02 14:30:00
 sr:sport_event:51268957	sr:season:118693	sr:competitor:2573	sr:competitor:2672	1	6	closed	3	sr:venue:659	2024-09-14 16:30:00
 sr:sport_event:51269349	sr:season:118693	sr:competitor:2527	sr:competitor:2542	\N	\N	not_started	19	sr:venue:788	2025-01-25 17:30:00
 sr:sport_event:51269273	sr:season:118693	sr:competitor:2534	sr:competitor:2547	\N	\N	not_started	15	sr:venue:821	2024-12-21 14:30:00
-sr:sport_event:50868521	sr:season:119799	sr:competitor:2947	sr:competitor:2971	\N	\N	not_started	31	sr:venue:2081	2025-05-02 16:00:00
 sr:sport_event:51268865	sr:season:118693	sr:competitor:2538	sr:competitor:2677	3	1	closed	1	sr:venue:61056	2024-08-24 13:30:00
 sr:sport_event:50955447	sr:season:119835	sr:competitor:1684	sr:competitor:1682	1	3	closed	6	sr:venue:19889	2024-09-29 15:00:00
-sr:sport_event:50868511	sr:season:119799	sr:competitor:2951	sr:competitor:2956	\N	\N	not_started	31	sr:venue:35438	2025-05-02 16:00:00
 sr:sport_event:50955437	sr:season:119835	sr:competitor:1648	sr:competitor:1661	0	0	closed	6	sr:venue:835	2024-09-28 15:00:00
-sr:sport_event:50868553	sr:season:119799	sr:competitor:2948	sr:competitor:2960	\N	\N	not_started	33	sr:venue:786	2025-05-14 18:00:00
-sr:sport_event:50868561	sr:season:119799	sr:competitor:2952	sr:competitor:2977	\N	\N	not_started	33	sr:venue:726	2025-05-14 18:00:00
 sr:sport_event:50955399	sr:season:119835	sr:competitor:1648	sr:competitor:1649	0	0	closed	4	sr:venue:835	2024-09-15 18:45:00
-sr:sport_event:51269443	sr:season:118693	sr:competitor:2681	sr:competitor:2534	\N	\N	not_started	25	sr:venue:593	2025-03-08 14:30:00
 sr:sport_event:50955397	sr:season:119835	sr:competitor:1658	sr:competitor:1642	3	0	closed	4	sr:venue:844	2024-09-15 13:00:00
 sr:sport_event:51269251	sr:season:118693	sr:competitor:2538	sr:competitor:2524	\N	\N	not_started	14	sr:venue:61056	2024-12-13 19:30:00
 sr:sport_event:51269069	sr:season:118693	sr:competitor:2681	sr:competitor:2674	2	1	closed	7	sr:venue:593	2024-10-19 13:30:00
 sr:sport_event:51269195	sr:season:118693	sr:competitor:2672	sr:competitor:2600	3	0	closed	11	sr:venue:574	2024-11-22 19:30:00
 sr:sport_event:50955407	sr:season:119835	sr:competitor:1678	sr:competitor:1643	1	0	closed	4	sr:venue:845	2024-09-13 18:45:00
 sr:sport_event:51268879	sr:season:118693	sr:competitor:2556	sr:competitor:2547	1	1	closed	1	sr:venue:2406	2024-08-24 13:30:00
-sr:sport_event:51269521	sr:season:118693	sr:competitor:2674	sr:competitor:5885	\N	\N	not_started	29	sr:venue:67707	2025-04-12 13:30:00
-sr:sport_event:51269439	sr:season:118693	sr:competitor:2542	sr:competitor:2569	\N	\N	not_started	24	sr:venue:738	2025-03-01 14:30:00
 sr:sport_event:51269121	sr:season:118693	sr:competitor:2600	sr:competitor:2673	2	1	closed	8	sr:venue:1655	2024-10-26 13:30:00
 sr:sport_event:51269369	sr:season:118693	sr:competitor:2526	sr:competitor:2600	\N	\N	not_started	20	sr:venue:791	2025-02-01 14:30:00
 sr:sport_event:51269285	sr:season:118693	sr:competitor:2569	sr:competitor:2524	\N	\N	not_started	16	sr:venue:1089	2025-01-11 14:30:00
-sr:sport_event:51269613	sr:season:118693	sr:competitor:2538	sr:competitor:2674	\N	\N	not_started	34	sr:venue:61056	2025-05-17 13:30:00
-sr:sport_event:51269555	sr:season:118693	sr:competitor:2672	sr:competitor:2556	\N	\N	not_started	31	sr:venue:574	2025-04-26 13:30:00
-sr:sport_event:51269479	sr:season:118693	sr:competitor:2681	sr:competitor:2542	\N	\N	not_started	27	sr:venue:593	2025-03-29 14:30:00
+sr:sport_event:51269497	sr:season:118693	sr:competitor:36360	sr:competitor:2569	\N	\N	not_started	28	sr:venue:850	2025-04-05 13:30:00
+sr:sport_event:51269527	sr:season:118693	sr:competitor:2527	sr:competitor:2538	\N	\N	not_started	29	sr:venue:788	2025-04-12 13:30:00
+sr:sport_event:51269519	sr:season:118693	sr:competitor:2672	sr:competitor:2673	\N	\N	not_started	29	sr:venue:574	2025-04-12 13:30:00
+sr:sport_event:51269521	sr:season:118693	sr:competitor:2674	sr:competitor:5885	\N	\N	not_started	29	sr:venue:67707	2025-04-12 13:30:00
+sr:sport_event:51269529	sr:season:118693	sr:competitor:2542	sr:competitor:2600	\N	\N	not_started	29	sr:venue:738	2025-04-12 13:30:00
+sr:sport_event:50868463	sr:season:119799	sr:competitor:2951	sr:competitor:2952	\N	\N	not_started	28	sr:venue:35438	2025-04-04 16:00:00
+sr:sport_event:50868451	sr:season:119799	sr:competitor:2971	sr:competitor:2956	\N	\N	not_started	27	sr:venue:18994	2025-03-29 17:00:00
+sr:sport_event:50868521	sr:season:119799	sr:competitor:2947	sr:competitor:2971	\N	\N	not_started	31	sr:venue:2081	2025-05-02 16:00:00
+sr:sport_event:50868513	sr:season:119799	sr:competitor:2948	sr:competitor:2953	\N	\N	not_started	31	sr:venue:786	2025-05-02 16:00:00
+sr:sport_event:50868531	sr:season:119799	sr:competitor:2990	sr:competitor:2960	\N	\N	not_started	32	sr:venue:3261	2025-05-09 16:00:00
+sr:sport_event:50868511	sr:season:119799	sr:competitor:2951	sr:competitor:2956	\N	\N	not_started	31	sr:venue:35438	2025-05-02 16:00:00
+sr:sport_event:50868553	sr:season:119799	sr:competitor:2948	sr:competitor:2960	\N	\N	not_started	33	sr:venue:786	2025-05-14 18:00:00
+sr:sport_event:50868561	sr:season:119799	sr:competitor:2952	sr:competitor:2977	\N	\N	not_started	33	sr:venue:726	2025-05-14 18:00:00
 sr:sport_event:51269299	sr:season:118693	sr:competitor:2681	sr:competitor:2556	\N	\N	not_started	17	sr:venue:593	2025-01-14 19:30:00
-sr:sport_event:51269601	sr:season:118693	sr:competitor:2542	sr:competitor:2556	\N	\N	not_started	33	sr:venue:738	2025-05-10 13:30:00
-sr:sport_event:51269487	sr:season:118693	sr:competitor:2569	sr:competitor:2600	\N	\N	not_started	27	sr:venue:1089	2025-03-29 14:30:00
-sr:sport_event:51269579	sr:season:118693	sr:competitor:2556	sr:competitor:2674	\N	\N	not_started	32	sr:venue:2406	2025-05-03 13:30:00
-sr:sport_event:51269581	sr:season:118693	sr:competitor:2527	sr:competitor:2569	\N	\N	not_started	32	sr:venue:788	2025-05-03 13:30:00
-sr:sport_event:51269619	sr:season:118693	sr:competitor:2527	sr:competitor:2524	\N	\N	not_started	34	sr:venue:788	2025-05-17 13:30:00
-sr:sport_event:51269465	sr:season:118693	sr:competitor:5885	sr:competitor:2573	\N	\N	not_started	26	sr:venue:34054	2025-03-15 14:30:00
-sr:sport_event:50868437	sr:season:119799	sr:competitor:2960	sr:competitor:2971	\N	\N	not_started	26	sr:venue:656	2025-03-14 17:00:00
-sr:sport_event:50868449	sr:season:119799	sr:competitor:2947	sr:competitor:2951	\N	\N	not_started	27	sr:venue:2081	2025-03-29 17:00:00
-sr:sport_event:51269499	sr:season:118693	sr:competitor:5885	sr:competitor:2681	\N	\N	not_started	28	sr:venue:34054	2025-04-05 13:30:00
 sr:sport_event:51269259	sr:season:118693	sr:competitor:2547	sr:competitor:2542	\N	\N	not_started	14	sr:venue:578	2024-12-14 14:30:00
 sr:sport_event:51269037	sr:season:118693	sr:competitor:2677	sr:competitor:2569	1	1	closed	6	sr:venue:648	2024-10-06 17:30:00
-sr:sport_event:50868503	sr:season:119799	sr:competitor:2959	sr:competitor:2971	\N	\N	not_started	30	sr:venue:612	2025-04-23 16:00:00
-sr:sport_event:50868505	sr:season:119799	sr:competitor:2957	sr:competitor:2961	\N	\N	not_started	30	sr:venue:2769	2025-04-23 16:00:00
 sr:sport_event:51268921	sr:season:118693	sr:competitor:2573	sr:competitor:2524	0	2	closed	2	sr:venue:659	2024-08-31 13:30:00
-sr:sport_event:51269509	sr:season:118693	sr:competitor:2547	sr:competitor:2524	\N	\N	not_started	28	sr:venue:578	2025-04-05 13:30:00
-sr:sport_event:50868543	sr:season:119799	sr:competitor:2956	sr:competitor:2964	\N	\N	not_started	32	sr:venue:685	2025-05-09 16:00:00
 sr:sport_event:51269073	sr:season:118693	sr:competitor:2672	sr:competitor:2677	4	0	closed	7	sr:venue:574	2024-10-19 16:30:00
 sr:sport_event:51269189	sr:season:118693	sr:competitor:2526	sr:competitor:2672	0	1	closed	10	sr:venue:791	2024-11-09 14:30:00
 sr:sport_event:51269053	sr:season:118693	sr:competitor:2600	sr:competitor:2527	2	1	closed	6	sr:venue:1655	2024-10-04 18:30:00
@@ -3266,44 +3038,43 @@ sr:sport_event:51269191	sr:season:118693	sr:competitor:2681	sr:competitor:5885	5
 sr:sport_event:51269141	sr:season:118693	sr:competitor:2681	sr:competitor:2677	0	0	closed	9	sr:venue:593	2024-11-01 19:30:00
 sr:sport_event:51269335	sr:season:118693	sr:competitor:36360	sr:competitor:2681	\N	\N	not_started	19	sr:venue:850	2025-01-25 14:30:00
 sr:sport_event:51269225	sr:season:118693	sr:competitor:2526	sr:competitor:2573	\N	\N	not_started	12	sr:venue:791	2024-11-29 19:30:00
-sr:sport_event:50868493	sr:season:119799	sr:competitor:2953	sr:competitor:2960	\N	\N	not_started	30	sr:venue:577	2025-04-23 16:00:00
 sr:sport_event:50955429	sr:season:119835	sr:competitor:1653	sr:competitor:1662	3	1	closed	5	sr:venue:831	2024-09-22 13:00:00
-sr:sport_event:50868571	sr:season:119799	sr:competitor:2977	sr:competitor:2962	\N	\N	not_started	34	sr:venue:729	2025-05-18 12:30:00
-sr:sport_event:50868547	sr:season:119799	sr:competitor:2990	sr:competitor:2957	\N	\N	not_started	33	sr:venue:3261	2025-05-14 18:00:00
 sr:sport_event:50955411	sr:season:119835	sr:competitor:1644	sr:competitor:1715	3	1	closed	4	sr:venue:843	2024-09-14 19:00:00
 sr:sport_event:50955463	sr:season:119835	sr:competitor:1659	sr:competitor:1648	2	2	closed	7	sr:venue:847	2024-10-06 15:00:00
 sr:sport_event:51269203	sr:season:118693	sr:competitor:2524	sr:competitor:2547	1	0	closed	11	sr:venue:816	2024-11-23 14:30:00
 sr:sport_event:51269329	sr:season:118693	sr:competitor:2547	sr:competitor:2556	\N	\N	not_started	18	sr:venue:578	2025-01-19 14:30:00
 sr:sport_event:51269397	sr:season:118693	sr:competitor:2534	sr:competitor:2569	\N	\N	not_started	22	sr:venue:821	2025-02-15 14:30:00
 sr:sport_event:51268901	sr:season:118693	sr:competitor:2674	sr:competitor:2569	3	1	closed	2	sr:venue:67707	2024-08-31 13:30:00
-sr:sport_event:51269477	sr:season:118693	sr:competitor:2526	sr:competitor:2569	\N	\N	not_started	26	sr:venue:791	2025-03-15 14:30:00
-sr:sport_event:51269557	sr:season:118693	sr:competitor:2674	sr:competitor:36360	\N	\N	not_started	31	sr:venue:67707	2025-04-26 13:30:00
-sr:sport_event:51269515	sr:season:118693	sr:competitor:2681	sr:competitor:2547	\N	\N	not_started	29	sr:venue:593	2025-04-12 13:30:00
 sr:sport_event:51268975	sr:season:118693	sr:competitor:2534	sr:competitor:2672	0	5	closed	4	sr:venue:821	2024-09-21 13:30:00
-sr:sport_event:51269501	sr:season:118693	sr:competitor:2534	sr:competitor:2674	\N	\N	not_started	28	sr:venue:821	2025-04-05 13:30:00
-sr:sport_event:50868453	sr:season:119799	sr:competitor:2952	sr:competitor:2953	\N	\N	not_started	27	sr:venue:726	2025-03-29 17:00:00
 sr:sport_event:51269241	sr:season:118693	sr:competitor:2542	sr:competitor:2534	\N	\N	not_started	13	sr:venue:738	2024-12-07 14:30:00
 sr:sport_event:51268925	sr:season:118693	sr:competitor:36360	sr:competitor:2547	0	0	closed	3	sr:venue:850	2024-09-14 13:30:00
 sr:sport_event:51269249	sr:season:118693	sr:competitor:5885	sr:competitor:2677	\N	\N	not_started	14	sr:venue:34054	2024-12-15 14:30:00
-sr:sport_event:51269433	sr:season:118693	sr:competitor:2534	sr:competitor:2524	\N	\N	not_started	24	sr:venue:821	2025-03-01 14:30:00
-sr:sport_event:50868469	sr:season:119799	sr:competitor:2956	sr:competitor:2977	\N	\N	not_started	28	sr:venue:685	2025-04-04 16:00:00
 sr:sport_event:51268987	sr:season:118693	sr:competitor:2542	sr:competitor:2573	2	2	closed	4	sr:venue:738	2024-09-21 13:30:00
-sr:sport_event:51269533	sr:season:118693	sr:competitor:36360	sr:competitor:2573	\N	\N	not_started	30	sr:venue:850	2025-04-19 13:30:00
 sr:sport_event:51269343	sr:season:118693	sr:competitor:2600	sr:competitor:5885	\N	\N	not_started	19	sr:venue:1655	2025-01-25 14:30:00
+sr:sport_event:51269465	sr:season:118693	sr:competitor:5885	sr:competitor:2573	\N	\N	not_started	26	sr:venue:34054	2025-03-15 14:30:00
+sr:sport_event:51269515	sr:season:118693	sr:competitor:2681	sr:competitor:2547	\N	\N	not_started	29	sr:venue:593	2025-04-12 13:30:00
+sr:sport_event:51269579	sr:season:118693	sr:competitor:2556	sr:competitor:2674	\N	\N	not_started	32	sr:venue:2406	2025-05-03 13:30:00
+sr:sport_event:51269533	sr:season:118693	sr:competitor:36360	sr:competitor:2573	\N	\N	not_started	30	sr:venue:850	2025-04-19 13:30:00
+sr:sport_event:51269581	sr:season:118693	sr:competitor:2527	sr:competitor:2569	\N	\N	not_started	32	sr:venue:788	2025-05-03 13:30:00
+sr:sport_event:51269601	sr:season:118693	sr:competitor:2542	sr:competitor:2556	\N	\N	not_started	33	sr:venue:738	2025-05-10 13:30:00
+sr:sport_event:51269613	sr:season:118693	sr:competitor:2538	sr:competitor:2674	\N	\N	not_started	34	sr:venue:61056	2025-05-17 13:30:00
+sr:sport_event:51269619	sr:season:118693	sr:competitor:2527	sr:competitor:2524	\N	\N	not_started	34	sr:venue:788	2025-05-17 13:30:00
+sr:sport_event:50868449	sr:season:119799	sr:competitor:2947	sr:competitor:2951	\N	\N	not_started	27	sr:venue:2081	2025-03-29 17:00:00
+sr:sport_event:50868453	sr:season:119799	sr:competitor:2952	sr:competitor:2953	\N	\N	not_started	27	sr:venue:726	2025-03-29 17:00:00
+sr:sport_event:50868437	sr:season:119799	sr:competitor:2960	sr:competitor:2971	\N	\N	not_started	26	sr:venue:656	2025-03-14 17:00:00
+sr:sport_event:50868469	sr:season:119799	sr:competitor:2956	sr:competitor:2977	\N	\N	not_started	28	sr:venue:685	2025-04-04 16:00:00
+sr:sport_event:50868503	sr:season:119799	sr:competitor:2959	sr:competitor:2971	\N	\N	not_started	30	sr:venue:612	2025-04-23 16:00:00
+sr:sport_event:50868505	sr:season:119799	sr:competitor:2957	sr:competitor:2961	\N	\N	not_started	30	sr:venue:2769	2025-04-23 16:00:00
+sr:sport_event:50868493	sr:season:119799	sr:competitor:2953	sr:competitor:2960	\N	\N	not_started	30	sr:venue:577	2025-04-23 16:00:00
 sr:sport_event:50868545	sr:season:119799	sr:competitor:2961	sr:competitor:2977	\N	\N	not_started	32	sr:venue:826	2025-05-09 16:00:00
-sr:sport_event:50868517	sr:season:119799	sr:competitor:2977	sr:competitor:2959	\N	\N	not_started	31	sr:venue:729	2025-05-02 16:00:00
-sr:sport_event:51269551	sr:season:118693	sr:competitor:2681	sr:competitor:2600	\N	\N	not_started	31	sr:venue:593	2025-04-26 13:30:00
-sr:sport_event:51269467	sr:season:118693	sr:competitor:2534	sr:competitor:2527	\N	\N	not_started	26	sr:venue:821	2025-03-15 14:30:00
-sr:sport_event:51269413	sr:season:118693	sr:competitor:2569	sr:competitor:2677	\N	\N	not_started	23	sr:venue:1089	2025-02-22 14:30:00
-sr:sport_event:50868563	sr:season:119799	sr:competitor:2961	sr:competitor:2971	\N	\N	not_started	33	sr:venue:826	2025-05-14 18:00:00
+sr:sport_event:50868547	sr:season:119799	sr:competitor:2990	sr:competitor:2957	\N	\N	not_started	33	sr:venue:3261	2025-05-14 18:00:00
+sr:sport_event:50868543	sr:season:119799	sr:competitor:2956	sr:competitor:2964	\N	\N	not_started	32	sr:venue:685	2025-05-09 16:00:00
+sr:sport_event:50868571	sr:season:119799	sr:competitor:2977	sr:competitor:2962	\N	\N	not_started	34	sr:venue:729	2025-05-18 12:30:00
 sr:sport_event:51269283	sr:season:118693	sr:competitor:2673	sr:competitor:2681	\N	\N	not_started	16	sr:venue:759	2025-01-10 19:30:00
-sr:sport_event:51269589	sr:season:118693	sr:competitor:2677	sr:competitor:2600	\N	\N	not_started	33	sr:venue:648	2025-05-10 13:30:00
 sr:sport_event:51269373	sr:season:118693	sr:competitor:36360	sr:competitor:2526	\N	\N	not_started	21	sr:venue:850	2025-02-08 14:30:00
 sr:sport_event:51268883	sr:season:118693	sr:competitor:2526	sr:competitor:5885	0	2	closed	1	sr:venue:791	2024-08-25 15:30:00
 sr:sport_event:51269033	sr:season:118693	sr:competitor:2681	sr:competitor:2573	2	2	closed	6	sr:venue:593	2024-10-05 13:30:00
 sr:sport_event:51269395	sr:season:118693	sr:competitor:5885	sr:competitor:2556	\N	\N	not_started	22	sr:venue:34054	2025-02-15 14:30:00
-sr:sport_event:51269435	sr:season:118693	sr:competitor:2600	sr:competitor:2538	\N	\N	not_started	24	sr:venue:1655	2025-03-01 14:30:00
-sr:sport_event:51269599	sr:season:118693	sr:competitor:2547	sr:competitor:5885	\N	\N	not_started	33	sr:venue:578	2025-05-10 13:30:00
 sr:sport_event:51269199	sr:season:118693	sr:competitor:2674	sr:competitor:2534	1	0	closed	11	sr:venue:67707	2024-11-23 17:30:00
 sr:sport_event:51269165	sr:season:118693	sr:competitor:2524	sr:competitor:2600	1	1	closed	9	sr:venue:816	2024-11-02 14:30:00
 sr:sport_event:51269265	sr:season:118693	sr:competitor:2677	sr:competitor:2526	\N	\N	not_started	15	sr:venue:648	2024-12-21 14:30:00
@@ -3311,43 +3082,42 @@ sr:sport_event:51268969	sr:season:118693	sr:competitor:2674	sr:competitor:2527	2
 sr:sport_event:51269205	sr:season:118693	sr:competitor:2527	sr:competitor:2526	2	0	closed	11	sr:venue:788	2024-11-24 16:30:00
 sr:sport_event:51269339	sr:season:118693	sr:competitor:2569	sr:competitor:2674	\N	\N	not_started	19	sr:venue:1089	2025-01-26 14:30:00
 sr:sport_event:50955427	sr:season:119835	sr:competitor:1658	sr:competitor:1648	1	1	closed	5	sr:venue:844	2024-09-21 17:00:00
-sr:sport_event:50868539	sr:season:119799	sr:competitor:2957	sr:competitor:2947	\N	\N	not_started	32	sr:venue:2769	2025-05-09 16:00:00
-sr:sport_event:50868573	sr:season:119799	sr:competitor:2947	sr:competitor:2961	\N	\N	not_started	34	sr:venue:2081	2025-05-18 12:30:00
-sr:sport_event:50868575	sr:season:119799	sr:competitor:2971	sr:competitor:2951	\N	\N	not_started	34	sr:venue:18994	2025-05-18 12:30:00
-sr:sport_event:51269469	sr:season:118693	sr:competitor:2600	sr:competitor:2524	\N	\N	not_started	26	sr:venue:1655	2025-03-15 14:30:00
 sr:sport_event:51269045	sr:season:118693	sr:competitor:5885	sr:competitor:36360	0	1	closed	6	sr:venue:34054	2024-10-06 13:30:00
 sr:sport_event:51269379	sr:season:118693	sr:competitor:2538	sr:competitor:5885	\N	\N	not_started	21	sr:venue:61056	2025-02-08 14:30:00
 sr:sport_event:50955389	sr:season:119835	sr:competitor:1662	sr:competitor:1646	3	1	closed	3	sr:venue:46514	2024-09-01 15:00:00
 sr:sport_event:51269315	sr:season:118693	sr:competitor:2573	sr:competitor:2673	\N	\N	not_started	17	sr:venue:659	2025-01-14 17:30:00
-sr:sport_event:50868461	sr:season:119799	sr:competitor:2950	sr:competitor:2959	\N	\N	not_started	28	sr:venue:615	2025-04-04 16:00:00
 sr:sport_event:51269179	sr:season:118693	sr:competitor:2534	sr:competitor:2573	2	1	closed	10	sr:venue:821	2024-11-09 14:30:00
 sr:sport_event:51269109	sr:season:118693	sr:competitor:36360	sr:competitor:2538	3	1	closed	8	sr:venue:850	2024-10-26 13:30:00
 sr:sport_event:51269061	sr:season:118693	sr:competitor:2542	sr:competitor:2524	1	3	closed	6	sr:venue:738	2024-10-05 13:30:00
 sr:sport_event:51269331	sr:season:118693	sr:competitor:2542	sr:competitor:36360	\N	\N	not_started	18	sr:venue:738	2025-01-18 14:30:00
 sr:sport_event:51269363	sr:season:118693	sr:competitor:2534	sr:competitor:2556	\N	\N	not_started	20	sr:venue:821	2025-02-01 14:30:00
 sr:sport_event:51269245	sr:season:118693	sr:competitor:36360	sr:competitor:2674	\N	\N	not_started	14	sr:venue:850	2024-12-15 18:30:00
-sr:sport_event:51269507	sr:season:118693	sr:competitor:2556	sr:competitor:2573	\N	\N	not_started	28	sr:venue:2406	2025-04-05 13:30:00
 sr:sport_event:51268857	sr:season:118693	sr:competitor:2673	sr:competitor:2674	2	0	closed	1	sr:venue:759	2024-08-24 16:30:00
 sr:sport_event:51269211	sr:season:118693	sr:competitor:2673	sr:competitor:2672	\N	\N	not_started	12	sr:venue:759	2024-11-30 17:30:00
-sr:sport_event:51269451	sr:season:118693	sr:competitor:2569	sr:competitor:5885	\N	\N	not_started	25	sr:venue:1089	2025-03-08 14:30:00
-sr:sport_event:51269491	sr:season:118693	sr:competitor:2524	sr:competitor:5885	\N	\N	not_started	27	sr:venue:816	2025-03-29 14:30:00
 sr:sport_event:51269327	sr:season:118693	sr:competitor:2534	sr:competitor:2600	\N	\N	not_started	18	sr:venue:821	2025-01-19 16:30:00
-sr:sport_event:51269419	sr:season:118693	sr:competitor:2556	sr:competitor:2526	\N	\N	not_started	23	sr:venue:2406	2025-02-22 14:30:00
-sr:sport_event:51269541	sr:season:118693	sr:competitor:2538	sr:competitor:2569	\N	\N	not_started	30	sr:venue:61056	2025-04-19 13:30:00
 sr:sport_event:51269277	sr:season:118693	sr:competitor:2542	sr:competitor:5885	\N	\N	not_started	15	sr:venue:738	2024-12-22 14:30:00
-sr:sport_event:51269537	sr:season:118693	sr:competitor:5885	sr:competitor:2672	\N	\N	not_started	30	sr:venue:34054	2025-04-19 13:30:00
-sr:sport_event:51269517	sr:season:118693	sr:competitor:2677	sr:competitor:2534	\N	\N	not_started	29	sr:venue:648	2025-04-12 13:30:00
-sr:sport_event:51269575	sr:season:118693	sr:competitor:2538	sr:competitor:2681	\N	\N	not_started	32	sr:venue:61056	2025-05-03 13:30:00
 sr:sport_event:51269307	sr:season:118693	sr:competitor:2534	sr:competitor:5885	\N	\N	not_started	17	sr:venue:821	2025-01-15 19:30:00
+sr:sport_event:51269467	sr:season:118693	sr:competitor:2534	sr:competitor:2527	\N	\N	not_started	26	sr:venue:821	2025-03-15 14:30:00
+sr:sport_event:51269469	sr:season:118693	sr:competitor:2600	sr:competitor:2524	\N	\N	not_started	26	sr:venue:1655	2025-03-15 14:30:00
+sr:sport_event:51269413	sr:season:118693	sr:competitor:2569	sr:competitor:2677	\N	\N	not_started	23	sr:venue:1089	2025-02-22 14:30:00
+sr:sport_event:51269517	sr:season:118693	sr:competitor:2677	sr:competitor:2534	\N	\N	not_started	29	sr:venue:648	2025-04-12 13:30:00
+sr:sport_event:51269541	sr:season:118693	sr:competitor:2538	sr:competitor:2569	\N	\N	not_started	30	sr:venue:61056	2025-04-19 13:30:00
+sr:sport_event:51269551	sr:season:118693	sr:competitor:2681	sr:competitor:2600	\N	\N	not_started	31	sr:venue:593	2025-04-26 13:30:00
+sr:sport_event:51269537	sr:season:118693	sr:competitor:5885	sr:competitor:2672	\N	\N	not_started	30	sr:venue:34054	2025-04-19 13:30:00
+sr:sport_event:51269575	sr:season:118693	sr:competitor:2538	sr:competitor:2681	\N	\N	not_started	32	sr:venue:61056	2025-05-03 13:30:00
+sr:sport_event:51269589	sr:season:118693	sr:competitor:2677	sr:competitor:2600	\N	\N	not_started	33	sr:venue:648	2025-05-10 13:30:00
+sr:sport_event:51269599	sr:season:118693	sr:competitor:2547	sr:competitor:5885	\N	\N	not_started	33	sr:venue:578	2025-05-10 13:30:00
 sr:sport_event:51269605	sr:season:118693	sr:competitor:36360	sr:competitor:2677	\N	\N	not_started	34	sr:venue:850	2025-05-17 13:30:00
 sr:sport_event:51269607	sr:season:118693	sr:competitor:2673	sr:competitor:2573	\N	\N	not_started	34	sr:venue:759	2025-05-17 13:30:00
-sr:sport_event:50868479	sr:season:119799	sr:competitor:2977	sr:competitor:2950	\N	\N	not_started	29	sr:venue:729	2025-04-11 16:00:00
+sr:sport_event:50868461	sr:season:119799	sr:competitor:2950	sr:competitor:2959	\N	\N	not_started	28	sr:venue:615	2025-04-04 16:00:00
 sr:sport_event:50868489	sr:season:119799	sr:competitor:2960	sr:competitor:2964	\N	\N	not_started	29	sr:venue:656	2025-04-11 16:00:00
-sr:sport_event:51269409	sr:season:118693	sr:competitor:36360	sr:competitor:5885	\N	\N	not_started	23	sr:venue:850	2025-02-22 14:30:00
+sr:sport_event:50868479	sr:season:119799	sr:competitor:2977	sr:competitor:2950	\N	\N	not_started	29	sr:venue:729	2025-04-11 16:00:00
+sr:sport_event:50868517	sr:season:119799	sr:competitor:2977	sr:competitor:2959	\N	\N	not_started	31	sr:venue:729	2025-05-02 16:00:00
+sr:sport_event:50868539	sr:season:119799	sr:competitor:2957	sr:competitor:2947	\N	\N	not_started	32	sr:venue:2769	2025-05-09 16:00:00
+sr:sport_event:50868575	sr:season:119799	sr:competitor:2971	sr:competitor:2951	\N	\N	not_started	34	sr:venue:18994	2025-05-18 12:30:00
+sr:sport_event:50868573	sr:season:119799	sr:competitor:2947	sr:competitor:2961	\N	\N	not_started	34	sr:venue:2081	2025-05-18 12:30:00
+sr:sport_event:50868563	sr:season:119799	sr:competitor:2961	sr:competitor:2971	\N	\N	not_started	33	sr:venue:826	2025-05-14 18:00:00
 sr:sport_event:51268965	sr:season:118693	sr:competitor:2677	sr:competitor:2673	5	1	closed	4	sr:venue:648	2024-09-22 15:30:00
-sr:sport_event:50868523	sr:season:119799	sr:competitor:2952	sr:competitor:2957	\N	\N	not_started	31	sr:venue:726	2025-05-02 16:00:00
-sr:sport_event:50868529	sr:season:119799	sr:competitor:2953	sr:competitor:2962	\N	\N	not_started	32	sr:venue:577	2025-05-09 16:00:00
-sr:sport_event:50868557	sr:season:119799	sr:competitor:2979	sr:competitor:2964	\N	\N	not_started	33	sr:venue:3293	2025-05-14 18:00:00
 sr:sport_event:51268913	sr:season:118693	sr:competitor:2547	sr:competitor:2526	1	0	closed	2	sr:venue:578	2024-08-30 18:30:00
 sr:sport_event:51269129	sr:season:118693	sr:competitor:2547	sr:competitor:2674	1	1	closed	8	sr:venue:578	2024-10-27 16:30:00
 sr:sport_event:51269021	sr:season:118693	sr:competitor:2556	sr:competitor:5885	0	2	closed	5	sr:venue:2406	2024-09-28 13:30:00
@@ -3357,75 +3127,56 @@ sr:sport_event:51269347	sr:season:118693	sr:competitor:2556	sr:competitor:2677	\
 sr:sport_event:51269105	sr:season:118693	sr:competitor:2677	sr:competitor:2573	2	1	closed	8	sr:venue:648	2024-10-26 13:30:00
 sr:sport_event:51269255	sr:season:118693	sr:competitor:2556	sr:competitor:2672	\N	\N	not_started	14	sr:venue:2406	2024-12-14 14:30:00
 sr:sport_event:51269041	sr:season:118693	sr:competitor:2674	sr:competitor:2672	3	3	closed	6	sr:venue:67707	2024-10-06 15:30:00
-sr:sport_event:50868567	sr:season:119799	sr:competitor:2950	sr:competitor:2990	\N	\N	not_started	34	sr:venue:615	2025-05-18 12:30:00
 sr:sport_event:50955387	sr:season:119835	sr:competitor:1653	sr:competitor:1648	1	1	closed	3	sr:venue:831	2024-09-01 13:00:00
 sr:sport_event:51269161	sr:season:118693	sr:competitor:2538	sr:competitor:2556	0	0	closed	9	sr:venue:61056	2024-11-03 14:30:00
 sr:sport_event:51269157	sr:season:118693	sr:competitor:2569	sr:competitor:2526	0	2	closed	9	sr:venue:1089	2024-11-02 14:30:00
-sr:sport_event:51269531	sr:season:118693	sr:competitor:2573	sr:competitor:2526	\N	\N	not_started	29	sr:venue:659	2025-04-12 13:30:00
 sr:sport_event:51268861	sr:season:118693	sr:competitor:2569	sr:competitor:2573	3	2	closed	1	sr:venue:1089	2024-08-24 13:30:00
 sr:sport_event:51269383	sr:season:118693	sr:competitor:2556	sr:competitor:2600	\N	\N	not_started	21	sr:venue:2406	2025-02-08 14:30:00
-sr:sport_event:51269539	sr:season:118693	sr:competitor:2534	sr:competitor:2542	\N	\N	not_started	30	sr:venue:821	2025-04-19 13:30:00
-sr:sport_event:51269441	sr:season:118693	sr:competitor:2526	sr:competitor:2673	\N	\N	not_started	24	sr:venue:791	2025-03-01 14:30:00
 sr:sport_event:51269269	sr:season:118693	sr:competitor:2674	sr:competitor:2556	\N	\N	not_started	15	sr:venue:67707	2024-12-21 14:30:00
 sr:sport_event:51269213	sr:season:118693	sr:competitor:5885	sr:competitor:2674	\N	\N	not_started	12	sr:venue:34054	2024-12-01 16:30:00
-sr:sport_event:51269617	sr:season:118693	sr:competitor:2556	sr:competitor:2681	\N	\N	not_started	34	sr:venue:2406	2025-05-17 13:30:00
 sr:sport_event:51269263	sr:season:118693	sr:competitor:2681	sr:competitor:2538	\N	\N	not_started	15	sr:venue:593	2024-12-21 17:30:00
-sr:sport_event:51269461	sr:season:118693	sr:competitor:2677	sr:competitor:2681	\N	\N	not_started	26	sr:venue:648	2025-03-15 14:30:00
-sr:sport_event:51269483	sr:season:118693	sr:competitor:2673	sr:competitor:2556	\N	\N	not_started	27	sr:venue:759	2025-03-29 14:30:00
 sr:sport_event:51269385	sr:season:118693	sr:competitor:2527	sr:competitor:2674	\N	\N	not_started	21	sr:venue:788	2025-02-08 14:30:00
 sr:sport_event:51269303	sr:season:118693	sr:competitor:2672	sr:competitor:2569	\N	\N	not_started	17	sr:venue:574	2025-01-15 19:30:00
-sr:sport_event:51269591	sr:season:118693	sr:competitor:2672	sr:competitor:2527	\N	\N	not_started	33	sr:venue:574	2025-05-10 13:30:00
-sr:sport_event:50868525	sr:season:119799	sr:competitor:2964	sr:competitor:2990	\N	\N	not_started	31	sr:venue:569	2025-05-02 16:00:00
 sr:sport_event:51269317	sr:season:118693	sr:competitor:2681	sr:competitor:2527	\N	\N	not_started	18	sr:venue:593	2025-01-18 17:30:00
 sr:sport_event:51269065	sr:season:118693	sr:competitor:2526	sr:competitor:2556	0	3	closed	6	sr:venue:791	2024-10-05 16:30:00
-sr:sport_event:51269595	sr:season:118693	sr:competitor:2534	sr:competitor:36360	\N	\N	not_started	33	sr:venue:821	2025-05-10 13:30:00
-sr:sport_event:51269603	sr:season:118693	sr:competitor:2573	sr:competitor:2538	\N	\N	not_started	33	sr:venue:659	2025-05-10 13:30:00
-sr:sport_event:50868475	sr:season:119799	sr:competitor:2948	sr:competitor:2951	\N	\N	not_started	29	sr:venue:786	2025-04-11 16:00:00
 sr:sport_event:51269293	sr:season:118693	sr:competitor:2556	sr:competitor:2542	\N	\N	not_started	16	sr:venue:2406	2025-01-11 14:30:00
 sr:sport_event:51269029	sr:season:118693	sr:competitor:2573	sr:competitor:2674	2	4	closed	5	sr:venue:659	2024-09-29 13:30:00
 sr:sport_event:51269365	sr:season:118693	sr:competitor:2547	sr:competitor:36360	\N	\N	not_started	20	sr:venue:578	2025-02-01 14:30:00
 sr:sport_event:51269175	sr:season:118693	sr:competitor:36360	sr:competitor:2527	0	0	closed	10	sr:venue:850	2024-11-09 17:30:00
-sr:sport_event:50868565	sr:season:119799	sr:competitor:2953	sr:competitor:2955	\N	\N	not_started	34	sr:venue:577	2025-05-18 12:30:00
 sr:sport_event:51269393	sr:season:118693	sr:competitor:2674	sr:competitor:2573	\N	\N	not_started	22	sr:venue:67707	2025-02-15 14:30:00
 sr:sport_event:51269229	sr:season:118693	sr:competitor:2677	sr:competitor:2547	\N	\N	not_started	13	sr:venue:648	2024-12-06 19:30:00
 sr:sport_event:51269345	sr:season:118693	sr:competitor:2524	sr:competitor:2573	\N	\N	not_started	19	sr:venue:816	2025-01-24 19:30:00
-sr:sport_event:51269453	sr:season:118693	sr:competitor:2538	sr:competitor:36360	\N	\N	not_started	25	sr:venue:61056	2025-03-08 14:30:00
 sr:sport_event:51269221	sr:season:118693	sr:competitor:2556	sr:competitor:2569	\N	\N	not_started	12	sr:venue:2406	2024-12-01 14:30:00
 sr:sport_event:51268917	sr:season:118693	sr:competitor:2542	sr:competitor:2527	0	2	closed	2	sr:venue:738	2024-08-31 13:30:00
 sr:sport_event:51268953	sr:season:118693	sr:competitor:2527	sr:competitor:2677	1	3	closed	3	sr:venue:788	2024-09-14 13:30:00
 sr:sport_event:51268933	sr:season:118693	sr:competitor:2569	sr:competitor:2681	1	4	closed	3	sr:venue:1089	2024-09-14 13:30:00
 sr:sport_event:51269389	sr:season:118693	sr:competitor:2681	sr:competitor:2672	\N	\N	not_started	22	sr:venue:593	2025-02-15 14:30:00
+sr:sport_event:51269461	sr:season:118693	sr:competitor:2677	sr:competitor:2681	\N	\N	not_started	26	sr:venue:648	2025-03-15 14:30:00
+sr:sport_event:51269483	sr:season:118693	sr:competitor:2673	sr:competitor:2556	\N	\N	not_started	27	sr:venue:759	2025-03-29 14:30:00
+sr:sport_event:51269539	sr:season:118693	sr:competitor:2534	sr:competitor:2542	\N	\N	not_started	30	sr:venue:821	2025-04-19 13:30:00
+sr:sport_event:51269591	sr:season:118693	sr:competitor:2672	sr:competitor:2527	\N	\N	not_started	33	sr:venue:574	2025-05-10 13:30:00
+sr:sport_event:51269595	sr:season:118693	sr:competitor:2534	sr:competitor:36360	\N	\N	not_started	33	sr:venue:821	2025-05-10 13:30:00
+sr:sport_event:51269603	sr:season:118693	sr:competitor:2573	sr:competitor:2538	\N	\N	not_started	33	sr:venue:659	2025-05-10 13:30:00
+sr:sport_event:51269617	sr:season:118693	sr:competitor:2556	sr:competitor:2681	\N	\N	not_started	34	sr:venue:2406	2025-05-17 13:30:00
+sr:sport_event:50868475	sr:season:119799	sr:competitor:2948	sr:competitor:2951	\N	\N	not_started	29	sr:venue:786	2025-04-11 16:00:00
+sr:sport_event:50868525	sr:season:119799	sr:competitor:2964	sr:competitor:2990	\N	\N	not_started	31	sr:venue:569	2025-05-02 16:00:00
+sr:sport_event:50868529	sr:season:119799	sr:competitor:2953	sr:competitor:2962	\N	\N	not_started	32	sr:venue:577	2025-05-09 16:00:00
+sr:sport_event:50868523	sr:season:119799	sr:competitor:2952	sr:competitor:2957	\N	\N	not_started	31	sr:venue:726	2025-05-02 16:00:00
+sr:sport_event:50868557	sr:season:119799	sr:competitor:2979	sr:competitor:2964	\N	\N	not_started	33	sr:venue:3293	2025-05-14 18:00:00
 sr:sport_event:51269341	sr:season:118693	sr:competitor:2538	sr:competitor:2672	\N	\N	not_started	19	sr:venue:61056	2025-01-25 14:30:00
-sr:sport_event:51269417	sr:season:118693	sr:competitor:2524	sr:competitor:2542	\N	\N	not_started	23	sr:venue:816	2025-02-22 14:30:00
-sr:sport_event:51269493	sr:season:118693	sr:competitor:2527	sr:competitor:36360	\N	\N	not_started	27	sr:venue:788	2025-03-29 14:30:00
-sr:sport_event:51269567	sr:season:118693	sr:competitor:2573	sr:competitor:2527	\N	\N	not_started	31	sr:venue:659	2025-04-26 13:30:00
-sr:sport_event:51269505	sr:season:118693	sr:competitor:2600	sr:competitor:2672	\N	\N	not_started	28	sr:venue:1655	2025-04-05 13:30:00
-sr:sport_event:51269523	sr:season:118693	sr:competitor:2569	sr:competitor:2556	\N	\N	not_started	29	sr:venue:1089	2025-04-12 13:30:00
-sr:sport_event:50955901	sr:season:119835	sr:competitor:1649	sr:competitor:1658	\N	\N	not_started	31	sr:venue:17406	2025-04-27 17:00:00
 sr:sport_event:50955453	sr:season:119835	sr:competitor:1643	sr:competitor:1681	2	1	closed	7	sr:venue:837	2024-10-05 17:00:00
-sr:sport_event:51269585	sr:season:118693	sr:competitor:2526	sr:competitor:2677	\N	\N	not_started	32	sr:venue:791	2025-05-03 13:30:00
 sr:sport_event:50955465	sr:season:119835	sr:competitor:1682	sr:competitor:1642	4	2	closed	7	sr:venue:1871	2024-10-06 15:00:00
 sr:sport_event:50955639	sr:season:119835	sr:competitor:1642	sr:competitor:1684	\N	\N	not_started	17	sr:venue:1275	2025-01-12 16:00:00
-sr:sport_event:50955761	sr:season:119835	sr:competitor:1641	sr:competitor:1647	\N	\N	not_started	24	sr:venue:839	2025-03-02 17:00:00
-sr:sport_event:51269561	sr:season:118693	sr:competitor:2534	sr:competitor:2526	\N	\N	not_started	31	sr:venue:821	2025-04-26 13:30:00
 sr:sport_event:50955511	sr:season:119835	sr:competitor:1647	sr:competitor:1641	1	2	closed	10	sr:venue:953	2024-11-03 19:45:00
 sr:sport_event:51269311	sr:season:118693	sr:competitor:2547	sr:competitor:2600	\N	\N	not_started	17	sr:venue:578	2025-01-15 19:30:00
 sr:sport_event:51269309	sr:season:118693	sr:competitor:2524	sr:competitor:2527	\N	\N	not_started	17	sr:venue:816	2025-01-14 19:30:00
-sr:sport_event:50955841	sr:season:119835	sr:competitor:1648	sr:competitor:1678	\N	\N	not_started	28	sr:venue:835	2025-04-06 17:00:00
-sr:sport_event:50955873	sr:season:119835	sr:competitor:1643	sr:competitor:1646	\N	\N	not_started	30	sr:venue:837	2025-04-20 17:00:00
 sr:sport_event:50955559	sr:season:119835	sr:competitor:1658	sr:competitor:1678	\N	\N	not_started	13	sr:venue:844	2024-11-30 16:00:00
 sr:sport_event:50955623	sr:season:119835	sr:competitor:1641	sr:competitor:1662	\N	\N	not_started	16	sr:venue:839	2025-01-05 16:00:00
-sr:sport_event:50955799	sr:season:119835	sr:competitor:1642	sr:competitor:1678	\N	\N	not_started	26	sr:venue:1275	2025-03-16 17:00:00
-sr:sport_event:50955893	sr:season:119835	sr:competitor:1648	sr:competitor:1646	\N	\N	not_started	31	sr:venue:835	2025-04-27 17:00:00
 sr:sport_event:50955413	sr:season:119835	sr:competitor:1649	sr:competitor:1641	2	3	closed	5	sr:venue:17406	2024-09-22 18:45:00
-sr:sport_event:50955951	sr:season:119835	sr:competitor:1643	sr:competitor:1682	\N	\N	not_started	34	sr:venue:837	2025-05-18 17:00:00
 sr:sport_event:50955489	sr:season:119835	sr:competitor:1641	sr:competitor:1644	0	3	closed	9	sr:venue:839	2024-10-27 19:45:00
 sr:sport_event:50955385	sr:season:119835	sr:competitor:1684	sr:competitor:1661	1	4	closed	3	sr:venue:19889	2024-09-01 15:00:00
 sr:sport_event:50955699	sr:season:119835	sr:competitor:1681	sr:competitor:1661	\N	\N	not_started	20	sr:venue:848	2025-02-02 16:00:00
-sr:sport_event:51269407	sr:season:118693	sr:competitor:2672	sr:competitor:2674	\N	\N	not_started	23	sr:venue:574	2025-02-22 14:30:00
-sr:sport_event:50955879	sr:season:119835	sr:competitor:1682	sr:competitor:1681	\N	\N	not_started	30	sr:venue:1871	2025-04-20 17:00:00
 sr:sport_event:50955711	sr:season:119835	sr:competitor:1643	sr:competitor:1662	\N	\N	not_started	21	sr:venue:837	2025-02-09 16:00:00
-sr:sport_event:50955937	sr:season:119835	sr:competitor:1681	sr:competitor:1648	\N	\N	not_started	33	sr:venue:848	2025-05-11 17:00:00
 sr:sport_event:50955563	sr:season:119835	sr:competitor:1681	sr:competitor:1646	\N	\N	not_started	13	sr:venue:848	2024-12-01 16:00:00
 sr:sport_event:50955479	sr:season:119835	sr:competitor:1678	sr:competitor:1648	0	2	closed	8	sr:venue:845	2024-10-19 17:00:00
 sr:sport_event:50955657	sr:season:119835	sr:competitor:1642	sr:competitor:1653	\N	\N	not_started	18	sr:venue:1275	2025-01-19 16:00:00
@@ -3433,146 +3184,123 @@ sr:sport_event:50955665	sr:season:119835	sr:competitor:1659	sr:competitor:1643	\
 sr:sport_event:50955703	sr:season:119835	sr:competitor:1653	sr:competitor:1646	\N	\N	not_started	20	sr:venue:831	2025-02-02 16:00:00
 sr:sport_event:50955549	sr:season:119835	sr:competitor:1647	sr:competitor:1662	0	2	closed	12	sr:venue:953	2024-11-24 16:00:00
 sr:sport_event:50955735	sr:season:119835	sr:competitor:1682	sr:competitor:1684	\N	\N	not_started	22	sr:venue:1871	2025-02-16 16:00:00
-sr:sport_event:50955769	sr:season:119835	sr:competitor:1648	sr:competitor:1662	\N	\N	not_started	24	sr:venue:835	2025-03-02 17:00:00
 sr:sport_event:50955449	sr:season:119835	sr:competitor:1649	sr:competitor:1647	2	0	closed	7	sr:venue:17406	2024-10-06 13:00:00
 sr:sport_event:50955451	sr:season:119835	sr:competitor:1661	sr:competitor:1644	1	1	closed	7	sr:venue:13184	2024-10-06 18:45:00
 sr:sport_event:50955457	sr:season:119835	sr:competitor:1715	sr:competitor:1662	2	0	closed	7	sr:venue:1858	2024-10-06 15:00:00
 sr:sport_event:50955645	sr:season:119835	sr:competitor:1658	sr:competitor:1641	\N	\N	not_started	17	sr:venue:844	2025-01-12 16:00:00
-sr:sport_event:50955773	sr:season:119835	sr:competitor:1653	sr:competitor:1682	\N	\N	not_started	24	sr:venue:831	2025-03-02 17:00:00
 sr:sport_event:50955495	sr:season:119835	sr:competitor:1659	sr:competitor:1647	3	1	closed	9	sr:venue:847	2024-10-27 16:00:00
 sr:sport_event:50955517	sr:season:119835	sr:competitor:1715	sr:competitor:1661	0	1	closed	10	sr:venue:1858	2024-11-02 18:00:00
 sr:sport_event:50955621	sr:season:119835	sr:competitor:1643	sr:competitor:1647	\N	\N	not_started	16	sr:venue:837	2025-01-05 16:00:00
 sr:sport_event:50955625	sr:season:119835	sr:competitor:1659	sr:competitor:1646	\N	\N	not_started	16	sr:venue:847	2025-01-05 16:00:00
 sr:sport_event:50955629	sr:season:119835	sr:competitor:1681	sr:competitor:1659	\N	\N	not_started	17	sr:venue:848	2025-01-12 16:00:00
 sr:sport_event:50955731	sr:season:119835	sr:competitor:1715	sr:competitor:1646	\N	\N	not_started	22	sr:venue:1858	2025-02-16 16:00:00
-sr:sport_event:50955741	sr:season:119835	sr:competitor:1658	sr:competitor:1682	\N	\N	not_started	23	sr:venue:844	2025-02-23 16:00:00
 sr:sport_event:50955635	sr:season:119835	sr:competitor:1682	sr:competitor:1661	\N	\N	not_started	17	sr:venue:1871	2025-01-12 16:00:00
-sr:sport_event:50955811	sr:season:119835	sr:competitor:1684	sr:competitor:1653	\N	\N	not_started	26	sr:venue:19889	2025-03-16 17:00:00
-sr:sport_event:50955793	sr:season:119835	sr:competitor:1641	sr:competitor:1648	\N	\N	not_started	25	sr:venue:839	2025-03-09 17:00:00
+sr:sport_event:51269493	sr:season:118693	sr:competitor:2527	sr:competitor:36360	\N	\N	not_started	27	sr:venue:788	2025-03-29 14:30:00
+sr:sport_event:51269505	sr:season:118693	sr:competitor:2600	sr:competitor:2672	\N	\N	not_started	28	sr:venue:1655	2025-04-05 13:30:00
+sr:sport_event:51269523	sr:season:118693	sr:competitor:2569	sr:competitor:2556	\N	\N	not_started	29	sr:venue:1089	2025-04-12 13:30:00
+sr:sport_event:50955773	sr:season:119835	sr:competitor:1653	sr:competitor:1682	\N	\N	not_started	24	sr:venue:831	2025-03-02 17:00:00
+sr:sport_event:50955741	sr:season:119835	sr:competitor:1658	sr:competitor:1682	\N	\N	not_started	23	sr:venue:844	2025-02-23 16:00:00
+sr:sport_event:50955761	sr:season:119835	sr:competitor:1641	sr:competitor:1647	\N	\N	not_started	24	sr:venue:839	2025-03-02 17:00:00
+sr:sport_event:50955769	sr:season:119835	sr:competitor:1648	sr:competitor:1662	\N	\N	not_started	24	sr:venue:835	2025-03-02 17:00:00
+sr:sport_event:50955799	sr:season:119835	sr:competitor:1642	sr:competitor:1678	\N	\N	not_started	26	sr:venue:1275	2025-03-16 17:00:00
+sr:sport_event:50955879	sr:season:119835	sr:competitor:1682	sr:competitor:1681	\N	\N	not_started	30	sr:venue:1871	2025-04-20 17:00:00
+sr:sport_event:50955873	sr:season:119835	sr:competitor:1643	sr:competitor:1646	\N	\N	not_started	30	sr:venue:837	2025-04-20 17:00:00
+sr:sport_event:50955901	sr:season:119835	sr:competitor:1649	sr:competitor:1658	\N	\N	not_started	31	sr:venue:17406	2025-04-27 17:00:00
+sr:sport_event:50955893	sr:season:119835	sr:competitor:1648	sr:competitor:1646	\N	\N	not_started	31	sr:venue:835	2025-04-27 17:00:00
+sr:sport_event:50955937	sr:season:119835	sr:competitor:1681	sr:competitor:1648	\N	\N	not_started	33	sr:venue:848	2025-05-11 17:00:00
+sr:sport_event:50955951	sr:season:119835	sr:competitor:1643	sr:competitor:1682	\N	\N	not_started	34	sr:venue:837	2025-05-18 17:00:00
 sr:sport_event:50955459	sr:season:119835	sr:competitor:1641	sr:competitor:1684	1	1	closed	7	sr:venue:839	2024-10-04 18:45:00
 sr:sport_event:50955615	sr:season:119835	sr:competitor:1648	sr:competitor:1681	\N	\N	not_started	16	sr:venue:835	2025-01-05 16:00:00
 sr:sport_event:50955719	sr:season:119835	sr:competitor:1684	sr:competitor:1641	\N	\N	not_started	21	sr:venue:19889	2025-02-09 16:00:00
-sr:sport_event:50955947	sr:season:119835	sr:competitor:1661	sr:competitor:1715	\N	\N	not_started	34	sr:venue:13184	2025-05-18 17:00:00
 sr:sport_event:50955543	sr:season:119835	sr:competitor:1661	sr:competitor:1659	2	1	closed	12	sr:venue:13184	2024-11-24 19:45:00
-sr:sport_event:50955783	sr:season:119835	sr:competitor:1681	sr:competitor:1653	\N	\N	not_started	25	sr:venue:848	2025-03-09 17:00:00
 sr:sport_event:50955725	sr:season:119835	sr:competitor:1641	sr:competitor:1678	\N	\N	not_started	22	sr:venue:839	2025-02-16 16:00:00
-sr:sport_event:50955863	sr:season:119835	sr:competitor:1648	sr:competitor:1682	\N	\N	not_started	29	sr:venue:835	2025-04-13 17:00:00
-sr:sport_event:50955847	sr:season:119835	sr:competitor:1658	sr:competitor:1646	\N	\N	not_started	28	sr:venue:844	2025-04-06 17:00:00
 sr:sport_event:50955689	sr:season:119835	sr:competitor:1715	sr:competitor:1644	\N	\N	not_started	20	sr:venue:1858	2025-02-02 16:00:00
 sr:sport_event:50955589	sr:season:119835	sr:competitor:1647	sr:competitor:1658	\N	\N	not_started	14	sr:venue:953	2024-12-08 16:00:00
-sr:sport_event:50955891	sr:season:119835	sr:competitor:1642	sr:competitor:1682	\N	\N	not_started	31	sr:venue:1275	2025-04-27 17:00:00
-sr:sport_event:50955815	sr:season:119835	sr:competitor:1646	sr:competitor:1642	\N	\N	not_started	27	sr:venue:767	2025-03-30 17:00:00
-sr:sport_event:50955855	sr:season:119835	sr:competitor:1647	sr:competitor:1644	\N	\N	not_started	29	sr:venue:953	2025-04-13 17:00:00
-sr:sport_event:50955887	sr:season:119835	sr:competitor:1659	sr:competitor:1678	\N	\N	not_started	31	sr:venue:847	2025-04-27 17:00:00
 sr:sport_event:50955697	sr:season:119835	sr:competitor:1684	sr:competitor:1662	\N	\N	not_started	20	sr:venue:19889	2025-02-02 16:00:00
 sr:sport_event:50955547	sr:season:119835	sr:competitor:1643	sr:competitor:1658	1	0	closed	12	sr:venue:837	2024-11-24 14:00:00
-sr:sport_event:50955881	sr:season:119835	sr:competitor:1653	sr:competitor:1659	\N	\N	not_started	30	sr:venue:831	2025-04-20 17:00:00
-sr:sport_event:50955921	sr:season:119835	sr:competitor:1682	sr:competitor:1678	\N	\N	not_started	33	sr:venue:1871	2025-05-11 17:00:00
-sr:sport_event:50955787	sr:season:119835	sr:competitor:1715	sr:competitor:1684	\N	\N	not_started	25	sr:venue:1858	2025-03-09 17:00:00
 sr:sport_event:50955687	sr:season:119835	sr:competitor:1641	sr:competitor:1649	\N	\N	not_started	20	sr:venue:839	2025-02-02 16:00:00
-sr:sport_event:50955903	sr:season:119835	sr:competitor:1649	sr:competitor:1648	\N	\N	not_started	32	sr:venue:17406	2025-05-04 17:00:00
-sr:sport_event:50955821	sr:season:119835	sr:competitor:1681	sr:competitor:1715	\N	\N	not_started	27	sr:venue:848	2025-03-30 17:00:00
-sr:sport_event:50955767	sr:season:119835	sr:competitor:1678	sr:competitor:1661	\N	\N	not_started	24	sr:venue:845	2025-03-02 17:00:00
 sr:sport_event:50955557	sr:season:119835	sr:competitor:1682	sr:competitor:1648	\N	\N	not_started	13	sr:venue:1871	2024-11-29 19:45:00
-sr:sport_event:50955869	sr:season:119835	sr:competitor:1661	sr:competitor:1684	\N	\N	not_started	30	sr:venue:13184	2025-04-20 17:00:00
 sr:sport_event:50955569	sr:season:119835	sr:competitor:1644	sr:competitor:1647	\N	\N	not_started	13	sr:venue:843	2024-11-30 20:00:00
-sr:sport_event:50955945	sr:season:119835	sr:competitor:1649	sr:competitor:1684	\N	\N	not_started	34	sr:venue:17406	2025-05-18 17:00:00
 sr:sport_event:50955497	sr:season:119835	sr:competitor:1658	sr:competitor:1662	1	0	closed	9	sr:venue:844	2024-10-25 18:45:00
-sr:sport_event:50955955	sr:season:119835	sr:competitor:1647	sr:competitor:1642	\N	\N	not_started	34	sr:venue:953	2025-05-18 17:00:00
 sr:sport_event:50955591	sr:season:119835	sr:competitor:1653	sr:competitor:1681	\N	\N	not_started	14	sr:venue:831	2024-12-07 16:00:00
-sr:sport_event:50955809	sr:season:119835	sr:competitor:1647	sr:competitor:1643	\N	\N	not_started	26	sr:venue:953	2025-03-16 17:00:00
-sr:sport_event:50955755	sr:season:119835	sr:competitor:1661	sr:competitor:1642	\N	\N	not_started	23	sr:venue:13184	2025-02-23 16:00:00
 sr:sport_event:50955707	sr:season:119835	sr:competitor:1647	sr:competitor:1715	\N	\N	not_started	21	sr:venue:953	2025-02-09 16:00:00
 sr:sport_event:50955717	sr:season:119835	sr:competitor:1649	sr:competitor:1682	\N	\N	not_started	21	sr:venue:17406	2025-02-09 16:00:00
-sr:sport_event:50955733	sr:season:119835	sr:competitor:1658	sr:competitor:1643	\N	\N	not_started	22	sr:venue:844	2025-02-16 16:00:00
-sr:sport_event:50955819	sr:season:119835	sr:competitor:1659	sr:competitor:1649	\N	\N	not_started	27	sr:venue:847	2025-03-30 17:00:00
-sr:sport_event:50955785	sr:season:119835	sr:competitor:1661	sr:competitor:1649	\N	\N	not_started	25	sr:venue:13184	2025-03-09 17:00:00
 sr:sport_event:50955461	sr:season:119835	sr:competitor:1658	sr:competitor:1653	1	2	closed	7	sr:venue:844	2024-10-05 19:00:00
 sr:sport_event:50955587	sr:season:119835	sr:competitor:1659	sr:competitor:1682	\N	\N	not_started	14	sr:venue:847	2024-12-08 16:00:00
 sr:sport_event:50955643	sr:season:119835	sr:competitor:1644	sr:competitor:1678	\N	\N	not_started	17	sr:venue:843	2025-01-12 16:00:00
-sr:sport_event:50955871	sr:season:119835	sr:competitor:1715	sr:competitor:1648	\N	\N	not_started	30	sr:venue:1858	2025-04-20 17:00:00
-sr:sport_event:50955795	sr:season:119835	sr:competitor:1644	sr:competitor:1641	\N	\N	not_started	26	sr:venue:843	2025-03-16 17:00:00
-sr:sport_event:50955861	sr:season:119835	sr:competitor:1684	sr:competitor:1642	\N	\N	not_started	29	sr:venue:19889	2025-04-13 17:00:00
 sr:sport_event:50955681	sr:season:119835	sr:competitor:1648	sr:competitor:1684	\N	\N	not_started	19	sr:venue:835	2025-01-26 16:00:00
 sr:sport_event:50955595	sr:season:119835	sr:competitor:1662	sr:competitor:1659	\N	\N	not_started	15	sr:venue:46514	2024-12-15 16:00:00
 sr:sport_event:50955593	sr:season:119835	sr:competitor:1658	sr:competitor:1684	\N	\N	not_started	15	sr:venue:844	2024-12-15 16:00:00
-sr:sport_event:50955907	sr:season:119835	sr:competitor:1661	sr:competitor:1682	\N	\N	not_started	32	sr:venue:13184	2025-05-04 17:00:00
+sr:sport_event:50955855	sr:season:119835	sr:competitor:1647	sr:competitor:1644	\N	\N	not_started	29	sr:venue:953	2025-04-13 17:00:00
+sr:sport_event:50955861	sr:season:119835	sr:competitor:1684	sr:competitor:1642	\N	\N	not_started	29	sr:venue:19889	2025-04-13 17:00:00
+sr:sport_event:50955869	sr:season:119835	sr:competitor:1661	sr:competitor:1684	\N	\N	not_started	30	sr:venue:13184	2025-04-20 17:00:00
+sr:sport_event:50955871	sr:season:119835	sr:competitor:1715	sr:competitor:1648	\N	\N	not_started	30	sr:venue:1858	2025-04-20 17:00:00
+sr:sport_event:50955863	sr:season:119835	sr:competitor:1648	sr:competitor:1682	\N	\N	not_started	29	sr:venue:835	2025-04-13 17:00:00
+sr:sport_event:50955881	sr:season:119835	sr:competitor:1653	sr:competitor:1659	\N	\N	not_started	30	sr:venue:831	2025-04-20 17:00:00
+sr:sport_event:50955819	sr:season:119835	sr:competitor:1659	sr:competitor:1649	\N	\N	not_started	27	sr:venue:847	2025-03-30 17:00:00
+sr:sport_event:50955887	sr:season:119835	sr:competitor:1659	sr:competitor:1678	\N	\N	not_started	31	sr:venue:847	2025-04-27 17:00:00
+sr:sport_event:50955821	sr:season:119835	sr:competitor:1681	sr:competitor:1715	\N	\N	not_started	27	sr:venue:848	2025-03-30 17:00:00
 sr:sport_event:50955837	sr:season:119835	sr:competitor:1642	sr:competitor:1662	\N	\N	not_started	28	sr:venue:1275	2025-04-06 17:00:00
-sr:sport_event:50955915	sr:season:119835	sr:competitor:1681	sr:competitor:1658	\N	\N	not_started	32	sr:venue:848	2025-05-04 17:00:00
+sr:sport_event:50955903	sr:season:119835	sr:competitor:1649	sr:competitor:1648	\N	\N	not_started	32	sr:venue:17406	2025-05-04 17:00:00
+sr:sport_event:50955891	sr:season:119835	sr:competitor:1642	sr:competitor:1682	\N	\N	not_started	31	sr:venue:1275	2025-04-27 17:00:00
+sr:sport_event:50955907	sr:season:119835	sr:competitor:1661	sr:competitor:1682	\N	\N	not_started	32	sr:venue:13184	2025-05-04 17:00:00
+sr:sport_event:50955921	sr:season:119835	sr:competitor:1682	sr:competitor:1678	\N	\N	not_started	33	sr:venue:1871	2025-05-11 17:00:00
+sr:sport_event:50955955	sr:season:119835	sr:competitor:1647	sr:competitor:1642	\N	\N	not_started	34	sr:venue:953	2025-05-18 17:00:00
 sr:sport_event:50955599	sr:season:119835	sr:competitor:1646	sr:competitor:1648	\N	\N	not_started	15	sr:venue:767	2024-12-14 18:00:00
 sr:sport_event:50955683	sr:season:119835	sr:competitor:1644	sr:competitor:1682	\N	\N	not_started	19	sr:venue:843	2025-01-26 16:00:00
-sr:sport_event:50955823	sr:season:119835	sr:competitor:1678	sr:competitor:1644	\N	\N	not_started	27	sr:venue:845	2025-03-30 17:00:00
-sr:sport_event:50955825	sr:season:119835	sr:competitor:1682	sr:competitor:1641	\N	\N	not_started	27	sr:venue:1871	2025-03-30 17:00:00
 sr:sport_event:50955553	sr:season:119835	sr:competitor:1646	sr:competitor:1684	1	0	closed	12	sr:venue:767	2024-11-24 16:00:00
-sr:sport_event:50955857	sr:season:119835	sr:competitor:1659	sr:competitor:1661	\N	\N	not_started	29	sr:venue:847	2025-04-13 17:00:00
 sr:sport_event:50955529	sr:season:119835	sr:competitor:1659	sr:competitor:1653	1	3	closed	11	sr:venue:847	2024-11-09 16:00:00
-sr:sport_event:50955749	sr:season:119835	sr:competitor:1647	sr:competitor:1648	\N	\N	not_started	23	sr:venue:953	2025-02-23 16:00:00
 sr:sport_event:50955527	sr:season:119835	sr:competitor:1662	sr:competitor:1682	0	3	closed	11	sr:venue:46514	2024-11-10 16:00:00
 sr:sport_event:50955533	sr:season:119835	sr:competitor:1658	sr:competitor:1681	0	2	closed	11	sr:venue:844	2024-11-10 16:00:00
-sr:sport_event:50955883	sr:season:119835	sr:competitor:1658	sr:competitor:1647	\N	\N	not_started	30	sr:venue:844	2025-04-20 17:00:00
-sr:sport_event:50955759	sr:season:119835	sr:competitor:1644	sr:competitor:1643	\N	\N	not_started	24	sr:venue:843	2025-03-02 17:00:00
 sr:sport_event:50955647	sr:season:119835	sr:competitor:1641	sr:competitor:1659	\N	\N	not_started	18	sr:venue:839	2025-01-19 16:00:00
 sr:sport_event:50955541	sr:season:119835	sr:competitor:1648	sr:competitor:1641	1	3	closed	12	sr:venue:835	2024-11-23 16:00:00
 sr:sport_event:50955535	sr:season:119835	sr:competitor:1661	sr:competitor:1643	2	2	closed	11	sr:venue:13184	2024-11-10 14:00:00
-sr:sport_event:50955763	sr:season:119835	sr:competitor:1649	sr:competitor:1715	\N	\N	not_started	24	sr:venue:17406	2025-03-02 17:00:00
 sr:sport_event:50955609	sr:season:119835	sr:competitor:1644	sr:competitor:1649	\N	\N	not_started	15	sr:venue:843	2024-12-15 19:45:00
-sr:sport_event:50955899	sr:season:119835	sr:competitor:1641	sr:competitor:1715	\N	\N	not_started	31	sr:venue:839	2025-04-27 17:00:00
 sr:sport_event:50955509	sr:season:119835	sr:competitor:1662	sr:competitor:1642	1	0	closed	10	sr:venue:46514	2024-11-03 16:00:00
 sr:sport_event:50955673	sr:season:119835	sr:competitor:1653	sr:competitor:1658	\N	\N	not_started	19	sr:venue:831	2025-01-26 16:00:00
 sr:sport_event:50955685	sr:season:119835	sr:competitor:1661	sr:competitor:1641	\N	\N	not_started	19	sr:venue:13184	2025-01-26 16:00:00
 sr:sport_event:50955695	sr:season:119835	sr:competitor:1682	sr:competitor:1647	\N	\N	not_started	20	sr:venue:1871	2025-02-02 16:00:00
-sr:sport_event:50955913	sr:season:119835	sr:competitor:1647	sr:competitor:1684	\N	\N	not_started	32	sr:venue:953	2025-05-04 17:00:00
-sr:sport_event:50955917	sr:season:119835	sr:competitor:1659	sr:competitor:1644	\N	\N	not_started	32	sr:venue:847	2025-05-04 17:00:00
 sr:sport_event:51269257	sr:season:118693	sr:competitor:2527	sr:competitor:2573	\N	\N	not_started	14	sr:venue:788	2024-12-14 14:30:00
 sr:sport_event:51269351	sr:season:118693	sr:competitor:2526	sr:competitor:2547	\N	\N	not_started	19	sr:venue:791	2025-01-26 16:30:00
 sr:sport_event:51269313	sr:season:118693	sr:competitor:2542	sr:competitor:2526	\N	\N	not_started	17	sr:venue:738	2025-01-15 17:30:00
-sr:sport_event:51269445	sr:season:118693	sr:competitor:2672	sr:competitor:2542	\N	\N	not_started	25	sr:venue:574	2025-03-08 14:30:00
 sr:sport_event:51269359	sr:season:118693	sr:competitor:2674	sr:competitor:2524	\N	\N	not_started	20	sr:venue:67707	2025-02-01 14:30:00
-sr:sport_event:51269513	sr:season:118693	sr:competitor:2526	sr:competitor:2527	\N	\N	not_started	28	sr:venue:791	2025-04-05 13:30:00
-sr:sport_event:50955777	sr:season:119835	sr:competitor:1662	sr:competitor:1678	\N	\N	not_started	25	sr:venue:46514	2025-03-09 17:00:00
-sr:sport_event:50955839	sr:season:119835	sr:competitor:1649	sr:competitor:1643	\N	\N	not_started	28	sr:venue:17406	2025-04-06 17:00:00
-sr:sport_event:50868527	sr:season:119799	sr:competitor:2960	sr:competitor:2955	\N	\N	not_started	31	sr:venue:656	2025-05-02 16:00:00
 sr:sport_event:50955607	sr:season:119835	sr:competitor:1641	sr:competitor:1643	\N	\N	not_started	15	sr:venue:839	2024-12-14 16:00:00
 sr:sport_event:50955577	sr:season:119835	sr:competitor:1646	sr:competitor:1644	\N	\N	not_started	14	sr:venue:767	2024-12-06 20:00:00
 sr:sport_event:50955701	sr:season:119835	sr:competitor:1658	sr:competitor:1659	\N	\N	not_started	20	sr:venue:844	2025-02-02 16:00:00
 sr:sport_event:50955521	sr:season:119835	sr:competitor:1641	sr:competitor:1646	1	3	closed	11	sr:venue:839	2024-11-08 19:45:00
-sr:sport_event:50955805	sr:season:119835	sr:competitor:1648	sr:competitor:1658	\N	\N	not_started	26	sr:venue:835	2025-03-16 17:00:00
-sr:sport_event:50955745	sr:season:119835	sr:competitor:1643	sr:competitor:1653	\N	\N	not_started	23	sr:venue:837	2025-02-23 16:00:00
 sr:sport_event:50955499	sr:season:119835	sr:competitor:1684	sr:competitor:1678	4	2	closed	9	sr:venue:19889	2024-10-26 15:00:00
-sr:sport_event:50955943	sr:season:119835	sr:competitor:1641	sr:competitor:1658	\N	\N	not_started	34	sr:venue:839	2025-05-18 17:00:00
 sr:sport_event:50955417	sr:season:119835	sr:competitor:1682	sr:competitor:1644	1	1	closed	5	sr:venue:1871	2024-09-21 19:00:00
-sr:sport_event:50955909	sr:season:119835	sr:competitor:1715	sr:competitor:1642	\N	\N	not_started	32	sr:venue:1858	2025-05-04 17:00:00
 sr:sport_event:50955585	sr:season:119835	sr:competitor:1648	sr:competitor:1642	\N	\N	not_started	14	sr:venue:835	2024-12-08 14:00:00
 sr:sport_event:50955481	sr:season:119835	sr:competitor:1715	sr:competitor:1658	1	1	closed	8	sr:venue:1858	2024-10-19 15:00:00
-sr:sport_event:50955829	sr:season:119835	sr:competitor:1653	sr:competitor:1661	\N	\N	not_started	27	sr:venue:831	2025-03-30 17:00:00
 sr:sport_event:50955619	sr:season:119835	sr:competitor:1684	sr:competitor:1715	\N	\N	not_started	16	sr:venue:19889	2025-01-05 16:00:00
-sr:sport_event:50955929	sr:season:119835	sr:competitor:1658	sr:competitor:1661	\N	\N	not_started	33	sr:venue:844	2025-05-11 17:00:00
 sr:sport_event:51269149	sr:season:118693	sr:competitor:2673	sr:competitor:36360	2	1	closed	9	sr:venue:759	2024-11-02 17:30:00
 sr:sport_event:50955519	sr:season:119835	sr:competitor:1644	sr:competitor:1648	1	0	closed	10	sr:venue:843	2024-11-02 16:00:00
 sr:sport_event:50955637	sr:season:119835	sr:competitor:1662	sr:competitor:1648	\N	\N	not_started	17	sr:venue:46514	2025-01-12 16:00:00
 sr:sport_event:51269503	sr:season:118693	sr:competitor:2538	sr:competitor:2673	\N	\N	not_started	28	sr:venue:61056	2025-04-05 13:30:00
-sr:sport_event:51269525	sr:season:118693	sr:competitor:2524	sr:competitor:36360	\N	\N	not_started	29	sr:venue:816	2025-04-12 13:30:00
-sr:sport_event:51269571	sr:season:118693	sr:competitor:2673	sr:competitor:2524	\N	\N	not_started	32	sr:venue:759	2025-05-03 13:30:00
-sr:sport_event:50868467	sr:season:119799	sr:competitor:2979	sr:competitor:2948	\N	\N	not_started	28	sr:venue:3293	2025-04-04 16:00:00
-sr:sport_event:51269411	sr:season:118693	sr:competitor:2673	sr:competitor:2547	\N	\N	not_started	23	sr:venue:759	2025-02-22 14:30:00
+sr:sport_event:50868527	sr:season:119799	sr:competitor:2960	sr:competitor:2955	\N	\N	not_started	31	sr:venue:656	2025-05-02 16:00:00
+sr:sport_event:50955745	sr:season:119835	sr:competitor:1643	sr:competitor:1653	\N	\N	not_started	23	sr:venue:837	2025-02-23 16:00:00
+sr:sport_event:50955749	sr:season:119835	sr:competitor:1647	sr:competitor:1648	\N	\N	not_started	23	sr:venue:953	2025-02-23 16:00:00
+sr:sport_event:50955829	sr:season:119835	sr:competitor:1653	sr:competitor:1661	\N	\N	not_started	27	sr:venue:831	2025-03-30 17:00:00
+sr:sport_event:50955857	sr:season:119835	sr:competitor:1659	sr:competitor:1661	\N	\N	not_started	29	sr:venue:847	2025-04-13 17:00:00
+sr:sport_event:50955883	sr:season:119835	sr:competitor:1658	sr:competitor:1647	\N	\N	not_started	30	sr:venue:844	2025-04-20 17:00:00
+sr:sport_event:50955839	sr:season:119835	sr:competitor:1649	sr:competitor:1643	\N	\N	not_started	28	sr:venue:17406	2025-04-06 17:00:00
+sr:sport_event:50955899	sr:season:119835	sr:competitor:1641	sr:competitor:1715	\N	\N	not_started	31	sr:venue:839	2025-04-27 17:00:00
+sr:sport_event:50955909	sr:season:119835	sr:competitor:1715	sr:competitor:1642	\N	\N	not_started	32	sr:venue:1858	2025-05-04 17:00:00
+sr:sport_event:50955913	sr:season:119835	sr:competitor:1647	sr:competitor:1684	\N	\N	not_started	32	sr:venue:953	2025-05-04 17:00:00
+sr:sport_event:50955929	sr:season:119835	sr:competitor:1658	sr:competitor:1661	\N	\N	not_started	33	sr:venue:844	2025-05-11 17:00:00
+sr:sport_event:50955943	sr:season:119835	sr:competitor:1641	sr:competitor:1658	\N	\N	not_started	34	sr:venue:839	2025-05-18 17:00:00
+sr:sport_event:50955917	sr:season:119835	sr:competitor:1659	sr:competitor:1644	\N	\N	not_started	32	sr:venue:847	2025-05-04 17:00:00
 sr:sport_event:50955555	sr:season:119835	sr:competitor:1682	sr:competitor:1649	1	1	closed	12	sr:venue:1871	2024-11-23 20:00:00
 sr:sport_event:51269091	sr:season:118693	sr:competitor:2524	sr:competitor:2534	2	4	closed	7	sr:venue:816	2024-10-20 15:30:00
-sr:sport_event:50868501	sr:season:119799	sr:competitor:2955	sr:competitor:2952	\N	\N	not_started	30	sr:venue:584	2025-04-23 16:00:00
 sr:sport_event:51269399	sr:season:118693	sr:competitor:2600	sr:competitor:36360	\N	\N	not_started	22	sr:venue:1655	2025-02-15 14:30:00
 sr:sport_event:51268905	sr:season:118693	sr:competitor:5885	sr:competitor:2600	4	0	closed	2	sr:venue:34054	2024-09-01 13:30:00
 sr:sport_event:51269253	sr:season:118693	sr:competitor:2600	sr:competitor:2681	\N	\N	not_started	14	sr:venue:1655	2024-12-14 14:30:00
 sr:sport_event:51269009	sr:season:118693	sr:competitor:2569	sr:competitor:2534	3	4	closed	5	sr:venue:1089	2024-09-29 15:30:00
 sr:sport_event:50955641	sr:season:119835	sr:competitor:1715	sr:competitor:1649	\N	\N	not_started	17	sr:venue:1858	2025-01-12 16:00:00
-sr:sport_event:50868491	sr:season:119799	sr:competitor:2961	sr:competitor:2953	\N	\N	not_started	29	sr:venue:826	2025-04-11 16:00:00
-sr:sport_event:50955765	sr:season:119835	sr:competitor:1642	sr:competitor:1658	\N	\N	not_started	24	sr:venue:1275	2025-03-02 17:00:00
-sr:sport_event:50955813	sr:season:119835	sr:competitor:1684	sr:competitor:1658	\N	\N	not_started	27	sr:venue:19889	2025-03-30 17:00:00
-sr:sport_event:50955939	sr:season:119835	sr:competitor:1715	sr:competitor:1643	\N	\N	not_started	33	sr:venue:1858	2025-05-11 17:00:00
 sr:sport_event:51269181	sr:season:118693	sr:competitor:2600	sr:competitor:2569	0	0	closed	10	sr:venue:1655	2024-11-10 14:30:00
 sr:sport_event:50955723	sr:season:119835	sr:competitor:1681	sr:competitor:1644	\N	\N	not_started	22	sr:venue:848	2025-02-16 16:00:00
 sr:sport_event:50955729	sr:season:119835	sr:competitor:1648	sr:competitor:1659	\N	\N	not_started	22	sr:venue:835	2025-02-16 16:00:00
 sr:sport_event:51388797	sr:season:119847	sr:competitor:3009	sr:competitor:3002	0	3	closed	6	sr:venue:1137	2024-09-21 17:00:00
-sr:sport_event:50955851	sr:season:119835	sr:competitor:1662	sr:competitor:1658	\N	\N	not_started	29	sr:venue:46514	2025-04-13 17:00:00
-sr:sport_event:50955791	sr:season:119835	sr:competitor:1658	sr:competitor:1644	\N	\N	not_started	25	sr:venue:844	2025-03-09 17:00:00
 sr:sport_event:51388799	sr:season:119847	sr:competitor:2995	sr:competitor:3006	0	3	closed	6	sr:venue:14556	2024-09-23 19:15:00
 sr:sport_event:51388755	sr:season:119847	sr:competitor:49531	sr:competitor:2995	1	0	closed	3	sr:venue:16520	2024-08-24 19:30:00
 sr:sport_event:50955579	sr:season:119835	sr:competitor:1678	sr:competitor:1641	\N	\N	not_started	14	sr:venue:845	2024-12-08 19:45:00
@@ -3584,15 +3312,11 @@ sr:sport_event:51388735	sr:season:119847	sr:competitor:3009	sr:competitor:4500	1
 sr:sport_event:51388753	sr:season:119847	sr:competitor:1031053	sr:competitor:3009	1	0	closed	3	sr:venue:8249	2024-08-25 19:30:00
 sr:sport_event:51388827	sr:season:119847	sr:competitor:1031053	sr:competitor:2998	0	0	closed	7	sr:venue:8249	2024-09-30 19:15:00
 sr:sport_event:51388889	sr:season:119847	sr:competitor:2999	sr:competitor:3001	2	4	closed	11	sr:venue:951	2024-11-10 18:45:00
-sr:sport_event:50955875	sr:season:119835	sr:competitor:1644	sr:competitor:1662	\N	\N	not_started	30	sr:venue:843	2025-04-20 17:00:00
-sr:sport_event:50955897	sr:season:119835	sr:competitor:1644	sr:competitor:1661	\N	\N	not_started	31	sr:venue:843	2025-04-27 17:00:00
 sr:sport_event:51388751	sr:season:119847	sr:competitor:2998	sr:competitor:3001	0	5	closed	3	sr:venue:12069	2024-08-23 19:15:00
-sr:sport_event:50955753	sr:season:119835	sr:competitor:1646	sr:competitor:1641	\N	\N	not_started	23	sr:venue:767	2025-02-23 16:00:00
 sr:sport_event:51388837	sr:season:119847	sr:competitor:3009	sr:competitor:2995	2	2	closed	8	sr:venue:1137	2024-10-06 14:30:00
 sr:sport_event:51383363	sr:season:119847	sr:competitor:3001	sr:competitor:3036	3	1	closed	1	sr:venue:910	2024-08-09 19:15:00
 sr:sport_event:50955655	sr:season:119835	sr:competitor:1678	sr:competitor:1647	\N	\N	not_started	18	sr:venue:845	2025-01-19 16:00:00
 sr:sport_event:50955627	sr:season:119835	sr:competitor:1661	sr:competitor:1658	\N	\N	not_started	16	sr:venue:13184	2025-01-05 16:00:00
-sr:sport_event:50955959	sr:season:119835	sr:competitor:1644	sr:competitor:1646	\N	\N	not_started	34	sr:venue:843	2025-05-18 17:00:00
 sr:sport_event:51388795	sr:season:119847	sr:competitor:3011	sr:competitor:744135	1	0	closed	6	sr:venue:5318	2024-09-21 14:30:00
 sr:sport_event:51388857	sr:season:119847	sr:competitor:36365	sr:competitor:3013	1	0	closed	9	sr:venue:2645	2024-10-25 17:45:00
 sr:sport_event:51383377	sr:season:119847	sr:competitor:4500	sr:competitor:3011	1	4	closed	1	sr:venue:5326	2024-08-11 14:30:00
@@ -3603,23 +3327,30 @@ sr:sport_event:51388853	sr:season:119847	sr:competitor:2999	sr:competitor:2998	2
 sr:sport_event:51388851	sr:season:119847	sr:competitor:3006	sr:competitor:3036	5	0	closed	9	sr:venue:902	2024-10-27 18:00:00
 sr:sport_event:51388863	sr:season:119847	sr:competitor:1031053	sr:competitor:3002	0	5	closed	9	sr:venue:8249	2024-10-28 20:15:00
 sr:sport_event:51388757	sr:season:119847	sr:competitor:36365	sr:competitor:3011	0	2	closed	3	sr:venue:43626	2024-08-24 14:30:00
+sr:sport_event:51269525	sr:season:118693	sr:competitor:2524	sr:competitor:36360	\N	\N	not_started	29	sr:venue:816	2025-04-12 13:30:00
+sr:sport_event:50868467	sr:season:119799	sr:competitor:2979	sr:competitor:2948	\N	\N	not_started	28	sr:venue:3293	2025-04-04 16:00:00
+sr:sport_event:50868501	sr:season:119799	sr:competitor:2955	sr:competitor:2952	\N	\N	not_started	30	sr:venue:584	2025-04-23 16:00:00
+sr:sport_event:50955753	sr:season:119835	sr:competitor:1646	sr:competitor:1641	\N	\N	not_started	23	sr:venue:767	2025-02-23 16:00:00
+sr:sport_event:50955765	sr:season:119835	sr:competitor:1642	sr:competitor:1658	\N	\N	not_started	24	sr:venue:1275	2025-03-02 17:00:00
+sr:sport_event:50955791	sr:season:119835	sr:competitor:1658	sr:competitor:1644	\N	\N	not_started	25	sr:venue:844	2025-03-09 17:00:00
+sr:sport_event:50955875	sr:season:119835	sr:competitor:1644	sr:competitor:1662	\N	\N	not_started	30	sr:venue:843	2025-04-20 17:00:00
+sr:sport_event:50955813	sr:season:119835	sr:competitor:1684	sr:competitor:1658	\N	\N	not_started	27	sr:venue:19889	2025-03-30 17:00:00
+sr:sport_event:50955897	sr:season:119835	sr:competitor:1644	sr:competitor:1661	\N	\N	not_started	31	sr:venue:843	2025-04-27 17:00:00
+sr:sport_event:50955939	sr:season:119835	sr:competitor:1715	sr:competitor:1643	\N	\N	not_started	33	sr:venue:1858	2025-05-11 17:00:00
+sr:sport_event:50955959	sr:season:119835	sr:competitor:1644	sr:competitor:1646	\N	\N	not_started	34	sr:venue:843	2025-05-18 17:00:00
 sr:sport_event:51269237	sr:season:118693	sr:competitor:2524	sr:competitor:2556	\N	\N	not_started	13	sr:venue:816	2024-12-08 14:30:00
 sr:sport_event:51269271	sr:season:118693	sr:competitor:2569	sr:competitor:2527	\N	\N	not_started	15	sr:venue:1089	2024-12-21 14:30:00
 sr:sport_event:51095959	sr:season:118699	sr:competitor:2	sr:competitor:74	\N	\N	not_started	25	sr:venue:638	2025-01-01 15:00:00
 sr:sport_event:50867793	sr:season:119799	sr:competitor:2952	sr:competitor:2956	5	1	closed	1	sr:venue:726	2024-08-10 19:00:00
-sr:sport_event:50868439	sr:season:119799	sr:competitor:2948	sr:competitor:2964	\N	\N	not_started	27	sr:venue:786	2025-03-29 17:00:00
 sr:sport_event:50868143	sr:season:119799	sr:competitor:2950	sr:competitor:2979	2	2	closed	10	sr:venue:615	2024-10-27 19:00:00
-sr:sport_event:50868509	sr:season:119799	sr:competitor:2964	sr:competitor:2962	\N	\N	not_started	30	sr:venue:569	2025-04-23 16:00:00
 sr:sport_event:50852517	sr:season:118691	sr:competitor:2828	sr:competitor:2821	\N	\N	not_started	22	sr:venue:691	2025-02-02 19:00:00
 sr:sport_event:50849967	sr:season:118689	sr:competitor:35	sr:competitor:43	1	0	closed	1	sr:venue:9	2024-08-16 19:00:00
 sr:sport_event:50850013	sr:season:118689	sr:competitor:48	sr:competitor:60	2	3	closed	3	sr:venue:12	2024-08-31 14:00:00
 sr:sport_event:50850327	sr:season:118689	sr:competitor:40	sr:competitor:30	\N	\N	not_started	19	sr:venue:815	2024-12-30 19:45:00
 sr:sport_event:51388937	sr:season:119847	sr:competitor:36365	sr:competitor:1031053	\N	\N	not_started	13	sr:venue:43626	2024-12-08 18:00:00
-sr:sport_event:51389227	sr:season:119847	sr:competitor:3010	sr:competitor:3011	\N	\N	not_started	26	sr:venue:2539	2025-03-16 18:00:00
 sr:sport_event:50955363	sr:season:119835	sr:competitor:1647	sr:competitor:1646	2	0	closed	2	sr:venue:953	2024-08-25 15:00:00
 sr:sport_event:50955421	sr:season:119835	sr:competitor:1684	sr:competitor:1647	1	1	closed	5	sr:venue:19889	2024-09-22 15:00:00
 sr:sport_event:50955515	sr:season:119835	sr:competitor:1678	sr:competitor:1659	2	0	closed	10	sr:venue:845	2024-11-02 20:00:00
-sr:sport_event:50955941	sr:season:119835	sr:competitor:1653	sr:competitor:1649	\N	\N	not_started	33	sr:venue:831	2025-05-11 17:00:00
 sr:sport_event:46655737	sr:season:114317	sr:competitor:4937	sr:competitor:3202	0	0	closed	8	sr:venue:2388	2024-07-28 23:30:00
 sr:sport_event:50850007	sr:season:118689	sr:competitor:42	sr:competitor:30	1	1	closed	3	sr:venue:624	2024-08-31 11:30:00
 sr:sport_event:51388931	sr:season:119847	sr:competitor:3014	sr:competitor:3001	\N	\N	not_started	13	sr:venue:5312	2024-12-05 20:15:00
@@ -3628,18 +3359,14 @@ sr:sport_event:51388761	sr:season:119847	sr:competitor:2995	sr:competitor:4500	0
 sr:sport_event:51389045	sr:season:119847	sr:competitor:1031053	sr:competitor:3010	\N	\N	not_started	19	sr:venue:8249	2025-01-26 18:00:00
 sr:sport_event:51388917	sr:season:119847	sr:competitor:3036	sr:competitor:3014	\N	\N	not_started	12	sr:venue:2013	2024-11-30 15:30:00
 sr:sport_event:50955365	sr:season:119835	sr:competitor:1678	sr:competitor:1662	0	2	closed	2	sr:venue:845	2024-08-24 19:00:00
-sr:sport_event:50955957	sr:season:119835	sr:competitor:1648	sr:competitor:1653	\N	\N	not_started	34	sr:venue:835	2025-05-18 17:00:00
 sr:sport_event:46655545	sr:season:114317	sr:competitor:3218	sr:competitor:36842	0	2	closed	1	sr:venue:981	2024-05-12 20:45:00
 sr:sport_event:46655639	sr:season:114317	sr:competitor:3217	sr:competitor:3218	1	1	closed	4	sr:venue:1329	2024-06-02 21:00:00
 sr:sport_event:50867989	sr:season:119799	sr:competitor:2955	sr:competitor:2960	1	1	closed	2	sr:venue:584	2024-08-17 16:45:00
 sr:sport_event:50868139	sr:season:119799	sr:competitor:2964	sr:competitor:2960	2	0	closed	10	sr:venue:569	2024-10-26 19:00:00
-sr:sport_event:50868311	sr:season:119799	sr:competitor:2953	sr:competitor:2979	\N	\N	not_started	20	sr:venue:577	2025-01-26 15:45:00
 sr:sport_event:50867791	sr:season:119799	sr:competitor:2948	sr:competitor:2971	1	0	closed	1	sr:venue:786	2024-08-11 12:30:00
 sr:sport_event:50868021	sr:season:119799	sr:competitor:2979	sr:competitor:2956	2	0	closed	3	sr:venue:3293	2024-08-25 14:45:00
 sr:sport_event:50868267	sr:season:119799	sr:competitor:2952	sr:competitor:2959	\N	\N	not_started	17	sr:venue:726	2024-12-22 13:30:00
-sr:sport_event:50852615	sr:season:118691	sr:competitor:2814	sr:competitor:24264	\N	\N	not_started	27	sr:venue:1307	2025-03-09 18:00:00
 sr:sport_event:50868309	sr:season:119799	sr:competitor:2961	sr:competitor:2959	\N	\N	not_started	19	sr:venue:826	2025-01-18 19:00:00
-sr:sport_event:50852619	sr:season:118691	sr:competitor:2829	sr:competitor:2818	\N	\N	not_started	27	sr:venue:754	2025-03-09 18:00:00
 sr:sport_event:50849985	sr:season:118689	sr:competitor:31	sr:competitor:33	1	1	closed	1	sr:venue:2183	2024-08-19 19:00:00
 sr:sport_event:50850103	sr:season:118689	sr:competitor:17	sr:competitor:43	3	2	closed	7	sr:venue:606	2024-10-05 14:00:00
 sr:sport_event:50850031	sr:season:118689	sr:competitor:30	sr:competitor:32	0	0	closed	4	sr:venue:2443	2024-09-14 14:00:00
@@ -3653,12 +3380,15 @@ sr:sport_event:50868327	sr:season:119799	sr:competitor:2956	sr:competitor:2961	\
 sr:sport_event:50955425	sr:season:119835	sr:competitor:1643	sr:competitor:1659	3	3	closed	5	sr:venue:837	2024-09-21 15:00:00
 sr:sport_event:50955381	sr:season:119835	sr:competitor:1715	sr:competitor:1678	4	0	closed	3	sr:venue:1858	2024-08-31 15:00:00
 sr:sport_event:50955531	sr:season:119835	sr:competitor:1648	sr:competitor:1647	3	2	closed	11	sr:venue:835	2024-11-09 18:00:00
-sr:sport_event:50955843	sr:season:119835	sr:competitor:1644	sr:competitor:1684	\N	\N	not_started	28	sr:venue:843	2025-04-06 17:00:00
 sr:sport_event:46657251	sr:season:114317	sr:competitor:36839	sr:competitor:6074	\N	\N	not_started	25	sr:venue:12025	2024-12-01 00:45:00
+sr:sport_event:50852615	sr:season:118691	sr:competitor:2814	sr:competitor:24264	\N	\N	not_started	27	sr:venue:1307	2025-03-09 18:00:00
+sr:sport_event:50868311	sr:season:119799	sr:competitor:2953	sr:competitor:2979	\N	\N	postponed	20	sr:venue:577	2025-01-26 15:45:00
+sr:sport_event:50868439	sr:season:119799	sr:competitor:2948	sr:competitor:2964	\N	\N	not_started	27	sr:venue:786	2025-03-29 17:00:00
+sr:sport_event:50868509	sr:season:119799	sr:competitor:2964	sr:competitor:2962	\N	\N	not_started	30	sr:venue:569	2025-04-23 16:00:00
+sr:sport_event:50955843	sr:season:119835	sr:competitor:1644	sr:competitor:1684	\N	\N	not_started	28	sr:venue:843	2025-04-06 17:00:00
+sr:sport_event:50955941	sr:season:119835	sr:competitor:1653	sr:competitor:1649	\N	\N	not_started	33	sr:venue:831	2025-05-11 17:00:00
+sr:sport_event:50955957	sr:season:119835	sr:competitor:1648	sr:competitor:1653	\N	\N	not_started	34	sr:venue:835	2025-05-18 17:00:00
 sr:sport_event:51268973	sr:season:118693	sr:competitor:5885	sr:competitor:2538	0	3	closed	4	sr:venue:34054	2024-09-21 13:30:00
-sr:sport_event:51269431	sr:season:118693	sr:competitor:5885	sr:competitor:2527	\N	\N	not_started	24	sr:venue:34054	2025-03-01 14:30:00
-sr:sport_event:50868577	sr:season:119799	sr:competitor:2956	sr:competitor:2979	\N	\N	not_started	34	sr:venue:685	2025-05-18 12:30:00
-sr:sport_event:51096911	sr:season:118699	sr:competitor:46	sr:competitor:24	\N	\N	not_started	45	sr:venue:631	2025-04-26 14:00:00
 sr:sport_event:50850191	sr:season:118689	sr:competitor:40	sr:competitor:7	2	2	closed	12	sr:venue:815	2024-11-23 15:00:00
 sr:sport_event:51388905	sr:season:119847	sr:competitor:3009	sr:competitor:3010	\N	\N	not_started	12	sr:venue:1137	2024-12-02 18:45:00
 sr:sport_event:51388729	sr:season:119847	sr:competitor:744135	sr:competitor:49531	0	3	closed	2	sr:venue:53523	2024-08-19 19:15:00
@@ -3672,7 +3402,6 @@ sr:sport_event:46655567	sr:season:114317	sr:competitor:36837	sr:competitor:3209	
 sr:sport_event:46657241	sr:season:114317	sr:competitor:36833	sr:competitor:3212	\N	\N	not_started	25	sr:venue:12017	2024-12-03 01:00:00
 sr:sport_event:51269231	sr:season:118693	sr:competitor:2672	sr:competitor:5885	\N	\N	not_started	13	sr:venue:574	2024-12-07 14:30:00
 sr:sport_event:51269305	sr:season:118693	sr:competitor:2674	sr:competitor:2538	\N	\N	not_started	17	sr:venue:67707	2025-01-14 19:30:00
-sr:sport_event:51269549	sr:season:118693	sr:competitor:2526	sr:competitor:2681	\N	\N	not_started	30	sr:venue:791	2025-04-19 13:30:00
 sr:sport_event:51095963	sr:season:118699	sr:competitor:1	sr:competitor:24	\N	\N	not_started	25	sr:venue:1693	2025-01-01 12:30:00
 sr:sport_event:51096233	sr:season:118699	sr:competitor:58	sr:competitor:74	\N	\N	not_started	31	sr:venue:2505	2025-02-09 12:00:00
 sr:sport_event:50867795	sr:season:119799	sr:competitor:2960	sr:competitor:2977	0	0	closed	1	sr:venue:656	2024-08-11 10:15:00
@@ -3700,13 +3429,16 @@ sr:sport_event:50955419	sr:season:119835	sr:competitor:1715	sr:competitor:1681	2
 sr:sport_event:50955493	sr:season:119835	sr:competitor:1642	sr:competitor:1681	0	3	closed	9	sr:venue:1275	2024-10-27 16:00:00
 sr:sport_event:46655613	sr:season:114317	sr:competitor:3209	sr:competitor:3208	1	1	closed	3	sr:venue:1099	2024-05-26 23:00:00
 sr:sport_event:51388737	sr:season:119847	sr:competitor:3036	sr:competitor:2998	1	0	closed	2	sr:venue:2013	2024-08-17 14:30:00
-sr:sport_event:51389369	sr:season:119847	sr:competitor:2998	sr:competitor:3011	\N	\N	not_started	34	sr:venue:12069	2025-05-17 17:00:00
 sr:sport_event:51388897	sr:season:119847	sr:competitor:49531	sr:competitor:25777	0	0	closed	11	sr:venue:16520	2024-11-09 18:00:00
 sr:sport_event:50955375	sr:season:119835	sr:competitor:1641	sr:competitor:1682	2	2	closed	2	sr:venue:839	2024-08-25 18:45:00
-sr:sport_event:50955853	sr:season:119835	sr:competitor:1646	sr:competitor:1649	\N	\N	not_started	29	sr:venue:767	2025-04-13 17:00:00
 sr:sport_event:50955439	sr:season:119835	sr:competitor:1647	sr:competitor:1678	2	2	closed	6	sr:venue:953	2024-09-29 15:00:00
 sr:sport_event:50955613	sr:season:119835	sr:competitor:1649	sr:competitor:1642	\N	\N	not_started	16	sr:venue:17406	2025-01-05 16:00:00
 sr:sport_event:46655573	sr:season:114317	sr:competitor:3219	sr:competitor:7629	1	1	closed	2	sr:venue:634	2024-05-19 20:45:00
+sr:sport_event:51269431	sr:season:118693	sr:competitor:5885	sr:competitor:2527	\N	\N	not_started	24	sr:venue:34054	2025-03-01 14:30:00
+sr:sport_event:51269549	sr:season:118693	sr:competitor:2526	sr:competitor:2681	\N	\N	not_started	30	sr:venue:791	2025-04-19 13:30:00
+sr:sport_event:51096911	sr:season:118699	sr:competitor:46	sr:competitor:24	\N	\N	not_started	45	sr:venue:631	2025-04-26 14:00:00
+sr:sport_event:50868577	sr:season:119799	sr:competitor:2956	sr:competitor:2979	\N	\N	not_started	34	sr:venue:685	2025-05-18 12:30:00
+sr:sport_event:50955853	sr:season:119835	sr:competitor:1646	sr:competitor:1649	\N	\N	not_started	29	sr:venue:767	2025-04-13 17:00:00
 sr:sport_event:46655635	sr:season:114317	sr:competitor:3201	sr:competitor:42338	0	1	closed	4	sr:venue:14324	2024-06-03 22:00:00
 sr:sport_event:46655707	sr:season:114317	sr:competitor:3218	sr:competitor:3203	3	2	closed	7	sr:venue:981	2024-07-25 21:45:00
 sr:sport_event:51095637	sr:season:118699	sr:competitor:72	sr:competitor:74	\N	\N	not_started	19	sr:venue:2178	2024-12-07 15:00:00
@@ -3715,7 +3447,6 @@ sr:sport_event:51096019	sr:season:118699	sr:competitor:41	sr:competitor:2	\N	\N	
 sr:sport_event:50867991	sr:season:119799	sr:competitor:2950	sr:competitor:2962	1	0	closed	2	sr:venue:615	2024-08-17 18:00:00
 sr:sport_event:50868069	sr:season:119799	sr:competitor:2964	sr:competitor:2951	2	1	closed	6	sr:venue:569	2024-09-22 10:15:00
 sr:sport_event:50852407	sr:season:118691	sr:competitor:2885	sr:competitor:2825	\N	\N	not_started	17	sr:venue:9311	2024-12-15 15:15:00
-sr:sport_event:50852729	sr:season:118691	sr:competitor:2821	sr:competitor:2819	\N	\N	not_started	33	sr:venue:697	2025-04-23 17:00:00
 sr:sport_event:50850087	sr:season:118689	sr:competitor:42	sr:competitor:45	3	1	closed	7	sr:venue:624	2024-10-05 14:00:00
 sr:sport_event:50849981	sr:season:118689	sr:competitor:50	sr:competitor:7	2	1	closed	1	sr:venue:53349	2024-08-18 13:00:00
 sr:sport_event:50850237	sr:season:118689	sr:competitor:32	sr:competitor:7	\N	\N	not_started	14	sr:venue:2188	2024-12-03 19:30:00
@@ -3733,19 +3464,16 @@ sr:sport_event:51388913	sr:season:119847	sr:competitor:3002	sr:competitor:36365	
 sr:sport_event:51389019	sr:season:119847	sr:competitor:3013	sr:competitor:1031053	\N	\N	not_started	18	sr:venue:1335	2025-01-19 18:00:00
 sr:sport_event:50955353	sr:season:119835	sr:competitor:1646	sr:competitor:1661	2	1	closed	1	sr:venue:767	2024-08-18 13:00:00
 sr:sport_event:50955601	sr:season:119835	sr:competitor:1681	sr:competitor:1678	\N	\N	not_started	15	sr:venue:848	2024-12-13 19:45:00
-sr:sport_event:50955895	sr:season:119835	sr:competitor:1684	sr:competitor:1643	\N	\N	not_started	31	sr:venue:19889	2025-04-27 17:00:00
 sr:sport_event:50955483	sr:season:119835	sr:competitor:1644	sr:competitor:1659	4	2	closed	8	sr:venue:843	2024-10-19 19:00:00
 sr:sport_event:46655813	sr:season:114317	sr:competitor:191648	sr:competitor:3218	3	1	closed	10	sr:venue:17150	2024-08-09 18:00:00
 sr:sport_event:46657261	sr:season:114317	sr:competitor:3201	sr:competitor:3203	\N	\N	not_started	25	sr:venue:14324	2024-11-29 22:00:00
 sr:sport_event:51269025	sr:season:118693	sr:competitor:2527	sr:competitor:2547	1	0	closed	5	sr:venue:788	2024-09-28 13:30:00
 sr:sport_event:46655571	sr:season:114317	sr:competitor:36839	sr:competitor:3205	1	1	closed	2	sr:venue:12025	2024-05-18 23:00:00
 sr:sport_event:46655777	sr:season:114317	sr:competitor:36833	sr:competitor:36842	2	1	closed	9	sr:venue:12017	2024-08-04 23:00:00
-sr:sport_event:51269415	sr:season:118693	sr:competitor:2538	sr:competitor:2534	\N	\N	not_started	23	sr:venue:61056	2025-02-22 14:30:00
 sr:sport_event:51095249	sr:season:118699	sr:competitor:36	sr:competitor:15	1	0	closed	11	sr:venue:743	2024-10-23 19:00:00
 sr:sport_event:51095373	sr:season:118699	sr:competitor:71	sr:competitor:2	1	0	closed	14	sr:venue:660	2024-11-05 20:00:00
 sr:sport_event:51095317	sr:season:118699	sr:competitor:96	sr:competitor:2	1	1	closed	13	sr:venue:1138	2024-11-02 15:00:00
 sr:sport_event:51096223	sr:season:118699	sr:competitor:71	sr:competitor:8	\N	\N	not_started	30	sr:venue:660	2025-02-01 12:30:00
-sr:sport_event:51096379	sr:season:118699	sr:competitor:61	sr:competitor:72	\N	\N	not_started	37	sr:venue:1514	2025-03-11 19:45:00
 sr:sport_event:50868015	sr:season:119799	sr:competitor:2977	sr:competitor:2961	1	1	closed	3	sr:venue:729	2024-08-25 12:30:00
 sr:sport_event:50868325	sr:season:119799	sr:competitor:2952	sr:competitor:2947	\N	\N	not_started	20	sr:venue:726	2025-01-25 17:45:00
 sr:sport_event:50868383	sr:season:119799	sr:competitor:2961	sr:competitor:2951	\N	\N	not_started	23	sr:venue:826	2025-02-14 17:00:00
@@ -3759,9 +3487,10 @@ sr:sport_event:50955737	sr:season:119835	sr:competitor:1662	sr:competitor:1661	\
 sr:sport_event:50955477	sr:season:119835	sr:competitor:1653	sr:competitor:1643	0	0	closed	8	sr:venue:831	2024-10-18 18:45:00
 sr:sport_event:46655685	sr:season:114317	sr:competitor:65668	sr:competitor:3212	0	1	closed	6	sr:venue:12021	2024-07-19 18:00:00
 sr:sport_event:51095329	sr:season:118699	sr:competitor:36	sr:competitor:11	0	3	closed	13	sr:venue:743	2024-11-02 15:00:00
-sr:sport_event:51096861	sr:season:118699	sr:competitor:11	sr:competitor:8	\N	\N	not_started	43	sr:venue:2194	2025-04-18 14:00:00
+sr:sport_event:51269415	sr:season:118693	sr:competitor:2538	sr:competitor:2534	\N	\N	not_started	23	sr:venue:61056	2025-02-22 14:30:00
+sr:sport_event:51096379	sr:season:118699	sr:competitor:61	sr:competitor:72	\N	\N	not_started	37	sr:venue:1514	2025-03-11 19:45:00
+sr:sport_event:50955895	sr:season:119835	sr:competitor:1684	sr:competitor:1643	\N	\N	not_started	31	sr:venue:19889	2025-04-27 17:00:00
 sr:sport_event:50868001	sr:season:119799	sr:competitor:2947	sr:competitor:2953	2	1	closed	2	sr:venue:2081	2024-08-18 14:45:00
-sr:sport_event:50852585	sr:season:118691	sr:competitor:2820	sr:competitor:2828	\N	\N	not_started	26	sr:venue:739	2025-03-02 18:00:00
 sr:sport_event:50850069	sr:season:118689	sr:competitor:42	sr:competitor:31	4	2	closed	6	sr:venue:624	2024-09-28 14:00:00
 sr:sport_event:50850079	sr:season:118689	sr:competitor:35	sr:competitor:33	0	3	closed	6	sr:venue:9	2024-09-29 15:30:00
 sr:sport_event:50850273	sr:season:118689	sr:competitor:38	sr:competitor:50	\N	\N	not_started	16	sr:venue:799	2024-12-15 19:00:00
@@ -3777,15 +3506,12 @@ sr:sport_event:51269215	sr:season:118693	sr:competitor:2534	sr:competitor:2677	\
 sr:sport_event:51269301	sr:season:118693	sr:competitor:2677	sr:competitor:36360	\N	\N	not_started	17	sr:venue:648	2025-01-15 19:30:00
 sr:sport_event:50868027	sr:season:119799	sr:competitor:2957	sr:competitor:2962	0	3	closed	4	sr:venue:2769	2024-08-31 16:45:00
 sr:sport_event:50868273	sr:season:119799	sr:competitor:2961	sr:competitor:2962	\N	\N	not_started	17	sr:venue:826	2024-12-22 15:45:00
-sr:sport_event:50868431	sr:season:119799	sr:competitor:2979	sr:competitor:2961	\N	\N	not_started	26	sr:venue:3293	2025-03-14 17:00:00
-sr:sport_event:50852733	sr:season:118691	sr:competitor:2820	sr:competitor:2833	\N	\N	not_started	33	sr:venue:739	2025-04-23 17:00:00
 sr:sport_event:50849991	sr:season:118689	sr:competitor:30	sr:competitor:35	2	1	closed	2	sr:venue:2443	2024-08-24 11:30:00
 sr:sport_event:50850139	sr:season:118689	sr:competitor:48	sr:competitor:43	1	1	closed	9	sr:venue:12	2024-10-26 16:30:00
 sr:sport_event:50850093	sr:season:118689	sr:competitor:30	sr:competitor:33	3	2	closed	7	sr:venue:2443	2024-10-06 15:30:00
 sr:sport_event:51388959	sr:season:119847	sr:competitor:3006	sr:competitor:4500	\N	\N	not_started	15	sr:venue:902	2024-12-23 18:45:00
 sr:sport_event:50955371	sr:season:119835	sr:competitor:1648	sr:competitor:1715	2	0	closed	2	sr:venue:835	2024-08-25 13:00:00
 sr:sport_event:50955571	sr:season:119835	sr:competitor:1641	sr:competitor:1653	\N	\N	not_started	13	sr:venue:839	2024-12-01 19:45:00
-sr:sport_event:50955911	sr:season:119835	sr:competitor:1678	sr:competitor:1653	\N	\N	not_started	32	sr:venue:845	2025-05-04 17:00:00
 sr:sport_event:50955455	sr:season:119835	sr:competitor:1678	sr:competitor:1646	3	1	closed	7	sr:venue:845	2024-10-05 15:00:00
 sr:sport_event:46655647	sr:season:114317	sr:competitor:3216	sr:competitor:65676	2	1	closed	5	sr:venue:613	2024-06-12 22:00:00
 sr:sport_event:46655787	sr:season:114317	sr:competitor:65676	sr:competitor:36839	2	0	closed	10	sr:venue:49307	2024-08-11 18:00:00
@@ -3811,25 +3537,25 @@ sr:sport_event:51095139	sr:season:118699	sr:competitor:29	sr:competitor:2	6	1	cl
 sr:sport_event:51095861	sr:season:118699	sr:competitor:15	sr:competitor:6	\N	\N	not_started	23	sr:venue:598	2024-12-26 15:00:00
 sr:sport_event:50867987	sr:season:119799	sr:competitor:2964	sr:competitor:2948	1	1	closed	2	sr:venue:569	2024-08-17 14:30:00
 sr:sport_event:50867999	sr:season:119799	sr:competitor:2961	sr:competitor:2979	2	0	closed	2	sr:venue:826	2024-08-18 12:30:00
+sr:sport_event:50852733	sr:season:118691	sr:competitor:2820	sr:competitor:2833	\N	\N	not_started	33	sr:venue:739	2025-04-23 17:00:00
+sr:sport_event:51096861	sr:season:118699	sr:competitor:11	sr:competitor:8	\N	\N	not_started	43	sr:venue:2194	2025-04-18 14:00:00
+sr:sport_event:50868431	sr:season:119799	sr:competitor:2979	sr:competitor:2961	\N	\N	not_started	26	sr:venue:3293	2025-03-14 17:00:00
+sr:sport_event:50955911	sr:season:119835	sr:competitor:1678	sr:competitor:1653	\N	\N	not_started	32	sr:venue:845	2025-05-04 17:00:00
 sr:sport_event:50868047	sr:season:119799	sr:competitor:2950	sr:competitor:2964	9	1	closed	5	sr:venue:615	2024-09-14 19:00:00
 sr:sport_event:50868111	sr:season:119799	sr:competitor:2957	sr:competitor:2950	1	0	closed	8	sr:venue:2769	2024-10-06 18:00:00
 sr:sport_event:50868321	sr:season:119799	sr:competitor:2957	sr:competitor:2971	\N	\N	not_started	20	sr:venue:2769	2025-01-26 11:15:00
 sr:sport_event:50852491	sr:season:118691	sr:competitor:2826	sr:competitor:2816	\N	\N	not_started	21	sr:venue:760	2025-01-26 19:00:00
-sr:sport_event:50868459	sr:season:119799	sr:competitor:2990	sr:competitor:2971	\N	\N	not_started	28	sr:venue:3261	2025-04-04 16:00:00
 sr:sport_event:55608041	sr:season:118691	sr:competitor:2814	sr:competitor:2828	\N	\N	not_started	13	sr:venue:1307	2024-12-18 20:30:00
 sr:sport_event:50850001	sr:season:118689	sr:competitor:45	sr:competitor:14	0	1	closed	2	sr:venue:2231	2024-08-24 14:00:00
 sr:sport_event:50850019	sr:season:118689	sr:competitor:35	sr:competitor:44	0	3	closed	3	sr:venue:9	2024-09-01 15:00:00
 sr:sport_event:50850365	sr:season:118689	sr:competitor:3	sr:competitor:14	\N	\N	not_started	20	sr:venue:1272	2025-01-06 20:00:00
 sr:sport_event:51388773	sr:season:119847	sr:competitor:3013	sr:competitor:2998	2	0	closed	4	sr:venue:1335	2024-09-01 14:30:00
-sr:sport_event:51389247	sr:season:119847	sr:competitor:744135	sr:competitor:3001	\N	\N	not_started	27	sr:venue:53523	2025-03-30 17:00:00
 sr:sport_event:50955369	sr:season:119835	sr:competitor:1661	sr:competitor:1681	1	1	closed	2	sr:venue:13184	2024-08-25 15:00:00
 sr:sport_event:50955505	sr:season:119835	sr:competitor:1681	sr:competitor:1682	1	0	closed	10	sr:venue:848	2024-11-03 14:00:00
-sr:sport_event:50955803	sr:season:119835	sr:competitor:1649	sr:competitor:1662	\N	\N	not_started	26	sr:venue:17406	2025-03-16 17:00:00
 sr:sport_event:46655641	sr:season:114317	sr:competitor:3215	sr:competitor:191648	1	0	closed	4	sr:venue:12033	2024-06-01 21:00:00
 sr:sport_event:50867789	sr:season:119799	sr:competitor:2962	sr:competitor:2955	1	2	closed	1	sr:venue:689	2024-08-10 16:45:00
 sr:sport_event:50868011	sr:season:119799	sr:competitor:2947	sr:competitor:2948	1	2	closed	3	sr:venue:2081	2024-08-24 19:00:00
 sr:sport_event:50868299	sr:season:119799	sr:competitor:2962	sr:competitor:2957	\N	\N	not_started	19	sr:venue:689	2025-01-19 15:45:00
-sr:sport_event:50868369	sr:season:119799	sr:competitor:2950	sr:competitor:2957	\N	\N	not_started	23	sr:venue:615	2025-02-14 17:00:00
 sr:sport_event:50868377	sr:season:119799	sr:competitor:2947	sr:competitor:2959	\N	\N	not_started	23	sr:venue:2081	2025-02-14 17:00:00
 sr:sport_event:50850059	sr:season:118689	sr:competitor:17	sr:competitor:42	2	2	closed	5	sr:venue:606	2024-09-22 15:30:00
 sr:sport_event:50849997	sr:season:118689	sr:competitor:44	sr:competitor:50	2	0	closed	2	sr:venue:579	2024-08-25 15:30:00
@@ -3853,16 +3579,18 @@ sr:sport_event:50955359	sr:season:119835	sr:competitor:1644	sr:competitor:1642	6
 sr:sport_event:46655557	sr:season:114317	sr:competitor:3212	sr:competitor:36837	2	0	closed	1	sr:venue:1567	2024-05-11 00:15:00
 sr:sport_event:46655765	sr:season:114317	sr:competitor:42338	sr:competitor:3203	0	0	closed	9	sr:venue:8975	2024-08-04 18:00:00
 sr:sport_event:51096267	sr:season:118699	sr:competitor:2	sr:competitor:61	\N	\N	not_started	32	sr:venue:638	2025-02-11 19:45:00
-sr:sport_event:51096899	sr:season:118699	sr:competitor:21	sr:competitor:71	\N	\N	not_started	45	sr:venue:3002	2025-04-26 14:00:00
 sr:sport_event:50867985	sr:season:119799	sr:competitor:2957	sr:competitor:2990	3	0	closed	2	sr:venue:2769	2024-08-16 18:00:00
 sr:sport_event:50867997	sr:season:119799	sr:competitor:2971	sr:competitor:2959	1	5	closed	2	sr:venue:18994	2024-08-18 12:30:00
-sr:sport_event:50868473	sr:season:119799	sr:competitor:2960	sr:competitor:2962	\N	\N	not_started	28	sr:venue:656	2025-04-04 16:00:00
 sr:sport_event:50868099	sr:season:119799	sr:competitor:2964	sr:competitor:2971	1	1	closed	8	sr:venue:569	2024-10-06 12:30:00
 sr:sport_event:50868189	sr:season:119799	sr:competitor:2959	sr:competitor:2964	3	0	closed	13	sr:venue:612	2024-11-23 17:45:00
 sr:sport_event:50868223	sr:season:119799	sr:competitor:2950	sr:competitor:2953	\N	\N	not_started	15	sr:venue:615	2024-12-08 13:30:00
 sr:sport_event:50849971	sr:season:118689	sr:competitor:42	sr:competitor:3	2	0	closed	1	sr:venue:624	2024-08-17 14:00:00
 sr:sport_event:50850005	sr:season:118689	sr:competitor:3	sr:competitor:38	2	6	closed	2	sr:venue:1272	2024-08-25 13:00:00
 sr:sport_event:50850141	sr:season:118689	sr:competitor:31	sr:competitor:14	1	3	closed	9	sr:venue:2183	2024-10-25 19:00:00
+sr:sport_event:51096899	sr:season:118699	sr:competitor:21	sr:competitor:71	\N	\N	not_started	45	sr:venue:3002	2025-04-26 14:00:00
+sr:sport_event:50868369	sr:season:119799	sr:competitor:2950	sr:competitor:2957	\N	\N	not_started	23	sr:venue:615	2025-02-14 17:00:00
+sr:sport_event:50868473	sr:season:119799	sr:competitor:2960	sr:competitor:2962	\N	\N	not_started	28	sr:venue:656	2025-04-04 16:00:00
+sr:sport_event:50955803	sr:season:119835	sr:competitor:1649	sr:competitor:1662	\N	\N	not_started	26	sr:venue:17406	2025-03-16 17:00:00
 sr:sport_event:50955355	sr:season:119835	sr:competitor:1662	sr:competitor:1644	1	4	closed	1	sr:venue:46514	2024-08-16 18:45:00
 sr:sport_event:50955659	sr:season:119835	sr:competitor:1682	sr:competitor:1662	\N	\N	not_started	18	sr:venue:1871	2025-01-19 16:00:00
 sr:sport_event:50955471	sr:season:119835	sr:competitor:1662	sr:competitor:1649	0	4	closed	8	sr:venue:46514	2024-10-20 13:00:00
@@ -3898,42 +3626,322 @@ sr:sport_event:50850187	sr:season:118689	sr:competitor:60	sr:competitor:30	1	2	c
 sr:sport_event:51388807	sr:season:119847	sr:competitor:3036	sr:competitor:4500	2	2	closed	6	sr:venue:2013	2024-09-21 14:30:00
 sr:sport_event:51388725	sr:season:119847	sr:competitor:3006	sr:competitor:36365	3	0	closed	2	sr:venue:902	2024-08-17 19:30:00
 sr:sport_event:46657077	sr:season:114317	sr:competitor:3209	sr:competitor:6074	1	1	closed	19	sr:venue:1099	2024-10-26 22:30:00
-sr:sport_event:51096863	sr:season:118699	sr:competitor:58	sr:competitor:41	\N	\N	not_started	43	sr:venue:2505	2025-04-18 14:00:00
 sr:sport_event:50850225	sr:season:118689	sr:competitor:3	sr:competitor:60	\N	\N	not_started	13	sr:venue:1272	2024-11-30 15:00:00
 sr:sport_event:51388731	sr:season:119847	sr:competitor:3013	sr:competitor:3001	1	6	closed	2	sr:venue:1335	2024-08-17 17:00:00
 sr:sport_event:51388739	sr:season:119847	sr:competitor:3010	sr:competitor:1031053	4	2	closed	2	sr:venue:2539	2024-08-16 19:15:00
 sr:sport_event:51383355	sr:season:119847	sr:competitor:1031053	sr:competitor:3013	1	1	closed	1	sr:venue:8249	2024-08-10 14:30:00
-sr:sport_event:51389183	sr:season:119847	sr:competitor:3001	sr:competitor:4500	\N	\N	not_started	24	sr:venue:910	2025-03-02 18:00:00
 sr:sport_event:51388791	sr:season:119847	sr:competitor:744135	sr:competitor:2995	2	2	closed	5	sr:venue:53523	2024-09-16 19:15:00
 sr:sport_event:50955513	sr:season:119835	sr:competitor:1643	sr:competitor:1649	1	1	closed	10	sr:venue:837	2024-11-01 20:00:00
 sr:sport_event:51096303	sr:season:118699	sr:competitor:29	sr:competitor:74	\N	\N	not_started	33	sr:venue:1135	2025-02-15 15:00:00
 sr:sport_event:51096247	sr:season:118699	sr:competitor:1	sr:competitor:46	\N	\N	not_started	31	sr:venue:1693	2025-02-08 12:30:00
 sr:sport_event:51383373	sr:season:119847	sr:competitor:3002	sr:competitor:3010	3	0	closed	1	sr:venue:907	2024-08-10 19:30:00
 sr:sport_event:51096281	sr:season:118699	sr:competitor:46	sr:competitor:71	\N	\N	not_started	33	sr:venue:631	2025-02-15 15:00:00
-sr:sport_event:50955953	sr:season:119835	sr:competitor:1659	sr:competitor:1662	\N	\N	not_started	34	sr:venue:847	2025-05-18 17:00:00
 sr:sport_event:50955475	sr:season:119835	sr:competitor:1642	sr:competitor:1641	0	5	closed	8	sr:venue:1275	2024-10-20 18:45:00
 sr:sport_event:46655551	sr:season:114317	sr:competitor:3204	sr:competitor:3219	1	0	closed	1	sr:venue:4754	2024-05-14 00:00:00
 sr:sport_event:46655835	sr:season:114317	sr:competitor:3210	sr:competitor:36842	2	1	closed	11	sr:venue:2388	2024-08-17 23:00:00
 sr:sport_event:51269223	sr:season:118693	sr:competitor:2547	sr:competitor:2681	\N	\N	not_started	12	sr:venue:578	2024-11-30 14:30:00
+sr:sport_event:51096863	sr:season:118699	sr:competitor:58	sr:competitor:41	\N	\N	not_started	43	sr:venue:2505	2025-04-18 14:00:00
+sr:sport_event:50955953	sr:season:119835	sr:competitor:1659	sr:competitor:1662	\N	\N	not_started	34	sr:venue:847	2025-05-18 17:00:00
 sr:sport_event:51095059	sr:season:118699	sr:competitor:6	sr:competitor:71	1	0	closed	8	sr:venue:806	2024-10-01 18:45:00
 sr:sport_event:51096207	sr:season:118699	sr:competitor:8	sr:competitor:2	\N	\N	not_started	29	sr:venue:1136	2025-01-25 15:00:00
 sr:sport_event:50868031	sr:season:119799	sr:competitor:2990	sr:competitor:2951	1	1	closed	4	sr:venue:3261	2024-08-31 14:30:00
 sr:sport_event:50867993	sr:season:119799	sr:competitor:2956	sr:competitor:2951	1	2	closed	2	sr:venue:685	2024-08-17 19:00:00
 sr:sport_event:50868151	sr:season:119799	sr:competitor:2977	sr:competitor:2947	2	0	closed	11	sr:venue:729	2024-11-02 17:45:00
 sr:sport_event:50852467	sr:season:118691	sr:competitor:2821	sr:competitor:2825	\N	\N	not_started	20	sr:venue:697	2025-01-19 19:00:00
-sr:sport_event:50852737	sr:season:118691	sr:competitor:2845	sr:competitor:24264	\N	\N	not_started	33	sr:venue:14888	2025-04-23 17:00:00
-sr:sport_event:50850481	sr:season:118689	sr:competitor:48	sr:competitor:35	\N	\N	not_started	26	sr:venue:12	2025-02-22 15:00:00
 sr:sport_event:50850171	sr:season:118689	sr:competitor:38	sr:competitor:42	1	1	closed	11	sr:venue:799	2024-11-10 16:30:00
 sr:sport_event:51388871	sr:season:119847	sr:competitor:1031053	sr:competitor:49531	2	3	closed	10	sr:venue:8249	2024-11-03 15:30:00
 sr:sport_event:51388953	sr:season:119847	sr:competitor:3002	sr:competitor:744135	\N	\N	not_started	14	sr:venue:907	2024-12-16 20:15:00
 sr:sport_event:50955373	sr:season:119835	sr:competitor:1649	sr:competitor:1653	0	2	closed	2	sr:venue:17406	2024-08-24 15:00:00
 sr:sport_event:50955575	sr:season:119835	sr:competitor:1661	sr:competitor:1662	\N	\N	not_started	14	sr:venue:13184	2024-12-07 18:00:00
+sr:sport_event:51389085	sr:season:119847	sr:competitor:3009	sr:competitor:2999	\N	\N	not_started	22	sr:venue:1137	2025-02-16 18:00:00
+sr:sport_event:51389247	sr:season:119847	sr:competitor:744135	sr:competitor:3001	\N	\N	not_started	27	sr:venue:53523	2025-03-30 17:00:00
+sr:sport_event:51389219	sr:season:119847	sr:competitor:3013	sr:competitor:36365	\N	\N	not_started	26	sr:venue:1335	2025-03-16 18:00:00
+sr:sport_event:51389215	sr:season:119847	sr:competitor:2998	sr:competitor:2999	\N	\N	not_started	26	sr:venue:12069	2025-03-16 18:00:00
+sr:sport_event:51389167	sr:season:119847	sr:competitor:25777	sr:competitor:2998	\N	\N	not_started	23	sr:venue:8289	2025-02-23 18:00:00
+sr:sport_event:51389093	sr:season:119847	sr:competitor:3010	sr:competitor:49531	\N	\N	not_started	22	sr:venue:2539	2025-02-16 18:00:00
+sr:sport_event:51389249	sr:season:119847	sr:competitor:3002	sr:competitor:3006	\N	\N	not_started	28	sr:venue:907	2025-04-06 17:00:00
+sr:sport_event:51389191	sr:season:119847	sr:competitor:25777	sr:competitor:3002	\N	\N	not_started	24	sr:venue:8289	2025-03-02 18:00:00
+sr:sport_event:51389201	sr:season:119847	sr:competitor:2999	sr:competitor:3002	\N	\N	not_started	25	sr:venue:951	2025-03-09 18:00:00
+sr:sport_event:51389205	sr:season:119847	sr:competitor:36365	sr:competitor:3001	\N	\N	not_started	25	sr:venue:43626	2025-03-09 18:00:00
+sr:sport_event:51389261	sr:season:119847	sr:competitor:25777	sr:competitor:49531	\N	\N	not_started	28	sr:venue:8289	2025-04-06 17:00:00
+sr:sport_event:51389273	sr:season:119847	sr:competitor:49531	sr:competitor:4500	\N	\N	not_started	29	sr:venue:16520	2025-04-13 17:00:00
+sr:sport_event:51389263	sr:season:119847	sr:competitor:3010	sr:competitor:3014	\N	\N	not_started	28	sr:venue:2539	2025-04-06 17:00:00
+sr:sport_event:51389281	sr:season:119847	sr:competitor:744135	sr:competitor:2998	\N	\N	not_started	29	sr:venue:53523	2025-04-13 17:00:00
+sr:sport_event:51389283	sr:season:119847	sr:competitor:3014	sr:competitor:3036	\N	\N	not_started	29	sr:venue:5312	2025-04-13 17:00:00
+sr:sport_event:51389255	sr:season:119847	sr:competitor:2998	sr:competitor:36365	\N	\N	not_started	28	sr:venue:12069	2025-04-06 17:00:00
+sr:sport_event:51389285	sr:season:119847	sr:competitor:3009	sr:competitor:3006	\N	\N	not_started	30	sr:venue:1137	2025-04-19 17:00:00
+sr:sport_event:51389277	sr:season:119847	sr:competitor:2995	sr:competitor:3013	\N	\N	not_started	29	sr:venue:14556	2025-04-13 17:00:00
+sr:sport_event:51389189	sr:season:119847	sr:competitor:2998	sr:competitor:1031053	\N	\N	not_started	24	sr:venue:12069	2025-03-02 18:00:00
+sr:sport_event:51389177	sr:season:119847	sr:competitor:3010	sr:competitor:3006	\N	\N	not_started	24	sr:venue:2539	2025-03-02 18:00:00
+sr:sport_event:51389287	sr:season:119847	sr:competitor:4500	sr:competitor:2999	\N	\N	not_started	30	sr:venue:5326	2025-04-19 17:00:00
+sr:sport_event:51389293	sr:season:119847	sr:competitor:3001	sr:competitor:3014	\N	\N	not_started	30	sr:venue:910	2025-04-19 17:00:00
+sr:sport_event:51389303	sr:season:119847	sr:competitor:3011	sr:competitor:25777	\N	\N	not_started	31	sr:venue:5318	2025-04-27 17:00:00
+sr:sport_event:51389311	sr:season:119847	sr:competitor:3009	sr:competitor:3036	\N	\N	not_started	31	sr:venue:1137	2025-04-27 17:00:00
+sr:sport_event:51389331	sr:season:119847	sr:competitor:2998	sr:competitor:49531	\N	\N	not_started	32	sr:venue:12069	2025-05-04 17:00:00
+sr:sport_event:51389345	sr:season:119847	sr:competitor:3014	sr:competitor:4500	\N	\N	not_started	33	sr:venue:5312	2025-05-11 17:00:00
+sr:sport_event:51389325	sr:season:119847	sr:competitor:3001	sr:competitor:3010	\N	\N	not_started	32	sr:venue:910	2025-05-04 17:00:00
+sr:sport_event:51389305	sr:season:119847	sr:competitor:49531	sr:competitor:2999	\N	\N	not_started	31	sr:venue:16520	2025-04-27 17:00:00
+sr:sport_event:51389341	sr:season:119847	sr:competitor:36365	sr:competitor:2999	\N	\N	not_started	33	sr:venue:43626	2025-05-11 17:00:00
+sr:sport_event:51389227	sr:season:119847	sr:competitor:3010	sr:competitor:3011	\N	\N	not_started	26	sr:venue:2539	2025-03-16 18:00:00
+sr:sport_event:51389353	sr:season:119847	sr:competitor:2995	sr:competitor:3002	\N	\N	not_started	33	sr:venue:14556	2025-05-11 17:00:00
+sr:sport_event:51389245	sr:season:119847	sr:competitor:4500	sr:competitor:3002	\N	\N	not_started	27	sr:venue:5326	2025-03-30 17:00:00
+sr:sport_event:51389193	sr:season:119847	sr:competitor:2995	sr:competitor:3011	\N	\N	not_started	24	sr:venue:14556	2025-03-02 18:00:00
+sr:sport_event:51389241	sr:season:119847	sr:competitor:2995	sr:competitor:3010	\N	\N	not_started	27	sr:venue:14556	2025-03-30 17:00:00
+sr:sport_event:51389163	sr:season:119847	sr:competitor:3006	sr:competitor:2995	\N	\N	not_started	23	sr:venue:902	2025-02-23 18:00:00
+sr:sport_event:51389369	sr:season:119847	sr:competitor:2998	sr:competitor:3011	\N	\N	not_started	34	sr:venue:12069	2025-05-17 17:00:00
+sr:sport_event:51389183	sr:season:119847	sr:competitor:3001	sr:competitor:4500	\N	\N	not_started	24	sr:venue:910	2025-03-02 18:00:00
+sr:sport_event:50850227	sr:season:118689	sr:competitor:60	sr:competitor:33	\N	\N	postponed	14	sr:venue:2990	2024-12-03 19:45:00
+sr:sport_event:50852737	sr:season:118691	sr:competitor:2845	sr:competitor:24264	\N	\N	not_started	33	sr:venue:14888	2025-04-23 17:00:00
 sr:sport_event:50955849	sr:season:119835	sr:competitor:1681	sr:competitor:1643	\N	\N	not_started	29	sr:venue:848	2025-04-13 17:00:00
+sr:sport_event:50850481	sr:season:118689	sr:competitor:48	sr:competitor:35	\N	\N	not_started	26	sr:venue:12	2025-02-22 15:00:00
+sr:sport_event:50850477	sr:season:118689	sr:competitor:42	sr:competitor:37	\N	\N	not_started	26	sr:venue:624	2025-02-22 15:00:00
+sr:sport_event:50850489	sr:season:118689	sr:competitor:17	sr:competitor:44	\N	\N	not_started	26	sr:venue:606	2025-02-22 15:00:00
+sr:sport_event:50850493	sr:season:118689	sr:competitor:45	sr:competitor:30	\N	\N	not_started	26	sr:venue:2231	2025-02-22 15:00:00
+sr:sport_event:50850553	sr:season:118689	sr:competitor:45	sr:competitor:3	\N	\N	not_started	29	sr:venue:2231	2025-03-15 15:00:00
+sr:sport_event:50850535	sr:season:118689	sr:competitor:60	sr:competitor:50	\N	\N	not_started	29	sr:venue:2990	2025-03-15 15:00:00
+sr:sport_event:50850543	sr:season:118689	sr:competitor:43	sr:competitor:33	\N	\N	not_started	29	sr:venue:611	2025-03-15 15:00:00
+sr:sport_event:50850561	sr:season:118689	sr:competitor:14	sr:competitor:35	\N	\N	not_started	30	sr:venue:2230	2025-04-01 14:00:00
+sr:sport_event:50850571	sr:season:118689	sr:competitor:45	sr:competitor:7	\N	\N	not_started	30	sr:venue:2231	2025-04-02 14:00:00
+sr:sport_event:50850557	sr:season:118689	sr:competitor:42	sr:competitor:43	\N	\N	not_started	30	sr:venue:624	2025-04-01 14:00:00
+sr:sport_event:50850591	sr:season:118689	sr:competitor:33	sr:competitor:45	\N	\N	not_started	31	sr:venue:28762	2025-04-05 14:00:00
+sr:sport_event:50850597	sr:season:118689	sr:competitor:42	sr:competitor:50	\N	\N	not_started	32	sr:venue:624	2025-04-12 14:00:00
+sr:sport_event:50850607	sr:season:118689	sr:competitor:39	sr:competitor:35	\N	\N	not_started	32	sr:venue:765	2025-04-12 14:00:00
+sr:sport_event:50850611	sr:season:118689	sr:competitor:45	sr:competitor:40	\N	\N	not_started	32	sr:venue:2231	2025-04-12 14:00:00
+sr:sport_event:50852587	sr:season:118691	sr:competitor:2818	sr:competitor:2833	\N	\N	not_started	26	sr:venue:2440	2025-03-02 18:00:00
+sr:sport_event:50852655	sr:season:118691	sr:competitor:2814	sr:competitor:2836	\N	\N	not_started	29	sr:venue:1307	2025-03-30 17:00:00
+sr:sport_event:50852675	sr:season:118691	sr:competitor:2831	sr:competitor:2859	\N	\N	not_started	30	sr:venue:880	2025-04-06 17:00:00
+sr:sport_event:51269419	sr:season:118693	sr:competitor:2556	sr:competitor:2526	\N	\N	not_started	23	sr:venue:2406	2025-02-22 14:30:00
+sr:sport_event:51269425	sr:season:118693	sr:competitor:2677	sr:competitor:2672	\N	\N	not_started	24	sr:venue:648	2025-03-01 14:30:00
+sr:sport_event:51269473	sr:season:118693	sr:competitor:2547	sr:competitor:2672	\N	\N	not_started	26	sr:venue:578	2025-03-15 14:30:00
+sr:sport_event:51269411	sr:season:118693	sr:competitor:2673	sr:competitor:2547	\N	\N	not_started	23	sr:venue:759	2025-02-22 14:30:00
+sr:sport_event:51269463	sr:season:118693	sr:competitor:36360	sr:competitor:2673	\N	\N	not_started	26	sr:venue:850	2025-03-15 14:30:00
+sr:sport_event:51269573	sr:season:118693	sr:competitor:5885	sr:competitor:2542	\N	\N	not_started	32	sr:venue:34054	2025-05-03 13:30:00
+sr:sport_event:50850507	sr:season:118689	sr:competitor:7	sr:competitor:40	\N	\N	not_started	27	sr:venue:10	2025-02-25 20:00:00
+sr:sport_event:50850485	sr:season:118689	sr:competitor:32	sr:competitor:33	\N	\N	not_started	26	sr:venue:2188	2025-02-22 15:00:00
+sr:sport_event:50850495	sr:season:118689	sr:competitor:50	sr:competitor:48	\N	\N	not_started	27	sr:venue:53349	2025-02-25 19:45:00
+sr:sport_event:50850503	sr:season:118689	sr:competitor:37	sr:competitor:31	\N	\N	postponed	27	sr:venue:18379	2025-02-25 19:45:00
+sr:sport_event:50850253	sr:season:118689	sr:competitor:48	sr:competitor:44	\N	\N	postponed	15	sr:venue:12	2024-12-07 12:30:00
+sr:sport_event:50850479	sr:season:118689	sr:competitor:40	sr:competitor:38	\N	\N	not_started	26	sr:venue:815	2025-02-22 15:00:00
+sr:sport_event:50850509	sr:season:118689	sr:competitor:38	sr:competitor:45	\N	\N	not_started	27	sr:venue:799	2025-02-26 19:45:00
+sr:sport_event:50850505	sr:season:118689	sr:competitor:3	sr:competitor:43	\N	\N	not_started	27	sr:venue:1272	2025-02-25 19:45:00
+sr:sport_event:50850487	sr:season:118689	sr:competitor:31	sr:competitor:50	\N	\N	not_started	26	sr:venue:2183	2025-02-22 15:00:00
+sr:sport_event:50850467	sr:season:118689	sr:competitor:60	sr:competitor:3	\N	\N	not_started	26	sr:venue:2990	2025-02-22 15:00:00
+sr:sport_event:50850515	sr:season:118689	sr:competitor:50	sr:competitor:40	\N	\N	not_started	28	sr:venue:53349	2025-03-08 15:00:00
+sr:sport_event:50850517	sr:season:118689	sr:competitor:30	sr:competitor:43	\N	\N	not_started	28	sr:venue:2443	2025-03-08 15:00:00
+sr:sport_event:50850541	sr:season:118689	sr:competitor:48	sr:competitor:37	\N	\N	not_started	29	sr:venue:12	2025-03-15 15:00:00
+sr:sport_event:50850565	sr:season:118689	sr:competitor:38	sr:competitor:33	\N	\N	not_started	30	sr:venue:799	2025-04-02 14:00:00
+sr:sport_event:50850577	sr:season:118689	sr:competitor:50	sr:competitor:38	\N	\N	not_started	31	sr:venue:53349	2025-04-05 14:00:00
+sr:sport_event:50850569	sr:season:118689	sr:competitor:39	sr:competitor:50	\N	\N	not_started	30	sr:venue:765	2025-04-02 14:00:00
+sr:sport_event:50850581	sr:season:118689	sr:competitor:48	sr:competitor:42	\N	\N	not_started	31	sr:venue:12	2025-04-05 14:00:00
+sr:sport_event:50850531	sr:season:118689	sr:competitor:37	sr:competitor:39	\N	\N	not_started	28	sr:venue:18379	2025-03-08 15:00:00
+sr:sport_event:50850589	sr:season:118689	sr:competitor:35	sr:competitor:17	\N	\N	not_started	31	sr:venue:9	2025-04-05 14:00:00
+sr:sport_event:50850603	sr:season:118689	sr:competitor:44	sr:competitor:37	\N	\N	not_started	32	sr:venue:579	2025-04-12 14:00:00
+sr:sport_event:50850595	sr:season:118689	sr:competitor:60	sr:competitor:43	\N	\N	not_started	32	sr:venue:2990	2025-04-12 14:00:00
+sr:sport_event:50850585	sr:season:118689	sr:competitor:32	sr:competitor:3	\N	\N	not_started	31	sr:venue:2188	2025-04-05 14:00:00
+sr:sport_event:50850617	sr:season:118689	sr:competitor:50	sr:competitor:30	\N	\N	not_started	33	sr:venue:53349	2025-04-19 14:00:00
+sr:sport_event:50850613	sr:season:118689	sr:competitor:3	sr:competitor:33	\N	\N	not_started	32	sr:venue:1272	2025-04-12 14:00:00
+sr:sport_event:50850631	sr:season:118689	sr:competitor:33	sr:competitor:14	\N	\N	not_started	33	sr:venue:28762	2025-04-19 14:00:00
+sr:sport_event:50850629	sr:season:118689	sr:competitor:35	sr:competitor:3	\N	\N	not_started	33	sr:venue:9	2025-04-19 14:00:00
+sr:sport_event:50850619	sr:season:118689	sr:competitor:7	sr:competitor:60	\N	\N	not_started	33	sr:venue:10	2025-04-19 14:00:00
+sr:sport_event:50850625	sr:season:118689	sr:competitor:32	sr:competitor:42	\N	\N	not_started	33	sr:venue:2188	2025-04-19 14:00:00
+sr:sport_event:50850649	sr:season:118689	sr:competitor:14	sr:competitor:50	\N	\N	not_started	34	sr:venue:2230	2025-04-26 14:00:00
+sr:sport_event:50850651	sr:season:118689	sr:competitor:45	sr:competitor:43	\N	\N	not_started	34	sr:venue:2231	2025-04-26 14:00:00
+sr:sport_event:57357019	sr:season:118689	sr:competitor:37	sr:competitor:31	\N	\N	not_started	27	sr:venue:18379	2025-02-27 20:00:00
+sr:sport_event:50852605	sr:season:118691	sr:competitor:2816	sr:competitor:6577	\N	\N	not_started	27	sr:venue:1045	2025-03-09 18:00:00
+sr:sport_event:50852315	sr:season:118691	sr:competitor:2828	sr:competitor:2829	\N	\N	postponed	12	sr:venue:691	2024-11-02 20:00:00
+sr:sport_event:50852633	sr:season:118691	sr:competitor:2820	sr:competitor:2859	\N	\N	not_started	28	sr:venue:739	2025-03-16 18:00:00
+sr:sport_event:50852797	sr:season:118691	sr:competitor:2833	sr:competitor:6577	\N	\N	not_started	36	sr:venue:730	2025-05-14 17:00:00
+sr:sport_event:50852769	sr:season:118691	sr:competitor:24264	sr:competitor:2819	\N	\N	not_started	35	sr:venue:11380	2025-05-11 17:00:00
+sr:sport_event:51269451	sr:season:118693	sr:competitor:2569	sr:competitor:5885	\N	\N	not_started	25	sr:venue:1089	2025-03-08 14:30:00
+sr:sport_event:51269409	sr:season:118693	sr:competitor:36360	sr:competitor:5885	\N	\N	not_started	23	sr:venue:850	2025-02-22 14:30:00
+sr:sport_event:51269423	sr:season:118693	sr:competitor:2573	sr:competitor:2681	\N	\N	not_started	23	sr:venue:659	2025-02-22 14:30:00
+sr:sport_event:51269439	sr:season:118693	sr:competitor:2542	sr:competitor:2569	\N	\N	not_started	24	sr:venue:738	2025-03-01 14:30:00
+sr:sport_event:51269443	sr:season:118693	sr:competitor:2681	sr:competitor:2534	\N	\N	not_started	25	sr:venue:593	2025-03-08 14:30:00
+sr:sport_event:51269459	sr:season:118693	sr:competitor:2573	sr:competitor:2677	\N	\N	not_started	25	sr:venue:659	2025-03-08 14:30:00
+sr:sport_event:51269453	sr:season:118693	sr:competitor:2538	sr:competitor:36360	\N	\N	not_started	25	sr:venue:61056	2025-03-08 14:30:00
+sr:sport_event:51269447	sr:season:118693	sr:competitor:2673	sr:competitor:2600	\N	\N	not_started	25	sr:venue:759	2025-03-08 14:30:00
+sr:sport_event:51269475	sr:season:118693	sr:competitor:2542	sr:competitor:2674	\N	\N	not_started	26	sr:venue:738	2025-03-15 14:30:00
+sr:sport_event:51269491	sr:season:118693	sr:competitor:2524	sr:competitor:5885	\N	\N	not_started	27	sr:venue:816	2025-03-29 14:30:00
+sr:sport_event:51269499	sr:season:118693	sr:competitor:5885	sr:competitor:2681	\N	\N	not_started	28	sr:venue:34054	2025-04-05 13:30:00
+sr:sport_event:51269487	sr:season:118693	sr:competitor:2569	sr:competitor:2600	\N	\N	not_started	27	sr:venue:1089	2025-03-29 14:30:00
+sr:sport_event:51269555	sr:season:118693	sr:competitor:2672	sr:competitor:2556	\N	\N	not_started	31	sr:venue:574	2025-04-26 13:30:00
+sr:sport_event:51269565	sr:season:118693	sr:competitor:2542	sr:competitor:2547	\N	\N	not_started	31	sr:venue:738	2025-04-26 13:30:00
+sr:sport_event:51269567	sr:season:118693	sr:competitor:2573	sr:competitor:2527	\N	\N	not_started	31	sr:venue:659	2025-04-26 13:30:00
+sr:sport_event:51269585	sr:season:118693	sr:competitor:2526	sr:competitor:2677	\N	\N	not_started	32	sr:venue:791	2025-05-03 13:30:00
+sr:sport_event:50850513	sr:season:118689	sr:competitor:35	sr:competitor:32	\N	\N	not_started	27	sr:venue:9	2025-02-26 20:00:00
+sr:sport_event:50850563	sr:season:118689	sr:competitor:3	sr:competitor:37	\N	\N	not_started	30	sr:venue:1272	2025-04-01 14:00:00
+sr:sport_event:50850549	sr:season:118689	sr:competitor:17	sr:competitor:30	\N	\N	not_started	29	sr:venue:606	2025-03-15 15:00:00
+sr:sport_event:50850615	sr:season:118689	sr:competitor:40	sr:competitor:39	\N	\N	not_started	33	sr:venue:815	2025-04-19 14:00:00
+sr:sport_event:50852817	sr:season:118691	sr:competitor:6577	sr:competitor:2845	\N	\N	not_started	37	sr:venue:974	2025-05-18 17:00:00
+sr:sport_event:51269435	sr:season:118693	sr:competitor:2600	sr:competitor:2538	\N	\N	not_started	24	sr:venue:1655	2025-03-01 14:30:00
+sr:sport_event:51269455	sr:season:118693	sr:competitor:2524	sr:competitor:2526	\N	\N	not_started	25	sr:venue:816	2025-03-08 14:30:00
+sr:sport_event:51269507	sr:season:118693	sr:competitor:2556	sr:competitor:2573	\N	\N	not_started	28	sr:venue:2406	2025-04-05 13:30:00
+sr:sport_event:51269547	sr:season:118693	sr:competitor:2547	sr:competitor:2677	\N	\N	not_started	30	sr:venue:578	2025-04-19 13:30:00
+sr:sport_event:50850545	sr:season:118689	sr:competitor:32	sr:competitor:14	\N	\N	not_started	29	sr:venue:2188	2025-03-15 15:00:00
+sr:sport_event:50850519	sr:season:118689	sr:competitor:38	sr:competitor:31	\N	\N	not_started	28	sr:venue:799	2025-03-08 15:00:00
+sr:sport_event:50850511	sr:season:118689	sr:competitor:44	sr:competitor:39	\N	\N	not_started	27	sr:venue:579	2025-02-26 20:00:00
+sr:sport_event:50850609	sr:season:118689	sr:competitor:14	sr:competitor:48	\N	\N	not_started	32	sr:venue:2230	2025-04-12 14:00:00
+sr:sport_event:50850671	sr:season:118689	sr:competitor:17	sr:competitor:3	\N	\N	not_started	35	sr:venue:606	2025-05-03 14:00:00
+sr:sport_event:50852585	sr:season:118691	sr:competitor:2820	sr:competitor:2828	\N	\N	not_started	26	sr:venue:739	2025-03-02 18:00:00
+sr:sport_event:50852611	sr:season:118691	sr:competitor:2828	sr:competitor:2831	\N	\N	not_started	27	sr:venue:691	2025-03-09 18:00:00
+sr:sport_event:50852619	sr:season:118691	sr:competitor:2829	sr:competitor:2818	\N	\N	not_started	27	sr:venue:754	2025-03-09 18:00:00
+sr:sport_event:50852669	sr:season:118691	sr:competitor:2819	sr:competitor:2825	\N	\N	not_started	30	sr:venue:619	2025-04-06 17:00:00
+sr:sport_event:51269429	sr:season:118693	sr:competitor:2674	sr:competitor:2681	\N	\N	not_started	24	sr:venue:67707	2025-03-01 14:30:00
+sr:sport_event:51269427	sr:season:118693	sr:competitor:36360	sr:competitor:2556	\N	\N	not_started	24	sr:venue:850	2025-03-01 14:30:00
+sr:sport_event:51269479	sr:season:118693	sr:competitor:2681	sr:competitor:2542	\N	\N	not_started	27	sr:venue:593	2025-03-29 14:30:00
+sr:sport_event:51269531	sr:season:118693	sr:competitor:2573	sr:competitor:2526	\N	\N	not_started	29	sr:venue:659	2025-04-12 13:30:00
+sr:sport_event:51269561	sr:season:118693	sr:competitor:2534	sr:competitor:2526	\N	\N	not_started	31	sr:venue:821	2025-04-26 13:30:00
+sr:sport_event:50850499	sr:season:118689	sr:competitor:14	sr:competitor:42	\N	\N	not_started	27	sr:venue:2230	2025-02-25 19:45:00
+sr:sport_event:50850575	sr:season:118689	sr:competitor:40	sr:competitor:14	\N	\N	not_started	31	sr:venue:815	2025-04-05 14:00:00
+sr:sport_event:50850533	sr:season:118689	sr:competitor:3	sr:competitor:48	\N	\N	not_started	28	sr:venue:1272	2025-03-08 15:00:00
+sr:sport_event:50850605	sr:season:118689	sr:competitor:17	sr:competitor:7	\N	\N	not_started	32	sr:venue:606	2025-04-12 14:00:00
+sr:sport_event:50850657	sr:season:118689	sr:competitor:40	sr:competitor:43	\N	\N	not_started	35	sr:venue:815	2025-05-03 14:00:00
+sr:sport_event:50852571	sr:season:118691	sr:competitor:6577	sr:competitor:2817	\N	\N	not_started	25	sr:venue:974	2025-02-23 19:00:00
+sr:sport_event:50852729	sr:season:118691	sr:competitor:2821	sr:competitor:2819	\N	\N	not_started	33	sr:venue:697	2025-04-23 17:00:00
+sr:sport_event:50852813	sr:season:118691	sr:competitor:2833	sr:competitor:2829	\N	\N	not_started	37	sr:venue:730	2025-05-18 17:00:00
+sr:sport_event:51269477	sr:season:118693	sr:competitor:2526	sr:competitor:2569	\N	\N	not_started	26	sr:venue:791	2025-03-15 14:30:00
+sr:sport_event:51269471	sr:season:118693	sr:competitor:2556	sr:competitor:2538	\N	\N	not_started	26	sr:venue:2406	2025-03-15 14:30:00
+sr:sport_event:51269593	sr:season:118693	sr:competitor:2674	sr:competitor:2526	\N	\N	not_started	33	sr:venue:67707	2025-05-10 13:30:00
+sr:sport_event:50850529	sr:season:118689	sr:competitor:33	sr:competitor:60	\N	\N	not_started	28	sr:venue:28762	2025-03-08 15:00:00
+sr:sport_event:50850537	sr:season:118689	sr:competitor:42	sr:competitor:38	\N	\N	not_started	29	sr:venue:624	2025-03-15 15:00:00
+sr:sport_event:50850583	sr:season:118689	sr:competitor:43	sr:competitor:44	\N	\N	not_started	31	sr:venue:611	2025-04-05 14:00:00
+sr:sport_event:50850551	sr:season:118689	sr:competitor:39	sr:competitor:7	\N	\N	not_started	29	sr:venue:765	2025-03-15 15:00:00
+sr:sport_event:50850627	sr:season:118689	sr:competitor:31	sr:competitor:44	\N	\N	not_started	33	sr:venue:2183	2025-04-19 14:00:00
+sr:sport_event:50850635	sr:season:118689	sr:competitor:60	sr:competitor:35	\N	\N	not_started	34	sr:venue:2990	2025-04-26 14:00:00
+sr:sport_event:50852603	sr:season:118691	sr:competitor:2817	sr:competitor:2820	\N	\N	not_started	27	sr:venue:714	2025-03-09 18:00:00
+sr:sport_event:51269417	sr:season:118693	sr:competitor:2524	sr:competitor:2542	\N	\N	not_started	23	sr:venue:816	2025-02-22 14:30:00
+sr:sport_event:51269445	sr:season:118693	sr:competitor:2672	sr:competitor:2542	\N	\N	not_started	25	sr:venue:574	2025-03-08 14:30:00
+sr:sport_event:51269509	sr:season:118693	sr:competitor:2547	sr:competitor:2524	\N	\N	not_started	28	sr:venue:578	2025-04-05 13:30:00
+sr:sport_event:50850501	sr:season:118689	sr:competitor:33	sr:competitor:17	\N	\N	not_started	27	sr:venue:28762	2025-02-25 19:45:00
+sr:sport_event:50850559	sr:season:118689	sr:competitor:30	sr:competitor:40	\N	\N	not_started	30	sr:venue:2443	2025-04-01 14:00:00
+sr:sport_event:50850587	sr:season:118689	sr:competitor:31	sr:competitor:39	\N	\N	not_started	31	sr:venue:2183	2025-04-05 14:00:00
+sr:sport_event:50850621	sr:season:118689	sr:competitor:48	sr:competitor:17	\N	\N	not_started	33	sr:venue:12	2025-04-19 14:00:00
+sr:sport_event:50850685	sr:season:118689	sr:competitor:39	sr:competitor:38	\N	\N	not_started	36	sr:venue:765	2025-05-10 14:00:00
+sr:sport_event:51269449	sr:season:118693	sr:competitor:2674	sr:competitor:2547	\N	\N	not_started	25	sr:venue:67707	2025-03-08 14:30:00
+sr:sport_event:51269501	sr:season:118693	sr:competitor:2534	sr:competitor:2674	\N	\N	not_started	28	sr:venue:821	2025-04-05 13:30:00
+sr:sport_event:51269571	sr:season:118693	sr:competitor:2673	sr:competitor:2524	\N	\N	not_started	32	sr:venue:759	2025-05-03 13:30:00
+sr:sport_event:51096421	sr:season:118699	sr:competitor:12	sr:competitor:15	\N	\N	not_started	38	sr:venue:2547	2025-03-15 15:00:00
+sr:sport_event:51096409	sr:season:118699	sr:competitor:25	sr:competitor:29	\N	\N	not_started	38	sr:venue:2352	2025-03-15 15:00:00
+sr:sport_event:51096369	sr:season:118699	sr:competitor:41	sr:competitor:61	\N	\N	not_started	36	sr:venue:851	2025-03-08 15:00:00
+sr:sport_event:50868415	sr:season:119799	sr:competitor:2971	sr:competitor:2953	\N	\N	not_started	25	sr:venue:18994	2025-03-07 17:00:00
+sr:sport_event:50850547	sr:season:118689	sr:competitor:31	sr:competitor:35	\N	\N	not_started	29	sr:venue:2183	2025-03-15 15:00:00
+sr:sport_event:50850525	sr:season:118689	sr:competitor:35	sr:competitor:42	\N	\N	not_started	28	sr:venue:9	2025-03-08 15:00:00
+sr:sport_event:51096325	sr:season:118699	sr:competitor:24	sr:competitor:72	\N	\N	not_started	34	sr:venue:813	2025-02-23 12:00:00
+sr:sport_event:51096483	sr:season:118699	sr:competitor:21	sr:competitor:61	\N	\N	not_started	41	sr:venue:3002	2025-04-08 18:45:00
+sr:sport_event:51096883	sr:season:118699	sr:competitor:34	sr:competitor:29	\N	\N	not_started	44	sr:venue:2223	2025-04-21 14:00:00
+sr:sport_event:51096935	sr:season:118699	sr:competitor:6	sr:competitor:25	\N	\N	not_started	46	sr:venue:806	2025-05-03 14:00:00
+sr:sport_event:50955787	sr:season:119835	sr:competitor:1715	sr:competitor:1684	\N	\N	not_started	25	sr:venue:1858	2025-03-09 17:00:00
+sr:sport_event:51096375	sr:season:118699	sr:competitor:8	sr:competitor:1	\N	\N	not_started	36	sr:venue:1136	2025-03-08 15:00:00
+sr:sport_event:51096447	sr:season:118699	sr:competitor:41	sr:competitor:25	\N	\N	not_started	39	sr:venue:851	2025-03-29 15:00:00
+sr:sport_event:50868565	sr:season:119799	sr:competitor:2953	sr:competitor:2955	\N	\N	not_started	34	sr:venue:577	2025-05-18 12:30:00
+sr:sport_event:51096475	sr:season:118699	sr:competitor:46	sr:competitor:12	\N	\N	not_started	41	sr:venue:631	2025-04-08 18:45:00
+sr:sport_event:50868427	sr:season:119799	sr:competitor:2955	sr:competitor:2959	\N	\N	not_started	26	sr:venue:584	2025-03-14 17:00:00
+sr:sport_event:50868497	sr:season:119799	sr:competitor:2950	sr:competitor:2947	\N	\N	not_started	30	sr:venue:615	2025-04-23 16:00:00
+sr:sport_event:50868569	sr:season:119799	sr:competitor:2957	sr:competitor:2948	\N	\N	not_started	34	sr:venue:2769	2025-05-18 12:30:00
+sr:sport_event:50955763	sr:season:119835	sr:competitor:1649	sr:competitor:1715	\N	\N	not_started	24	sr:venue:17406	2025-03-02 17:00:00
+sr:sport_event:51096451	sr:season:118699	sr:competitor:46	sr:competitor:36	\N	\N	not_started	40	sr:venue:631	2025-04-05 14:00:00
+sr:sport_event:50868385	sr:season:119799	sr:competitor:2990	sr:competitor:2953	\N	\N	not_started	24	sr:venue:3261	2025-02-28 17:00:00
+sr:sport_event:50955785	sr:season:119835	sr:competitor:1661	sr:competitor:1649	\N	\N	not_started	25	sr:venue:13184	2025-03-09 17:00:00
+sr:sport_event:51096425	sr:season:118699	sr:competitor:8	sr:competitor:96	\N	\N	not_started	38	sr:venue:1136	2025-03-15 15:00:00
+sr:sport_event:51096907	sr:season:118699	sr:competitor:96	sr:competitor:27	\N	\N	not_started	45	sr:venue:1138	2025-04-26 14:00:00
+sr:sport_event:51096905	sr:season:118699	sr:competitor:72	sr:competitor:11	\N	\N	not_started	45	sr:venue:2178	2025-04-26 14:00:00
+sr:sport_event:51096355	sr:season:118699	sr:competitor:6	sr:competitor:72	\N	\N	not_started	36	sr:venue:806	2025-03-08 15:00:00
+sr:sport_event:50868417	sr:season:119799	sr:competitor:2952	sr:competitor:2964	\N	\N	not_started	25	sr:venue:726	2025-03-07 17:00:00
+sr:sport_event:50955811	sr:season:119835	sr:competitor:1684	sr:competitor:1653	\N	\N	not_started	26	sr:venue:19889	2025-03-16 17:00:00
+sr:sport_event:51096423	sr:season:118699	sr:competitor:74	sr:competitor:6	\N	\N	not_started	38	sr:venue:1689	2025-03-15 15:00:00
+sr:sport_event:51096381	sr:season:118699	sr:competitor:27	sr:competitor:11	\N	\N	not_started	37	sr:venue:852	2025-03-11 19:45:00
+sr:sport_event:50868389	sr:season:119799	sr:competitor:2948	sr:competitor:2947	\N	\N	not_started	24	sr:venue:786	2025-02-28 17:00:00
+sr:sport_event:46657153	sr:season:114317	sr:competitor:3201	sr:competitor:3206	\N	\N	postponed	21	sr:venue:14324	2024-10-05 21:45:00
+sr:sport_event:51096345	sr:season:118699	sr:competitor:21	sr:competitor:74	\N	\N	not_started	35	sr:venue:3002	2025-03-01 15:00:00
+sr:sport_event:51095647	sr:season:118699	sr:competitor:71	sr:competitor:95	\N	\N	postponed	19	sr:venue:660	2024-12-07 15:00:00
+sr:sport_event:51096241	sr:season:118699	sr:competitor:72	sr:competitor:71	\N	\N	postponed	31	sr:venue:2178	2025-02-08 15:00:00
+sr:sport_event:51096359	sr:season:118699	sr:competitor:27	sr:competitor:46	\N	\N	not_started	36	sr:venue:852	2025-03-08 15:00:00
+sr:sport_event:50868391	sr:season:119799	sr:competitor:2959	sr:competitor:2962	\N	\N	not_started	24	sr:venue:612	2025-02-28 17:00:00
+sr:sport_event:50955841	sr:season:119835	sr:competitor:1648	sr:competitor:1678	\N	\N	not_started	28	sr:venue:835	2025-04-06 17:00:00
+sr:sport_event:50955945	sr:season:119835	sr:competitor:1649	sr:competitor:1684	\N	\N	not_started	34	sr:venue:17406	2025-05-18 17:00:00
+sr:sport_event:51096849	sr:season:118699	sr:competitor:74	sr:competitor:96	\N	\N	not_started	43	sr:venue:1689	2025-04-18 14:00:00
+sr:sport_event:51096851	sr:season:118699	sr:competitor:24	sr:competitor:6	\N	\N	not_started	43	sr:venue:813	2025-04-18 14:00:00
+sr:sport_event:51096923	sr:season:118699	sr:competitor:15	sr:competitor:46	\N	\N	not_started	46	sr:venue:598	2025-05-03 14:00:00
+sr:sport_event:51096367	sr:season:118699	sr:competitor:15	sr:competitor:21	\N	\N	not_started	36	sr:venue:598	2025-03-08 15:00:00
+sr:sport_event:57704595	sr:season:118699	sr:competitor:61	sr:competitor:96	\N	\N	not_started	31	sr:venue:1514	2025-02-26 19:45:00
+sr:sport_event:50868425	sr:season:119799	sr:competitor:2951	sr:competitor:2957	\N	\N	not_started	26	sr:venue:35438	2025-03-14 17:00:00
+sr:sport_event:50955781	sr:season:119835	sr:competitor:1647	sr:competitor:1659	\N	\N	not_started	25	sr:venue:953	2025-03-09 17:00:00
+sr:sport_event:51096865	sr:season:118699	sr:competitor:95	sr:competitor:34	\N	\N	not_started	43	sr:venue:2366	2025-04-18 14:00:00
+sr:sport_event:51096897	sr:season:118699	sr:competitor:1	sr:competitor:6	\N	\N	not_started	45	sr:venue:1693	2025-04-26 14:00:00
+sr:sport_event:51096321	sr:season:118699	sr:competitor:41	sr:competitor:96	\N	\N	not_started	34	sr:venue:851	2025-02-22 12:30:00
+sr:sport_event:50955767	sr:season:119835	sr:competitor:1678	sr:competitor:1661	\N	\N	not_started	24	sr:venue:845	2025-03-02 17:00:00
+sr:sport_event:50955795	sr:season:119835	sr:competitor:1644	sr:competitor:1641	\N	\N	not_started	26	sr:venue:843	2025-03-16 17:00:00
+sr:sport_event:51096875	sr:season:118699	sr:competitor:1	sr:competitor:74	\N	\N	not_started	44	sr:venue:1693	2025-04-21 14:00:00
+sr:sport_event:50955777	sr:season:119835	sr:competitor:1662	sr:competitor:1678	\N	\N	not_started	25	sr:venue:46514	2025-03-09 17:00:00
+sr:sport_event:57540711	sr:season:118699	sr:competitor:72	sr:competitor:71	\N	\N	not_started	31	sr:venue:2178	2025-02-19 19:45:00
+sr:sport_event:50868399	sr:season:119799	sr:competitor:2960	sr:competitor:2961	\N	\N	not_started	24	sr:venue:656	2025-02-28 17:00:00
+sr:sport_event:50955847	sr:season:119835	sr:competitor:1658	sr:competitor:1646	\N	\N	not_started	28	sr:venue:844	2025-04-06 17:00:00
+sr:sport_event:51096885	sr:season:118699	sr:competitor:96	sr:competitor:21	\N	\N	not_started	44	sr:venue:1138	2025-04-21 14:00:00
+sr:sport_event:50955759	sr:season:119835	sr:competitor:1644	sr:competitor:1643	\N	\N	not_started	24	sr:venue:843	2025-03-02 17:00:00
+sr:sport_event:51096363	sr:season:118699	sr:competitor:71	sr:competitor:12	\N	\N	not_started	36	sr:venue:660	2025-03-08 15:00:00
+sr:sport_event:50868429	sr:season:119799	sr:competitor:2948	sr:competitor:2962	\N	\N	not_started	26	sr:venue:786	2025-03-14 17:00:00
+sr:sport_event:50955947	sr:season:119835	sr:competitor:1661	sr:competitor:1715	\N	\N	not_started	34	sr:venue:13184	2025-05-18 17:00:00
+sr:sport_event:51096317	sr:season:118699	sr:competitor:2	sr:competitor:1	\N	\N	not_started	34	sr:venue:638	2025-02-22 15:00:00
+sr:sport_event:50868387	sr:season:119799	sr:competitor:2951	sr:competitor:2955	\N	\N	not_started	24	sr:venue:35438	2025-02-28 17:00:00
+sr:sport_event:51095467	sr:season:118699	sr:competitor:46	sr:competitor:2	\N	\N	postponed	16	sr:venue:631	2024-11-23 15:00:00
+sr:sport_event:50868403	sr:season:119799	sr:competitor:2950	sr:competitor:2956	\N	\N	not_started	25	sr:venue:615	2025-03-07 17:00:00
+sr:sport_event:50868421	sr:season:119799	sr:competitor:2953	sr:competitor:2950	\N	\N	not_started	26	sr:venue:577	2025-03-14 17:00:00
+sr:sport_event:50955845	sr:season:119835	sr:competitor:1682	sr:competitor:1659	\N	\N	not_started	28	sr:venue:1871	2025-04-06 17:00:00
+sr:sport_event:57352281	sr:season:118699	sr:competitor:21	sr:competitor:25	\N	\N	not_started	31	sr:venue:3002	2025-02-18 19:45:00
+sr:sport_event:50955805	sr:season:119835	sr:competitor:1648	sr:competitor:1658	\N	\N	not_started	26	sr:venue:835	2025-03-16 17:00:00
+sr:sport_event:50850497	sr:season:118689	sr:competitor:30	sr:competitor:60	\N	\N	not_started	27	sr:venue:2443	2025-02-25 19:45:00
+sr:sport_event:50850523	sr:season:118689	sr:competitor:44	sr:competitor:45	\N	\N	not_started	28	sr:venue:579	2025-03-08 15:00:00
+sr:sport_event:50850593	sr:season:118689	sr:competitor:37	sr:competitor:60	\N	\N	not_started	31	sr:venue:18379	2025-04-05 14:00:00
+sr:sport_event:50850637	sr:season:118689	sr:competitor:42	sr:competitor:7	\N	\N	not_started	34	sr:venue:624	2025-04-26 14:00:00
+sr:sport_event:51269433	sr:season:118693	sr:competitor:2534	sr:competitor:2524	\N	\N	not_started	24	sr:venue:821	2025-03-01 14:30:00
+sr:sport_event:57540717	sr:season:118699	sr:competitor:29	sr:competitor:36	\N	\N	not_started	31	sr:venue:1135	2025-02-25 19:45:00
+sr:sport_event:50868319	sr:season:119799	sr:competitor:2959	sr:competitor:2990	\N	\N	postponed	20	sr:venue:612	2025-01-25 20:00:00
+sr:sport_event:50868413	sr:season:119799	sr:competitor:2947	sr:competitor:2960	\N	\N	not_started	25	sr:venue:2081	2025-03-07 17:00:00
+sr:sport_event:50955793	sr:season:119835	sr:competitor:1641	sr:competitor:1648	\N	\N	not_started	25	sr:venue:839	2025-03-09 17:00:00
+sr:sport_event:50868317	sr:season:119799	sr:competitor:2955	sr:competitor:2962	\N	\N	postponed	20	sr:venue:584	2025-01-26 19:00:00
+sr:sport_event:50868491	sr:season:119799	sr:competitor:2961	sr:competitor:2953	\N	\N	not_started	29	sr:venue:826	2025-04-11 16:00:00
+sr:sport_event:50955809	sr:season:119835	sr:competitor:1647	sr:competitor:1643	\N	\N	not_started	26	sr:venue:953	2025-03-16 17:00:00
+sr:sport_event:50955851	sr:season:119835	sr:competitor:1662	sr:competitor:1658	\N	\N	not_started	29	sr:venue:46514	2025-04-13 17:00:00
+sr:sport_event:50868459	sr:season:119799	sr:competitor:2990	sr:competitor:2971	\N	\N	not_started	28	sr:venue:3261	2025-04-04 16:00:00
+sr:sport_event:50955823	sr:season:119835	sr:competitor:1678	sr:competitor:1644	\N	\N	not_started	27	sr:venue:845	2025-03-30 17:00:00
+sr:sport_event:57221983	sr:season:119799	sr:competitor:2953	sr:competitor:2979	\N	\N	not_started	20	sr:venue:577	2025-02-23 13:30:00
+sr:sport_event:50850483	sr:season:118689	sr:competitor:43	sr:competitor:7	\N	\N	not_started	26	sr:venue:611	2025-02-22 15:00:00
+sr:sport_event:50850567	sr:season:118689	sr:competitor:17	sr:competitor:31	\N	\N	not_started	30	sr:venue:606	2025-04-02 14:00:00
+sr:sport_event:50850623	sr:season:118689	sr:competitor:43	sr:competitor:38	\N	\N	not_started	33	sr:venue:611	2025-04-19 14:00:00
+sr:sport_event:50850633	sr:season:118689	sr:competitor:37	sr:competitor:45	\N	\N	not_started	33	sr:venue:18379	2025-04-19 14:00:00
+sr:sport_event:51269441	sr:season:118693	sr:competitor:2526	sr:competitor:2673	\N	\N	not_started	24	sr:venue:791	2025-03-01 14:30:00
+sr:sport_event:51269557	sr:season:118693	sr:competitor:2674	sr:competitor:36360	\N	\N	not_started	31	sr:venue:67707	2025-04-26 13:30:00
+sr:sport_event:51269597	sr:season:118693	sr:competitor:2524	sr:competitor:2569	\N	\N	not_started	33	sr:venue:816	2025-05-10 13:30:00
+sr:sport_event:57190387	sr:season:119799	sr:competitor:2959	sr:competitor:2990	\N	\N	not_started	20	sr:venue:612	2025-02-22 19:00:00
+sr:sport_event:50955733	sr:season:119835	sr:competitor:1658	sr:competitor:1643	0	0	live	22	sr:venue:844	2025-02-16 16:00:00
+sr:sport_event:57221985	sr:season:119799	sr:competitor:2955	sr:competitor:2962	\N	\N	not_started	20	sr:venue:584	2025-02-23 13:30:00
+sr:sport_event:50955825	sr:season:119835	sr:competitor:1682	sr:competitor:1641	\N	\N	not_started	27	sr:venue:1871	2025-03-30 17:00:00
+sr:sport_event:50868567	sr:season:119799	sr:competitor:2950	sr:competitor:2990	\N	\N	not_started	34	sr:venue:615	2025-05-18 12:30:00
+sr:sport_event:50955783	sr:season:119835	sr:competitor:1681	sr:competitor:1653	\N	\N	not_started	25	sr:venue:848	2025-03-09 17:00:00
+sr:sport_event:50955755	sr:season:119835	sr:competitor:1661	sr:competitor:1642	\N	\N	not_started	23	sr:venue:13184	2025-02-23 16:00:00
+sr:sport_event:50955815	sr:season:119835	sr:competitor:1646	sr:competitor:1642	\N	\N	not_started	27	sr:venue:767	2025-03-30 17:00:00
+sr:sport_event:50955827	sr:season:119835	sr:competitor:1643	sr:competitor:1648	\N	\N	not_started	27	sr:venue:837	2025-03-30 17:00:00
+sr:sport_event:50955915	sr:season:119835	sr:competitor:1681	sr:competitor:1658	\N	\N	not_started	32	sr:venue:848	2025-05-04 17:00:00
+sr:sport_event:50850491	sr:season:118689	sr:competitor:39	sr:competitor:14	\N	\N	not_started	26	sr:venue:765	2025-02-22 15:00:00
+sr:sport_event:50850573	sr:season:118689	sr:competitor:44	sr:competitor:48	\N	\N	not_started	30	sr:venue:579	2025-04-02 19:00:00
+sr:sport_event:50850601	sr:season:118689	sr:competitor:38	sr:competitor:32	\N	\N	not_started	32	sr:venue:799	2025-04-12 14:00:00
+sr:sport_event:50850659	sr:season:118689	sr:competitor:50	sr:competitor:35	\N	\N	not_started	35	sr:venue:53349	2025-05-03 14:00:00
+sr:sport_event:50852753	sr:season:118691	sr:competitor:2829	sr:competitor:2821	\N	\N	not_started	34	sr:venue:754	2025-05-04 17:00:00
+sr:sport_event:51269457	sr:season:118693	sr:competitor:2527	sr:competitor:2556	\N	\N	not_started	25	sr:venue:788	2025-03-08 14:30:00
+sr:sport_event:50850539	sr:season:118689	sr:competitor:40	sr:competitor:44	\N	\N	not_started	29	sr:venue:815	2025-03-15 15:00:00
+sr:sport_event:50850579	sr:season:118689	sr:competitor:7	sr:competitor:30	\N	\N	not_started	31	sr:venue:10	2025-04-05 14:00:00
+sr:sport_event:50850599	sr:season:118689	sr:competitor:30	sr:competitor:31	\N	\N	not_started	32	sr:venue:2443	2025-04-12 14:00:00
+sr:sport_event:51269421	sr:season:118693	sr:competitor:2527	sr:competitor:2600	\N	\N	not_started	23	sr:venue:788	2025-02-22 14:30:00
+sr:sport_event:51269587	sr:season:118693	sr:competitor:2681	sr:competitor:2673	\N	\N	not_started	33	sr:venue:593	2025-05-10 13:30:00
+sr:sport_event:50850527	sr:season:118689	sr:competitor:14	sr:competitor:17	\N	\N	not_started	28	sr:venue:2230	2025-03-08 15:00:00
+sr:sport_event:50852821	sr:season:118691	sr:competitor:2825	sr:competitor:2817	\N	\N	not_started	38	sr:venue:751	2025-05-25 17:00:00
+sr:sport_event:51269407	sr:season:118693	sr:competitor:2672	sr:competitor:2674	\N	\N	not_started	23	sr:venue:574	2025-02-22 14:30:00
+sr:sport_event:51269513	sr:season:118693	sr:competitor:2526	sr:competitor:2527	\N	\N	not_started	28	sr:venue:791	2025-04-05 13:30:00
 \.
 
 
 --
--- Data for Name: Player; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: Player; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."Player" (id, name, "teamId", "position", country, number) FROM stdin;
@@ -9294,7 +9302,7 @@ sr:player:2125558	Tyrer, Harry	sr:competitor:48	goalkeeper	ENG	53
 
 
 --
--- Data for Name: Stadium; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: Stadium; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."Stadium" (id, name, city, country, capacity) FROM stdin;
@@ -9469,7 +9477,7 @@ sr:venue:839	Orange Velodrome	Marseille	France	67000
 
 
 --
--- Data for Name: Standings; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: Standings; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."Standings" (id, "competitionId", "teamId", "position", played, win, loss, draw, goals_for, goals_against, points, form) FROM stdin;
@@ -9641,7 +9649,7 @@ COPY public."Standings" (id, "competitionId", "teamId", "position", played, win,
 
 
 --
--- Data for Name: Team; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: Team; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."Team" (id, name, city, country, "managerName", "stadiumId", logo, "shortName") FROM stdin;
@@ -9813,7 +9821,7 @@ sr:competitor:71	Plymouth Argyle	Plymouth	ENG	Rooney, Wayne	sr:venue:660	https:/
 
 
 --
--- Data for Name: User; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: User; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."User" (id, email, "createdAt", password, username) FROM stdin;
@@ -9825,7 +9833,7 @@ COPY public."User" (id, email, "createdAt", password, username) FROM stdin;
 
 
 --
--- Data for Name: _CompetitionToTeam; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: _CompetitionToTeam; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."_CompetitionToTeam" ("A", "B") FROM stdin;
@@ -9997,7 +10005,7 @@ sr:season:118699	sr:competitor:2
 
 
 --
--- Data for Name: _CompetitionToUser; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: _CompetitionToUser; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."_CompetitionToUser" ("A", "B") FROM stdin;
@@ -10008,7 +10016,7 @@ sr:season:118699	8
 
 
 --
--- Data for Name: _TeamToUser; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: _TeamToUser; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public."_TeamToUser" ("A", "B") FROM stdin;
@@ -10017,7 +10025,7 @@ sr:competitor:2556	13
 
 
 --
--- Data for Name: _prisma_migrations; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: _prisma_migrations; Type: TABLE DATA; Schema: public; Owner: juanseijas
 --
 
 COPY public._prisma_migrations (id, checksum, finished_at, migration_name, logs, rolled_back_at, started_at, applied_steps_count) FROM stdin;
@@ -10045,28 +10053,28 @@ a1374140-0c9d-4c5c-8315-26dd0b808313	5db25459f40af66fcc80677ace3f5a1e2760d259978
 
 
 --
--- Name: Jersey_id_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: Jersey_id_seq; Type: SEQUENCE SET; Schema: public; Owner: juanseijas
 --
 
 SELECT pg_catalog.setval('public."Jersey_id_seq"', 4264, true);
 
 
 --
--- Name: Standings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: Standings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: juanseijas
 --
 
 SELECT pg_catalog.setval('public."Standings_id_seq"', 5807, true);
 
 
 --
--- Name: User_id_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: User_id_seq; Type: SEQUENCE SET; Schema: public; Owner: juanseijas
 --
 
 SELECT pg_catalog.setval('public."User_id_seq"', 13, true);
 
 
 --
--- Name: Competition Competition_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Competition Competition_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Competition"
@@ -10074,7 +10082,7 @@ ALTER TABLE ONLY public."Competition"
 
 
 --
--- Name: Jersey Jersey_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Jersey Jersey_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Jersey"
@@ -10082,7 +10090,7 @@ ALTER TABLE ONLY public."Jersey"
 
 
 --
--- Name: Match Match_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Match Match_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Match"
@@ -10090,7 +10098,7 @@ ALTER TABLE ONLY public."Match"
 
 
 --
--- Name: Player Player_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Player Player_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Player"
@@ -10098,7 +10106,7 @@ ALTER TABLE ONLY public."Player"
 
 
 --
--- Name: Stadium Stadium_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Stadium Stadium_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Stadium"
@@ -10106,7 +10114,7 @@ ALTER TABLE ONLY public."Stadium"
 
 
 --
--- Name: Standings Standings_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Standings Standings_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Standings"
@@ -10114,7 +10122,7 @@ ALTER TABLE ONLY public."Standings"
 
 
 --
--- Name: Team Team_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Team Team_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Team"
@@ -10122,7 +10130,7 @@ ALTER TABLE ONLY public."Team"
 
 
 --
--- Name: User User_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: User User_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."User"
@@ -10130,7 +10138,7 @@ ALTER TABLE ONLY public."User"
 
 
 --
--- Name: _prisma_migrations _prisma_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: _prisma_migrations _prisma_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public._prisma_migrations
@@ -10138,84 +10146,84 @@ ALTER TABLE ONLY public._prisma_migrations
 
 
 --
--- Name: Jersey_teamId_type_key; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: Jersey_teamId_type_key; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "Jersey_teamId_type_key" ON public."Jersey" USING btree ("teamId", type);
 
 
 --
--- Name: Match_competitionId_homeTeamId_awayTeamId_start_time_key; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: Match_competitionId_homeTeamId_awayTeamId_start_time_key; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "Match_competitionId_homeTeamId_awayTeamId_start_time_key" ON public."Match" USING btree ("competitionId", "homeTeamId", "awayTeamId", start_time);
 
 
 --
--- Name: Player_id_teamId_key; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: Player_id_teamId_key; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "Player_id_teamId_key" ON public."Player" USING btree (id, "teamId");
 
 
 --
--- Name: Standings_competitionId_teamId_key; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: Standings_competitionId_teamId_key; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "Standings_competitionId_teamId_key" ON public."Standings" USING btree ("competitionId", "teamId");
 
 
 --
--- Name: User_email_key; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: User_email_key; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "User_email_key" ON public."User" USING btree (email);
 
 
 --
--- Name: _CompetitionToTeam_AB_unique; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToTeam_AB_unique; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "_CompetitionToTeam_AB_unique" ON public."_CompetitionToTeam" USING btree ("A", "B");
 
 
 --
--- Name: _CompetitionToTeam_B_index; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToTeam_B_index; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE INDEX "_CompetitionToTeam_B_index" ON public."_CompetitionToTeam" USING btree ("B");
 
 
 --
--- Name: _CompetitionToUser_AB_unique; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToUser_AB_unique; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "_CompetitionToUser_AB_unique" ON public."_CompetitionToUser" USING btree ("A", "B");
 
 
 --
--- Name: _CompetitionToUser_B_index; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToUser_B_index; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE INDEX "_CompetitionToUser_B_index" ON public."_CompetitionToUser" USING btree ("B");
 
 
 --
--- Name: _TeamToUser_AB_unique; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: _TeamToUser_AB_unique; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE UNIQUE INDEX "_TeamToUser_AB_unique" ON public."_TeamToUser" USING btree ("A", "B");
 
 
 --
--- Name: _TeamToUser_B_index; Type: INDEX; Schema: public; Owner: avnadmin
+-- Name: _TeamToUser_B_index; Type: INDEX; Schema: public; Owner: juanseijas
 --
 
 CREATE INDEX "_TeamToUser_B_index" ON public."_TeamToUser" USING btree ("B");
 
 
 --
--- Name: Jersey Jersey_teamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Jersey Jersey_teamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Jersey"
@@ -10223,7 +10231,7 @@ ALTER TABLE ONLY public."Jersey"
 
 
 --
--- Name: Match Match_awayTeamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Match Match_awayTeamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Match"
@@ -10231,7 +10239,7 @@ ALTER TABLE ONLY public."Match"
 
 
 --
--- Name: Match Match_competitionId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Match Match_competitionId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Match"
@@ -10239,7 +10247,7 @@ ALTER TABLE ONLY public."Match"
 
 
 --
--- Name: Match Match_homeTeamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Match Match_homeTeamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Match"
@@ -10247,7 +10255,7 @@ ALTER TABLE ONLY public."Match"
 
 
 --
--- Name: Match Match_stadiumId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Match Match_stadiumId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Match"
@@ -10255,7 +10263,7 @@ ALTER TABLE ONLY public."Match"
 
 
 --
--- Name: Player Player_teamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Player Player_teamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Player"
@@ -10263,7 +10271,7 @@ ALTER TABLE ONLY public."Player"
 
 
 --
--- Name: Standings Standings_competitionId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Standings Standings_competitionId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Standings"
@@ -10271,7 +10279,7 @@ ALTER TABLE ONLY public."Standings"
 
 
 --
--- Name: Standings Standings_teamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Standings Standings_teamId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Standings"
@@ -10279,7 +10287,7 @@ ALTER TABLE ONLY public."Standings"
 
 
 --
--- Name: Team Team_stadiumId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: Team Team_stadiumId_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."Team"
@@ -10287,7 +10295,7 @@ ALTER TABLE ONLY public."Team"
 
 
 --
--- Name: _CompetitionToTeam _CompetitionToTeam_A_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToTeam _CompetitionToTeam_A_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."_CompetitionToTeam"
@@ -10295,7 +10303,7 @@ ALTER TABLE ONLY public."_CompetitionToTeam"
 
 
 --
--- Name: _CompetitionToTeam _CompetitionToTeam_B_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToTeam _CompetitionToTeam_B_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."_CompetitionToTeam"
@@ -10303,7 +10311,7 @@ ALTER TABLE ONLY public."_CompetitionToTeam"
 
 
 --
--- Name: _CompetitionToUser _CompetitionToUser_A_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToUser _CompetitionToUser_A_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."_CompetitionToUser"
@@ -10311,7 +10319,7 @@ ALTER TABLE ONLY public."_CompetitionToUser"
 
 
 --
--- Name: _CompetitionToUser _CompetitionToUser_B_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: _CompetitionToUser _CompetitionToUser_B_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."_CompetitionToUser"
@@ -10319,7 +10327,7 @@ ALTER TABLE ONLY public."_CompetitionToUser"
 
 
 --
--- Name: _TeamToUser _TeamToUser_A_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: _TeamToUser _TeamToUser_A_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."_TeamToUser"
@@ -10327,7 +10335,7 @@ ALTER TABLE ONLY public."_TeamToUser"
 
 
 --
--- Name: _TeamToUser _TeamToUser_B_fkey; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: _TeamToUser _TeamToUser_B_fkey; Type: FK CONSTRAINT; Schema: public; Owner: juanseijas
 --
 
 ALTER TABLE ONLY public."_TeamToUser"
@@ -10335,7 +10343,7 @@ ALTER TABLE ONLY public."_TeamToUser"
 
 
 --
--- Name: SCHEMA public; Type: ACL; Schema: -; Owner: avnadmin
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: juanseijas
 --
 
 REVOKE USAGE ON SCHEMA public FROM PUBLIC;
