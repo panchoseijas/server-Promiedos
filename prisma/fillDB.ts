@@ -239,4 +239,4 @@ const fillDatabase = async () => {
   console.log("Database filled");
 };
 
-//fillDatabase();
+fillDatabase();
