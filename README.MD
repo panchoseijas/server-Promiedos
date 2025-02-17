@@ -2,7 +2,7 @@
 
 ## Server
 
-https://github.com/Zepoide/promiedos/tree/entrega-final-g9
+https://github.com/Zepoide/promiedos/tree/entrega-final-g9-tamarit
 
 ## .env
 
